@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  USER
+  DEALER
+  ADMIN
+}
+
+enum VehicleCategory {
+  TWO_WHEELER
+  THREE_WHEELER
+  FOUR_WHEELER
+  COMMERCIAL
+}
+
+enum VehicleStatus {
+  DRAFT
+  ACTIVE
+  SOLD
+  ARCHIVED
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  passwordHash String
+  name         String
+  role         UserRole       @default(USER)
+  isActive     Boolean        @default(true)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  refreshTokens RefreshToken[]
+  vehicles     Vehicle[]
+
+  @@index([email])
+  @@map("users")
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("refresh_tokens")
+}
+
+model Vehicle {
+  id          String          @id @default(cuid())
+  title       String
+  brand       String
+  model       String
+  category    VehicleCategory
+  status      VehicleStatus   @default(DRAFT)
+  price       Decimal         @db.Decimal(12, 2)
+  year        Int
+  rangeKm     Int?
+  batteryKwh  Decimal?        @db.Decimal(6, 2)
+  description String?
+  images      String[]        @default([])
+  sellerId    String
+  seller      User            @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@index([category, status])
+  @@index([brand])
+  @@index([price])
+  @@index([sellerId])
+  @@map("vehicles")
+}

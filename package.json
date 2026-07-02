@@ -1,0 +1,30 @@
+{
+  "name": "nexiora-ev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nexiora EV — Driving the Future of Smart Mobility",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "npm run build --workspace=@nexiora/shared",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean",
+    "db:generate": "npm run db:generate --workspace=@nexiora/api",
+    "db:migrate": "npm run db:migrate --workspace=@nexiora/api",
+    "db:push": "npm run db:push --workspace=@nexiora/api",
+    "db:studio": "npm run db:studio --workspace=@nexiora/api"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "npm@10.9.2"
+}
