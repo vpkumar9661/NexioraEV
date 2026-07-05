@@ -112,7 +112,7 @@ export function EnvironmentalTools() {
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">CO₂ Savings Index</span>
           </div>
           <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
-            The average petrol passenger car emits ~120 grams of CO₂ per km. Transitioning to EV eliminates tailpipe emissions directly, offset only by the grid's local energy mix index.
+            The average petrol passenger car emits ~120 grams of CO₂ per km. Transitioning to EV eliminates tailpipe emissions directly, offset only by the grid&apos;s local energy mix index.
           </p>
         </div>
 

@@ -379,7 +379,7 @@ export function ControllerLab() {
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Pulse-Width Modulation (PWM)</span>
           </div>
           <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
-            Chopping DC voltage into pulses creates simulated AC sine waves. Adjusting the width of these pulses controls the motor's speed and torque directly.
+            Chopping DC voltage into pulses creates simulated AC sine waves. Adjusting the width of these pulses controls the motor&apos;s speed and torque directly.
           </p>
         </div>
       </div>

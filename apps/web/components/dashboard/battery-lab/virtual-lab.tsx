@@ -1875,7 +1875,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
               <div className="flex-1 flex flex-col items-center justify-center text-center p-4">
                 <BrainCircuit className="w-8 h-8 text-[#AEB5C0]/30 mb-2" />
                 <p className="text-xs text-[#AEB5C0]/50">
-                  Configure operational goals and click "Generate" to receive an interactive expert system chemistry recommendation.
+                  Configure operational goals and click &quot;Generate&quot; to receive an interactive expert system chemistry recommendation.
                 </p>
               </div>
             )}

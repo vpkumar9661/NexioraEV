@@ -418,7 +418,7 @@ export function V2G_V2H_Lab() {
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Vehicle-to-Home (V2H)</span>
           </div>
           <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
-            Enables using the EV's traction battery to power auxiliary home appliances. Acts as an emergency backup generator during grid blackouts.
+            Enables using the EV&apos;s traction battery to power auxiliary home appliances. Acts as an emergency backup generator during grid blackouts.
           </p>
         </div>
 
