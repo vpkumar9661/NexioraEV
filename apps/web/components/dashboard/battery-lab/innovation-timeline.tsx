@@ -70,7 +70,7 @@ export function InnovationTimeline() {
         {current && (
           <div className="grid md:grid-cols-12 gap-6 bg-[#131722]/50 border border-white/3 p-5 sm:p-6 rounded-xl relative overflow-hidden">
             {/* Year backdrop */}
-            <div className="absolute -bottom-10 -right-6 text-[80px] font-black text-white/[0.01] pointer-events-none select-none">
+            <div className="absolute -bottom-10 -right-6 text-[80px] font-black text-white/1 pointer-events-none select-none">
               {current.year}
             </div>
 

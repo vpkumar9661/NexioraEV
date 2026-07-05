@@ -10,5 +10,6 @@
   "files.exclude": {
     "**/.turbo": true,
     "**/dist": true
-  }
+  },
+  "css.lint.unknownAtRules": "ignore"
 }

@@ -42,7 +42,7 @@ export function FAQSection() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search questions..."
-            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/3 border border-white/10 text-sm text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#8B5CF6]/40 focus:bg-[#8B5CF6]/[0.03] transition-all"
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/3 border border-white/10 text-sm text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#8B5CF6]/40 focus:bg-[#8B5CF6]/3 transition-all"
           />
         </div>
       </div>
@@ -60,7 +60,7 @@ export function FAQSection() {
               key={idx}
               className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
                 isOpen
-                  ? "border-[#8B5CF6]/20 bg-[#8B5CF6]/[0.03]"
+                  ? "border-[#8B5CF6]/20 bg-[#8B5CF6]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
               }`}
             >

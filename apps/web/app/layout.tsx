@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
 };
 
+import { GlobalAmbientBackground } from "@/components/layout/global-background";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,12 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans bg-[#07090e] text-white`}>
         <QueryProvider>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col relative z-10">
+            <GlobalAmbientBackground />
             <CursorGlow />
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 z-10">{children}</main>
             <SiteFooter />
           </div>
         </QueryProvider>

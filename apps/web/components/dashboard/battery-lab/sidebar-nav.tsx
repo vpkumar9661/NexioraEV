@@ -4,12 +4,13 @@ import {
   BookOpen, ChevronRight, Cpu, HelpCircle, History, 
   ShieldAlert, Settings, Thermometer, Zap, Activity, 
   Table, BarChart3, LineChart, FileText, Play, BrainCircuit,
-  Award, Download
+  Award, Download, Sparkles
 } from "lucide-react";
 
 const SECTIONS = [
   { id: "hero", label: "Overview", icon: BookOpen },
   { id: "stats", label: "Stats & Diagnostics", icon: Activity },
+  { id: "virtual-lab", label: "Virtual Lab", icon: Sparkles },
   { id: "explorer", label: "Chemistries", icon: BrainCircuit },
   { id: "comparison", label: "Comparison", icon: Table },
   { id: "pack", label: "Pack Explorer", icon: Cpu },
@@ -35,7 +36,7 @@ interface SidebarNavProps {
 export function SidebarNav({ activeSection }: SidebarNavProps) {
   return (
     <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-[140px] w-[180px] z-30">
-      <nav className="p-3 rounded-[16px] border border-white/5 bg-white/[0.02] backdrop-blur-md space-y-1 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
+      <nav className="p-3 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-1 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
         <p className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">
           Lab Navigator
         </p>

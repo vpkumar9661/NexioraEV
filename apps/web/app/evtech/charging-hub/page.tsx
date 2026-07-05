@@ -1,54 +1,159 @@
 "use client";
 
-import { EvtechDashboardTemplate } from "@/components/layout/evtech-dashboard-template";
-import { Plug, Radio, Activity } from "lucide-react";
+import { useEffect, useState } from "react";
+import {
+  DashboardBreadcrumb,
+  SidebarNav,
+  FloatingToolbar,
+  HeroSection,
+  StatsBar,
+  TechExplorer,
+  ChargingStandards,
+  InteractiveStation,
+  ChargingSimulator,
+  CostCalculator,
+  TripPlanner,
+  ConnectorExplorer,
+  SafetyCenter,
+  SmartCharging,
+  NetworkDashboard,
+  ResearchLibrary,
+  VideoLearning,
+  AIAssistant,
+  ChargingQuiz,
+  DownloadCenter,
+  FAQSection,
+  ContinueCTA
+} from "@/components/dashboard/charging-hub";
+
+const SECTION_IDS = [
+  "hero",
+  "stats",
+  "explorer",
+  "standards",
+  "station",
+  "simulator",
+  "calculator",
+  "planner",
+  "connector",
+  "safety",
+  "smart",
+  "network",
+  "library",
+  "videos",
+  "ai",
+  "quiz",
+  "downloads",
+  "faq",
+  "cta"
+];
 
 export default function ChargingHubPage() {
-  const stats = [
-    { label: "Active Stations", value: "842 Grid", change: "99.8% Uptime", changeType: "positive" as const },
-    { label: "Max Peak Rate", value: "350 kW", change: "DC Superfast", changeType: "positive" as const },
-    { label: "Standard Ports", value: "CCS2 / NACS", change: "Compliant", changeType: "neutral" as const },
-    { label: "Grid Status", value: "Balanced", change: "Active V2G", changeType: "positive" as const }
-  ];
+  const [activeSection, setActiveSection] = useState("hero");
 
-  const widgets = [
-    {
-      title: "Charging Standards Connector Matrix",
-      description: "Explore the different charging speeds, voltage configurations, and connectors standard globally.",
-      content: (
-        <div className="w-full space-y-3 text-xs">
-          <div className="flex justify-between items-center p-2 rounded-lg bg-white/5 border border-white/5">
-            <span className="text-white font-bold">CCS Type 2</span>
-            <span className="text-[#FF9F1A]">Up to 350kW DC</span>
-          </div>
-          <div className="flex justify-between items-center p-2 rounded-lg bg-white/5 border border-white/5">
-            <span className="text-white font-bold">NACS Standard</span>
-            <span className="text-[#FF9F1A]">Tesla / Universal North America</span>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "V2G (Vehicle-to-Grid) Simulator",
-      description: "Bidirectional charging allows parked EVs to supply battery power back to the grid during peak loads.",
-      content: (
-        <div className="w-full text-xs text-[#AEB5C0]/85 space-y-2">
-          <div className="flex items-center gap-2 p-2 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
-            <Activity className="w-4 h-4 text-emerald-400" />
-            <span>Power Output Flowing: Grid Feed active</span>
-          </div>
-        </div>
-      )
-    }
-  ];
+  // Scroll-based active section tracking
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        const first = visible[0];
+        if (first) {
+          setActiveSection(first.target.id);
+        }
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <EvtechDashboardTemplate
-      title="Charging Hub"
-      subtitle="Connectors, charging types, charging speed profiles, and grid integration."
-      categoryName="Charging Hub"
-      stats={stats}
-      widgets={widgets}
-    />
+    <div className="min-h-screen bg-[#07090e] text-white font-sans overflow-hidden">
+      {/* Charging Hub specific background elements: Cyan energy flows */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-[15%] left-1/4 w-[600px] h-[600px] bg-[#22D3EE]/1.5 rounded-full blur-[150px]" />
+        <div className="absolute top-[45%] right-1/4 w-[500px] h-[500px] bg-[#8B5CF6]/1.5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[15%] left-1/3 w-[600px] h-[600px] bg-[#10B981]/1.5 rounded-full blur-[150px]" />
+      </div>
+
+      {/* Breadcrumb navigation */}
+      <div className="pt-[72px] px-4 sm:px-6 lg:px-8 relative z-40">
+        <DashboardBreadcrumb />
+      </div>
+
+      {/* Sidebar navigation */}
+      <SidebarNav activeSection={activeSection} />
+
+      {/* Floating Action Toolbar */}
+      <FloatingToolbar />
+
+      {/* Main Content Workspace Layout */}
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-16">
+        
+        {/* Section 1: Hero */}
+        <HeroSection />
+
+        {/* Section 2: Live charging stats counters */}
+        <StatsBar />
+
+        {/* Section 3: Tech Explorer */}
+        <TechExplorer />
+
+        {/* Section 4: Standards Comparison matrix */}
+        <ChargingStandards />
+
+        {/* Section 5: Charger station hardware inspector */}
+        <InteractiveStation />
+
+        {/* Section 6: Live Charging session simulator */}
+        <ChargingSimulator />
+
+        {/* Section 7: Grid cost and savings calculator */}
+        <CostCalculator />
+
+        {/* Section 8: Trip planning optimizer */}
+        <TripPlanner />
+
+        {/* Section 9: Connector gallery pins inspector */}
+        <ConnectorExplorer />
+
+        {/* Section 10: Charging Safety module */}
+        <SafetyCenter />
+
+        {/* Section 11: Smart Charging V2G networks */}
+        <SmartCharging />
+
+        {/* Section 12: Grid Load & network occupancies */}
+        <NetworkDashboard />
+
+        {/* Section 13: Standards documents catalog */}
+        <ResearchLibrary />
+
+        {/* Section 14: Video Courses */}
+        <VideoLearning />
+
+        {/* Section 15: AI Chat prompt advisor */}
+        <AIAssistant />
+
+        {/* Section 16: Certification Quiz panel */}
+        <ChargingQuiz />
+
+        {/* Section 17: Reference PDF manuals */}
+        <DownloadCenter />
+
+        {/* Section 18: FAQ accordion */}
+        <FAQSection />
+
+        {/* Section 19/20: Drivetrain Components transition CTA */}
+        <ContinueCTA />
+      </main>
+    </div>
   );
 }

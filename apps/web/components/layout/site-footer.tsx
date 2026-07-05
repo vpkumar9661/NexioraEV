@@ -122,6 +122,9 @@ export function SiteFooter() {
               {[
                 { name: "Learning Center", href: "/evtech/learning-center" },
                 { name: "Battery Lab", href: "/evtech/battery-lab" },
+                { name: "Battery Digital Twin", href: "/evtech/digital-twin" },
+                { name: "Digital EV Studio", href: "/evtech/digital-studio" },
+                { name: "Drive Simulator", href: "/evtech/drive-simulator" },
                 { name: "Charging Hub", href: "/evtech/charging-hub" },
                 { name: "EV News", href: "/news" },
                 { name: "Blog", href: "/news" },

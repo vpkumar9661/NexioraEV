@@ -24,9 +24,10 @@ import { DownloadCenter } from "@/components/dashboard/battery-lab/download-cent
 import { FAQSection } from "@/components/dashboard/battery-lab/faq-section";
 import { RelatedModules } from "@/components/dashboard/battery-lab/related-modules";
 import { ContinueCTA } from "@/components/dashboard/battery-lab/continue-cta";
+import { VirtualBatteryLab } from "@/components/dashboard/battery-lab/virtual-lab";
 
 const SECTION_IDS = [
-  "hero", "stats", "explorer", "comparison", "pack", "bms", "charging",
+  "hero", "stats", "virtual-lab", "explorer", "comparison", "pack", "bms", "charging",
   "health", "thermal", "safety", "timeline", "calculators", "library",
   "videos", "ai", "quiz", "downloads", "faq"
 ];
@@ -85,7 +86,10 @@ export default function BatteryLabPage() {
         {/* Section 2: Live Battery Stats */}
         <StatsBar />
 
-        {/* Section 3: Battery Technology Explorer */}
+        {/* Section 3: Virtual Battery Laboratory */}
+        <VirtualBatteryLab />
+
+        {/* Section 4: Battery Technology Explorer */}
         <TechExplorer />
 
         {/* Section 4: Battery Comparison Center */}

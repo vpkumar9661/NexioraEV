@@ -1,54 +1,136 @@
 "use client";
 
-import { EvtechDashboardTemplate } from "@/components/layout/evtech-dashboard-template";
-import { Calculator, Sparkles, RefreshCw } from "lucide-react";
+import { useEffect, useState } from "react";
+import { 
+  ToolkitBreadcrumb,
+  ToolkitLeftSidebarNav,
+  ToolkitFloatingToolbar,
+  HeroSection,
+  StatsBar,
+  ToolCategories,
+  BatteryTools,
+  ChargingTools,
+  MotorTools,
+  PerformanceTools,
+  EnergyCostTools,
+  EnvironmentalTools,
+  ConvertersSection,
+  FormulaLibrary,
+  AIPlanner,
+  DownloadsCenter,
+  FAQSection
+} from "@/components/dashboard/calculators-tools";
+
+const SECTION_IDS = [
+  "hero",
+  "stats",
+  "categories",
+  "battery",
+  "charging",
+  "motor",
+  "performance",
+  "energy",
+  "environment",
+  "converters",
+  "formulas",
+  "references",
+  "ai",
+  "downloads",
+  "faq"
+];
 
 export default function CalculatorsToolsPage() {
-  const stats = [
-    { label: "Tools Loaded", value: "4 Modules", change: "Interactive", changeType: "neutral" as const },
-    { label: "Calculation Latency", value: "12ms", change: "Client-side", changeType: "positive" as const },
-    { label: "Precision", value: "99.9%", change: "WLTP Standard", changeType: "positive" as const },
-    { label: "Updates", value: "June 2026", change: "Up-to-date", changeType: "neutral" as const }
-  ];
+  const [activeSection, setActiveSection] = useState("hero");
 
-  const widgets = [
-    {
-      title: "Interactive Range & Charging Cost Estimator",
-      description: "Estimate your monthly fuel cost savings, vehicle battery health degradation rates, and charging times.",
-      content: (
-        <div className="w-full space-y-3 text-xs">
-          <div className="flex justify-between items-center p-2 rounded-lg bg-white/5 border border-white/5">
-            <span className="text-white font-bold">Estimated Cost Savings</span>
-            <span className="text-[#FF9F1A]">~₹8,500 / Month</span>
-          </div>
-          <div className="flex justify-between items-center p-2 rounded-lg bg-white/5 border border-white/5">
-            <span className="text-white font-bold">Battery Degradation Target</span>
-            <span className="text-[#FF9F1A]">&lt;1.8% / Year</span>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "EMI and ROI Analysis Module",
-      description: "Analyze the total cost of ownership (TCO) compared to ICE vehicles to calculate break-even years.",
-      content: (
-        <div className="w-full text-xs text-[#AEB5C0]/85 space-y-2">
-          <div className="flex items-center gap-2 p-2 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
-            <Calculator className="w-4 h-4 text-emerald-400" />
-            <span>TCO Break-even Target reached in 2.4 Years</span>
-          </div>
-        </div>
-      )
-    }
-  ];
+  // Scroll active section tracking
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        const first = visible[0];
+        if (first) {
+          setActiveSection(first.target.id);
+        }
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <EvtechDashboardTemplate
-      title="Calculators & Tools"
-      subtitle="Interactive tools to calculate EV charging cost, battery health, and financial ROI."
-      categoryName="Calculators & Tools"
-      stats={stats}
-      widgets={widgets}
-    />
+    <div className="min-h-screen bg-[#07090e] text-white font-sans overflow-hidden">
+      {/* Emerald themed ambient glowing backgrounds */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-[15%] left-1/4 w-[600px] h-[600px] bg-[#00C853]/1.5 rounded-full blur-[150px]" />
+        <div className="absolute top-[45%] right-1/4 w-[500px] h-[500px] bg-[#22D3EE]/1 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[15%] left-1/3 w-[600px] h-[600px] bg-[#3B82F6]/1 rounded-full blur-[150px]" />
+      </div>
+
+      {/* Sticky breadcrumbs */}
+      <div className="pt-[72px] px-4 sm:px-6 lg:px-8 relative z-40">
+        <ToolkitBreadcrumb />
+      </div>
+
+      {/* Sticky Left navigation */}
+      <ToolkitLeftSidebarNav activeSection={activeSection} />
+
+      {/* Floating Toolbar Shortcuts */}
+      <ToolkitFloatingToolbar />
+
+      {/* Main Content Workspace Layout */}
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-16">
+        
+        {/* Section 1: Hero */}
+        <HeroSection />
+
+        {/* Section 2: Stats bar */}
+        <StatsBar />
+
+        {/* Section 3: Categories shortcuts */}
+        <ToolCategories />
+
+        {/* Section 4: Battery Config calculators */}
+        <BatteryTools />
+
+        {/* Section 5: Charging speed calculators */}
+        <ChargingTools />
+
+        {/* Section 6: Motor RPM calculations */}
+        <MotorTools />
+
+        {/* Section 7: WLTP Drag ranges estimators */}
+        <PerformanceTools />
+
+        {/* Section 8: TCO monthly savings ledger */}
+        <EnergyCostTools />
+
+        {/* Section 9: Carbon Pine offsets equivalent */}
+        <EnvironmentalTools />
+
+        {/* Section 10: SI conversions forms */}
+        <ConvertersSection />
+
+        {/* Section 11/12: Formulas library and cell chemistries references */}
+        <FormulaLibrary />
+
+        {/* Section 13: AI advisor planner */}
+        <AIPlanner />
+
+        {/* Section 14/15: PDF guides download & FAQ accordions */}
+        <DownloadsCenter />
+
+        {/* Section 16: FAQ Section */}
+        <FAQSection />
+
+      </main>
+    </div>
   );
 }

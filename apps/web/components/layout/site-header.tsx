@@ -7,7 +7,7 @@ import {
   Zap, ChevronDown, Search, Menu, X, Box, Brain, ShoppingCart, Shield, Building,
   BookOpen, Battery, Plug, Cpu, Sparkles, GraduationCap, Calculator, Bot, ArrowRight,
   Truck, Sun, Activity, Headphones, LineChart, TrendingUp, Wand2, Wrench, Lightbulb, Rocket,
-  Car, GitCompare, Tag, Store,
+  Car, GitCompare, Tag, Store, Rotate3d, Sliders,
   Landmark, Map, Route, Factory, Newspaper, BadgeCheck,
   Users, Handshake, Briefcase, Mic, Code, Mail
 } from "lucide-react";
@@ -36,6 +36,12 @@ const EVTECH_CATEGORIES = [
     icon: Battery
   },
   {
+    name: "Battery Digital Twin",
+    description: "Build, simulate and analyze virtual battery packs",
+    href: "/evtech/digital-twin",
+    icon: GitCompare
+  },
+  {
     name: "Charging Hub",
     description: "Charging types, connectors, stations and infrastructure",
     href: "/evtech/charging-hub",
@@ -46,6 +52,18 @@ const EVTECH_CATEGORIES = [
     description: "Motors, controllers, inverter, drivetrain and architecture",
     href: "/evtech/components",
     icon: Cpu
+  },
+  {
+    name: "Digital EV Studio",
+    description: "Build, configure and simulate complete electric vehicles",
+    href: "/evtech/digital-studio",
+    icon: Rotate3d
+  },
+  {
+    name: "Drive Simulator",
+    description: "Virtually drive your custom EV and monitor real-time physics telemetry",
+    href: "/evtech/drive-simulator",
+    icon: Activity
   },
   {
     name: "Future Tech",
@@ -64,6 +82,12 @@ const EVTECH_CATEGORIES = [
     description: "Charging cost, range, EMI, battery health and ROI tools",
     href: "/evtech/calculators-tools",
     icon: Calculator
+  },
+  {
+    name: "Engineering Workbench",
+    description: "Integrated professional workspace to design battery packs and simulate physics performance",
+    href: "/evtech/calculators-tools/workbench",
+    icon: Sliders
   },
   {
     name: "AI EV Assistant",
@@ -788,10 +812,10 @@ export function SiteHeader() {
                       linear-gradient(180deg, rgba(12, 15, 22, 0.9) 0%, rgba(12, 15, 22, 0.98) 100%),
                       rgba(139, 92, 246, 0.04);
           backdrop-filter: blur(30px) saturate(210%);
-          border: 1px solid rgba(139, 92, 246, 0.12);
+          border: 1px solid rgba(139, 92, 246, 0.35);
           border-radius: 20px;
           box-shadow: 
-            0 20px 48px -10px rgba(139, 92, 246, 0.15),
+            0 20px 48px -10px rgba(139, 92, 246, 0.25),
             inset 0 1px 1px rgba(255, 255, 255, 0.08);
           z-index: 40;
           transform-origin: top center;
@@ -1025,10 +1049,10 @@ export function SiteHeader() {
         }
         .mega-menu-card:hover {
           background: rgba(139, 92, 246, 0.06);
-          border-color: rgba(139, 92, 246, 0.25) !important;
+          border-color: rgba(139, 92, 246, 0.35) !important;
           transform: translateY(-2px) scale(1.02);
           box-shadow: 
-            0 8px 24px -8px rgba(139, 92, 246, 0.25),
+            0 8px 24px -8px rgba(139, 92, 246, 0.35),
             inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
         .mega-menu-card:hover .mega-arrow {
@@ -1478,9 +1502,8 @@ export function SiteHeader() {
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden relative p-2 bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.06)] rounded-[12px] text-white hover:bg-[rgba(255,255,255,0.06)] transition-colors z-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
+            className="lg:hidden relative p-2 bg-muted border border-[rgba(255,255,255,0.06)] rounded-[12px] text-white hover:bg-[rgba(255,255,255,0.06)] transition-colors z-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" strokeWidth={1.5} /> : <Menu className="w-5 h-5" strokeWidth={1.5} />}
@@ -1495,8 +1518,11 @@ export function SiteHeader() {
               onMouseEnter={() => handleMouseEnter("evtech")}
               onMouseLeave={handleMouseLeave}
             >
-            <div className="max-w-[1200px] mx-auto p-5">
-              <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+              {/* Purple/EVTech visual grid overlay */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
+              <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
                 {EVTECH_CATEGORIES.map((category) => {
                   const CatIcon = category.icon;
                   return (
