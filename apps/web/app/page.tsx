@@ -1634,82 +1634,216 @@ export default function HomePage() {
       <div className="divider-blur-glow" />
 
       {/* ====================================================
-          SECTION 18: NEWSLETTER
+          SECTION 18: PREMIUM PRE-FOOTER EXPERIENCE
           ==================================================== */}
-      <section className="relative theme-graphite bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
-        {/* Layered Background Design */}
-        <div className="absolute inset-0 bg-noise pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
-        
-        <div className="mx-auto max-w-5xl relative z-10">
-          <div className="flex justify-center">
-            <div className="liquid-glass-badge">
-              <span className="badge-dot" />
-              Newsletter Sign Up
-            </div>
-          </div>
+      <section className="relative bg-[#07090e] py-32 px-4 sm:px-6 lg:px-8 overflow-hidden z-10 border-t border-white/5">
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes flow {
+            to {
+              stroke-dashoffset: -20;
+            }
+          }
+          .animate-flow-dash {
+            stroke-dasharray: 8, 4;
+            animation: flow 1s linear infinite;
+          }
+          .animate-flow-dash-reverse {
+            stroke-dasharray: 8, 4;
+            animation: flow 1.2s linear infinite reverse;
+          }
+        `}} />
 
-          <div className="card-green-glass rounded-[24px] p-8 sm:p-12 text-center relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
-            <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-              <Mail className="size-10 text-(--accent) mx-auto drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.3)]" />
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Stay Updated with the <span className="text-gradient-green">Future of EV</span>
-              </h2>
-              <p className="text-xs sm:text-sm text-[#C5CBD7] leading-relaxed">
-                Get weekly expert reports on solid-state developments, fast charging standardizations, and new model reviews direct to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address..."
-                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:border-(--accent) transition-colors"
-                />
-                <Button size="sm" className="py-2.5 text-xs bg-[#00D26A] text-black hover:bg-[#6BFF95] hover:scale-105 transition-all duration-300 font-bold border-none shadow-lg shadow-[#00D26A]/20">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
-          </div>
+        {/* Layered Background System */}
+        <div className="absolute inset-0 bg-noise pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:36px_36px] opacity-45 pointer-events-none" />
+        
+        {/* Animated Mesh Glows */}
+        <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-[#00D26A]/5 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s" }} />
+        <div className="absolute bottom-10 left-1/4 w-[450px] h-[450px] bg-[#3B82F6]/5 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "14s" }} />
+
+        {/* Energy Flow Lines (Background SVG) */}
+        <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-100,200 C300,100 500,400 900,250 C1200,150 1400,300 1700,200" fill="none" stroke="url(#flow-gradient-1)" strokeWidth="1.5" className="animate-flow-dash" />
+            <path d="M-100,350 C400,200 600,500 1000,300 C1300,200 1500,450 1800,350" fill="none" stroke="url(#flow-gradient-2)" strokeWidth="1.2" className="animate-flow-dash-reverse" />
+            <defs>
+              <linearGradient id="flow-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#00D26A" stopOpacity="0" />
+                <stop offset="50%" stopColor="#00D26A" stopOpacity="1" />
+                <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
+              </linearGradient>
+              <linearGradient id="flow-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0" />
+                <stop offset="50%" stopColor="#3B82F6" stopOpacity="1" />
+                <stop offset="100%" stopColor="#00D26A" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
-      </section>
 
-      <div className="divider-glow" />
-
-      {/* ====================================================
-          SECTION 19: FINAL CALL TO ACTION
-          ==================================================== */}
-      <section className="relative theme-purple bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
-        {/* Layered Background Design */}
-        <div className="absolute inset-0 bg-noise pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
-        
-        <div className="mx-auto max-w-7xl relative z-10 text-center">
-          <div className="flex justify-center">
-            <div className="liquid-glass-badge">
-              <span className="badge-dot" />
-              Get Started Today
-            </div>
-          </div>
-
-          <div className="relative rounded-[24px] overflow-hidden border border-white/5 bg-radial-gradient from-(--accent)/5 to-transparent p-8 sm:p-16 card-green-glass">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
-            <div className="max-w-3xl mx-auto space-y-8 relative z-10">
-              <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-                Ready to Experience the <span className="text-gradient-green">Future of Electric Mobility</span>?
+        <div className="mx-auto max-w-7xl relative z-10">
+          <div className="grid gap-16 lg:grid-cols-12 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
+              <div className="flex justify-center lg:justify-start">
+                <div className="liquid-glass-badge">
+                  <span className="badge-dot" />
+                  Ecosystem Hub
+                </div>
+              </div>
+              
+              <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-white leading-tight">
+                Join India&apos;s Next Generation <span className="bg-gradient-to-r from-[#00D26A] via-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">EV Ecosystem</span>
               </h2>
-              <p className="text-sm sm:text-base text-[#C5CBD7] leading-relaxed">
-                Join India&apos;s advanced smart electric transportation hub today. Compare vehicles, estimate range, locate slots, and leverage federal incentives in one platform.
+              
+              <p className="text-base sm:text-lg text-[#C5CBD7] leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Discover intelligent EV technology, charging solutions, AI-powered insights, government schemes, marketplace services, and the future of sustainable mobility—all in one platform.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg" asChild className="bg-[#00D26A] text-black hover:bg-[#6BFF95] hover:scale-105 transition-all duration-300 font-bold border-none shadow-lg shadow-[#00D26A]/20">
-                  <Link href="/evtech">Explore EVTech</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="glass-btn bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold">
-                  <Link href="/vehicles">Explore Marketplace</Link>
-                </Button>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Link 
+                  href="/evtech"
+                  className="px-6 py-3.5 rounded-xl font-bold bg-[#00D26A] text-[#07090e] hover:bg-[#6BFF95] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_24px_rgba(0,210,106,0.25)] flex items-center justify-center gap-2 group w-full sm:w-auto"
+                >
+                  Explore EVTech
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2.2} />
+                </Link>
+                <Link 
+                  href="/marketplace"
+                  className="px-6 py-3.5 rounded-xl font-bold bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto text-center"
+                >
+                  Explore Marketplace
+                </Link>
+                <Link 
+                  href="/company/contact"
+                  className="px-6 py-3.5 rounded-xl font-bold bg-transparent border border-white/20 hover:border-white/40 text-[#AEB5C0] hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
+
+            {/* Right Side Animated SVGs & Data Cards Hero Illustration */}
+            <div className="lg:col-span-6 relative flex justify-center items-center h-[460px] max-w-xl mx-auto lg:max-w-none w-full">
+              
+              {/* Floating Data Card 1 */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-8 left-4 z-20 backdrop-blur-md bg-white/[0.02] border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#00D26A]/10 border border-[#00D26A]/20 flex items-center justify-center">
+                  <Zap className="w-4.5 h-4.5 text-[#00D26A]" />
+                </div>
+                <div className="text-left">
+                  <span className="text-[10px] text-[#C5CBD7]/60 font-bold uppercase tracking-wider block">Grid Sync</span>
+                  <span className="text-xs font-bold text-white block">V2G Active (99.9%)</span>
+                </div>
+              </motion.div>
+
+              {/* Floating Data Card 2 */}
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute bottom-12 right-6 z-20 backdrop-blur-md bg-white/[0.02] border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center">
+                  <Bot className="w-4.5 h-4.5 text-[#3B82F6]" />
+                </div>
+                <div className="text-left">
+                  <span className="text-[10px] text-[#C5CBD7]/60 font-bold uppercase tracking-wider block">AI Diagnostics</span>
+                  <span className="text-xs font-bold text-white block">BMS Protected</span>
+                </div>
+              </motion.div>
+
+              {/* Core SVG Composition */}
+              <div className="w-full h-full relative border border-white/[0.05] rounded-[24px] bg-white/[0.01] backdrop-blur-xs overflow-hidden shadow-2xl">
+                
+                {/* Circuit Grid Pattern Backdrop inside illustration */}
+                <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1.2px,transparent_1.2px)] bg-[size:16px_16px] pointer-events-none" />
+
+                <svg className="w-full h-full p-4" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Smart City Skyline Silhouette */}
+                  <g opacity="0.12">
+                    <rect x="20" y="280" width="40" height="80" fill="#AEB5C0" />
+                    <rect x="70" y="240" width="50" height="120" fill="#AEB5C0" />
+                    <rect x="130" y="200" width="45" height="160" fill="#AEB5C0" />
+                    <rect x="185" y="250" width="35" height="110" fill="#AEB5C0" />
+                    <rect x="230" y="210" width="55" height="150" fill="#AEB5C0" />
+                    <rect x="295" y="260" width="40" height="100" fill="#AEB5C0" />
+                    <rect x="345" y="190" width="50" height="170" fill="#AEB5C0" />
+                    <rect x="405" y="230" width="45" height="130" fill="#AEB5C0" />
+                    <rect x="460" y="270" width="30" height="90" fill="#AEB5C0" />
+                  </g>
+
+                  {/* AI Circuit Paths */}
+                  <g opacity="0.3">
+                    <path d="M 150,220 L 250,150 L 350,220" stroke="#3B82F6" strokeWidth="1.5" strokeDasharray="4 4" />
+                    <path d="M 250,150 L 250,80" stroke="#00D26A" strokeWidth="1.5" />
+                    <circle cx="250" cy="80" r="6" fill="#00D26A" />
+                    <circle cx="150" cy="220" r="4" fill="#3B82F6" />
+                    <circle cx="350" cy="220" r="4" fill="#8B5CF6" />
+                  </g>
+
+                  {/* Charging Station Vector */}
+                  <g transform="translate(80, 240)">
+                    <rect x="0" y="0" width="36" height="70" rx="6" fill="#131722" stroke="rgba(255,255,255,0.1)" strokeWidth="1.5" />
+                    <rect x="6" y="8" width="24" height="16" rx="2" fill="#07090e" stroke="rgba(255,255,255,0.05)" />
+                    {/* Screen light indicator */}
+                    <rect x="12" y="12" width="12" height="8" fill="#3B82F6" opacity="0.8" />
+                    {/* Green charger logo */}
+                    <circle cx="18" cy="46" r="8" fill="#00D26A" opacity="0.15" />
+                    <path d="M 18,40 L 14,48 L 17,48 L 16,53 L 21,45 L 18,45 Z" fill="#00D26A" />
+                    {/* Pulsing Cable line to the center */}
+                    <path d="M 36,55 Q 80,60 120,40" fill="none" stroke="#00D26A" strokeWidth="2.5" strokeDasharray="6 4" className="animate-flow-dash" />
+                  </g>
+
+                  {/* Battery Pack Vector */}
+                  <g transform="translate(370, 250)">
+                    <rect x="0" y="0" width="55" height="58" rx="8" fill="#131722" stroke="rgba(255,255,255,0.1)" strokeWidth="1.5" />
+                    {/* Battery terminal top nodes */}
+                    <rect x="12" y="-4" width="8" height="4" fill="#AEB5C0" rx="1" />
+                    <rect x="35" y="-4" width="8" height="4" fill="#AEB5C0" rx="1" />
+                    {/* Charging stats indicators */}
+                    <rect x="10" y="10" width="35" height="8" rx="1" fill="#00D26A" opacity="0.8" />
+                    <rect x="10" y="22" width="35" height="8" rx="1" fill="#00D26A" opacity="0.8" />
+                    <rect x="10" y="34" width="35" height="8" rx="1" fill="#00D26A" opacity="0.3" />
+                    {/* Energy flow link */}
+                    <path d="M 0,30 Q -40,35 -90,15" fill="none" stroke="#8B5CF6" strokeWidth="2.5" strokeDasharray="6 4" className="animate-flow-dash-reverse" />
+                  </g>
+
+                  {/* Futuristic Electric Car Silhouette in the Center */}
+                  <g transform="translate(160, 220)">
+                    {/* Shadow glow under car */}
+                    <ellipse cx="90" cy="98" rx="80" ry="10" fill="#00D26A" opacity="0.18" filter="url(#glow-blur)" />
+                    {/* Body contours */}
+                    <path d="M 10,85 C 20,80 40,55 80,45 C 120,35 150,55 170,80 C 178,88 174,95 160,95 L 20,95 C 10,95 5,90 10,85 Z" fill="#131722" stroke="#00D26A" strokeWidth="2" />
+                    <path d="M 40,55 C 65,30 115,30 140,55" fill="none" stroke="#3B82F6" strokeWidth="1.5" opacity="0.8" />
+                    
+                    {/* Wheels */}
+                    <circle cx="45" cy="95" r="16" fill="#07090e" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
+                    <circle cx="45" cy="95" r="11" fill="#00D26A" opacity="0.1" />
+                    <circle cx="45" cy="95" r="4" fill="#00D26A" />
+
+                    <circle cx="135" cy="95" r="16" fill="#07090e" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" />
+                    <circle cx="135" cy="95" r="11" fill="#00D26A" opacity="0.1" />
+                    <circle cx="135" cy="95" r="4" fill="#00D26A" />
+                    
+                    {/* Laser head lights & tail lights */}
+                    <path d="M 170,80 L 175,82" stroke="#3B82F6" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M 10,85 L 6,87" stroke="#FF3B30" strokeWidth="2.5" strokeLinecap="round" />
+                  </g>
+                  
+                  <defs>
+                    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="8" />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
