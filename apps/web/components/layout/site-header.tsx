@@ -27,85 +27,73 @@ const EVTECH_CATEGORIES = [
     name: "EV Basics",
     description: "Learn the fundamentals of Electric Vehicles",
     href: "/evtech/basics",
-    icon: BookOpen,
-    color: "#F4B400"
+    icon: BookOpen
   },
   {
     name: "Battery Lab",
     description: "Battery chemistry, BMS, thermal management and safety",
     href: "/evtech/battery-lab",
-    icon: Battery,
-    color: "#00E676"
+    icon: Battery
   },
   {
     name: "Battery Digital Twin",
     description: "Build, simulate and analyze virtual battery packs",
     href: "/evtech/digital-twin",
-    icon: GitCompare,
-    color: "#00E676"
+    icon: GitCompare
   },
   {
     name: "Charging Hub",
     description: "Charging types, connectors, stations and infrastructure",
     href: "/evtech/charging-hub",
-    icon: Plug,
-    color: "#00D4FF"
+    icon: Plug
   },
   {
     name: "EV Components",
     description: "Motors, controllers, inverter, drivetrain and architecture",
     href: "/evtech/components",
-    icon: Cpu,
-    color: "#00D4FF"
+    icon: Cpu
   },
   {
     name: "Digital EV Studio",
     description: "Build, configure and simulate complete electric vehicles",
     href: "/evtech/digital-studio",
-    icon: Rotate3d,
-    color: "#8B5CF6"
+    icon: Rotate3d
   },
   {
     name: "Drive Simulator",
     description: "Virtually drive your custom EV and monitor real-time physics telemetry",
     href: "/evtech/drive-simulator",
-    icon: Activity,
-    color: "#00D4FF"
+    icon: Activity
   },
   {
     name: "Future Tech",
     description: "Solid-state batteries, V2G, autonomous mobility and AI",
     href: "/evtech/future-tech",
-    icon: Sparkles,
-    color: "#8B5CF6"
+    icon: Sparkles
   },
   {
     name: "Learning Center",
     description: "Guides, tutorials, articles and video lessons",
     href: "/evtech/learning-center",
-    icon: GraduationCap,
-    color: "#F4B400"
+    icon: GraduationCap
   },
   {
     name: "Calculators & Tools",
     description: "Charging cost, range, EMI, battery health and ROI tools",
     href: "/evtech/calculators-tools",
-    icon: Calculator,
-    color: "#00D4FF"
+    icon: Calculator
   },
   {
     name: "Engineering Workbench",
     description: "Integrated professional workspace to design battery packs and simulate physics performance",
     href: "/evtech/calculators-tools/workbench",
-    icon: Sliders,
-    color: "#8B5CF6"
+    icon: Sliders
   },
   {
     name: "AI EV Assistant",
     description: "Ask questions and get intelligent EV guidance",
     href: "/evtech/ai-assistant",
-    icon: Bot,
-    color: "#8B5CF6"
+    icon: Bot
   }
 ];
 
@@ -817,15 +805,15 @@ export function SiteHeader() {
           top: calc(100% + 6px);
           left: 50%;
           width: calc(100% - 48px);
-          max-width: 1180px;
+          max-width: 1040px;
           height: auto;
-          max-height: 600px;
+          max-height: 340px;
           background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 60%), 
-                      linear-gradient(180deg, #06090F 0%, #0D111C 100%),
-                      rgba(20, 25, 38, 0.70);
+                      linear-gradient(180deg, rgba(12, 15, 22, 0.9) 0%, rgba(12, 15, 22, 0.98) 100%),
+                      rgba(139, 92, 246, 0.04);
           backdrop-filter: blur(30px) saturate(210%);
           border: 1px solid rgba(139, 92, 246, 0.35);
-          border-radius: 24px;
+          border-radius: 20px;
           box-shadow: 
             0 20px 48px -10px rgba(139, 92, 246, 0.25),
             inset 0 1px 1px rgba(255, 255, 255, 0.08);
@@ -1052,31 +1040,28 @@ export function SiteHeader() {
           transform: translateX(-50%) translateY(6px) scale(0.97);
         }
         .mega-menu-card {
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
-          border-radius: 20px;
-          height: 130px;
-          transition: all 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .mega-menu-card:hover {
-          background: rgba(255, 255, 255, 0.06);
-          border-color: var(--card-hover-border) !important;
-          transform: translateY(-6px) scale(1.02);
+          background: rgba(139, 92, 246, 0.06);
+          border-color: rgba(139, 92, 246, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
           box-shadow: 
-            0 8px 32px -8px var(--card-glow-color),
+            0 8px 24px -8px rgba(139, 92, 246, 0.35),
             inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
         .mega-menu-card:hover .mega-arrow {
           transform: translateX(4px);
-          color: var(--card-glow-color) !important;
+          color: #8B5CF6;
         }
         .mega-menu-card:hover .mega-icon {
           transform: scale(1.08);
-          color: var(--card-glow-color) !important;
-        }
-        .mega-menu-card:hover .mega-title {
-          color: var(--card-glow-color) !important;
+          color: #8B5CF6;
         }
         .solutions-mega-menu-card {
           background: rgba(255, 255, 255, 0.01);
@@ -1536,8 +1521,8 @@ export function SiteHeader() {
               {/* Purple/EVTech visual grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1250px] mx-auto pt-[28px] pb-[40px] px-[28px] relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] animate-in fade-in zoom-in-95 duration-200">
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
                 {EVTECH_CATEGORIES.map((category) => {
                   const CatIcon = category.icon;
                   return (
@@ -1546,30 +1531,20 @@ export function SiteHeader() {
                       href={category.href}
                       onClick={handleLinkClick}
                       prefetch={true}
-                      className="mega-menu-card p-4 flex flex-col cursor-pointer relative justify-center"
-                      style={{
-                        '--card-glow-color': `${category.color}33`,
-                        '--card-hover-border': `${category.color}66`
-                      } as React.CSSProperties}
+                      className="mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
                     >
-                      <div className="flex items-center gap-[14px] h-full">
-                        <div 
-                          className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[14px] bg-white/5 border transition-all duration-300 group-hover/card:scale-105"
-                          style={{
-                            boxShadow: `0 0 12px ${category.color}22`,
-                            borderColor: `rgba(255, 255, 255, 0.08)`
-                          }}
-                        >
-                          <CatIcon className="mega-icon w-5 h-5 transition-all duration-300" style={{ color: category.color }} strokeWidth={1.8} />
+                      <div className="flex items-center gap-[12px] h-full">
+                        <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#8B5CF6]/30 transition-colors">
+                          <CatIcon className="mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                         </div>
-                        <div className="flex flex-col justify-center h-full gap-1.5 pl-1">
-                          <span className="mega-title text-[22px] font-bold text-white transition-colors leading-tight pr-6">{category.name}</span>
-                          <p className="text-[15px] text-[#BFC6D5] leading-[1.6] font-sans line-clamp-2 pr-4">
+                        <div className="flex flex-col justify-center h-full gap-0.5">
+                          <span className="text-[18px] font-bold text-white group-hover/card:text-[#8B5CF6] transition-colors leading-tight pr-6">{category.name}</span>
+                          <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
                             {category.description}
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
                     </Link>
                   );
                 })}
