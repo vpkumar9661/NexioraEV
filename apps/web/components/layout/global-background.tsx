@@ -21,9 +21,9 @@ export function GlobalAmbientBackground() {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#07090e]">
       
       {/* 1. LAYERED MESH GRADIENTS */}
-      <div className="absolute top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-[#7C4DFF]/2.5 blur-[120px] animate-pulse" style={{ animationDuration: "16s" }} />
+      <div className="absolute top-[10%] left-[15%] w-[500px] h-[500px] rounded-full bg-accent/2.5 blur-[120px] animate-pulse" style={{ animationDuration: "16s" }} />
       <div className="absolute top-[40%] right-[10%] w-[600px] h-[600px] rounded-full bg-[#00C853]/2.5 blur-[150px] animate-pulse" style={{ animationDuration: "20s" }} />
-      <div className="absolute bottom-[20%] left-[25%] w-[550px] h-[550px] rounded-full bg-[#00E5FF]/2 blur-[130px] animate-pulse" style={{ animationDuration: "18s" }} />
+      <div className="absolute bottom-[20%] left-[25%] w-[550px] h-[550px] rounded-full bg-secondary/2 blur-[130px] animate-pulse" style={{ animationDuration: "18s" }} />
       <div className="absolute bottom-[5%] right-[20%] w-[450px] h-[450px] rounded-full bg-[#F4B400]/1 blur-[110px] animate-pulse" style={{ animationDuration: "22s" }} />
 
       {/* 2. CIRCUIT-INSPIRED PATTERNS (Low Opacity Grid Overlay) */}
