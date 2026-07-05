@@ -234,8 +234,8 @@ export function HeroVehicle() {
                   key={i}
                   x1="0" 
                   y1="0" 
-                  x2={36 * Math.cos((i * Math.PI) / 3)} 
-                  y2={36 * Math.sin((i * Math.PI) / 3)} 
+                  x2={parseFloat((36 * Math.cos((i * Math.PI) / 3)).toFixed(4))} 
+                  y2={parseFloat((36 * Math.sin((i * Math.PI) / 3)).toFixed(4))} 
                   stroke="url(#wheels-glow)" 
                   strokeWidth="1.8" 
                   opacity="0.8"
@@ -255,8 +255,8 @@ export function HeroVehicle() {
                   key={i}
                   x1="0" 
                   y1="0" 
-                  x2={36 * Math.cos((i * Math.PI) / 3)} 
-                  y2={36 * Math.sin((i * Math.PI) / 3)} 
+                  x2={parseFloat((36 * Math.cos((i * Math.PI) / 3)).toFixed(4))} 
+                  y2={parseFloat((36 * Math.sin((i * Math.PI) / 3)).toFixed(4))} 
                   stroke="url(#wheels-glow)" 
                   strokeWidth="1.8" 
                   opacity="0.8"

@@ -5,7 +5,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { APP_NAME, APP_TAGLINE } from "@nexiora/shared";
 import { 
   Zap, ChevronDown, Search, Menu, X, Box, Brain, ShoppingCart, Shield, Building,
-  BookOpen, Battery, Plug, Cpu, Sparkles, GraduationCap, Calculator, Bot, ArrowRight 
+  BookOpen, Battery, Plug, Cpu, Sparkles, GraduationCap, Calculator, Bot, ArrowRight,
+  Truck, Sun, Activity, Headphones, LineChart, TrendingUp, Wand2, Wrench, Lightbulb, Rocket,
+  Car, GitCompare, Tag, Store,
+  Landmark, Map, Route, Factory, Newspaper, BadgeCheck,
+  Users, Handshake, Briefcase, Mic, Code, Mail
 } from "lucide-react";
 import Link from "next/link";
 
@@ -69,10 +73,270 @@ const EVTECH_CATEGORIES = [
   }
 ];
 
+const SOLUTIONS_CATEGORIES = [
+  {
+    name: "EV Charging Solutions",
+    description: "Home chargers, commercial charging stations, DC fast charging and smart charging infrastructure.",
+    href: "/solutions/charging",
+    icon: Plug
+  },
+  {
+    name: "Battery Solutions",
+    description: "Battery systems, swapping, thermal management, recycling and energy storage.",
+    href: "/solutions/battery",
+    icon: Battery
+  },
+  {
+    name: "Fleet Solutions",
+    description: "Complete EV fleet management for businesses, logistics, ride sharing and commercial transport.",
+    href: "/solutions/fleet",
+    icon: Truck
+  },
+  {
+    name: "Solar + EV",
+    description: "Integrate rooftop solar with EV charging for maximum energy savings.",
+    href: "/solutions/solar",
+    icon: Sun
+  },
+  {
+    name: "Business Solutions",
+    description: "EV infrastructure for offices, industries, apartments and commercial facilities.",
+    href: "/solutions/business",
+    icon: Building
+  },
+  {
+    name: "Smart Energy",
+    description: "Energy monitoring, V2G, smart grid integration and intelligent energy optimization.",
+    href: "/solutions/energy",
+    icon: Activity
+  },
+  {
+    name: "AI Solutions",
+    description: "Predictive maintenance, AI diagnostics, smart charging optimization and analytics.",
+    href: "/solutions/ai",
+    icon: Brain
+  },
+  {
+    name: "Consultation",
+    description: "Expert EV consulting, project planning, technology guidance and implementation support.",
+    href: "/solutions/consultation",
+    icon: Headphones
+  }
+];
+
+const INTELLIGENCE_CATEGORIES = [
+  {
+    name: "AI Assistant",
+    description: "Ask EV-related questions and receive intelligent recommendations instantly.",
+    href: "/intelligence/assistant",
+    icon: Sparkles
+  },
+  {
+    name: "EV Analytics",
+    description: "Explore EV market trends, adoption statistics, charging growth, and industry insights.",
+    href: "/intelligence/analytics",
+    icon: LineChart
+  },
+  {
+    name: "Battery Intelligence",
+    description: "Analyze battery health, degradation, charging cycles, lifespan prediction, and efficiency.",
+    href: "/intelligence/battery",
+    icon: Battery
+  },
+  {
+    name: "Charging Intelligence",
+    description: "Find optimal charging times, station availability, charging speed, and energy optimization.",
+    href: "/intelligence/charging",
+    icon: Plug
+  },
+  {
+    name: "Smart Recommendations",
+    description: "Receive personalized EV suggestions based on your driving habits and requirements.",
+    href: "/intelligence/recommendations",
+    icon: Wand2
+  },
+  {
+    name: "Predictive Maintenance",
+    description: "Detect future maintenance needs using AI-powered diagnostics and predictive analysis.",
+    href: "/intelligence/maintenance",
+    icon: Wrench
+  },
+  {
+    name: "EV Insights",
+    description: "Daily EV news, research reports, battery innovations, and future mobility trends.",
+    href: "/intelligence/insights",
+    icon: Lightbulb
+  },
+  {
+    name: "Future Mobility Lab",
+    description: "Explore autonomous driving, V2G, smart cities, robotics, and next-generation mobility technologies.",
+    href: "/intelligence/future-lab",
+    icon: Rocket
+  }
+];
+
+const MARKETPLACE_CATEGORIES = [
+  {
+    name: "Electric Vehicles",
+    description: "Browse and compare electric cars, scooters, bikes, buses and commercial EVs.",
+    href: "/marketplace/vehicles",
+    icon: Car
+  },
+  {
+    name: "EV Batteries",
+    description: "Explore batteries, battery packs, BMS, battery modules and replacement options.",
+    href: "/marketplace/batteries",
+    icon: Battery
+  },
+  {
+    name: "Charging Equipment",
+    description: "Home chargers, wall boxes, portable chargers, DC fast chargers and accessories.",
+    href: "/marketplace/charging",
+    icon: Plug
+  },
+  {
+    name: "EV Accessories",
+    description: "Smart accessories including cables, connectors, tyres, helmets, smart devices and more.",
+    href: "/marketplace/accessories",
+    icon: Wrench
+  },
+  {
+    name: "Compare Vehicles",
+    description: "Compare EV specifications, price, range, battery, charging time and performance.",
+    href: "/marketplace/compare",
+    icon: GitCompare
+  },
+  {
+    name: "Offers & Deals",
+    description: "Latest discounts, launch offers, exchange bonuses and seasonal promotions.",
+    href: "/marketplace/offers",
+    icon: Tag
+  },
+  {
+    name: "Verified Sellers",
+    description: "Find verified dealers, manufacturers, suppliers and trusted EV partners.",
+    href: "/marketplace/sellers",
+    icon: Store
+  },
+  {
+    name: "Marketplace AI",
+    description: "AI-powered product recommendations based on your budget, needs and driving habits.",
+    href: "/marketplace/ai",
+    icon: Bot
+  }
+];
+
+const SCHEMES_CATEGORIES = [
+  {
+    name: "Central Schemes",
+    description: "Explore PM E-Drive, FAME, national incentives and central government support.",
+    href: "/schemes/central",
+    icon: Landmark
+  },
+  {
+    name: "State EV Policies",
+    description: "Compare EV subsidies and benefits available across all Indian states.",
+    href: "/schemes/state",
+    icon: Map
+  },
+  {
+    name: "EV Subsidy Calculator",
+    description: "Estimate subsidy amount based on your location, vehicle category and eligibility.",
+    href: "/schemes/calculator",
+    icon: Calculator
+  },
+  {
+    name: "Road Tax Benefits",
+    description: "Road tax exemptions, registration fee waivers and state transport benefits.",
+    href: "/schemes/tax-benefits",
+    icon: Route
+  },
+  {
+    name: "Commercial Incentives",
+    description: "Business incentives, manufacturing support, fleet benefits and MSME programs.",
+    href: "/schemes/business",
+    icon: Factory
+  },
+  {
+    name: "Charging Grants",
+    description: "Government grants and funding for charging station installation.",
+    href: "/schemes/charging",
+    icon: Plug
+  },
+  {
+    name: "Policy Updates",
+    description: "Latest notifications, policy changes, EV regulations and official announcements.",
+    href: "/schemes/policy",
+    icon: Newspaper
+  },
+  {
+    name: "Eligibility Checker",
+    description: "Check your eligibility for subsidies, incentives and government schemes instantly.",
+    href: "/schemes/eligibility",
+    icon: BadgeCheck
+  }
+];
+
+const COMPANY_CATEGORIES = [
+  {
+    name: "About NexioraEV",
+    description: "Discover our vision, mission and commitment to accelerating electric mobility.",
+    href: "/company/about",
+    icon: Building
+  },
+  {
+    name: "Our Team",
+    description: "Meet the engineers, designers, researchers and innovators behind NexioraEV.",
+    href: "/company/team",
+    icon: Users
+  },
+  {
+    name: "Partners",
+    description: "Technology partners, manufacturers, charging providers and ecosystem collaborators.",
+    href: "/company/partners",
+    icon: Handshake
+  },
+  {
+    name: "Careers",
+    description: "Join our team and help shape the future of sustainable transportation.",
+    href: "/company/careers",
+    icon: Briefcase
+  },
+  {
+    name: "Press & Media",
+    description: "Company announcements, media coverage, brand assets and press releases.",
+    href: "/company/media",
+    icon: Mic
+  },
+  {
+    name: "Developers",
+    description: "Developer APIs, SDKs, documentation and integration resources.",
+    href: "/company/developers",
+    icon: Code
+  },
+  {
+    name: "Support Center",
+    description: "Customer support, FAQs, documentation and technical assistance.",
+    href: "/company/support",
+    icon: Headphones
+  },
+  {
+    name: "Contact Us",
+    description: "Reach our sales, support and partnership teams.",
+    href: "/company/contact",
+    icon: Mail
+  }
+];
+
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isEvtechMobileOpen, setIsEvtechMobileOpen] = useState(false);
+  const [isSolutionsMobileOpen, setIsSolutionsMobileOpen] = useState(false);
+  const [isIntelligenceMobileOpen, setIsIntelligenceMobileOpen] = useState(false);
+  const [isMarketplaceMobileOpen, setIsMarketplaceMobileOpen] = useState(false);
+  const [isSchemesMobileOpen, setIsSchemesMobileOpen] = useState(false);
+  const [isCompanyMobileOpen, setIsCompanyMobileOpen] = useState(false);
 
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [visibleMenus, setVisibleMenus] = useState<string[]>([]);
@@ -129,6 +393,26 @@ export function SiteHeader() {
       EVTECH_CATEGORIES.forEach((category) => {
         router.prefetch(category.href);
       });
+    } else if (menuName === "solutions") {
+      SOLUTIONS_CATEGORIES.forEach((category) => {
+        router.prefetch(category.href);
+      });
+    } else if (menuName === "intelligence") {
+      INTELLIGENCE_CATEGORIES.forEach((category) => {
+        router.prefetch(category.href);
+      });
+    } else if (menuName === "marketplace") {
+      MARKETPLACE_CATEGORIES.forEach((category) => {
+        router.prefetch(category.href);
+      });
+    } else if (menuName === "schemes") {
+      SCHEMES_CATEGORIES.forEach((category) => {
+        router.prefetch(category.href);
+      });
+    } else if (menuName === "company") {
+      COMPANY_CATEGORIES.forEach((category) => {
+        router.prefetch(category.href);
+      });
     }
   };
 
@@ -145,6 +429,11 @@ export function SiteHeader() {
     setActiveMenu(null);
     setIsMobileMenuOpen(false);
     setIsEvtechMobileOpen(false);
+    setIsSolutionsMobileOpen(false);
+    setIsIntelligenceMobileOpen(false);
+    setIsMarketplaceMobileOpen(false);
+    setIsSchemesMobileOpen(false);
+    setIsCompanyMobileOpen(false);
   };
 
   return (
@@ -244,6 +533,211 @@ export function SiteHeader() {
           color: #FFFFFF !important;
           transform: rotate(180deg);
         }
+        .solutions-nav-btn {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          transition: 
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .solutions-nav-btn:hover, .solutions-nav-btn-active {
+          background: linear-gradient(135deg, #00D26A 0%, #22C55E 100%) !important;
+          border-color: rgba(34, 197, 94, 0.45) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px rgba(34, 197, 94, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+          filter: brightness(1.1);
+        }
+        .solutions-nav-icon {
+          color: #AEB5C0;
+          opacity: 0.8;
+          transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .solutions-nav-btn:hover .solutions-nav-icon, 
+        .solutions-nav-btn-active .solutions-nav-icon {
+          color: #FFFFFF !important;
+          opacity: 1 !important;
+        }
+        .solutions-nav-arrow {
+          color: rgba(174, 181, 192, 0.6);
+          transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .solutions-nav-btn:hover .solutions-nav-arrow, 
+        .solutions-nav-btn-active .solutions-nav-arrow {
+          color: #FFFFFF !important;
+          transform: rotate(180deg);
+        }
+        .intelligence-nav-btn {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          transition: 
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .intelligence-nav-btn:hover, .intelligence-nav-btn-active {
+          background: linear-gradient(135deg, #FF8C00 0%, #FFA726 100%) !important;
+          border-color: rgba(255, 140, 0, 0.45) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px rgba(255, 140, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+          filter: brightness(1.1);
+        }
+        .intelligence-nav-icon {
+          color: #AEB5C0;
+          opacity: 0.8;
+          transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .intelligence-nav-btn:hover .intelligence-nav-icon, 
+        .intelligence-nav-btn-active .intelligence-nav-icon {
+          color: #FFFFFF !important;
+          opacity: 1 !important;
+        }
+        .intelligence-nav-arrow {
+          color: rgba(174, 181, 192, 0.6);
+          transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .intelligence-nav-btn:hover .intelligence-nav-arrow, 
+        .intelligence-nav-btn-active .intelligence-nav-arrow {
+          color: #FFFFFF !important;
+          transform: rotate(180deg);
+        }
+        .marketplace-nav-btn {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          transition: 
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .marketplace-nav-btn:hover, .marketplace-nav-btn-active {
+          background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%) !important;
+          border-color: rgba(59, 130, 246, 0.45) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px rgba(59, 130, 246, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+          filter: brightness(1.1);
+        }
+        .marketplace-nav-icon {
+          color: #AEB5C0;
+          opacity: 0.8;
+          transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .marketplace-nav-btn:hover .marketplace-nav-icon, 
+        .marketplace-nav-btn-active .marketplace-nav-icon {
+          color: #FFFFFF !important;
+          opacity: 1 !important;
+        }
+        .marketplace-nav-arrow {
+          color: rgba(174, 181, 192, 0.6);
+          transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .marketplace-nav-btn:hover .marketplace-nav-arrow, 
+        .marketplace-nav-btn-active .marketplace-nav-arrow {
+          color: #FFFFFF !important;
+          transform: rotate(180deg);
+        }
+        .schemes-nav-btn {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          transition: 
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .schemes-nav-btn:hover, .schemes-nav-btn-active {
+          background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%) !important;
+          border-color: rgba(99, 102, 241, 0.45) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px rgba(99, 102, 241, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+          filter: brightness(1.1);
+        }
+        .schemes-nav-icon {
+          color: #AEB5C0;
+          opacity: 0.8;
+          transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .schemes-nav-btn:hover .schemes-nav-icon, 
+        .schemes-nav-btn-active .schemes-nav-icon {
+          color: #FFFFFF !important;
+          opacity: 1 !important;
+        }
+        .schemes-nav-arrow {
+          color: rgba(174, 181, 192, 0.6);
+          transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .schemes-nav-btn:hover .schemes-nav-arrow, 
+        .schemes-nav-btn-active .schemes-nav-arrow {
+          color: #FFFFFF !important;
+          transform: rotate(180deg);
+        }
+        .company-nav-btn {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+          transition: 
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 200ms cubic-bezier(0.22, 1, 0.36, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .company-nav-btn:hover, .company-nav-btn-active {
+          background: linear-gradient(135deg, #EC4899 0%, #F472B6 100%) !important;
+          border-color: rgba(236, 72, 153, 0.45) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px rgba(236, 72, 153, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+          filter: brightness(1.1);
+        }
+        .company-nav-icon {
+          color: #AEB5C0;
+          opacity: 0.8;
+          transition: color 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .company-nav-btn:hover .company-nav-icon, 
+        .company-nav-btn-active .company-nav-icon {
+          color: #FFFFFF !important;
+          opacity: 1 !important;
+        }
+        .company-nav-arrow {
+          color: rgba(174, 181, 192, 0.6);
+          transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .company-nav-btn:hover .company-nav-arrow, 
+        .company-nav-btn-active .company-nav-arrow {
+          color: #FFFFFF !important;
+          transform: rotate(180deg);
+        }
         .search-glass {
           background: rgba(255,255,255,0.02);
           border: 1px solid rgba(255,255,255,0.06);
@@ -318,6 +812,186 @@ export function SiteHeader() {
           visibility: hidden;
           transform: translateX(-50%) translateY(6px) scale(0.98);
         }
+        .solutions-mega-menu-panel {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 50%;
+          width: calc(100% - 48px);
+          max-width: 1040px;
+          height: auto;
+          max-height: 340px;
+          background: radial-gradient(circle at 50% 0%, rgba(0, 210, 106, 0.15) 0%, transparent 60%), 
+                      linear-gradient(180deg, rgba(8, 16, 12, 0.92) 0%, rgba(6, 12, 9, 0.98) 100%),
+                      rgba(0, 210, 106, 0.03);
+          backdrop-filter: blur(30px) saturate(210%);
+          border: 1px solid rgba(34, 197, 94, 0.35);
+          border-radius: 20px;
+          box-shadow: 
+            0 20px 48px -10px rgba(34, 197, 94, 0.35),
+            inset 0 1px 1px rgba(255, 255, 255, 0.08);
+          z-index: 40;
+          transform-origin: top center;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+          transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      visibility 180ms;
+        }
+        .solutions-mega-menu-panel.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .solutions-mega-menu-panel.closed {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+        }
+        .intelligence-mega-menu-panel {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 50%;
+          width: calc(100% - 48px);
+          max-width: 1040px;
+          height: auto;
+          max-height: 340px;
+          background: radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.15) 0%, transparent 60%), 
+                      linear-gradient(180deg, rgba(23, 18, 11, 0.92) 0%, rgba(15, 12, 7, 0.98) 100%),
+                      rgba(255, 140, 0, 0.03);
+          backdrop-filter: blur(30px) saturate(210%);
+          border: 1px solid rgba(255, 140, 0, 0.35);
+          border-radius: 20px;
+          box-shadow: 
+            0 20px 48px -10px rgba(255, 140, 0, 0.25),
+            inset 0 1px 1px rgba(255, 255, 255, 0.08);
+          z-index: 40;
+          transform-origin: top center;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+          transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      visibility 180ms;
+        }
+        .intelligence-mega-menu-panel.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .intelligence-mega-menu-panel.closed {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+        }
+        .marketplace-mega-menu-panel {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 50%;
+          width: calc(100% - 48px);
+          max-width: 1040px;
+          height: auto;
+          max-height: 340px;
+          background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 60%), 
+                      linear-gradient(180deg, rgba(12, 18, 32, 0.92) 0%, rgba(8, 12, 22, 0.98) 100%),
+                      rgba(37, 99, 235, 0.03);
+          backdrop-filter: blur(30px) saturate(210%);
+          border: 1px solid rgba(59, 130, 246, 0.35);
+          border-radius: 20px;
+          box-shadow: 
+            0 20px 48px -10px rgba(59, 130, 246, 0.25),
+            inset 0 1px 1px rgba(255, 255, 255, 0.08);
+          z-index: 40;
+          transform-origin: top center;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+          transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      visibility 180ms;
+        }
+        .marketplace-mega-menu-panel.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .marketplace-mega-menu-panel.closed {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+        }
+        .schemes-mega-menu-panel {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 50%;
+          width: calc(100% - 48px);
+          max-width: 1040px;
+          height: auto;
+          max-height: 340px;
+          background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.15) 0%, transparent 60%), 
+                      linear-gradient(180deg, rgba(14, 12, 26, 0.92) 0%, rgba(9, 8, 17, 0.98) 100%),
+                      rgba(79, 70, 229, 0.03);
+          backdrop-filter: blur(30px) saturate(210%);
+          border: 1px solid rgba(99, 102, 241, 0.35);
+          border-radius: 20px;
+          box-shadow: 
+            0 20px 48px -10px rgba(99, 102, 241, 0.25),
+            inset 0 1px 1px rgba(255, 255, 255, 0.08);
+          z-index: 40;
+          transform-origin: top center;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+          transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      visibility 180ms;
+        }
+        .schemes-mega-menu-panel.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .schemes-mega-menu-panel.closed {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+        }
+        .company-mega-menu-panel {
+          position: absolute;
+          top: calc(100% + 6px);
+          left: 50%;
+          width: calc(100% - 48px);
+          max-width: 1040px;
+          height: auto;
+          max-height: 340px;
+          background: radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.15) 0%, transparent 60%), 
+                      linear-gradient(180deg, rgba(26, 10, 18, 0.92) 0%, rgba(17, 7, 12, 0.98) 100%),
+                      rgba(236, 72, 153, 0.03);
+          backdrop-filter: blur(30px) saturate(210%);
+          border: 1px solid rgba(236, 72, 153, 0.35);
+          border-radius: 20px;
+          box-shadow: 
+            0 20px 48px -10px rgba(236, 72, 153, 0.25),
+            inset 0 1px 1px rgba(255, 255, 255, 0.08);
+          z-index: 40;
+          transform-origin: top center;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+          transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      transform 180ms cubic-bezier(0.16, 1, 0.3, 1), 
+                      visibility 180ms;
+        }
+        .company-mega-menu-panel.open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(-50%) translateY(0) scale(1);
+        }
+        .company-mega-menu-panel.closed {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(-50%) translateY(6px) scale(0.98);
+        }
         .glass-dropdown-panel {
           position: absolute;
           top: calc(100% + 6px);
@@ -364,6 +1038,126 @@ export function SiteHeader() {
         .mega-menu-card:hover .mega-icon {
           transform: scale(1.08);
           color: #8B5CF6;
+        }
+        .solutions-mega-menu-card {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .solutions-mega-menu-card:hover {
+          background: rgba(0, 210, 106, 0.06);
+          border-color: rgba(34, 197, 94, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px -8px rgba(34, 197, 94, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .solutions-mega-menu-card:hover .solutions-mega-arrow {
+          transform: translateX(4px);
+          color: #00D26A;
+        }
+        .solutions-mega-menu-card:hover .solutions-mega-icon {
+          transform: scale(1.05);
+          color: #00D26A;
+        }
+        .intelligence-mega-menu-card {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .intelligence-mega-menu-card:hover {
+          background: rgba(255, 140, 0, 0.06);
+          border-color: rgba(255, 140, 0, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px -8px rgba(255, 140, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .intelligence-mega-menu-card:hover .intelligence-mega-arrow {
+          transform: translateX(4px);
+          color: #FF8C00;
+        }
+        .intelligence-mega-menu-card:hover .intelligence-mega-icon {
+          transform: scale(1.05);
+          color: #FF8C00;
+        }
+        .marketplace-mega-menu-card {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .marketplace-mega-menu-card:hover {
+          background: rgba(37, 99, 235, 0.06);
+          border-color: rgba(59, 130, 246, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px -8px rgba(59, 130, 246, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .marketplace-mega-menu-card:hover .marketplace-mega-arrow {
+          transform: translateX(4px);
+          color: #2563EB;
+        }
+        .marketplace-mega-menu-card:hover .marketplace-mega-icon {
+          transform: scale(1.05);
+          color: #2563EB;
+        }
+        .schemes-mega-menu-card {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .schemes-mega-menu-card:hover {
+          background: rgba(79, 70, 229, 0.06);
+          border-color: rgba(99, 102, 241, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px -8px rgba(99, 102, 241, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .schemes-mega-menu-card:hover .schemes-mega-arrow {
+          transform: translateX(4px);
+          color: #4F46E5;
+        }
+        .schemes-mega-menu-card:hover .schemes-mega-icon {
+          transform: scale(1.05);
+          color: #4F46E5;
+        }
+        .company-mega-menu-card {
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+          border-radius: 14px;
+          height: 102px;
+          transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .company-mega-menu-card:hover {
+          background: rgba(236, 72, 153, 0.06);
+          border-color: rgba(236, 72, 153, 0.35) !important;
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 
+            0 8px 24px -8px rgba(236, 72, 153, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+        .company-mega-menu-card:hover .company-mega-arrow {
+          transform: translateX(4px);
+          color: #EC4899;
+        }
+        .company-mega-menu-card:hover .company-mega-icon {
+          transform: scale(1.05);
+          color: #EC4899;
         }
 
         /* Animated Logo branding */
@@ -414,7 +1208,7 @@ export function SiteHeader() {
       {/* Subtle Backdrop */}
       <div 
         className={`fixed inset-0 bg-[#090b10]/20 backdrop-blur-[2px] transition-all duration-300 z-30 pointer-events-none ${
-          activeMenu === "evtech" ? "opacity-100" : "opacity-0"
+          activeMenu === "evtech" || activeMenu === "solutions" || activeMenu === "intelligence" || activeMenu === "marketplace" || activeMenu === "schemes" || activeMenu === "company" ? "opacity-100" : "opacity-0"
         }`}
         aria-hidden="true"
       />
@@ -473,6 +1267,131 @@ export function SiteHeader() {
                       <Icon className="evtech-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
                       <span className="text-white font-sans">{item.name}</span>
                       <ChevronDown className={`evtech-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.name === "Solutions") {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative flex items-center"
+                    onMouseEnter={() => handleMouseEnter("solutions")}
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeMenu === "solutions") {
+                          setActiveMenu(null);
+                        } else {
+                          setActiveMenu("solutions");
+                        }
+                      }}
+                      className={`${isActive || isMenuOpen ? 'solutions-nav-btn-active' : 'solutions-nav-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer`}
+                    >
+                      <Icon className="solutions-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
+                      <span className="text-white font-sans">{item.name}</span>
+                      <ChevronDown className={`solutions-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.name === "Intelligence") {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative flex items-center"
+                    onMouseEnter={() => handleMouseEnter("intelligence")}
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeMenu === "intelligence") {
+                          setActiveMenu(null);
+                        } else {
+                          setActiveMenu("intelligence");
+                        }
+                      }}
+                      className={`${isActive || isMenuOpen ? 'intelligence-nav-btn-active' : 'intelligence-nav-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer`}
+                    >
+                      <Icon className="intelligence-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
+                      <span className="text-white font-sans">{item.name}</span>
+                      <ChevronDown className={`intelligence-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.name === "Marketplace") {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative flex items-center"
+                    onMouseEnter={() => handleMouseEnter("marketplace")}
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeMenu === "marketplace") {
+                          setActiveMenu(null);
+                        } else {
+                          setActiveMenu("marketplace");
+                        }
+                      }}
+                      className={`${isActive || isMenuOpen ? 'marketplace-nav-btn-active' : 'marketplace-nav-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer`}
+                    >
+                      <Icon className="marketplace-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
+                      <span className="text-white font-sans">{item.name}</span>
+                      <ChevronDown className={`marketplace-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.name === "Schemes") {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative flex items-center"
+                    onMouseEnter={() => handleMouseEnter("schemes")}
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeMenu === "schemes") {
+                          setActiveMenu(null);
+                        } else {
+                          setActiveMenu("schemes");
+                        }
+                      }}
+                      className={`${isActive || isMenuOpen ? 'schemes-nav-btn-active' : 'schemes-nav-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer`}
+                    >
+                      <Icon className="schemes-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
+                      <span className="text-white font-sans">{item.name}</span>
+                      <ChevronDown className={`schemes-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                );
+              }
+
+              if (item.name === "Company") {
+                return (
+                  <div 
+                    key={item.name} 
+                    className="relative flex items-center"
+                    onMouseEnter={() => handleMouseEnter("company")}
+                  >
+                    <button
+                      onClick={() => {
+                        if (activeMenu === "company") {
+                          setActiveMenu(null);
+                        } else {
+                          setActiveMenu("company");
+                        }
+                      }}
+                      className={`${isActive || isMenuOpen ? 'company-nav-btn-active' : 'company-nav-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer`}
+                    >
+                      <Icon className="company-nav-icon w-3.5 h-3.5" strokeWidth={1.5} />
+                      <span className="text-white font-sans">{item.name}</span>
+                      <ChevronDown className={`company-nav-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} strokeWidth={1.5} />
                     </button>
                   </div>
                 );
@@ -608,6 +1527,223 @@ export function SiteHeader() {
           </div>
           )}
 
+          {/* Solutions Mega Menu Panel (Desktop only) */}
+          {visibleMenus.includes("solutions") && (
+            <div 
+              className={`solutions-mega-menu-panel w-full pointer-events-auto hidden lg:block overflow-hidden ${
+                activeMenu === "solutions" ? "open" : "closed"
+              }`}
+              onMouseEnter={() => handleMouseEnter("solutions")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="max-w-[1200px] mx-auto p-5">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                  {SOLUTIONS_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        onClick={handleLinkClick}
+                        prefetch={true}
+                        className="solutions-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                      >
+                        <div className="flex items-center gap-[12px] h-full">
+                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
+                            <CatIcon className="solutions-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                          </div>
+                          <div className="flex flex-col justify-center h-full gap-0.5">
+                            <span className="text-[18px] font-bold text-white group-hover/card:text-[#00D26A] transition-colors leading-tight pr-6">{category.name}</span>
+                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                              {category.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowRight className="solutions-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Intelligence Mega Menu Panel (Desktop only) */}
+          {visibleMenus.includes("intelligence") && (
+            <div 
+              className={`intelligence-mega-menu-panel w-full pointer-events-auto hidden lg:block overflow-hidden ${
+                activeMenu === "intelligence" ? "open" : "closed"
+              }`}
+              onMouseEnter={() => handleMouseEnter("intelligence")}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* AI/Neural visual grid overlay */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
+              <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                  {INTELLIGENCE_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        onClick={handleLinkClick}
+                        prefetch={true}
+                        className="intelligence-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                      >
+                        <div className="flex items-center gap-[12px] h-full">
+                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
+                            <CatIcon className="intelligence-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                          </div>
+                          <div className="flex flex-col justify-center h-full gap-0.5">
+                            <span className="text-[18px] font-bold text-white group-hover/card:text-[#FF8C00] transition-colors leading-tight pr-6">{category.name}</span>
+                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                              {category.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowRight className="intelligence-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Marketplace Mega Menu Panel (Desktop only) */}
+          {visibleMenus.includes("marketplace") && (
+            <div 
+              className={`marketplace-mega-menu-panel w-full pointer-events-auto hidden lg:block overflow-hidden ${
+                activeMenu === "marketplace" ? "open" : "closed"
+              }`}
+              onMouseEnter={() => handleMouseEnter("marketplace")}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Commerce visual grid texture and blueprints */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35" />
+              <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                  {MARKETPLACE_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        onClick={handleLinkClick}
+                        prefetch={true}
+                        className="marketplace-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                      >
+                        <div className="flex items-center gap-[12px] h-full">
+                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
+                            <CatIcon className="marketplace-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                          </div>
+                          <div className="flex flex-col justify-center h-full gap-0.5">
+                            <span className="text-[18px] font-bold text-white group-hover/card:text-[#2563EB] transition-colors leading-tight pr-6">{category.name}</span>
+                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                              {category.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowRight className="marketplace-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Schemes Mega Menu Panel (Desktop only) */}
+          {visibleMenus.includes("schemes") && (
+            <div 
+              className={`schemes-mega-menu-panel w-full pointer-events-auto hidden lg:block overflow-hidden ${
+                activeMenu === "schemes" ? "open" : "closed"
+              }`}
+              onMouseEnter={() => handleMouseEnter("schemes")}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Document/Government visual grid overlay */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-[size:28px_28px] opacity-35" />
+              <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#4F46E5]/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                  {SCHEMES_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        onClick={handleLinkClick}
+                        prefetch={true}
+                        className="schemes-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                      >
+                        <div className="flex items-center gap-[12px] h-full">
+                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
+                            <CatIcon className="schemes-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                          </div>
+                          <div className="flex flex-col justify-center h-full gap-0.5">
+                            <span className="text-[18px] font-bold text-white group-hover/card:text-[#4F46E5] transition-colors leading-tight pr-6">{category.name}</span>
+                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                              {category.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowRight className="schemes-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Company Mega Menu Panel (Desktop only) */}
+          {visibleMenus.includes("company") && (
+            <div 
+              className={`company-mega-menu-panel w-full pointer-events-auto hidden lg:block overflow-hidden ${
+                activeMenu === "company" ? "open" : "closed"
+              }`}
+              onMouseEnter={() => handleMouseEnter("company")}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Corporate visual pattern and grid overlay */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(236,72,153,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35" />
+              <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#EC4899]/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                  {COMPANY_CATEGORIES.map((category) => {
+                    const CatIcon = category.icon;
+                    return (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        onClick={handleLinkClick}
+                        prefetch={true}
+                        className="company-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                      >
+                        <div className="flex items-center gap-[12px] h-full">
+                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
+                            <CatIcon className="company-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                          </div>
+                          <div className="flex flex-col justify-center h-full gap-0.5">
+                            <span className="text-[18px] font-bold text-white group-hover/card:text-[#EC4899] transition-colors leading-tight pr-6">{category.name}</span>
+                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                              {category.description}
+                            </p>
+                          </div>
+                        </div>
+                        <ArrowRight className="company-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
         </header>
 
         {/* Mobile Menu Dropdown */}
@@ -644,6 +1780,71 @@ export function SiteHeader() {
                     </button>
                   );
                 }
+
+                if (item.name === "Solutions") {
+                  return (
+                    <button 
+                      key={item.name} 
+                      onClick={() => setIsSolutionsMobileOpen(!isSolutionsMobileOpen)}
+                      className={`${isSolutionsMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
+                    >
+                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <span className="text-[13px] font-semibold text-white">{item.name}</span>
+                    </button>
+                  );
+                }
+
+                if (item.name === "Intelligence") {
+                  return (
+                    <button 
+                      key={item.name} 
+                      onClick={() => setIsIntelligenceMobileOpen(!isIntelligenceMobileOpen)}
+                      className={`${isIntelligenceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
+                    >
+                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <span className="text-[13px] font-semibold text-white">{item.name}</span>
+                    </button>
+                  );
+                }
+
+                if (item.name === "Marketplace") {
+                  return (
+                    <button 
+                      key={item.name} 
+                      onClick={() => setIsMarketplaceMobileOpen(!isMarketplaceMobileOpen)}
+                      className={`${isMarketplaceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
+                    >
+                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <span className="text-[13px] font-semibold text-white">{item.name}</span>
+                    </button>
+                  );
+                }
+
+                if (item.name === "Schemes") {
+                  return (
+                    <button 
+                      key={item.name} 
+                      onClick={() => setIsSchemesMobileOpen(!isSchemesMobileOpen)}
+                      className={`${isSchemesMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
+                    >
+                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <span className="text-[13px] font-semibold text-white">{item.name}</span>
+                    </button>
+                  );
+                }
+
+                if (item.name === "Company") {
+                  return (
+                    <button 
+                      key={item.name} 
+                      onClick={() => setIsCompanyMobileOpen(!isCompanyMobileOpen)}
+                      className={`${isCompanyMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
+                    >
+                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <span className="text-[13px] font-semibold text-white">{item.name}</span>
+                    </button>
+                  );
+                }
                 
                 return (
                   <Link 
@@ -672,6 +1873,157 @@ export function SiteHeader() {
                       key={category.name}
                       href={category.href}
                       onClick={handleLinkClick}
+                      prefetch={true}
+                      className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
+                    >
+                      <div className="flex items-center gap-3">
+                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          <span className="text-[13px] font-bold text-white">{category.name}</span>
+                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Mobile Solutions Sub-menu */}
+            {isSolutionsMobileOpen && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                <div className="col-span-full flex items-center justify-between px-1 mb-1">
+                  <span className="text-[11px] font-semibold tracking-wider text-[#00D26A] uppercase">Solutions Categories</span>
+                </div>
+                {SOLUTIONS_CATEGORIES.map((category) => {
+                  const CatIcon = category.icon;
+                  return (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      onClick={handleLinkClick}
+                      prefetch={true}
+                      className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
+                    >
+                      <div className="flex items-center gap-3">
+                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          <span className="text-[13px] font-bold text-white">{category.name}</span>
+                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Mobile Intelligence Sub-menu */}
+            {isIntelligenceMobileOpen && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                <div className="col-span-full flex items-center justify-between px-1 mb-1">
+                  <span className="text-[11px] font-semibold tracking-wider text-[#FF8C00] uppercase">Intelligence Categories</span>
+                </div>
+                {INTELLIGENCE_CATEGORIES.map((category) => {
+                  const CatIcon = category.icon;
+                  return (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      onClick={handleLinkClick}
+                      prefetch={true}
+                      className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
+                    >
+                      <div className="flex items-center gap-3">
+                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          <span className="text-[13px] font-bold text-white">{category.name}</span>
+                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Mobile Marketplace Sub-menu */}
+            {isMarketplaceMobileOpen && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                <div className="col-span-full flex items-center justify-between px-1 mb-1">
+                  <span className="text-[11px] font-semibold tracking-wider text-[#2563EB] uppercase">Marketplace Categories</span>
+                </div>
+                {MARKETPLACE_CATEGORIES.map((category) => {
+                  const CatIcon = category.icon;
+                  return (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      onClick={handleLinkClick}
+                      prefetch={true}
+                      className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
+                    >
+                      <div className="flex items-center gap-3">
+                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          <span className="text-[13px] font-bold text-white">{category.name}</span>
+                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Mobile Schemes Sub-menu */}
+            {isSchemesMobileOpen && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                <div className="col-span-full flex items-center justify-between px-1 mb-1">
+                  <span className="text-[11px] font-semibold tracking-wider text-[#4F46E5] uppercase">Schemes Categories</span>
+                </div>
+                {SCHEMES_CATEGORIES.map((category) => {
+                  const CatIcon = category.icon;
+                  return (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      onClick={handleLinkClick}
+                      prefetch={true}
+                      className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
+                    >
+                      <div className="flex items-center gap-3">
+                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <div className="flex flex-col">
+                          <span className="text-[13px] font-bold text-white">{category.name}</span>
+                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Mobile Company Sub-menu */}
+            {isCompanyMobileOpen && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+                <div className="col-span-full flex items-center justify-between px-1 mb-1">
+                  <span className="text-[11px] font-semibold tracking-wider text-[#EC4899] uppercase">Company Categories</span>
+                </div>
+                {COMPANY_CATEGORIES.map((category) => {
+                  const CatIcon = category.icon;
+                  return (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      onClick={handleLinkClick}
+                      prefetch={true}
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
