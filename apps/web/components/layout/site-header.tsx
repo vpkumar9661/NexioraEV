@@ -2064,19 +2064,3 @@ export function SiteHeader() {
     </>
   );
 }
-
-export function SiteFooter() {
-  return (
-    <footer className="border-t border-border/60 bg-muted/30">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="font-semibold">{APP_NAME}</p>
-          <p className="text-sm text-muted-foreground">{APP_TAGLINE}</p>
-        </div>
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Nexiora EV. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  );
-}

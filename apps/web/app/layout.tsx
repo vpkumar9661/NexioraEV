@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { SiteFooter, SiteHeader } from "@/components/layout/site-header";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import { QueryProvider } from "@/providers/query-provider";
 import "./globals.css";
