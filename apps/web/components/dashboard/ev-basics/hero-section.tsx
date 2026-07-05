@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Zap, Battery } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative overflow-hidden rounded-[24px] border border-white/5 bg-white/[0.02] backdrop-blur-md p-8 sm:p-12 shadow-[0_16px_64px_rgba(0,0,0,0.3)]">
+    <section id="hero" className="relative overflow-hidden rounded-[24px] border border-white/5 bg-white/2 backdrop-blur-md p-8 sm:p-12 shadow-[0_16px_64px_rgba(0,0,0,0.3)]">
       {/* Ambient purple glow */}
       <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#8B5CF6]/8 rounded-full blur-[100px]" />
       <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#3B82F6]/6 rounded-full blur-[80px]" />
@@ -21,7 +21,7 @@ export function HeroSection() {
 
           <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-black tracking-tight text-white leading-[1.1]">
             Electric Vehicle{" "}
-            <span className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#8B5CF6] to-[#A78BFA] bg-clip-text text-transparent">
               Fundamentals
             </span>
           </h1>
@@ -60,7 +60,7 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-4 right-4 z-20 backdrop-blur-md bg-white/[0.03] border border-white/10 rounded-xl p-3 shadow-lg flex items-center gap-2.5"
+            className="absolute top-4 right-4 z-20 backdrop-blur-md bg-white/3 border border-white/10 rounded-xl p-3 shadow-lg flex items-center gap-2.5"
           >
             <div className="w-7 h-7 rounded-lg bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center">
               <Battery className="w-4 h-4 text-[#A78BFA]" />
@@ -74,7 +74,7 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="absolute bottom-6 left-4 z-20 backdrop-blur-md bg-white/[0.03] border border-white/10 rounded-xl p-3 shadow-lg flex items-center gap-2.5"
+            className="absolute bottom-6 left-4 z-20 backdrop-blur-md bg-white/3 border border-white/10 rounded-xl p-3 shadow-lg flex items-center gap-2.5"
           >
             <div className="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
               <Zap className="w-4 h-4 text-emerald-400" />
@@ -86,8 +86,8 @@ export function HeroSection() {
           </motion.div>
 
           {/* Core SVG EV Hologram */}
-          <div className="w-full h-full relative border border-white/[0.04] rounded-[20px] bg-white/[0.01] overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-[size:20px_20px]" />
+          <div className="w-full h-full relative border border-white/4 rounded-[20px] bg-white/1 overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-size-[20px_20px]" />
             
             <svg className="w-full h-full p-6" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* Electric grid background */}

@@ -77,8 +77,8 @@ export default function EVBasicsPage() {
     <div className="min-h-screen bg-[#07090e] text-white font-sans">
       {/* Ambient background glows */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#8B5CF6]/[0.02] rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#3B82F6]/[0.015] rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#8B5CF6]/2 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#3B82F6]/1.5 rounded-full blur-[120px]" />
       </div>
 
       {/* Breadcrumb */}

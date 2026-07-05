@@ -57,7 +57,7 @@ export function ChemistryComparison() {
               className={`px-4 py-2 rounded-xl text-[12px] font-bold border transition-all duration-300 ${
                 isActive
                   ? `text-white`
-                  : "bg-white/[0.02] border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -73,7 +73,7 @@ export function ChemistryComparison() {
 
       <div className="grid lg:grid-cols-12 gap-8 items-start">
         {/* Table representation */}
-        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/[0.02] overflow-hidden">
+        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/2 overflow-hidden">
           {PARAMETERS.map((param, index) => {
             const Icon = param.icon;
             return (
@@ -116,14 +116,14 @@ export function ChemistryComparison() {
         </div>
 
         {/* Dynamic Graphic Radar/Bar visual placeholder */}
-        <div className="lg:col-span-4 rounded-[20px] border border-white/5 bg-white/[0.02] p-5 space-y-4">
+        <div className="lg:col-span-4 rounded-[20px] border border-white/5 bg-white/2 p-5 space-y-4">
           <div className="border-b border-white/5 pb-3">
             <span className="text-xs font-bold text-white block">Density vs. Cost Benchmark</span>
             <span className="text-[10px] text-[#AEB5C0]/50 mt-1 block">Higher density & higher score is optimal</span>
           </div>
 
-          <div className="relative h-[220px] flex items-center justify-center border border-white/[0.04] bg-[#131722]/40 rounded-xl overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(#fff_1px,transparent_1px)] bg-[size:10px_10px]" />
+          <div className="relative h-[220px] flex items-center justify-center border border-white/4 bg-[#131722]/40 rounded-xl overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(#fff_1px,transparent_1px)] bg-size-[10px_10px]" />
             
             <svg className="w-full h-full p-4" viewBox="0 0 200 200" fill="none">
               {/* Polar background grids */}

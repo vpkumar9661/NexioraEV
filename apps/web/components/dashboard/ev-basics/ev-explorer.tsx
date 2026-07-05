@@ -23,8 +23,8 @@ export function EVExplorer() {
         <p className="text-sm text-[#AEB5C0]/60 mt-1">Hover or tap on components to learn about each part of an Electric Vehicle</p>
       </div>
 
-      <div className="relative rounded-[20px] border border-white/5 bg-white/[0.02] overflow-hidden min-h-[380px]">
-        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-[size:16px_16px]" />
+      <div className="relative rounded-[20px] border border-white/5 bg-white/2 overflow-hidden min-h-[380px]">
+        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-size-[16px_16px]" />
 
         <svg className="w-full h-full p-4" viewBox="0 0 450 280" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Car body outline */}

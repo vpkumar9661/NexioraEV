@@ -130,7 +130,7 @@ export function TechExplorer() {
           <div
             key={chem.id}
             onClick={() => setSelectedChem(chem)}
-            className="group relative rounded-[18px] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer overflow-hidden"
+            className="group relative rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-24 h-24 rounded-full blur-[50px] opacity-0 group-hover:opacity-[0.06] transition-opacity duration-500" style={{ backgroundColor: chem.color }} />
             
@@ -178,26 +178,26 @@ export function TechExplorer() {
 
             {/* Grid specs */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Density</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.energyDensity}</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Safety Profile</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.safetyScore}</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cycle Life</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.cycleLife}</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Typical Cost</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.cost}</span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-sm text-[#AEB5C0]/80 leading-relaxed bg-white/[0.01] p-4 rounded-xl border border-white/5">
+            <p className="text-sm text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
               {selectedChem.desc}
             </p>
 

@@ -64,7 +64,7 @@ export default function IntelligenceIndexPage() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/10 border border-[#FF8C00]/20 text-[#FF8C00] text-[11px] font-bold uppercase tracking-wider">
             NexioraEV Intelligence Center
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-white to-[#FF8C00]/80 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-linear-to-r from-white via-white to-[#FF8C00]/80 bg-clip-text text-transparent">
             The AI Brain of NexioraEV
           </h1>
           <p className="text-[#AEB5C0]/80 text-base sm:text-lg leading-relaxed">
@@ -80,13 +80,13 @@ export default function IntelligenceIndexPage() {
               <Link
                 key={category.name}
                 href={category.href}
-                className="group relative flex flex-col justify-between p-6 h-[220px] rounded-[18px] border border-white/5 bg-white/[0.01] hover:bg-[#FF8C00]/[0.02] hover:border-[#FF8C00]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(255,140,0,0.15)] overflow-hidden"
+                className="group relative flex flex-col justify-between p-6 h-[220px] rounded-[18px] border border-white/5 bg-white/1 hover:bg-[#FF8C00]/2 hover:border-[#FF8C00]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(255,140,0,0.15)] overflow-hidden"
               >
                 {/* Visual grid pattern */}
-                <div className="absolute inset-0 opacity-[0.01] bg-[linear-gradient(rgba(255,140,0,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.2)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+                <div className="absolute inset-0 opacity-[0.01] bg-[linear-gradient(rgba(255,140,0,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.2)_1px,transparent_1px)] bg-size-[16px_16px] pointer-events-none" />
                 
                 {/* Micro-interaction highlight glow */}
-                <div className="absolute -inset-px bg-gradient-to-br from-[#FF8C00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[18px] pointer-events-none" />
+                <div className="absolute -inset-px bg-linear-to-br from-[#FF8C00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[18px] pointer-events-none" />
                 
                 <div className="space-y-4 relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#FF8C00]/40 transition-colors">

@@ -72,7 +72,7 @@ export default function SolutionsIndexPage() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D26A]/10 border border-[#00D26A]/20 text-[#00D26A] text-[11px] font-bold uppercase tracking-wider">
             NexioraEV Solutions Hub
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-white to-[#00D26A]/80 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-linear-to-r from-white via-white to-[#00D26A]/80 bg-clip-text text-transparent">
             Complete EV Solutions
           </h1>
           <p className="text-[#AEB5C0]/80 text-base sm:text-lg leading-relaxed">
@@ -88,10 +88,10 @@ export default function SolutionsIndexPage() {
               <Link
                 key={solution.name}
                 href={solution.href}
-                className="group relative flex flex-col justify-between p-6 h-[220px] rounded-[18px] border border-white/5 bg-white/[0.01] hover:bg-[#00D26A]/[0.02] hover:border-[#00D26A]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(0,210,106,0.15)] overflow-hidden"
+                className="group relative flex flex-col justify-between p-6 h-[220px] rounded-[18px] border border-white/5 bg-white/1 hover:bg-[#00D26A]/2 hover:border-[#00D26A]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(0,210,106,0.15)] overflow-hidden"
               >
                 {/* Micro-interaction highlight glow */}
-                <div className="absolute -inset-px bg-gradient-to-br from-[#00D26A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[18px] pointer-events-none" />
+                <div className="absolute -inset-px bg-linear-to-br from-[#00D26A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[18px] pointer-events-none" />
                 
                 <div className="space-y-4 relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#00D26A]/40 transition-colors">

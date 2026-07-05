@@ -61,9 +61,9 @@ export default function BatteryLabPage() {
     <div className="min-h-screen bg-[#07090e] text-white font-sans overflow-hidden">
       {/* Ambient background glow design */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[10%] left-1/4 w-[600px] h-[600px] bg-[#10B981]/[0.015] rounded-full blur-[150px]" />
-        <div className="absolute top-[40%] right-1/4 w-[500px] h-[500px] bg-[#3B82F6]/[0.015] rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] left-1/3 w-[600px] h-[600px] bg-[#8B5CF6]/[0.015] rounded-full blur-[150px]" />
+        <div className="absolute top-[10%] left-1/4 w-[600px] h-[600px] bg-[#10B981]/1.5 rounded-full blur-[150px]" />
+        <div className="absolute top-[40%] right-1/4 w-[500px] h-[500px] bg-[#3B82F6]/1.5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] left-1/3 w-[600px] h-[600px] bg-[#8B5CF6]/1.5 rounded-full blur-[150px]" />
       </div>
 
       {/* Breadcrumb navigation */}

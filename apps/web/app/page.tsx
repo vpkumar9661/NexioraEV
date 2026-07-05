@@ -1655,7 +1655,7 @@ export default function HomePage() {
 
         {/* Layered Background System */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:36px_36px] opacity-45 pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[36px_36px] opacity-45 pointer-events-none" />
         
         {/* Animated Mesh Glows */}
         <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-[#00D26A]/5 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s" }} />
@@ -1694,7 +1694,7 @@ export default function HomePage() {
               </div>
               
               <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight text-white leading-tight">
-                Join India&apos;s Next Generation <span className="bg-gradient-to-r from-[#00D26A] via-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">EV Ecosystem</span>
+                Join India&apos;s Next Generation <span className="bg-linear-to-r from-[#00D26A] via-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">EV Ecosystem</span>
               </h2>
               
               <p className="text-base sm:text-lg text-[#C5CBD7] leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -1731,7 +1731,7 @@ export default function HomePage() {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-8 left-4 z-20 backdrop-blur-md bg-white/[0.02] border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
+                className="absolute top-8 left-4 z-20 backdrop-blur-md bg-white/2 border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
               >
                 <div className="w-8 h-8 rounded-lg bg-[#00D26A]/10 border border-[#00D26A]/20 flex items-center justify-center">
                   <Zap className="w-4.5 h-4.5 text-[#00D26A]" />
@@ -1746,7 +1746,7 @@ export default function HomePage() {
               <motion.div 
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-12 right-6 z-20 backdrop-blur-md bg-white/[0.02] border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
+                className="absolute bottom-12 right-6 z-20 backdrop-blur-md bg-white/2 border border-white/10 rounded-xl p-3.5 shadow-lg flex items-center gap-3 cursor-default"
               >
                 <div className="w-8 h-8 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center">
                   <Bot className="w-4.5 h-4.5 text-[#3B82F6]" />
@@ -1758,10 +1758,10 @@ export default function HomePage() {
               </motion.div>
 
               {/* Core SVG Composition */}
-              <div className="w-full h-full relative border border-white/[0.05] rounded-[24px] bg-white/[0.01] backdrop-blur-xs overflow-hidden shadow-2xl">
+              <div className="w-full h-full relative border border-white/5 rounded-[24px] bg-white/1 backdrop-blur-xs overflow-hidden shadow-2xl">
                 
                 {/* Circuit Grid Pattern Backdrop inside illustration */}
-                <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1.2px,transparent_1.2px)] bg-[size:16px_16px] pointer-events-none" />
+                <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1.2px,transparent_1.2px)] bg-size-[16px_16px] pointer-events-none" />
 
                 <svg className="w-full h-full p-4" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                   {/* Smart City Skyline Silhouette */}

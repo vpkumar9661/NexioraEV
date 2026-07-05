@@ -42,8 +42,8 @@ export function ChargingBehaviour() {
               onClick={() => setSelectedPhase(p)}
               className={`py-3.5 rounded-xl border text-center transition-all duration-300 font-black text-sm flex flex-col items-center justify-center gap-1.5 ${
                 isActive
-                  ? "bg-white/[0.04]"
-                  : "bg-white/[0.01] hover:bg-white/[0.02]"
+                  ? "bg-white/4"
+                  : "bg-white/1 hover:bg-white/2"
               }`}
               style={{ borderColor: isActive ? p.color : "rgba(255,255,255,0.05)" }}
             >
@@ -56,7 +56,7 @@ export function ChargingBehaviour() {
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
         {/* Detail specs */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/5 pb-3">
               <div>
@@ -80,11 +80,11 @@ export function ChargingBehaviour() {
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="p-3.5 rounded-xl bg-white/[0.01] border border-white/5">
+              <div className="p-3.5 rounded-xl bg-white/1 border border-white/5">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Remaining Time</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedPhase.timeEstimate}</span>
               </div>
-              <div className="p-3.5 rounded-xl bg-white/[0.01] border border-white/5 flex items-center justify-between">
+              <div className="p-3.5 rounded-xl bg-white/1 border border-white/5 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cell Temperature</span>
                   <span className="text-sm font-extrabold text-white mt-1 block">{selectedPhase.temp}</span>
@@ -95,7 +95,7 @@ export function ChargingBehaviour() {
           </div>
 
           {/* Stress alert indicator */}
-          <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/[0.01]">
+          <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/1">
             <AlertTriangle className={`w-5 h-5 ${selectedPhase.stress === "High" ? "text-rose-400" : selectedPhase.stress === "Medium" ? "text-amber-400" : "text-emerald-400"}`} />
             <div>
               <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Stress Level</span>
@@ -105,10 +105,10 @@ export function ChargingBehaviour() {
         </div>
 
         {/* Interactive graphical visualization */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6 relative">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6 relative">
           <span className="text-xs font-bold text-white uppercase tracking-wider block">DC Fast Charging Curve Simulation</span>
 
-          <div className="relative h-[200px] border border-white/[0.03] bg-[#131722]/50 rounded-xl overflow-hidden p-4">
+          <div className="relative h-[200px] border border-white/3 bg-[#131722]/50 rounded-xl overflow-hidden p-4">
             <svg className="w-full h-full" viewBox="0 0 300 120" fill="none">
               {/* Grid Background lines */}
               <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />

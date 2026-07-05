@@ -66,8 +66,8 @@ export function BatteryCalculators() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`p-3.5 rounded-xl border text-left transition-all duration-200 flex items-center gap-3 font-semibold text-xs ${
                   isActive
-                    ? "bg-white/[0.04] border-[#10B981]/40 text-[#6EE7B7]"
-                    : "bg-white/[0.01] border-white/5 text-[#AEB5C0]/60 hover:text-white"
+                    ? "bg-white/4 border-[#10B981]/40 text-[#6EE7B7]"
+                    : "bg-white/1 border-white/5 text-[#AEB5C0]/60 hover:text-white"
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -78,7 +78,7 @@ export function BatteryCalculators() {
         </div>
 
         {/* Right Side: Active Calculator Input/Output Grid */}
-        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 min-h-[300px] flex flex-col justify-between gap-6">
+        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-[300px] flex flex-col justify-between gap-6">
           
           {/* Capacity Calculator */}
           {activeTab === "capacity" && (
@@ -110,7 +110,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Calculated Total Energy</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   {((voltage * ampHours) / 1000).toFixed(1)} kWh
@@ -150,7 +150,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Run Duration</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   {(capWh / loadKw).toFixed(2)} Hours
@@ -190,7 +190,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Charge Duration (10% to 80%)</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   {/* includes typical tapering coefficient (1.15) for estimation */}
@@ -233,7 +233,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Driving Range</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   {Math.round((rangeCap * 1000) / efficiency)} km
@@ -283,7 +283,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated State of Health (SOH)</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   {(() => {
@@ -329,7 +329,7 @@ export function BatteryCalculators() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/[0.03] text-center">
+              <div className="p-5 rounded-xl bg-[#131722]/50 border border-white/3 text-center">
                 <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Total Cost</span>
                 <span className="text-3xl font-black text-white mt-1.5 block">
                   ${(costCap * costPerKwh).toLocaleString()}

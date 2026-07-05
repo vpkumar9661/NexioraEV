@@ -32,7 +32,7 @@ export function InnovationTimeline() {
         <p className="text-sm text-[#AEB5C0]/60 mt-1">Trace the evolution of energy storage technologies from early lead cells to solid-state systems</p>
       </div>
 
-      <div className="rounded-[20px] border border-white/5 bg-white/[0.02] p-6 space-y-8">
+      <div className="rounded-[20px] border border-white/5 bg-white/2 p-6 space-y-8">
         
         {/* Timeline slider steps */}
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 pt-2">
@@ -68,7 +68,7 @@ export function InnovationTimeline() {
 
         {/* Detailed Event panel */}
         {current && (
-          <div className="grid md:grid-cols-12 gap-6 bg-[#131722]/50 border border-white/[0.03] p-5 sm:p-6 rounded-xl relative overflow-hidden">
+          <div className="grid md:grid-cols-12 gap-6 bg-[#131722]/50 border border-white/3 p-5 sm:p-6 rounded-xl relative overflow-hidden">
             {/* Year backdrop */}
             <div className="absolute -bottom-10 -right-6 text-[80px] font-black text-white/[0.01] pointer-events-none select-none">
               {current.year}

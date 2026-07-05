@@ -5,7 +5,7 @@ import { ArrowRight, Zap } from "lucide-react";
 
 export function ContinueCTA() {
   return (
-    <section className="relative overflow-hidden rounded-[24px] border border-[#10B981]/15 bg-gradient-to-br from-[#10B981]/[0.06] via-transparent to-[#3B82F6]/[0.04] p-8 sm:p-12">
+    <section className="relative overflow-hidden rounded-[24px] border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/6 via-transparent to-[#3B82F6]/4 p-8 sm:p-12">
       <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#10B981]/8 rounded-full blur-[100px]" />
       <div className="absolute -bottom-24 -left-24 w-60 h-60 bg-[#3B82F6]/5 rounded-full blur-[80px]" />
 
@@ -42,7 +42,7 @@ export function ContinueCTA() {
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
           Continue to{" "}
-          <span className="bg-gradient-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
             Charging Hub
           </span>
         </h2>

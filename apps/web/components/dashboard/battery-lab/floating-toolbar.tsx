@@ -23,7 +23,7 @@ export function FloatingToolbar() {
 
   return (
     <div className="hidden lg:flex fixed right-[max(1rem,calc((100vw-1280px)/2-80px))] top-1/2 -translate-y-1/2 z-30 flex-col items-center gap-2">
-      <div className="p-2 rounded-[16px] border border-white/5 bg-white/[0.02] backdrop-blur-md space-y-1.5">
+      <div className="p-2 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-1.5">
         {TOOLS.map((tool) => {
           const Icon = tool.icon;
           return (

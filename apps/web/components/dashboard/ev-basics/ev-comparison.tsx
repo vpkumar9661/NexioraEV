@@ -51,7 +51,7 @@ export function EVComparison() {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-bold transition-all duration-300 border ${
                 isActive
                   ? `bg-opacity-15 border-opacity-30 text-white`
-                  : "bg-white/[0.02] border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -67,7 +67,7 @@ export function EVComparison() {
       </div>
 
       {/* Comparison bars */}
-      <div className="rounded-[20px] border border-white/5 bg-white/[0.02] overflow-hidden">
+      <div className="rounded-[20px] border border-white/5 bg-white/2 overflow-hidden">
         {METRICS.map((metric, idx) => (
           <div key={metric.label} className={`p-5 ${idx < METRICS.length - 1 ? "border-b border-white/5" : ""}`}>
             <span className="text-[12px] font-bold text-[#AEB5C0]/50 uppercase tracking-wider block mb-3">{metric.label}</span>

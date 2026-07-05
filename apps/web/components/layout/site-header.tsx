@@ -1578,7 +1578,7 @@ export function SiteHeader() {
               onMouseLeave={handleMouseLeave}
             >
               {/* AI/Neural visual grid overlay */}
-              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
@@ -1622,7 +1622,7 @@ export function SiteHeader() {
               onMouseLeave={handleMouseLeave}
             >
               {/* Commerce visual grid texture and blueprints */}
-              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35" />
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
@@ -1666,7 +1666,7 @@ export function SiteHeader() {
               onMouseLeave={handleMouseLeave}
             >
               {/* Document/Government visual grid overlay */}
-              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-[size:28px_28px] opacity-35" />
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-size-[28px_28px] opacity-35" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#4F46E5]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
@@ -1710,7 +1710,7 @@ export function SiteHeader() {
               onMouseLeave={handleMouseLeave}
             >
               {/* Corporate visual pattern and grid overlay */}
-              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(236,72,153,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35" />
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(236,72,153,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#EC4899]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">

@@ -36,8 +36,8 @@ export function PackExplorer() {
         <p className="text-sm text-[#AEB5C0]/60 mt-1">Explore structural components inside a high-voltage battery housing</p>
       </div>
 
-      <div className="relative rounded-[20px] border border-white/5 bg-white/[0.02] overflow-hidden min-h-[380px] flex flex-col justify-between">
-        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#10B981_1px,transparent_1px)] bg-[size:16px_16px]" />
+      <div className="relative rounded-[20px] border border-white/5 bg-white/2 overflow-hidden min-h-[380px] flex flex-col justify-between">
+        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#10B981_1px,transparent_1px)] bg-size-[16px_16px]" />
 
         {/* SVG Drawing */}
         <div className="flex-1 flex justify-center items-center">

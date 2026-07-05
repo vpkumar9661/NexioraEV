@@ -178,7 +178,7 @@ export function BatteryQuiz() {
         </div>
       </div>
 
-      <div className="rounded-[20px] border border-white/5 bg-white/[0.02] p-6 min-h-[300px] flex flex-col justify-between gap-6">
+      <div className="rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-[300px] flex flex-col justify-between gap-6">
         
         {/* Scoreboard screen */}
         {showResult ? (
@@ -226,7 +226,7 @@ export function BatteryQuiz() {
               {activeQuestion.options.map((opt, idx) => {
                 const isSelected = selectedAns === idx;
                 const isCorrect = idx === activeQuestion.correct;
-                let bgStyle = "bg-white/[0.01] border-white/5 hover:border-white/10 hover:bg-white/[0.02]";
+                let bgStyle = "bg-white/1 border-white/5 hover:border-white/10 hover:bg-white/2";
                 
                 if (isSubmitted) {
                   if (isCorrect) bgStyle = "bg-emerald-500/10 border-emerald-500/30 text-[#6EE7B7]";
@@ -252,7 +252,7 @@ export function BatteryQuiz() {
 
             {/* Feedback Explanation */}
             {isSubmitted && (
-              <div className="p-4 rounded-xl bg-white/[0.01] border border-white/5 text-[11.5px] text-[#AEB5C0]/85 leading-relaxed animate-in fade-in duration-200">
+              <div className="p-4 rounded-xl bg-white/1 border border-white/5 text-[11.5px] text-[#AEB5C0]/85 leading-relaxed animate-in fade-in duration-200">
                 <span className="font-bold text-white block mb-1">Explanation:</span>
                 {activeQuestion.explanation}
               </div>

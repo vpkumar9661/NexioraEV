@@ -27,7 +27,7 @@ export function SiteFooter() {
       {/* Background Graphic Design */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[40px_40px] opacity-40" />
         
         {/* Layered glowing dots */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#00D26A]/3 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "12s" }} />
@@ -48,13 +48,13 @@ export function SiteFooter() {
             <div className="flex items-center gap-2">
               <div className="relative">
                 {/* Soft pulse green blur behind logo */}
-                <div className="absolute inset-0 bg-[#00D26A]/20 rounded-full blur-[12px] scale-150 animate-pulse" />
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D26A] to-[#22C55E] flex items-center justify-center border border-white/10">
+                <div className="absolute inset-0 bg-[#00D26A]/20 rounded-full blur-md scale-150 animate-pulse" />
+                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#00D26A] to-[#22C55E] flex items-center justify-center border border-white/10">
                   <Zap className="w-5 h-5 text-[#07090e]" strokeWidth={2.5} />
                 </div>
               </div>
               <span className="text-2xl font-black tracking-tight text-white">
-                Nexiora<span className="bg-gradient-to-r from-[#00D26A] to-[#22C55E] bg-clip-text text-transparent">EV</span>
+                Nexiora<span className="bg-linear-to-r from-[#00D26A] to-[#22C55E] bg-clip-text text-transparent">EV</span>
               </span>
             </div>
             
@@ -188,7 +188,7 @@ export function SiteFooter() {
         </section>
 
         {/* Contact details and Glass Newsletter Card */}
-        <section className="grid grid-cols-1 lg:grid-cols-5 gap-12 border-t border-white/[0.05] pt-12">
+        <section className="grid grid-cols-1 lg:grid-cols-5 gap-12 border-t border-white/5 pt-12">
           
           {/* Corporate Contact Info */}
           <div className="lg:col-span-2 space-y-4">
@@ -222,7 +222,7 @@ export function SiteFooter() {
           <div className="hidden lg:block lg:col-span-1" />
 
           {/* Newsletter Box (Liquid Glass card with animated border) */}
-          <div className="lg:col-span-2 p-6 rounded-[20px] border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl relative overflow-hidden flex flex-col justify-between min-h-[180px] shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          <div className="lg:col-span-2 p-6 rounded-[20px] border border-white/8 bg-white/2 backdrop-blur-xl relative overflow-hidden flex flex-col justify-between min-h-[180px] shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <div className="absolute -bottom-12 -right-12 w-28 h-28 bg-[#00D26A]/5 rounded-full blur-[30px]" />
             
             <div className="space-y-2">
@@ -264,7 +264,7 @@ export function SiteFooter() {
         </section>
 
         {/* Trust Badges Section */}
-        <section className="flex flex-wrap items-center justify-center gap-4 border-t border-white/[0.05] pt-10">
+        <section className="flex flex-wrap items-center justify-center gap-4 border-t border-white/5 pt-10">
           {[
             { label: "AI Powered", icon: Sparkles },
             { label: "Future Ready", icon: ShieldCheck },
@@ -277,7 +277,7 @@ export function SiteFooter() {
             return (
               <div 
                 key={badge.label}
-                className="px-3.5 py-2 rounded-xl border border-white/[0.06] bg-white/[0.01] text-[11.5px] font-bold text-[#AEB5C0]/85 flex items-center gap-2 hover:bg-white/[0.03] hover:border-white/10 hover:text-white transition-all cursor-default"
+                className="px-3.5 py-2 rounded-xl border border-white/6 bg-white/1 text-[11.5px] font-bold text-[#AEB5C0]/85 flex items-center gap-2 hover:bg-white/3 hover:border-white/10 hover:text-white transition-all cursor-default"
               >
                 <BadgeIcon className="w-4 h-4 text-[#00D26A]" />
                 {badge.label}
@@ -287,7 +287,7 @@ export function SiteFooter() {
         </section>
 
         {/* Bottom Bar Footer Details */}
-        <section className="border-t border-white/[0.05] pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] font-semibold text-[#AEB5C0]/65">
+        <section className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] font-semibold text-[#AEB5C0]/65">
           <div>
             © 2026 NexioraEV
           </div>

@@ -32,11 +32,11 @@ export function AIAssistant() {
         <p className="text-sm text-[#AEB5C0]/60 mt-1">Get instant diagnostic or technical answers about high-voltage battery systems</p>
       </div>
 
-      <div className="rounded-[24px] border border-[#10B981]/15 bg-gradient-to-br from-[#10B981]/[0.03] via-transparent to-[#8B5CF6]/[0.02] p-6 relative overflow-hidden grid lg:grid-cols-12 gap-6">
+      <div className="rounded-[24px] border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/3 via-transparent to-[#8B5CF6]/2 p-6 relative overflow-hidden grid lg:grid-cols-12 gap-6">
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#10B981]/5 rounded-full blur-[80px]" />
         
         {/* Chat History Panel */}
-        <div className="lg:col-span-7 flex flex-col justify-between h-[320px] bg-[#131722]/50 border border-white/[0.03] rounded-xl p-4">
+        <div className="lg:col-span-7 flex flex-col justify-between h-[320px] bg-[#131722]/50 border border-white/3 rounded-xl p-4">
           <div className="flex-1 overflow-y-auto space-y-3 pr-2 scrollbar-thin scrollbar-thumb-white/5">
             {messages.map((msg, i) => (
               <div
@@ -72,7 +72,7 @@ export function AIAssistant() {
                 }
               }}
               placeholder="Ask the Battery Assistant..."
-              className="flex-1 px-4 py-2.5 rounded-lg bg-white/[0.03] border border-white/10 text-xs text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40"
+              className="flex-1 px-4 py-2.5 rounded-lg bg-white/3 border border-white/10 text-xs text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40"
             />
             <button
               onClick={() => {
@@ -97,7 +97,7 @@ export function AIAssistant() {
                 <button
                   key={q}
                   onClick={() => handleQuery(q)}
-                  className="w-full flex items-center gap-2 p-2.5 rounded-lg bg-white/[0.02] border border-white/5 hover:border-[#10B981]/25 hover:bg-[#10B981]/[0.03] transition-all text-left group"
+                  className="w-full flex items-center gap-2 p-2.5 rounded-lg bg-white/2 border border-white/5 hover:border-[#10B981]/25 hover:bg-[#10B981]/3 transition-all text-left group"
                 >
                   <Sparkles className="w-3 h-3 text-[#6EE7B7]/40 group-hover:text-[#6EE7B7] shrink-0" />
                   <span className="text-[11px] text-[#AEB5C0]/75 group-hover:text-white transition-colors">{q}</span>

@@ -28,7 +28,7 @@ export function LearningModules() {
           return (
             <div
               key={mod.id}
-              className="group relative rounded-[18px] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer overflow-hidden"
+              className="group relative rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] cursor-pointer overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-[0.06] transition-opacity duration-500" style={{ backgroundColor: mod.color }} />
 

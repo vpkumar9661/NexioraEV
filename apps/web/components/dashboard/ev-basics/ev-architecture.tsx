@@ -8,8 +8,8 @@ export function EVArchitecture() {
         <p className="text-sm text-[#AEB5C0]/60 mt-1">How energy flows through an Electric Vehicle — from battery to wheel</p>
       </div>
 
-      <div className="rounded-[20px] border border-white/5 bg-white/[0.02] overflow-hidden p-6 sm:p-8 relative">
-        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="rounded-[20px] border border-white/5 bg-white/2 overflow-hidden p-6 sm:p-8 relative">
+        <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-size-[24px_24px]" />
 
         <svg className="w-full" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* --- Node 1: Battery --- */}

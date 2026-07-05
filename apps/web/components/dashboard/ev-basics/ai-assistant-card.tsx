@@ -12,7 +12,7 @@ const EXAMPLE_QUESTIONS = [
 
 export function AIAssistantCard() {
   return (
-    <div className="rounded-[20px] border border-[#8B5CF6]/15 bg-gradient-to-br from-[#8B5CF6]/[0.04] to-transparent p-6 relative overflow-hidden">
+    <div className="rounded-[20px] border border-[#8B5CF6]/15 bg-linear-to-br from-[#8B5CF6]/4 to-transparent p-6 relative overflow-hidden">
       <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#8B5CF6]/5 rounded-full blur-[60px]" />
 
       <div className="relative z-10 space-y-4">
@@ -36,7 +36,7 @@ export function AIAssistantCard() {
           {EXAMPLE_QUESTIONS.map((q, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2 p-2.5 rounded-lg bg-white/[0.03] border border-white/5 hover:border-[#8B5CF6]/20 hover:bg-[#8B5CF6]/[0.04] transition-all duration-200 cursor-pointer group"
+              className="flex items-center gap-2 p-2.5 rounded-lg bg-white/3 border border-white/5 hover:border-[#8B5CF6]/20 hover:bg-[#8B5CF6]/4 transition-all duration-200 cursor-pointer group"
             >
               <Sparkles className="w-3 h-3 text-[#A78BFA]/50 shrink-0" />
               <span className="text-[11.5px] text-[#AEB5C0]/70 group-hover:text-white transition-colors">{q}</span>

@@ -45,7 +45,7 @@ export function ThermalManagement() {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-bold border transition-all duration-300 ${
                 isActive
                   ? "text-white"
-                  : "bg-white/[0.02] border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -62,28 +62,28 @@ export function ThermalManagement() {
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
         {/* Specs detail card */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <div className="space-y-4">
             <h4 className="text-base font-extrabold text-white">{selectedSystem.label} Parameters</h4>
             <p className="text-sm text-[#AEB5C0]/80 leading-relaxed">{selectedSystem.desc}</p>
             
             <div className="grid grid-cols-3 gap-3 pt-2">
-              <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/1 border border-white/5">
                 <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Heat Capture</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.efficiency}</span>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/1 border border-white/5">
                 <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">System Complexity</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.complexity}</span>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/1 border border-white/5">
                 <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Relative Cost</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.cost}</span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/[0.01]">
+          <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/1">
             <Thermometer className="w-5 h-5 text-[#3B82F6]" />
             <div>
               <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Gradient Delta</span>
@@ -95,10 +95,10 @@ export function ThermalManagement() {
         </div>
 
         {/* Heat Map SVG */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <span className="text-xs font-bold text-white uppercase tracking-wider block">Cell Module Heat Map Simulation</span>
 
-          <div className="relative h-[180px] bg-[#131722]/50 border border-white/[0.03] rounded-xl flex items-center justify-center p-4">
+          <div className="relative h-[180px] bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
             <svg className="w-full h-full" viewBox="0 0 300 120">
               {/* Cooling channel flow indicator */}
               {selectedSystem.id === "liquid" && (

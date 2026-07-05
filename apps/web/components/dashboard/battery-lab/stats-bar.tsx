@@ -67,7 +67,7 @@ export function StatsBar() {
         return (
           <div
             key={stat.label}
-            className="group p-5 rounded-[16px] border border-white/5 bg-white/[0.02] hover:bg-[#10B981]/[0.04] hover:border-[#10B981]/20 transition-all duration-300 cursor-default shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]"
+            className="group p-5 rounded-[16px] border border-white/5 bg-white/2 hover:bg-[#10B981]/4 hover:border-[#10B981]/20 transition-all duration-300 cursor-default shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]"
           >
             <div className="w-8 h-8 rounded-lg bg-[#10B981]/10 border border-[#10B981]/15 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
               <Icon className="w-4 h-4 text-[#6EE7B7]" />

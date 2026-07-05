@@ -47,7 +47,7 @@ export function HealthCenter() {
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
         {/* Controls inputs */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 space-y-6">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 space-y-6">
           <div className="flex items-center gap-2 border-b border-white/5 pb-3">
             <Sliders className="w-4 h-4 text-[#10B981]" />
             <span className="text-xs font-bold text-white uppercase tracking-wider">Operational Stress Controls</span>
@@ -118,7 +118,7 @@ export function HealthCenter() {
         </div>
 
         {/* Diagnostic Outputs */}
-        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <div className="flex items-center justify-between border-b border-white/5 pb-3">
             <div className="flex items-center gap-2">
               <HeartPulse className="w-4 h-4 text-[#10B981]" />
@@ -138,13 +138,13 @@ export function HealthCenter() {
 
           <div className="grid grid-cols-2 gap-4 items-center">
             {/* Score Ring */}
-            <div className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/[0.01] border border-white/5 h-[140px] relative">
+            <div className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/1 border border-white/5 h-[140px] relative">
               <span className="text-3xl font-extrabold text-white">{analytics.healthScore}%</span>
               <span className="text-[10px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider mt-1.5">Calculated SOH</span>
             </div>
 
             <div className="space-y-3">
-              <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5 flex items-center gap-2.5">
+              <div className="p-3 rounded-xl bg-white/1 border border-white/5 flex items-center gap-2.5">
                 <Calendar className="w-4 h-4 text-[#3B82F6]" />
                 <div>
                   <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Est. Lifespan</span>
@@ -152,7 +152,7 @@ export function HealthCenter() {
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5 flex items-center gap-2.5">
+              <div className="p-3 rounded-xl bg-white/1 border border-white/5 flex items-center gap-2.5">
                 <Battery className="w-4 h-4 text-[#10B981]" />
                 <div>
                   <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Total Degradation</span>
@@ -162,7 +162,7 @@ export function HealthCenter() {
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.01] border border-white/5 text-[11px] text-[#AEB5C0]/65 leading-normal">
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/1 border border-white/5 text-[11px] text-[#AEB5C0]/65 leading-normal">
             <ShieldAlert className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
             <span>Avoid keeping cells stored above 80% charge level in ambient temperatures exceeding 35°C to limit calendar aging.</span>
           </div>

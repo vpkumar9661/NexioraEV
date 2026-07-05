@@ -25,7 +25,7 @@ export function RelatedModules() {
             <Link
               key={item.title}
               href={item.href}
-              className="group rounded-[18px] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 p-5 transition-all duration-300 block"
+              className="group rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 p-5 transition-all duration-300 block"
             >
               <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 border group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: `${item.color}12`, borderColor: `${item.color}25` }}>
                 <Icon className="w-5 h-5" style={{ color: item.color }} />

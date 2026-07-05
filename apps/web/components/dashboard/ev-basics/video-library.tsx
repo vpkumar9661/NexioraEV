@@ -28,11 +28,11 @@ export function VideoLibrary() {
         {VIDEOS.map((video, idx) => (
           <div
             key={idx}
-            className="group rounded-[18px] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 overflow-hidden cursor-pointer"
+            className="group rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 transition-all duration-300 overflow-hidden cursor-pointer"
           >
             {/* Thumbnail area */}
-            <div className="relative h-[130px] bg-gradient-to-br from-[#131722] to-[#0a0d14] flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-[size:12px_12px]" />
+            <div className="relative h-[130px] bg-linear-to-br from-[#131722] to-[#0a0d14] flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] bg-size-[12px_12px]" />
               <span className="text-4xl">{video.thumb}</span>
               
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">

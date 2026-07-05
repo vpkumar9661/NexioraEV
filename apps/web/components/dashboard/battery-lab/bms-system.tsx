@@ -43,8 +43,8 @@ export function BMSSystem() {
                 onClick={() => setActiveFeature(feat)}
                 className={`p-4 rounded-xl border text-left transition-all duration-300 flex items-center justify-between gap-4 ${
                   isActive
-                    ? "bg-white/[0.04]"
-                    : "bg-white/[0.01] hover:bg-white/[0.02]"
+                    ? "bg-white/4"
+                    : "bg-white/1 hover:bg-white/2"
                 }`}
                 style={{ borderColor: isActive ? `${feat.color}40` : "rgba(255,255,255,0.05)" }}
               >
@@ -66,8 +66,8 @@ export function BMSSystem() {
         </div>
 
         {/* Right BMS Diagram with Animated Signal Flow */}
-        <div className="lg:col-span-7 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#10B981_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+        <div className="lg:col-span-7 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#10B981_1px,transparent_1px)] bg-size-[20px_20px] pointer-events-none" />
 
           {/* Heading Detail */}
           <div className="flex items-start justify-between border-b border-white/5 pb-3">
@@ -81,7 +81,7 @@ export function BMSSystem() {
           </div>
 
           {/* Signal flow block diagram */}
-          <div className="relative h-[180px] bg-[#131722]/50 border border-white/[0.03] rounded-xl flex items-center justify-center p-4">
+          <div className="relative h-[180px] bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
             <svg className="w-full h-full" viewBox="0 0 400 160">
               {/* Battery Cells array */}
               <g transform="translate(20, 45)">
@@ -125,7 +125,7 @@ export function BMSSystem() {
           </div>
 
           {/* Description */}
-          <p className="text-[12.5px] text-[#AEB5C0]/80 leading-relaxed bg-white/[0.01] p-4 rounded-xl border border-white/5">
+          <p className="text-[12.5px] text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
             {activeFeature.desc}
           </p>
         </div>

@@ -39,7 +39,7 @@ export function LearningRoadmap({ completedSteps, onToggleStep }: LearningRoadma
       {/* Progress bar */}
       <div className="w-full h-2 rounded-full bg-white/5 overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] transition-all duration-700"
+          className="h-full rounded-full bg-linear-to-r from-[#8B5CF6] to-[#A78BFA] transition-all duration-700"
           style={{ width: `${progressPercent}%` }}
         />
       </div>

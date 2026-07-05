@@ -41,7 +41,7 @@ export function FAQSection() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search questions..."
-            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40 focus:bg-[#10B981]/[0.03] transition-all"
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/3 border border-white/10 text-sm text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40 focus:bg-[#10B981]/[0.03] transition-all"
           />
         </div>
       </div>
@@ -60,7 +60,7 @@ export function FAQSection() {
               className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#10B981]/20 bg-[#10B981]/[0.03]"
-                  : "border-white/5 bg-white/[0.02] hover:border-white/10"
+                  : "border-white/5 bg-white/2 hover:border-white/10"
               }`}
             >
               <button

@@ -28,7 +28,7 @@ export function ResearchLibrary() {
           return (
             <div
               key={idx}
-              className="group rounded-[18px] border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 p-5 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              className="group rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 p-5 transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 rounded-full blur-[40px] opacity-0 group-hover:opacity-[0.04] transition-opacity" style={{ backgroundColor: paper.color }} />
               

@@ -44,8 +44,8 @@ export function SafetyModules() {
                 onClick={() => setActiveItem(item)}
                 className={`p-4 rounded-xl border text-left transition-all duration-300 flex items-center justify-between gap-4 ${
                   isActive
-                    ? "bg-white/[0.04]"
-                    : "bg-white/[0.01] hover:bg-white/[0.02]"
+                    ? "bg-white/4"
+                    : "bg-white/1 hover:bg-white/2"
                 }`}
                 style={{ borderColor: isActive ? `${item.color}40` : "rgba(255,255,255,0.05)" }}
               >
@@ -67,7 +67,7 @@ export function SafetyModules() {
         </div>
 
         {/* Detailed action card */}
-        <div className="lg:col-span-7 rounded-[20px] border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-7 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/5 pb-3">
               <div>
@@ -79,12 +79,12 @@ export function SafetyModules() {
             <p className="text-sm text-[#AEB5C0]/85 leading-relaxed">{activeItem.desc}</p>
 
             <div className="space-y-3.5 pt-2">
-              <div className="p-4 rounded-xl bg-red-500/[0.02] border border-red-500/10">
+              <div className="p-4 rounded-xl bg-red-500/2 border border-red-500/10">
                 <span className="text-[10px] text-red-400 font-extrabold uppercase tracking-wider block">Sensor Trigger Condition</span>
                 <p className="text-xs text-[#AEB5C0]/80 mt-1 leading-relaxed">{activeItem.trigger}</p>
               </div>
               
-              <div className="p-4 rounded-xl bg-emerald-500/[0.02] border border-emerald-500/10">
+              <div className="p-4 rounded-xl bg-emerald-500/2 border border-emerald-500/10">
                 <span className="text-[10px] text-emerald-400 font-extrabold uppercase tracking-wider block">Active Mitigation Response</span>
                 <p className="text-xs text-[#AEB5C0]/80 mt-1 leading-relaxed">{activeItem.action}</p>
               </div>
