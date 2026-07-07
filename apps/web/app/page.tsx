@@ -9,7 +9,7 @@ import {
   TrendingUp, Calendar, User, Sparkles, Network, Eye, RefreshCw, Shuffle, 
   Calculator, Percent, HeartPulse, Wallet, Coins, Building, Award, 
   CircleDollarSign, FileText, FileCheck, Search, Filter, Navigation, Compass,
-  Atom, Layers, Sliders, Send, MessageSquare, BookOpen, Video, Download,
+  Atom, Layers, Sliders, Send, MessageSquare, BookOpen, Video, Download, Play,
   Star, Quote, Smartphone, QrCode, Mail, ShieldAlert, Check
 } from "lucide-react";
 import Link from "next/link";
@@ -154,7 +154,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090B10] text-white font-sans overflow-hidden">
+    <div className="min-h-screen bg-transparent text-white font-sans overflow-hidden">
       {/* CSS Visual Refinements */}
       <style dangerouslySetInnerHTML={{__html: `
         /* Premium Background Themes */
@@ -361,6 +361,8 @@ export default function HomePage() {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
           border-radius: 20px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
         .card-dark-glass:hover {
           background: rgba(255, 255, 255, 0.03);
@@ -376,6 +378,8 @@ export default function HomePage() {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(0, 210, 106, 0.05);
           border-radius: 20px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
         .card-green-glass:hover {
           background: rgba(0, 210, 106, 0.04);
@@ -391,6 +395,8 @@ export default function HomePage() {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(59, 130, 246, 0.05);
           border-radius: 20px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
         .card-blue-glass:hover {
           background: rgba(59, 130, 246, 0.04);
@@ -406,6 +412,8 @@ export default function HomePage() {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(139, 92, 246, 0.05);
           border-radius: 20px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
         .card-purple-glass:hover {
           background: rgba(139, 92, 246, 0.04);
@@ -421,6 +429,8 @@ export default function HomePage() {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(245, 158, 11, 0.05);
           border-radius: 20px;
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
         }
         .card-amber-glass:hover {
           background: rgba(245, 158, 11, 0.04);
@@ -560,118 +570,382 @@ export default function HomePage() {
         .marquee-track:hover {
           animation-play-state: paused;
         }
+
+        /* ============================================
+           NEW CARD GLASS VARIANTS
+           ============================================ */
+        .card-cyan-glass {
+          background: rgba(0, 212, 255, 0.02);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(0, 212, 255, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(0, 212, 255, 0.05);
+          border-radius: 20px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .card-cyan-glass:hover {
+          background: rgba(0, 212, 255, 0.04);
+          border-color: rgba(0, 212, 255, 0.35);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.55), 0 0 25px 0 rgba(0, 212, 255, 0.25);
+          transform: translateY(-4px);
+        }
+
+        .card-orange-glass {
+          background: rgba(249, 115, 22, 0.02);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(249, 115, 22, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(249, 115, 22, 0.05);
+          border-radius: 20px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .card-orange-glass:hover {
+          background: rgba(249, 115, 22, 0.04);
+          border-color: rgba(249, 115, 22, 0.35);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.55), 0 0 25px 0 rgba(249, 115, 22, 0.25);
+          transform: translateY(-4px);
+        }
+
+        .card-pink-glass {
+          background: rgba(236, 72, 153, 0.02);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(236, 72, 153, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(236, 72, 153, 0.05);
+          border-radius: 20px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .card-pink-glass:hover {
+          background: rgba(236, 72, 153, 0.04);
+          border-color: rgba(236, 72, 153, 0.35);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.55), 0 0 25px 0 rgba(236, 72, 153, 0.25);
+          transform: translateY(-4px);
+        }
+
+        .card-indigo-glass {
+          background: rgba(99, 102, 241, 0.02);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(99, 102, 241, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 12px 0 rgba(99, 102, 241, 0.05);
+          border-radius: 20px;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          position: relative;
+          overflow: hidden;
+        }
+        .card-indigo-glass:hover {
+          background: rgba(99, 102, 241, 0.04);
+          border-color: rgba(99, 102, 241, 0.35);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.55), 0 0 25px 0 rgba(99, 102, 241, 0.25);
+          transform: translateY(-4px);
+        }
+
+        /* ============================================
+           CARD SHIMMER OVERLAY (glass reflection sweep)
+           ============================================ */
+        .card-dark-glass::after,
+        .card-green-glass::after,
+        .card-blue-glass::after,
+        .card-purple-glass::after,
+        .card-amber-glass::after,
+        .card-cyan-glass::after,
+        .card-orange-glass::after,
+        .card-pink-glass::after,
+        .card-indigo-glass::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            105deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.03) 45%,
+            rgba(255, 255, 255, 0.06) 50%,
+            rgba(255, 255, 255, 0.03) 55%,
+            transparent 60%
+          );
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          pointer-events: none;
+          border-radius: inherit;
+        }
+        .card-dark-glass:hover::after,
+        .card-green-glass:hover::after,
+        .card-blue-glass:hover::after,
+        .card-purple-glass:hover::after,
+        .card-amber-glass:hover::after,
+        .card-cyan-glass:hover::after,
+        .card-orange-glass:hover::after,
+        .card-pink-glass:hover::after,
+        .card-indigo-glass:hover::after {
+          opacity: 1;
+          animation: glass-shimmer 1.5s ease-in-out;
+        }
+
+        /* ============================================
+           ENERGY SVG LINE ANIMATION
+           ============================================ */
+        .energy-svg-line {
+          stroke-dasharray: 10 6;
+          animation: energy-flow 2s linear infinite;
+        }
+
+        /* ============================================
+           HOLOGRAPHIC SCAN LINE (for AI section)
+           ============================================ */
+        .holo-scanline {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          pointer-events: none;
+          opacity: 0.06;
+        }
+        .holo-scanline::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), rgba(0, 212, 255, 0.6), transparent);
+          animation: holo-scan 8s linear infinite;
+          filter: blur(1px);
+        }
+
+        /* ============================================
+           SECTION-SPECIFIC MESH BACKGROUND PATTERNS
+           ============================================ */
+        .section-mesh-green {
+          background: radial-gradient(ellipse at 30% 30%, rgba(0, 230, 118, 0.06) 0%, transparent 60%),
+                      radial-gradient(ellipse at 70% 70%, rgba(0, 212, 255, 0.03) 0%, transparent 50%);
+        }
+        .section-mesh-cyan {
+          background: radial-gradient(ellipse at 60% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 60%),
+                      radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+        }
+        .section-mesh-purple {
+          background: radial-gradient(ellipse at 40% 30%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 70%, rgba(0, 212, 255, 0.03) 0%, transparent 50%);
+        }
+        .section-mesh-blue {
+          background: radial-gradient(ellipse at 50% 40%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+                      radial-gradient(ellipse at 20% 80%, rgba(0, 212, 255, 0.04) 0%, transparent 50%);
+        }
+        .section-mesh-amber {
+          background: radial-gradient(ellipse at 40% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 30%, rgba(244, 180, 0, 0.03) 0%, transparent 50%);
+        }
+        .section-mesh-dual-purple-cyan {
+          background: radial-gradient(ellipse at 30% 30%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+                      radial-gradient(ellipse at 70% 70%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+        }
       `}} />
 
-      {/* --- Existing Hero Section --- */}
-      <section className="relative overflow-hidden border-b border-white/5 bg-(--bg-color) text-white theme-graphite accent-green">
+      {/* --- Rebuilt Hero Section --- */}
+      <section 
+        className="relative overflow-hidden border-b border-white/5 text-white theme-graphite accent-green pt-24 pb-12 bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(to right, rgba(4, 8, 15, 0.85) 0%, rgba(4, 8, 15, 0.45) 45%, rgba(4, 8, 15, 0) 80%), linear-gradient(to top, #04080F 0%, rgba(4, 8, 15, 0) 30%), url('/hero-bg-mockup.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "right center"
+        }}
+      >
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
-        <HeroVehicle />
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[700px] h-[700px] opacity-35 bg-radial-gradient from-[#00D26A]/15 to-transparent filter blur-3xl" />
-          <div className="absolute top-0 right-1/4 translate-x-1/2 w-[700px] h-[700px] opacity-35 bg-radial-gradient from-[#00E5FF]/15 to-transparent filter blur-3xl" />
+          <div className="absolute top-0 right-1/4 translate-x-1/2 w-[700px] h-[700px] opacity-35 bg-radial-gradient from-secondary/15 to-transparent filter blur-3xl" />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[20%] left-[20%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[60%] left-[75%]" style={{ animationDelay: "3s" }} />
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28 z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="liquid-glass-badge">
-                <span className="badge-dot" />
-                Phase 1 — India
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 w-full">
+          {/* Main 2-Column Hero Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
+            {/* Left Column (Content) */}
+            <div className="lg:col-span-6 space-y-6 text-left">
+              {/* Green Pill Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/5 border border-secondary/15 text-xs font-semibold text-white tracking-wide shadow-[0_0_15px_rgba(0,229,255,0.05)]">
+                <span className="w-2 h-2 rounded-full bg-[#00E676] animate-pulse shadow-[0_0_8px_#00E676]" />
+                The Future is Electric. The Future is NexioraEV.
+              </div>
+              
+              {/* Heading */}
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[54px] text-white leading-tight font-sans">
+                Driving the Future <br /> of <span className="bg-linear-to-r from-[#00E676] via-[#00D4FF] to-[#8B5CF6] bg-clip-text text-transparent">Smart Mobility</span>
+              </h1>
+              
+              {/* Tagline */}
+              <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
+                NexioraEV is your all-in-one platform for EV technology, charging solutions, marketplace, learning, AI tools, government schemes, and everything electric.
+              </p>
+              
+              {/* Button Controls */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Button size="lg" asChild className="bg-linear-to-r from-[#00E676] to-[#00D4FF] text-black hover:scale-105 transition-all duration-300 font-extrabold border-none shadow-[0_4px_20px_rgba(0,230,118,0.25)] rounded-full px-8 py-6">
+                  <Link href="/vehicles">
+                    Explore EVTech
+                    <ArrowRight aria-hidden="true" className="ml-1 size-4" strokeWidth={2.5} />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="glass-btn bg-white/3 border border-white/10 hover:bg-white/8 text-white font-bold transition-all duration-300 rounded-full px-8 py-6">
+                  <Link href="/auth/register" className="flex items-center gap-2">
+                    <Play className="size-4 text-[#00D4FF] fill-[#00D4FF]/20" />
+                    Play Platform Tour
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Unified Horizontal Stats Container */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl border border-white/8 bg-white/2 backdrop-blur-md mt-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),0_8px_32px_rgba(0,0,0,0.3)]">
+                {/* Stat 1 */}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#00E676]/10 border border-[#00E676]/20 flex items-center justify-center shrink-0">
+                    <Zap className="w-4.5 h-4.5 text-[#00E676]" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-white block">100+</span>
+                    <span className="text-[10px] text-muted-foreground/65 block font-medium">EV Technologies</span>
+                  </div>
+                </div>
+
+                {/* Stat 2 */}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 flex items-center justify-center shrink-0">
+                    <User className="w-4.5 h-4.5 text-[#3B82F6]" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-white block">50K+</span>
+                    <span className="text-[10px] text-muted-foreground/65 block font-medium">Active Users</span>
+                  </div>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center shrink-0">
+                    <GraduationCap className="w-4.5 h-4.5 text-[#8B5CF6]" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-white block">200+</span>
+                    <span className="text-[10px] text-muted-foreground/65 block font-medium">Expert Guides</span>
+                  </div>
+                </div>
+
+                {/* Stat 4 */}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#FF9800]/10 border border-[#FF9800]/20 flex items-center justify-center shrink-0">
+                    <Clock className="w-4.5 h-4.5 text-[#FF9800]" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-white block">24/7</span>
+                    <span className="text-[10px] text-muted-foreground/65 block font-medium">AI Assistance</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white leading-tight">
-              Driving the Future of{" "}
-              <span className="text-gradient-green">Smart Mobility</span>
-            </h1>
-            <p className="mt-6 text-lg text-[#B6BCCB] sm:text-xl">{APP_TAGLINE}</p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" asChild className="bg-[#00D26A] text-black hover:bg-[#6BFF95] hover:scale-105 transition-all duration-300 font-bold border-none shadow-lg shadow-[#00D26A]/20">
-                <Link href="/vehicles">
-                  Explore EVs
-                  <ArrowRight aria-hidden="true" className="ml-1 size-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="glass-btn bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold transition-all duration-300 rounded-[12px]">
-                <Link href="/auth/register">Create free account</Link>
-              </Button>
+
+            {/* Right Column (Hero Vehicle Graphics) */}
+            <div className="lg:col-span-6 flex justify-center items-center relative">
+              <HeroVehicle />
             </div>
-          </motion.div>
+          </div>
+
+          {/* Bottom Grid: 6 Premium Glassmorphic Ecosystem Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16 pt-4 w-full relative z-10">
+            {/* Card 1: EV Basics */}
+            <Link href="/evtech/learning-center" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00E676] group-hover:text-white transition-colors duration-300">
+                  <GraduationCap className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#00E676] transition-colors duration-300">EV Basics</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Learn fundamentals of electric vehicles</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#00E676] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+
+            {/* Card 2: Battery Lab */}
+            <Link href="/evtech/battery-lab" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00E676] group-hover:text-white transition-colors duration-300">
+                  <Atom className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#00E676] transition-colors duration-300">Battery Lab</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Chemistry, BMS, thermal & advanced battery tech</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#00E676] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+
+            {/* Card 3: Charging Hub */}
+            <Link href="/charging" className="card-cyan-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00D4FF] group-hover:text-white transition-colors duration-300">
+                  <BatteryCharging className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#00D4FF] transition-colors duration-300">Charging Hub</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Charging types, stations, connectors & standards</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#00D4FF] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+
+            {/* Card 4: EV Components */}
+            <Link href="/evtech" className="card-blue-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#3B82F6] group-hover:text-white transition-colors duration-300">
+                  <Cpu className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#3B82F6] transition-colors duration-300">EV Components</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Motors, controllers, inverters & more</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#3B82F6] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+
+            {/* Card 5: Future Tech */}
+            <Link href="/evtech" className="card-purple-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#8B5CF6] group-hover:text-white transition-colors duration-300">
+                  <Sparkles className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#8B5CF6] transition-colors duration-300">Future Tech</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Solid-state batteries, V2G, autonomous EVs</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#8B5CF6] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+
+            {/* Card 6: AI EV Assistant */}
+            <Link href="/evtech/ai-assistant" className="card-amber-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+              <div>
+                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#FF9800] group-hover:text-white transition-colors duration-300">
+                  <Bot className="size-4.5" />
+                </div>
+                <h3 className="text-sm font-bold text-white mt-4 group-hover:text-[#FF9800] transition-colors duration-300">AI EV Assistant</h3>
+                <p className="text-[10px] text-muted-foreground/80 mt-1 leading-relaxed line-clamp-2">Ask questions & get intelligent EV help</p>
+              </div>
+              <div className="flex justify-end mt-1">
+                <ArrowRight className="size-3.5 text-muted-foreground/40 group-hover:text-[#FF9800] group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ====================================================
-          SECTION 1: EV ECOSYSTEM OVERVIEW
-          ==================================================== */}
-      <section className="relative theme-emerald bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-emerald">
-        {/* Layered Background Design */}
-        <div className="absolute inset-0 bg-noise pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-60 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
-          <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[600px] h-[600px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
-          <div className="particle-container">
-            <div className="particle-p1 w-2.5 h-2.5 top-[15%] left-[25%]" style={{ animationDelay: "0s" }} />
-            <div className="particle-p2 w-1.5 h-1.5 top-[70%] left-[85%]" style={{ animationDelay: "2s" }} />
-            <div className="particle-p1 w-2 h-2 top-[80%] left-[10%]" style={{ animationDelay: "4s" }} />
-          </div>
-        </div>
-
-        <div className="mx-auto max-w-7xl relative z-10">
-          <div className="liquid-glass-badge">
-            <span className="badge-dot" />
-            EV Ecosystem Overview
-          </div>
-          
-          <div className="mb-12">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
-              Everything You Need for <span className="text-gradient-green">Electric Mobility</span>
-            </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed">
-              One platform for EV technology, charging, marketplace, learning, AI tools, government schemes, and future mobility.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {ECOSYSTEM_CARDS.map((card, idx) => {
-              const CardIcon = card.icon;
-              const cardStyles = ["card-green-glass", "card-dark-glass", "card-green-glass", "card-dark-glass"];
-              const currentCardStyle = cardStyles[idx % 4];
-              return (
-                <Link href={card.href} key={idx} className={`${currentCardStyle} p-6 rounded-[18px] group flex flex-col justify-between h-[180px]`}>
-                  <div>
-                    <div className="size-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-(--accent) group-hover:text-white transition-colors duration-300">
-                      <CardIcon className="size-5" />
-                    </div>
-                    <h3 className="text-lg font-bold text-white mt-4 group-hover:text-(--accent) transition-colors duration-300">{card.title}</h3>
-                    <p className="text-xs text-[#C5CBD7] mt-1 leading-relaxed line-clamp-2">{card.desc}</p>
-                  </div>
-                  <div className="flex justify-end mt-2">
-                    <ArrowRight className="size-4 text-[#94A3B8] group-hover:text-(--accent) group-hover:translate-x-1 transition-all duration-300" />
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <div className="divider-blur-glow" />
+      {/* Duplicate EV ECOSYSTEM OVERVIEW removed to match reference image layout exactly */}
 
       {/* ====================================================
           SECTION 2: LIVE EV STATISTICS
           ==================================================== */}
-      <section className="relative theme-graphite bg-(--bg-color) py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
+      <section className="relative theme-graphite bg-[#05070D]/25 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -695,8 +969,9 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 3: WHY NEXIORAEV
           ==================================================== */}
-      <section className="relative theme-graphite accent-cyan bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-graphite accent-cyan bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
+        <div className="absolute inset-0 section-mesh-cyan pointer-events-none" />
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -746,7 +1021,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 4: FEATURED EV BRANDS
           ==================================================== */}
-      <section className="relative theme-midnight accent-blue bg-(--bg-color) py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-midnight accent-blue bg-[#05070D]/25 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
@@ -780,7 +1055,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 5: LATEST EV NEWS
           ==================================================== */}
-      <section className="relative theme-midnight accent-blue bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-midnight accent-blue bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
@@ -854,8 +1129,9 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 6: EV TECHNOLOGY HIGHLIGHTS
           ==================================================== */}
-      <section className="relative theme-graphite accent-blue bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-graphite accent-purple bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
+        <div className="absolute inset-0 section-mesh-purple pointer-events-none" />
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -874,7 +1150,7 @@ export default function HomePage() {
           
           <div className="mb-12">
             <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
-              EV <span className="text-gradient-blue">Technology Highlights</span>
+              EV <span className="text-gradient-purple">Technology Highlights</span>
             </h2>
             <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed">
               State-of-the-art power electronics, modular skateboard chassis architectures, and automated cell systems.
@@ -884,7 +1160,7 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {TECH_HIGHLIGHTS.map((tech, idx) => {
               const Icon = tech.icon;
-              const cardStyles = ["card-blue-glass", "card-dark-glass", "card-blue-glass", "card-dark-glass"];
+              const cardStyles = ["card-purple-glass", "card-dark-glass", "card-indigo-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
                 <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-[160px]`}>
@@ -907,7 +1183,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 7: INTERACTIVE EV CALCULATORS
           ==================================================== */}
-      <section className="relative theme-emerald accent-green bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-emerald accent-green bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.18] pointer-events-none" />
@@ -1018,7 +1294,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 8: GOVERNMENT SCHEMES
           ==================================================== */}
-      <section className="relative theme-midnight bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-blue">
+      <section className="relative theme-midnight bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-blue">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
@@ -1071,8 +1347,9 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 9: CHARGING NETWORK
           ==================================================== */}
-      <section className="relative theme-midnight bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-cyan">
+      <section className="relative theme-midnight bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-cyan">
         {/* Layered Background Design */}
+        <div className="absolute inset-0 section-mesh-cyan pointer-events-none" />
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1107,7 +1384,7 @@ export default function HomePage() {
                       onClick={() => setChargerFilter(type as any)}
                       className={`px-3.5 py-1.5 rounded-full text-xs font-bold capitalize border transition-all duration-300 ${
                         chargerFilter === type 
-                          ? "bg-(--accent) border-(--accent) text-black shadow-lg shadow-[#00E5FF]/30 font-bold" 
+                          ? "bg-(--accent) border-(--accent) text-black shadow-lg shadow-secondary/30 font-bold" 
                           : "bg-white/5 border-white/10 text-[#94A3B8] hover:border-(--accent) hover:text-white"
                       }`}
                     >
@@ -1117,7 +1394,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <Button size="lg" asChild className="w-full sm:w-auto bg-[#00E5FF] text-black hover:bg-[#00D26A] hover:scale-105 transition-all duration-300 font-bold border-none shadow-lg shadow-[#00E5FF]/20">
+              <Button size="lg" asChild className="w-full sm:w-auto bg-secondary text-black hover:bg-[#00D26A] hover:scale-105 transition-all duration-300 font-bold border-none shadow-lg shadow-secondary/20">
                 <Link href="/charging">
                   <Compass className="size-4 mr-2" />
                   Open Interactive Map
@@ -1136,8 +1413,8 @@ export default function HomePage() {
                   <span className="text-[10px] font-bold text-white">Hub-1 NH44 (DC 350kW)</span>
                 </div>
 
-                <div className="absolute top-1/2 right-1/4 p-2.5 rounded-2xl bg-slate-950/90 border border-[#00E5FF]/30 flex items-center gap-2 shadow-lg shadow-[#00E5FF]/5 animate-pulse">
-                  <div className="size-2 rounded-full bg-[#00E5FF] shadow-[0_0_6px_#00E5FF]" />
+                <div className="absolute top-1/2 right-1/4 p-2.5 rounded-2xl bg-slate-950/90 border border-secondary/30 flex items-center gap-2 shadow-lg shadow-secondary/5 animate-pulse">
+                  <div className="size-2 rounded-full bg-secondary shadow-[0_0_6px_#00E5FF]" />
                   <span className="text-[10px] font-bold text-white">Hub-2 Metro Mall (AC 22kW)</span>
                 </div>
 
@@ -1163,7 +1440,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 10: BATTERY LAB PREVIEW
           ==================================================== */}
-      <section className="relative theme-emerald bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
+      <section className="relative theme-emerald bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.18] pointer-events-none" />
@@ -1225,8 +1502,10 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 11: AI EV ASSISTANT
           ==================================================== */}
-      <section className="relative theme-graphite accent-purple bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-graphite accent-purple bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
+        <div className="absolute inset-0 section-mesh-dual-purple-cyan pointer-events-none" />
+        <div className="holo-scanline" />
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1302,8 +1581,9 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 12: LEARNING CENTER
           ==================================================== */}
-      <section className="relative theme-purple accent-amber bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-purple accent-amber bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
+        <div className="absolute inset-0 section-mesh-amber pointer-events-none" />
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.22] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1371,7 +1651,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 13: CUSTOMER TESTIMONIALS
           ==================================================== */}
-      <section className="relative theme-graphite accent-purple bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
+      <section className="relative theme-graphite accent-purple bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
@@ -1431,7 +1711,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 14: PARTNER COMPANIES
           ==================================================== */}
-      <section className="relative theme-midnight bg-(--bg-color) py-10 overflow-hidden transition-colors duration-500 accent-blue">
+      <section className="relative theme-midnight bg-[#05070D]/25 py-10 overflow-hidden transition-colors duration-500 accent-blue">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1461,7 +1741,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 15: EV JOURNEY
           ==================================================== */}
-      <section className="relative theme-midnight bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
+      <section className="relative theme-midnight bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
@@ -1515,7 +1795,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 16: COMMUNITY
           ==================================================== */}
-      <section className="relative theme-graphite bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
+      <section className="relative theme-graphite bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-green">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
@@ -1586,7 +1866,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 17: DOWNLOAD MOBILE APP
           ==================================================== */}
-      <section className="relative theme-purple bg-(--bg-color) py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-purple">
+      <section className="relative theme-purple bg-[#05070D]/25 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-500 accent-purple">
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
@@ -1636,7 +1916,7 @@ export default function HomePage() {
       {/* ====================================================
           SECTION 18: PREMIUM PRE-FOOTER EXPERIENCE
           ==================================================== */}
-      <section className="relative bg-[#07090e] py-32 px-4 sm:px-6 lg:px-8 overflow-hidden z-10 border-t border-white/5">
+      <section className="relative bg-[#05070D]/30 py-32 px-4 sm:px-6 lg:px-8 overflow-hidden z-10 border-t border-white/5">
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes flow {
             to {
@@ -1717,7 +1997,7 @@ export default function HomePage() {
                 </Link>
                 <Link 
                   href="/company/contact"
-                  className="px-6 py-3.5 rounded-xl font-bold bg-transparent border border-white/20 hover:border-white/40 text-[#AEB5C0] hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                  className="px-6 py-3.5 rounded-xl font-bold bg-transparent border border-white/20 hover:border-white/40 text-muted-foreground hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
                 >
                   Contact Us
                 </Link>

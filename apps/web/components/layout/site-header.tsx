@@ -817,15 +817,15 @@ export function SiteHeader() {
           top: calc(100% + 6px);
           left: 50%;
           width: calc(100% - 48px);
-          max-width: 1180px;
+          max-width: 1040px;
           height: auto;
-          max-height: 600px;
+          max-height: 450px;
           background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 60%), 
                       linear-gradient(180deg, #06090F 0%, #0D111C 100%),
                       rgba(20, 25, 38, 0.70);
           backdrop-filter: blur(30px) saturate(210%);
           border: 1px solid rgba(139, 92, 246, 0.35);
-          border-radius: 24px;
+          border-radius: 20px;
           box-shadow: 
             0 20px 48px -10px rgba(139, 92, 246, 0.25),
             inset 0 1px 1px rgba(255, 255, 255, 0.08);
@@ -1055,8 +1055,8 @@ export function SiteHeader() {
           background: rgba(255, 255, 255, 0.04);
           border: 1px solid rgba(255, 255, 255, 0.08);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
-          border-radius: 20px;
-          height: 130px;
+          border-radius: 14px;
+          height: 116px;
           transition: all 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         .mega-menu-card:hover {
@@ -1083,7 +1083,7 @@ export function SiteHeader() {
           border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
           border-radius: 14px;
-          height: 102px;
+          height: 116px;
           transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .solutions-mega-menu-card:hover {
@@ -1107,7 +1107,7 @@ export function SiteHeader() {
           border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
           border-radius: 14px;
-          height: 102px;
+          height: 116px;
           transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .intelligence-mega-menu-card:hover {
@@ -1131,7 +1131,7 @@ export function SiteHeader() {
           border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
           border-radius: 14px;
-          height: 102px;
+          height: 116px;
           transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .marketplace-mega-menu-card:hover {
@@ -1155,7 +1155,7 @@ export function SiteHeader() {
           border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
           border-radius: 14px;
-          height: 102px;
+          height: 116px;
           transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .schemes-mega-menu-card:hover {
@@ -1179,7 +1179,7 @@ export function SiteHeader() {
           border: 1px solid rgba(255, 255, 255, 0.03);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
           border-radius: 14px;
-          height: 102px;
+          height: 116px;
           transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
         }
         .company-mega-menu-card:hover {
@@ -1536,8 +1536,8 @@ export function SiteHeader() {
               {/* Purple/EVTech visual grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1250px] mx-auto pt-[28px] pb-[40px] px-[28px] relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] animate-in fade-in zoom-in-95 duration-200">
+              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                 {EVTECH_CATEGORIES.map((category) => {
                   const CatIcon = category.icon;
                   return (
@@ -1552,24 +1552,23 @@ export function SiteHeader() {
                         '--card-hover-border': `${category.color}66`
                       } as React.CSSProperties}
                     >
-                      <div className="flex items-center gap-[14px] h-full">
+                      <div className="flex items-center gap-[12px] h-full">
                         <div 
-                          className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[14px] bg-white/5 border transition-all duration-300 group-hover/card:scale-105"
+                          className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-violet-500/30 transition-all duration-300 group-hover/card:scale-105"
                           style={{
                             boxShadow: `0 0 12px ${category.color}22`,
-                            borderColor: `rgba(255, 255, 255, 0.08)`
                           }}
                         >
                           <CatIcon className="mega-icon w-5 h-5 transition-all duration-300" style={{ color: category.color }} strokeWidth={1.8} />
                         </div>
-                        <div className="flex flex-col justify-center h-full gap-1.5 pl-1">
-                          <span className="mega-title text-[22px] font-bold text-white transition-colors leading-tight pr-6">{category.name}</span>
-                          <p className="text-[15px] text-[#BFC6D5] leading-[1.6] font-sans line-clamp-2 pr-4">
+                        <div className="flex flex-col justify-center h-full gap-0.5">
+                          <span className="mega-title text-[18px] font-bold text-white transition-colors leading-tight pr-6">{category.name}</span>
+                          <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-4">
                             {category.description}
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
                     </Link>
                   );
                 })}
@@ -1588,7 +1587,7 @@ export function SiteHeader() {
               onMouseLeave={handleMouseLeave}
             >
               <div className="max-w-[1200px] mx-auto p-5">
-                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {SOLUTIONS_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
@@ -1597,10 +1596,10 @@ export function SiteHeader() {
                         href={category.href}
                         onClick={handleLinkClick}
                         prefetch={true}
-                        className="solutions-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                        className="solutions-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
                         <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
+                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
                             <CatIcon className="solutions-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1632,7 +1631,7 @@ export function SiteHeader() {
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
-                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {INTELLIGENCE_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
@@ -1641,10 +1640,10 @@ export function SiteHeader() {
                         href={category.href}
                         onClick={handleLinkClick}
                         prefetch={true}
-                        className="intelligence-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                        className="intelligence-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
                         <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
+                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
                             <CatIcon className="intelligence-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1676,7 +1675,7 @@ export function SiteHeader() {
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
-                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {MARKETPLACE_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
@@ -1685,10 +1684,10 @@ export function SiteHeader() {
                         href={category.href}
                         onClick={handleLinkClick}
                         prefetch={true}
-                        className="marketplace-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                        className="marketplace-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
                         <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
+                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
                             <CatIcon className="marketplace-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1720,7 +1719,7 @@ export function SiteHeader() {
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-size-[28px_28px] opacity-35" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#4F46E5]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
-                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {SCHEMES_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
@@ -1729,10 +1728,10 @@ export function SiteHeader() {
                         href={category.href}
                         onClick={handleLinkClick}
                         prefetch={true}
-                        className="schemes-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                        className="schemes-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
                         <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
+                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
                             <CatIcon className="schemes-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1764,7 +1763,7 @@ export function SiteHeader() {
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(236,72,153,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#EC4899]/10 rounded-full blur-[100px] pointer-events-none" />
               <div className="max-w-[1200px] mx-auto p-5 relative z-10">
-                <div className="grid grid-cols-4 gap-[14px] animate-in fade-in zoom-in-95 duration-200">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {COMPANY_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
                     return (
@@ -1773,10 +1772,10 @@ export function SiteHeader() {
                         href={category.href}
                         onClick={handleLinkClick}
                         prefetch={true}
-                        className="company-mega-menu-card p-4 flex flex-col h-[102px] group/card cursor-pointer relative"
+                        className="company-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
                         <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[42px] h-[42px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
+                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
                             <CatIcon className="company-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">

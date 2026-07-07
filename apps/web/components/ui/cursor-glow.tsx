@@ -9,6 +9,7 @@ export function CursorGlow() {
   const [hoverState, setHoverState] = useState<"normal" | "button" | "link" | "card">("normal");
 
   const glowRef = useRef<HTMLDivElement | null>(null);
+  const innerGlowRef = useRef<HTMLDivElement | null>(null);
   
   // Track mouse coordinates
   const mouseX = useRef(0);
@@ -81,6 +82,10 @@ export function CursorGlow() {
         target.closest(".card-blue-glass") ||
         target.closest(".card-purple-glass") ||
         target.closest(".card-amber-glass") ||
+        target.closest(".card-orange-glass") ||
+        target.closest(".card-pink-glass") ||
+        target.closest(".card-indigo-glass") ||
+        target.closest(".card-cyan-glass") ||
         target.closest(".glass-card")
       ) {
         setHoverState("card");
@@ -101,8 +106,8 @@ export function CursorGlow() {
 
     // GPU optimized interpolation loop running at 60 FPS
     const tick = () => {
-      // Ease coordinates
-      const ease = 0.09;
+      // Faster easing for more responsive feel
+      const ease = 0.12;
       glowX.current += (mouseX.current - glowX.current) * ease;
       glowY.current += (mouseY.current - glowY.current) * ease;
       
@@ -112,8 +117,13 @@ export function CursorGlow() {
       // Decelerate movement scale stretch
       targetScale.current += (1 - targetScale.current) * 0.05;
 
+      const transform = `translate3d(calc(${glowX.current}px - 50%), calc(${glowY.current}px - 50%), 0) scale(${glowScale.current})`;
+
       if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(calc(${glowX.current}px - 50%), calc(${glowY.current}px - 50%), 0) scale(${glowScale.current})`;
+        glowRef.current.style.transform = transform;
+      }
+      if (innerGlowRef.current) {
+        innerGlowRef.current.style.transform = transform;
       }
 
       animationFrameId = requestAnimationFrame(tick);
@@ -133,22 +143,44 @@ export function CursorGlow() {
   // Disable completely for performance/accessibility criteria
   if (isMobile || reducedMotion) return null;
 
-  // Render the single absolute layer tracking cursor coords
+  // Size configs
+  const outerSize = hoverState === "card" ? "360px" : hoverState === "link" ? "280px" : hoverState === "button" ? "240px" : "360px";
+  const innerSize = hoverState === "card" ? "120px" : hoverState === "link" ? "90px" : hoverState === "button" ? "80px" : "100px";
+
+  // Render the glow layers
   return (
     <>
+      {/* Outer Glow — primary atmosphere */}
       <div
         ref={glowRef}
         className={`fixed top-0 left-0 pointer-events-none rounded-full transition-opacity duration-300 will-change-transform z-5 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          width: hoverState === "card" ? "320px" : hoverState === "link" ? "240px" : "280px",
-          height: hoverState === "card" ? "320px" : hoverState === "link" ? "240px" : "280px",
-          background: "radial-gradient(circle, rgba(0, 255, 136, 0.35) 0%, rgba(0, 210, 106, 0.25) 30%, rgba(0, 255, 136, 0.18) 60%, transparent 100%)",
-          filter: hoverState === "button" ? "blur(90px) saturate(1.4)" : "blur(90px)",
+          width: outerSize,
+          height: outerSize,
+          background: "radial-gradient(circle, rgba(0, 230, 118, 0.12) 0%, rgba(0, 212, 255, 0.06) 40%, transparent 70%)",
+          filter: hoverState === "button" ? "blur(80px) saturate(1.5)" : "blur(80px)",
           mixBlendMode: "screen",
-          opacity: hoverState === "button" ? 0.85 : 0.65,
+          opacity: hoverState === "button" ? 0.9 : 0.65,
           transition: "width 250ms ease, height 250ms ease, opacity 200ms ease, filter 200ms ease",
+        }}
+      />
+
+      {/* Inner Glow — depth ring for premium feel */}
+      <div
+        ref={innerGlowRef}
+        className={`fixed top-0 left-0 pointer-events-none rounded-full transition-opacity duration-300 will-change-transform z-5 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          width: innerSize,
+          height: innerSize,
+          background: "radial-gradient(circle, rgba(0, 230, 118, 0.18) 0%, rgba(0, 230, 118, 0.05) 50%, transparent 100%)",
+          filter: "blur(30px)",
+          mixBlendMode: "screen",
+          opacity: hoverState === "button" ? 0.7 : 0.4,
+          transition: "width 250ms ease, height 250ms ease, opacity 200ms ease",
         }}
       />
     </>

@@ -22,7 +22,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#07090e] pt-24 pb-8 font-sans z-10">
+    <footer className="relative overflow-hidden bg-[#05070D]/40 pt-24 pb-8 font-sans z-10">
       
       {/* Background Graphic Design */}
       <div className="absolute inset-0 pointer-events-none z-0">
