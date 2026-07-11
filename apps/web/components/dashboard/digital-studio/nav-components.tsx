@@ -66,7 +66,7 @@ export function TopToolbar({
           <button 
             onClick={onRename} 
             title="Rename Project"
-            className="p-1 rounded hover:bg-white/5 text-[#AEB5C0]/40 hover:text-white transition-colors cursor-pointer"
+            className="p-1 rounded hover:bg-white/5 text-muted-foreground/40 hover:text-white transition-colors cursor-pointer"
           >
             <Edit2 className="w-3.5 h-3.5" />
           </button>
@@ -83,14 +83,14 @@ export function TopToolbar({
         </button>
         <button
           onClick={onDuplicate}
-          className="px-3.5 py-1.5 rounded-xl border border-white/5 bg-white/3 hover:bg-white/5 text-[#AEB5C0] hover:text-white text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5"
+          className="px-3.5 py-1.5 rounded-xl border border-white/5 bg-white/3 hover:bg-white/5 text-muted-foreground hover:text-white text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5"
         >
           <Copy className="w-3.5 h-3.5" />
           Duplicate
         </button>
         <button
           onClick={onShare}
-          className="p-2 rounded-xl border border-white/5 bg-white/3 hover:bg-white/5 text-[#AEB5C0] hover:text-white transition-all cursor-pointer"
+          className="p-2 rounded-xl border border-white/5 bg-white/3 hover:bg-white/5 text-muted-foreground hover:text-white transition-all cursor-pointer"
           title="Share Project"
         >
           <Share2 className="w-3.5 h-3.5" />
@@ -114,14 +114,14 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
     <aside className="w-full lg:w-[260px] shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
       <div className="flex items-center gap-2 border-b border-white/5 pb-2.5">
         <Settings className="w-4 h-4 text-[#22D3EE]" />
-        <span className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">
+        <span className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">
           EV Configurator
         </span>
       </div>
 
       {/* Vehicle Platform */}
       <div className="space-y-1.5 text-xs">
-        <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider block">Vehicle Platform</label>
+        <label className="text-[9px] text-muted-foreground/50 font-bold uppercase tracking-wider block">Vehicle Platform</label>
         <select
           value={config.platform}
           onChange={(e) => onChange({ platform: e.target.value })}
@@ -143,7 +143,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         <span className="text-[9px] text-[#22D3EE] font-black uppercase tracking-wider block">Battery Stack Sizing</span>
         
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Chemistry</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Chemistry</label>
           <select
             value={config.chemistry}
             onChange={(e) => onChange({ chemistry: e.target.value })}
@@ -159,7 +159,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
 
         <div className="space-y-1.5 text-xs">
           <div className="flex justify-between font-bold text-[10px]">
-            <span className="text-[#AEB5C0]/50 uppercase">Capacity</span>
+            <span className="text-muted-foreground/50 uppercase">Capacity</span>
             <span className="text-white">{config.capacity} kWh</span>
           </div>
           <input
@@ -179,7 +179,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         <span className="text-[9px] text-[#22D3EE] font-black uppercase tracking-wider block">Powertrain Systems</span>
         
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Traction Motor</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Traction Motor</label>
           <select
             value={config.motor}
             onChange={(e) => onChange({ motor: e.target.value })}
@@ -193,7 +193,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         </div>
 
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Inverter Switches</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Inverter Switches</label>
           <select
             value={config.inverter}
             onChange={(e) => onChange({ inverter: e.target.value })}
@@ -212,7 +212,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         <span className="text-[9px] text-[#22D3EE] font-black uppercase tracking-wider block">Chassis Accessories</span>
         
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Charging Interface</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Charging Interface</label>
           <select
             value={config.charging}
             onChange={(e) => onChange({ charging: e.target.value })}
@@ -227,7 +227,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         </div>
 
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Active Cooling Loop</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Active Cooling Loop</label>
           <select
             value={config.cooling}
             onChange={(e) => onChange({ cooling: e.target.value })}
@@ -241,7 +241,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
         </div>
 
         <div className="space-y-1 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block">Suspension Arms</label>
+          <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block">Suspension Arms</label>
           <select
             value={config.suspension}
             onChange={(e) => onChange({ suspension: e.target.value })}
@@ -256,7 +256,7 @@ export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) 
 
         <div className="space-y-1.5 text-xs">
           <div className="flex justify-between font-bold text-[10px]">
-            <span className="text-[#AEB5C0]/50 uppercase">Aerodynamic Drag (Cd)</span>
+            <span className="text-muted-foreground/50 uppercase">Aerodynamic Drag (Cd)</span>
             <span className="text-white">{config.aero.toFixed(2)}</span>
           </div>
           <input
@@ -287,7 +287,7 @@ export function RightTelemetrySidebar({ telemetry }: RightTelemetrySidebarProps)
     <aside className="w-full lg:w-[260px] shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
       <div className="flex items-center gap-2 border-b border-white/5 pb-2.5">
         <Activity className="w-4 h-4 text-[#10B981]" />
-        <span className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">
+        <span className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">
           Diagnostics HUD
         </span>
       </div>
@@ -295,19 +295,19 @@ export function RightTelemetrySidebar({ telemetry }: RightTelemetrySidebarProps)
       <div className="space-y-4">
         {/* Battery Health readout */}
         <div className="space-y-2">
-          <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block tracking-wider">Storage Telemetry</span>
+          <span className="text-[9px] text-muted-foreground/50 font-bold uppercase block tracking-wider">Storage Telemetry</span>
           
           <div className="p-3 rounded-xl bg-black/40 border border-white/5 space-y-2.5 text-xs">
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Voltage:</span>
+              <span className="text-muted-foreground/65">Voltage:</span>
               <strong className="text-white">{telemetry.voltage} V DC</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Current Draw:</span>
+              <span className="text-muted-foreground/65">Current Draw:</span>
               <strong className="text-white">{telemetry.current} A RMS</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Temp limits:</span>
+              <span className="text-muted-foreground/65">Temp limits:</span>
               <strong className="text-white">{telemetry.temp} °C</strong>
             </div>
           </div>
@@ -315,19 +315,19 @@ export function RightTelemetrySidebar({ telemetry }: RightTelemetrySidebarProps)
 
         {/* Powertrain Motor */}
         <div className="space-y-2">
-          <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block tracking-wider">Drive Shaft</span>
+          <span className="text-[9px] text-muted-foreground/50 font-bold uppercase block tracking-wider">Drive Shaft</span>
           
           <div className="p-3 rounded-xl bg-black/40 border border-white/5 space-y-2.5 text-xs">
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Motor Speed:</span>
+              <span className="text-muted-foreground/65">Motor Speed:</span>
               <strong className="text-white">{telemetry.rpm.toLocaleString()} RPM</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Continuous Torque:</span>
+              <span className="text-muted-foreground/65">Continuous Torque:</span>
               <strong className="text-white">{telemetry.torque} Nm</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Overall Efficiency:</span>
+              <span className="text-muted-foreground/65">Overall Efficiency:</span>
               <strong className="text-[#10B981]">{telemetry.efficiency}%</strong>
             </div>
           </div>
@@ -335,23 +335,23 @@ export function RightTelemetrySidebar({ telemetry }: RightTelemetrySidebarProps)
 
         {/* Drivetrain limits */}
         <div className="space-y-2">
-          <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block tracking-wider">Performance Sizing</span>
+          <span className="text-[9px] text-muted-foreground/50 font-bold uppercase block tracking-wider">Performance Sizing</span>
           
           <div className="p-3 rounded-xl bg-black/40 border border-white/5 space-y-2.5 text-xs">
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Estimated Range:</span>
+              <span className="text-muted-foreground/65">Estimated Range:</span>
               <strong className="text-cyan-300">{telemetry.range} km</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">0-100 km/h:</span>
+              <span className="text-muted-foreground/65">0-100 km/h:</span>
               <strong className="text-white">{telemetry.accel} sec</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Total Weight:</span>
+              <span className="text-muted-foreground/65">Total Weight:</span>
               <strong className="text-white">{telemetry.weight} kg</strong>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#AEB5C0]/65">Center of Gravity:</span>
+              <span className="text-muted-foreground/65">Center of Gravity:</span>
               <strong className="text-purple-300">{telemetry.cg}</strong>
             </div>
           </div>

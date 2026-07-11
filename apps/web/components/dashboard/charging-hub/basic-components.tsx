@@ -28,7 +28,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight">
             Advanced Charging Hub
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Master EV charging technology through interactive simulations, grid-load calculations, AI-assisted advisors, and structural connector diagnostics.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -109,7 +109,7 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
@@ -214,7 +214,7 @@ export function TechExplorer() {
     <section id="explorer" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Charging Technology Explorer</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Interact with core EV charging architectures and power transfer mechanics.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Interact with core EV charging architectures and power transfer mechanics.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -231,13 +231,13 @@ export function TechExplorer() {
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center border" style={{ backgroundColor: `${tech.color}15`, borderColor: `${tech.color}25` }}>
                   <Zap className="w-4.5 h-4.5" style={{ color: tech.color }} />
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-[#AEB5C0]/75">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-muted-foreground/75">
                   {tech.power.split(" ")[0]} {tech.power.split(" ")[1]}
                 </span>
               </div>
               <div>
                 <h3 className="text-sm font-bold text-white group-hover:text-[#22D3EE] transition-colors">{tech.name}</h3>
-                <p className="text-[11.5px] text-[#AEB5C0]/50 mt-1 line-clamp-2 leading-relaxed">{tech.useCase}</p>
+                <p className="text-[11.5px] text-muted-foreground/50 mt-1 line-clamp-2 leading-relaxed">{tech.useCase}</p>
               </div>
             </div>
           </div>
@@ -261,12 +261,12 @@ export function TechExplorer() {
                   </div>
                   <div>
                     <h3 className="text-base font-black text-white">{selectedTech.name}</h3>
-                    <span className="text-xs text-[#AEB5C0]/60">Technical Architecture Specifications</span>
+                    <span className="text-xs text-muted-foreground/60">Technical Architecture Specifications</span>
                   </div>
                 </div>
                 <button
                   onClick={() => setSelectedTech(null)}
-                  className="p-1 rounded-lg hover:bg-white/5 text-[#AEB5C0]/50 hover:text-white transition-colors cursor-pointer"
+                  className="p-1 rounded-lg hover:bg-white/5 text-muted-foreground/50 hover:text-white transition-colors cursor-pointer"
                 >
                   ✕
                 </button>
@@ -274,18 +274,18 @@ export function TechExplorer() {
 
               <div className="grid grid-cols-2 gap-4 text-xs">
                 <div className="p-3 rounded-xl bg-white/2 border border-white/5">
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Voltage Levels</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Voltage Levels</span>
                   <span className="text-xs font-bold text-white mt-1 block">{selectedTech.voltage}</span>
                 </div>
                 <div className="p-3 rounded-xl bg-white/2 border border-white/5">
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Power Ranges</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Power Ranges</span>
                   <span className="text-xs font-bold text-white mt-1 block">{selectedTech.power}</span>
                 </div>
               </div>
 
               <div className="space-y-2">
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider">Technology Breakdown</h4>
-                <p className="text-[12.5px] text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+                <p className="text-[12.5px] text-muted-foreground/80 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
                   {selectedTech.description}
                 </p>
               </div>
@@ -294,7 +294,7 @@ export function TechExplorer() {
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider">Key Engineering Advantages</h4>
                 <ul className="space-y-1">
                   {selectedTech.pros.map((p, idx) => (
-                    <li key={idx} className="text-xs text-[#AEB5C0] flex items-center gap-2">
+                    <li key={idx} className="text-xs text-muted-foreground flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
                       {p}
                     </li>
@@ -325,7 +325,7 @@ export function ResearchLibrary() {
     <section id="library" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Technical Research Library</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Access peer-reviewed documents, charging grid standards, and protocol white papers.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Access peer-reviewed documents, charging grid standards, and protocol white papers.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -343,7 +343,7 @@ export function ResearchLibrary() {
             </div>
             <button
               onClick={() => alert(`Initiating mock download: ${paper.doc}`)}
-              className="p-2 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 cursor-pointer"
+              className="p-2 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 cursor-pointer"
             >
               <FileDown className="w-4.5 h-4.5" />
             </button>
@@ -370,7 +370,7 @@ export function VideoLearning() {
     <section id="videos" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Video Learning Courses</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Watch masterclass briefings detailing charging hardware and smart grid deployments.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Watch masterclass briefings detailing charging hardware and smart grid deployments.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -388,9 +388,9 @@ export function VideoLearning() {
               </span>
             </div>
             <div className="p-4 space-y-2">
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block">{vid.level}</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block">{vid.level}</span>
               <h4 className="text-xs font-bold text-white leading-snug group-hover:text-[#22D3EE] transition-colors">{vid.title}</h4>
-              <span className="text-[10px] text-[#AEB5C0]/50 block">Speaker: {vid.author}</span>
+              <span className="text-[10px] text-muted-foreground/50 block">Speaker: {vid.author}</span>
             </div>
           </div>
         ))}
@@ -408,7 +408,7 @@ export function DownloadCenter() {
     <section id="downloads" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Downloads Catalog</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Download reference charts, handbook PDFs, and installation specifications.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Download reference charts, handbook PDFs, and installation specifications.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -423,7 +423,7 @@ export function DownloadCenter() {
           >
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">{item.title}</h4>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-1 leading-normal">{item.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-1 leading-normal">{item.desc}</p>
             </div>
             <button
               onClick={() => alert(`Downloading: ${item.file}`)}
@@ -455,7 +455,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Frequently Asked Questions</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Answers to standard queries relating to charging networks and adapters.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Answers to standard queries relating to charging networks and adapters.</p>
       </div>
 
       <div className="space-y-2">
@@ -475,10 +475,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>
@@ -502,7 +502,7 @@ export function ContinueCTA() {
         <div className="space-y-2">
           <span className="text-[9.5px] font-extrabold text-purple-400 uppercase tracking-widest block">Next Subject Module</span>
           <h3 className="text-lg font-bold text-white">EV Components & Drivetrains</h3>
-          <p className="text-xs text-[#AEB5C0]/60 max-w-md leading-relaxed">
+          <p className="text-xs text-muted-foreground/60 max-w-md leading-relaxed">
             Transition to the next module. Learn how traction motors, power inverters, and reduction gearboxes manage pack energy.
           </p>
         </div>

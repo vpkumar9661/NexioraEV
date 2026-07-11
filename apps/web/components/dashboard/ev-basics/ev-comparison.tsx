@@ -36,7 +36,7 @@ export function EVComparison() {
     <section id="comparison" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">EV vs ICE Comparison</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Compare performance, cost, and environmental impact across drivetrain types</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Compare performance, cost, and environmental impact across drivetrain types</p>
       </div>
 
       {/* Type selector pills */}
@@ -51,7 +51,7 @@ export function EVComparison() {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-bold transition-all duration-300 border ${
                 isActive
                   ? `bg-opacity-15 border-opacity-30 text-white`
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-muted-foreground/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -70,7 +70,7 @@ export function EVComparison() {
       <div className="rounded-[20px] border border-white/5 bg-white/2 overflow-hidden">
         {METRICS.map((metric, idx) => (
           <div key={metric.label} className={`p-5 ${idx < METRICS.length - 1 ? "border-b border-white/5" : ""}`}>
-            <span className="text-[12px] font-bold text-[#AEB5C0]/50 uppercase tracking-wider block mb-3">{metric.label}</span>
+            <span className="text-[12px] font-bold text-muted-foreground/50 uppercase tracking-wider block mb-3">{metric.label}</span>
             <div className="space-y-2.5">
               {selected.map((typeId) => {
                 const type = TYPES.find((t) => t.id === typeId)!;

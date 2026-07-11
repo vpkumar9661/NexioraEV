@@ -45,7 +45,7 @@ export function EndReport({
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h2 className="text-xl font-black text-white font-sans">End of Proving Run Report</h2>
-          <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Diagnose battery thermal decay rates, mechanical energy efficiencies, and safety scores.</p>
+          <p className="text-xs text-muted-foreground/60 mt-0.5">Diagnose battery thermal decay rates, mechanical energy efficiencies, and safety scores.</p>
         </div>
         <div className="flex gap-2">
           <button
@@ -68,42 +68,42 @@ export function EndReport({
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Statistics Readout Left */}
         <div className="md:col-span-8 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-5">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Proving Statistics Summary</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Proving Statistics Summary</span>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Distance Covered</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Distance Covered</span>
               <strong className="text-sm text-white block mt-0.5">{distance.toFixed(2)} km</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Average Speed</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Average Speed</span>
               <strong className="text-sm text-white block mt-0.5">{stats.avgSpeed} km/h</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Maximum Speed</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Maximum Speed</span>
               <strong className="text-sm text-white block mt-0.5">{maxSpeed} km/h</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Efficiency</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Efficiency</span>
               <strong className="text-sm text-cyan-300 block mt-0.5">{stats.efficiency} Wh/km</strong>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs border-t border-white/5 pt-4">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Regen Recovered</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Regen Recovered</span>
               <strong className="text-sm text-emerald-400 block mt-0.5">{regenRecovered.toFixed(2)} kWh</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Driving Score</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Driving Score</span>
               <strong className="text-sm text-white block mt-0.5">{stats.driveScore} / 100</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Rating</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Thermal Rating</span>
               <strong className="text-sm text-white block mt-0.5">{stats.thermalScore} / 100</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">CO₂ Offsets</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">CO₂ Offsets</span>
               <strong className="text-sm text-[#10B981] block mt-0.5">+{Math.round(distance * 0.12)} kg</strong>
             </div>
           </div>
@@ -111,7 +111,7 @@ export function EndReport({
 
         {/* Proving Achievements Right */}
         <div className="md:col-span-4 p-5 rounded-[20px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block border-b border-white/5 pb-2">Proving Badges Unlocked</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block border-b border-white/5 pb-2">Proving Badges Unlocked</span>
           
           <div className="space-y-2.5">
             {[
@@ -124,7 +124,7 @@ export function EndReport({
                 </div>
                 <div>
                   <strong className="text-white block">{badge.title}</strong>
-                  <span className="text-[10px] text-[#AEB5C0]/50 block leading-normal">{badge.desc}</span>
+                  <span className="text-[10px] text-muted-foreground/50 block leading-normal">{badge.desc}</span>
                 </div>
               </div>
             ))}

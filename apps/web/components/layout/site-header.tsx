@@ -113,44 +113,44 @@ const SOLUTIONS_CATEGORIES = [
   {
     name: "EV Charging Solutions",
     description: "Home chargers, commercial charging stations, DC fast charging and smart charging infrastructure.",
-    href: "/solutions/charging",
+    href: "/solutions/charging-solutions",
     icon: Plug
   },
   {
     name: "Battery Solutions",
     description: "Battery systems, swapping, thermal management, recycling and energy storage.",
-    href: "/solutions/battery",
+    href: "/solutions/battery-solutions",
     icon: Battery
   },
   {
     name: "Fleet Solutions",
     description: "Complete EV fleet management for businesses, logistics, ride sharing and commercial transport.",
-    href: "/solutions/fleet",
+    href: "/solutions/fleet-solutions",
     icon: Truck
   },
   {
-    name: "Solar + EV",
+    name: "Solar + EV Solutions",
     description: "Integrate rooftop solar with EV charging for maximum energy savings.",
-    href: "/solutions/solar",
+    href: "/solutions/solar-ev-solutions",
     icon: Sun
   },
   {
     name: "Business Solutions",
     description: "EV infrastructure for offices, industries, apartments and commercial facilities.",
-    href: "/solutions/business",
+    href: "/solutions/business-solutions",
     icon: Building
   },
   {
-    name: "Smart Energy",
+    name: "Smart Energy Solutions",
     description: "Energy monitoring, V2G, smart grid integration and intelligent energy optimization.",
-    href: "/solutions/energy",
+    href: "/solutions/smart-energy-solutions",
     icon: Activity
   },
   {
     name: "AI Solutions",
-    description: "Predictive maintenance, AI diagnostics, smart charging optimization and analytics.",
-    href: "/solutions/ai",
-    icon: Brain
+    description: "Enterprise EV intelligence platform connecting every system.",
+    href: "/solutions/ai-solutions",
+    icon: Sparkles
   },
   {
     name: "Consultation",
@@ -1452,9 +1452,9 @@ export function SiteHeader() {
                     }}
                     className={`${isActive || isMenuOpen ? 'glass-btn-active' : 'glass-btn'} flex items-center border border-solid gap-1.5 px-3.5 py-2 rounded-[12px] text-[13px] xl:text-[14px] font-semibold cursor-pointer transition-all duration-350`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${isActive || isMenuOpen ? 'text-[#00D26A]' : 'text-[#AEB5C0] opacity-80'}`} strokeWidth={1.5} />
+                    <Icon className={`w-3.5 h-3.5 ${isActive || isMenuOpen ? 'text-[#00D26A]' : 'text-muted-foreground opacity-80'}`} strokeWidth={1.5} />
                     <span className="text-white font-sans">{item.name}</span>
-                    <ChevronDown className={`dropdown-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180 text-[#00D26A]' : 'text-[#AEB5C0]/60'}`} strokeWidth={1.5} />
+                    <ChevronDown className={`dropdown-arrow w-3 h-3 transition-transform duration-300 ${isMenuOpen ? 'rotate-180 text-[#00D26A]' : 'text-muted-foreground/60'}`} strokeWidth={1.5} />
                   </button>
                   
                   {/* Dropdown Menu */}
@@ -1466,10 +1466,10 @@ export function SiteHeader() {
                       onMouseEnter={() => handleMouseEnter(menuKey)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <Link href={`/${menuKey}`} onClick={handleLinkClick} className="block px-4 py-2.5 text-[13px] font-medium text-[#AEB5C0] hover:text-[#00D26A] hover:bg-[rgba(0,210,106,0.08)] rounded-[10px] transition-all duration-300">
+                      <Link href={`/${menuKey}`} onClick={handleLinkClick} className="block px-4 py-2.5 text-[13px] font-medium text-muted-foreground hover:text-[#00D26A] hover:bg-[rgba(0,210,106,0.08)] rounded-[10px] transition-all duration-300">
                         Overview
                       </Link>
-                      <Link href={`/${menuKey}/features`} onClick={handleLinkClick} className="block px-4 py-2.5 text-[13px] font-medium text-[#AEB5C0] hover:text-[#00D26A] hover:bg-[rgba(0,210,106,0.08)] rounded-[10px] transition-all duration-300">
+                      <Link href={`/${menuKey}/features`} onClick={handleLinkClick} className="block px-4 py-2.5 text-[13px] font-medium text-muted-foreground hover:text-[#00D26A] hover:bg-[rgba(0,210,106,0.08)] rounded-[10px] transition-all duration-300">
                         Features
                       </Link>
                     </div>
@@ -1484,13 +1484,13 @@ export function SiteHeader() {
             {/* Search Bar */}
             <div className="relative group cursor-pointer hidden xl:block">
               <div className="search-glass flex items-center gap-2 px-3 py-1.5 w-[175px]">
-                <Search className="w-3.5 h-3.5 text-[#AEB5C0] group-focus-within:text-[#00D26A] transition-colors" strokeWidth={1.5} />
+                <Search className="w-3.5 h-3.5 text-muted-foreground group-focus-within:text-[#00D26A] transition-colors" strokeWidth={1.5} />
                 <input 
                   type="text"
                   placeholder="Search..."
-                  className="bg-transparent border-none outline-none text-[13px] text-white placeholder:text-[#AEB5C0]/60 w-full font-sans py-0 leading-none h-full align-middle"
+                  className="bg-transparent border-none outline-none text-[13px] text-white placeholder:text-muted-foreground/60 w-full font-sans py-0 leading-none h-full align-middle"
                 />
-                <kbd className="hidden lg:inline-flex h-[18px] items-center gap-0.5 rounded-[4px] bg-[rgba(255,255,255,0.04)] px-1.5 font-mono text-[9px] font-medium text-[#AEB5C0] border border-[rgba(255,255,255,0.08)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] shrink-0">
+                <kbd className="hidden lg:inline-flex h-[18px] items-center gap-0.5 rounded-[4px] bg-[rgba(255,255,255,0.04)] px-1.5 font-mono text-[9px] font-medium text-muted-foreground border border-[rgba(255,255,255,0.08)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] shrink-0">
                   ⌘K
                 </kbd>
               </div>
@@ -1500,7 +1500,7 @@ export function SiteHeader() {
             <Link 
               href="/auth/login" 
               onClick={handleLinkClick}
-              className="text-[13px] xl:text-[14px] font-medium text-[#AEB5C0] hover:text-white transition-all duration-300 px-2 py-1.5 relative group"
+              className="text-[13px] xl:text-[14px] font-medium text-muted-foreground hover:text-white transition-all duration-300 px-2 py-1.5 relative group"
             >
               Sign In
               <span className="absolute bottom-0 left-2 right-2 h-px bg-[#00D26A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
@@ -1563,12 +1563,12 @@ export function SiteHeader() {
                         </div>
                         <div className="flex flex-col justify-center h-full gap-0.5">
                           <span className="mega-title text-[18px] font-bold text-white transition-colors leading-tight pr-6">{category.name}</span>
-                          <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-4">
+                          <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-4">
                             {category.description}
                           </p>
                         </div>
                       </div>
-                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                      <ArrowRight className="mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                     </Link>
                   );
                 })}
@@ -1600,16 +1600,16 @@ export function SiteHeader() {
                       >
                         <div className="flex items-center gap-[12px] h-full">
                           <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
-                            <CatIcon className="solutions-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                            <CatIcon className="solutions-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
                             <span className="text-[18px] font-bold text-white group-hover/card:text-[#00D26A] transition-colors leading-tight pr-6">{category.name}</span>
-                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                            <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-2">
                               {category.description}
                             </p>
                           </div>
                         </div>
-                        <ArrowRight className="solutions-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                        <ArrowRight className="solutions-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                       </Link>
                     );
                   })}
@@ -1644,16 +1644,16 @@ export function SiteHeader() {
                       >
                         <div className="flex items-center gap-[12px] h-full">
                           <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
-                            <CatIcon className="intelligence-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                            <CatIcon className="intelligence-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
                             <span className="text-[18px] font-bold text-white group-hover/card:text-[#FF8C00] transition-colors leading-tight pr-6">{category.name}</span>
-                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                            <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-2">
                               {category.description}
                             </p>
                           </div>
                         </div>
-                        <ArrowRight className="intelligence-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                        <ArrowRight className="intelligence-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                       </Link>
                     );
                   })}
@@ -1688,16 +1688,16 @@ export function SiteHeader() {
                       >
                         <div className="flex items-center gap-[12px] h-full">
                           <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
-                            <CatIcon className="marketplace-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                            <CatIcon className="marketplace-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
                             <span className="text-[18px] font-bold text-white group-hover/card:text-[#2563EB] transition-colors leading-tight pr-6">{category.name}</span>
-                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                            <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-2">
                               {category.description}
                             </p>
                           </div>
                         </div>
-                        <ArrowRight className="marketplace-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                        <ArrowRight className="marketplace-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                       </Link>
                     );
                   })}
@@ -1732,16 +1732,16 @@ export function SiteHeader() {
                       >
                         <div className="flex items-center gap-[12px] h-full">
                           <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
-                            <CatIcon className="schemes-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                            <CatIcon className="schemes-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
                             <span className="text-[18px] font-bold text-white group-hover/card:text-[#4F46E5] transition-colors leading-tight pr-6">{category.name}</span>
-                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                            <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-2">
                               {category.description}
                             </p>
                           </div>
                         </div>
-                        <ArrowRight className="schemes-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                        <ArrowRight className="schemes-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                       </Link>
                     );
                   })}
@@ -1776,16 +1776,16 @@ export function SiteHeader() {
                       >
                         <div className="flex items-center gap-[12px] h-full">
                           <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
-                            <CatIcon className="company-mega-icon w-5 h-5 text-[#AEB5C0] transition-all duration-300" strokeWidth={1.8} />
+                            <CatIcon className="company-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
                             <span className="text-[18px] font-bold text-white group-hover/card:text-[#EC4899] transition-colors leading-tight pr-6">{category.name}</span>
-                            <p className="text-[13px] text-[#AEB5C0]/65 leading-tight font-sans line-clamp-2 pr-2">
+                            <p className="text-[13px] text-muted-foreground/65 leading-tight font-sans line-clamp-2 pr-2">
                               {category.description}
                             </p>
                           </div>
                         </div>
-                        <ArrowRight className="company-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/50 transition-transform duration-300" strokeWidth={1.8} />
+                        <ArrowRight className="company-mega-arrow absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/50 transition-transform duration-300" strokeWidth={1.8} />
                       </Link>
                     );
                   })}
@@ -1805,11 +1805,11 @@ export function SiteHeader() {
           <div className="flex flex-col gap-4 px-6 max-h-[70vh] overflow-y-auto">
             <div className="xl:hidden mb-2 relative">
                <div className="search-glass flex items-center gap-2 px-3 py-2">
-                <Search className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                <Search className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                 <input 
                   type="text"
                   placeholder="Search..."
-                  className="bg-transparent border-none outline-none text-[14px] text-white placeholder:text-[#AEB5C0] w-full font-sans"
+                  className="bg-transparent border-none outline-none text-[14px] text-white placeholder:text-muted-foreground w-full font-sans"
                 />
               </div>
             </div>
@@ -1825,7 +1825,7 @@ export function SiteHeader() {
                       onClick={() => setIsEvtechMobileOpen(!isEvtechMobileOpen)}
                       className={`${isEvtechMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1838,7 +1838,7 @@ export function SiteHeader() {
                       onClick={() => setIsSolutionsMobileOpen(!isSolutionsMobileOpen)}
                       className={`${isSolutionsMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1851,7 +1851,7 @@ export function SiteHeader() {
                       onClick={() => setIsIntelligenceMobileOpen(!isIntelligenceMobileOpen)}
                       className={`${isIntelligenceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1864,7 +1864,7 @@ export function SiteHeader() {
                       onClick={() => setIsMarketplaceMobileOpen(!isMarketplaceMobileOpen)}
                       className={`${isMarketplaceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1877,7 +1877,7 @@ export function SiteHeader() {
                       onClick={() => setIsSchemesMobileOpen(!isSchemesMobileOpen)}
                       className={`${isSchemesMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1890,7 +1890,7 @@ export function SiteHeader() {
                       onClick={() => setIsCompanyMobileOpen(!isCompanyMobileOpen)}
                       className={`${isCompanyMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1903,7 +1903,7 @@ export function SiteHeader() {
                     className="glass-btn flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px]"
                     onClick={handleLinkClick}
                   >
-                    <Icon className="w-[18px] h-[18px] text-[#AEB5C0]" strokeWidth={1.5} />
+                    <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
                     <span className="text-[13px] font-semibold text-white">{item.name}</span>
                   </Link>
                 )
@@ -1927,13 +1927,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}
@@ -1957,13 +1957,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}
@@ -1987,13 +1987,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}
@@ -2017,13 +2017,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}
@@ -2047,13 +2047,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}
@@ -2077,13 +2077,13 @@ export function SiteHeader() {
                       className="flex items-center justify-between p-3 rounded-[10px] bg-white/5 border border-white/5 hover:border-white/10"
                     >
                       <div className="flex items-center gap-3">
-                        <CatIcon className="w-4 h-4 text-[#AEB5C0]" strokeWidth={1.5} />
+                        <CatIcon className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                         <div className="flex flex-col">
                           <span className="text-[13px] font-bold text-white">{category.name}</span>
-                          <span className="text-[10px] text-[#AEB5C0]/65 line-clamp-1">{category.description}</span>
+                          <span className="text-[10px] text-muted-foreground/65 line-clamp-1">{category.description}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#AEB5C0]/50" strokeWidth={1.5} />
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/50" strokeWidth={1.5} />
                     </Link>
                   );
                 })}

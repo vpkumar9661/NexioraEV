@@ -26,7 +26,7 @@ export function InterviewCenter() {
     <section id="interview" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Interactive Interview Whiteboard</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Solve coding and design problems to receive instant validation scores.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Solve coding and design problems to receive instant validation scores.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -53,13 +53,13 @@ export function InterviewCenter() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
           {feedback ? (
             <div className="space-y-2 text-xs">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">AI Evaluator Diagnostics</span>
-              <p className="text-xs text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 font-semibold">
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Evaluator Diagnostics</span>
+              <p className="text-xs text-muted-foreground/80 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 font-semibold">
                 {feedback}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/35 text-xs">
+            <div className="text-center p-4 text-muted-foreground/35 text-xs">
               Submit your thermal calculations code on the left to receive AI validator output diagnostics.
             </div>
           )}
@@ -93,7 +93,7 @@ export function ResumeBuilder() {
     <section id="resume" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">EV Technical Resume Builder</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Input experience highlights to generate formatted modern resume templates.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Input experience highlights to generate formatted modern resume templates.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -102,17 +102,17 @@ export function ResumeBuilder() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[220px]">
           <form onSubmit={handleGenerate} className="space-y-3.5 text-xs">
             <div className="space-y-1">
-              <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Full Name</label>
+              <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Full Name</label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Alan Turing"
-                className="w-full px-3 py-1.5 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F4B400] placeholder:text-[#AEB5C0]/25"
+                className="w-full px-3 py-1.5 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F4B400] placeholder:text-muted-foreground/25"
               />
             </div>
             <div className="space-y-1">
-              <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Target Role</label>
+              <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Target Role</label>
               <input
                 type="text"
                 value={role}
@@ -121,7 +121,7 @@ export function ResumeBuilder() {
               />
             </div>
             <div className="space-y-1">
-              <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Key Competencies</label>
+              <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Key Competencies</label>
               <input
                 type="text"
                 value={skills}
@@ -149,13 +149,13 @@ export function ResumeBuilder() {
                 </div>
                 <button
                   onClick={() => alert("Downloading compiled resume PDF templates...")}
-                  className="p-1.5 rounded bg-white/5 border border-white/5 text-[#AEB5C0] hover:text-white hover:bg-white/10 cursor-pointer"
+                  className="p-1.5 rounded bg-white/5 border border-white/5 text-muted-foreground hover:text-white hover:bg-white/10 cursor-pointer"
                 >
                   <FileDown className="w-4 h-4" />
                 </button>
               </div>
 
-              <div className="text-[11px] text-[#AEB5C0]/85 space-y-2">
+              <div className="text-[11px] text-muted-foreground/85 space-y-2">
                 <div>
                   <strong className="text-white block uppercase tracking-widest text-[9px] mb-1">Competencies</strong>
                   <span>{resumeData.skills}</span>
@@ -167,8 +167,8 @@ export function ResumeBuilder() {
               </div>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/40 text-xs flex flex-col items-center justify-center gap-2">
-              <FileText className="w-8 h-8 text-[#AEB5C0]/25" />
+            <div className="text-center p-4 text-muted-foreground/40 text-xs flex flex-col items-center justify-center gap-2">
+              <FileText className="w-8 h-8 text-muted-foreground/25" />
               <span>Input experience highlights to generate resume previews.</span>
             </div>
           )}
@@ -188,15 +188,15 @@ export function InternshipReadiness() {
     <section id="readiness" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Internship & Job Readiness</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Analyze technical skills, gaps checklists, and recommended hiring companies.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Analyze technical skills, gaps checklists, and recommended hiring companies.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Strengths panel Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase block tracking-wider">Hiring Recommendations</span>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase block tracking-wider">Hiring Recommendations</span>
+          <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
             Suggested Roles: Junior Battery Engineer, BMS firmware Specialist, thermal testing associate.<br />
             Target Partners: Tesla, Rivian, Lucid Motors, CATL, Nexiora Automotive partners.
           </p>
@@ -204,8 +204,8 @@ export function InternshipReadiness() {
 
         {/* Gaps analysis right */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase block tracking-wider">Competency Gap Checklists</span>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase block tracking-wider">Competency Gap Checklists</span>
+          <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
             Missing requirements:<br />
             * Complete 3D Exploded components project under EV Studio.<br />
             * Solve Whiteboard system design coding equations exams.
@@ -247,7 +247,7 @@ export function AICareerCoach() {
         
         {/* Buttons left */}
         <div className="md:col-span-5 flex flex-col gap-2 p-3 rounded-2xl border border-white/5 bg-black/40">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">Select Query Profiles</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">Select Query Profiles</span>
           {[
             { id: "roadmap", label: "Suggest career paths & study timelines" },
             { id: "resume", label: "Provide ATS keywords advice" },
@@ -259,7 +259,7 @@ export function AICareerCoach() {
               className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer ${
                 selectedTopic === q.id
                   ? "bg-[#F4B400]/15 border-[#F4B400]/30 text-[#F4B400]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0] hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground hover:text-white"
               }`}
             >
               {q.label}
@@ -272,12 +272,12 @@ export function AICareerCoach() {
           {response ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">Career Coach Prognostics</span>
-              <p className="text-xs text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+              <p className="text-xs text-muted-foreground/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
                 {response}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/35 text-xs">
+            <div className="text-center p-4 text-muted-foreground/35 text-xs">
               Select a career query profile on the left to consult the AI Coach.
             </div>
           )}
@@ -297,11 +297,11 @@ export function CareerProgress() {
     <section id="progress" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Career Milestones Progress</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Track your ongoing roadmap timelines and targets benchmarks.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Track your ongoing roadmap timelines and targets benchmarks.</p>
       </div>
 
       <div className="p-5 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-md space-y-4">
-        <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Academic Roadmap Progress</span>
+        <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Academic Roadmap Progress</span>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs font-semibold">
           <div className="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl">
             <strong>Milestone 1: EV Basics</strong>
@@ -315,7 +315,7 @@ export function CareerProgress() {
             <strong>Milestone 3: Projects</strong>
             <span className="text-[10px] text-white block mt-1">Ongoing Design</span>
           </div>
-          <div className="p-3 bg-white/1 border border-white/5 text-[#AEB5C0] rounded-xl">
+          <div className="p-3 bg-white/1 border border-white/5 text-muted-foreground rounded-xl">
             <strong>Milestone 4: Placement</strong>
             <span className="text-[10px] block mt-1">Locked</span>
           </div>
@@ -336,7 +336,7 @@ export function AchievementsHub() {
         
         {/* Achievements Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Unlocked Badges</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Unlocked Badges</span>
           <div className="space-y-2">
             {[
               { title: "Industry Ready Candidate", desc: "Completed all core courses and generated portfolio." },
@@ -348,7 +348,7 @@ export function AchievementsHub() {
                 </div>
                 <div>
                   <strong className="text-white block">{b.title}</strong>
-                  <span className="text-[10px] text-[#AEB5C0]/50 block">{b.desc}</span>
+                  <span className="text-[10px] text-muted-foreground/50 block">{b.desc}</span>
                 </div>
               </div>
             ))}
@@ -358,18 +358,18 @@ export function AchievementsHub() {
         {/* Downloads Right */}
         <div id="downloads" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between">
           <div>
-            <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads center</span>
+            <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads center</span>
             
             <div className="grid grid-cols-2 gap-2 mt-4 text-xs">
               <button
                 onClick={() => alert("Downloading: Resume-Templates.pdf")}
-                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
+                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
               >
                 Resume template
               </button>
               <button
                 onClick={() => alert("Downloading: Interview-Guide.pdf")}
-                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
+                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
               >
                 Interview guide
               </button>
@@ -395,7 +395,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Frequently Asked Questions</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore answers relating to placements, certs, and roadmap targets.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore answers relating to placements, certs, and roadmap targets.</p>
       </div>
 
       <div className="space-y-2">
@@ -415,10 +415,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#F4B400]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#F4B400]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>
@@ -439,7 +439,7 @@ export function CareerCTA() {
         <div className="space-y-2">
           <span className="text-[9.5px] font-extrabold text-[#F4B400] uppercase tracking-widest block">Start Your EV Career Journey Today</span>
           <h3 className="text-lg font-bold text-white">Become a NexioraEV Certified Engineer</h3>
-          <p className="text-xs text-[#AEB5C0]/60 max-w-md leading-relaxed">
+          <p className="text-xs text-muted-foreground/60 max-w-md leading-relaxed">
             Consolidate your courses progress, download templates and guides, and share your verification link with auto manufacturers placement partners.
           </p>
         </div>

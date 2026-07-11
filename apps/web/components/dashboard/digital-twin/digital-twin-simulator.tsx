@@ -558,7 +558,7 @@ export function DigitalTwinSimulator() {
           <h1 className="text-3xl font-black tracking-tight mt-1.5 bg-linear-to-r from-white via-purple-300 to-white bg-clip-text text-transparent">
             Nexiora Battery Digital Twin™
           </h1>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">
+          <p className="text-sm text-muted-foreground/60 mt-1">
             Build, model, and analyze customized cell groupings, thermal heat dynamics, and degradation longevity.
           </p>
         </div>
@@ -576,7 +576,7 @@ export function DigitalTwinSimulator() {
             className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all flex items-center gap-1.5 cursor-pointer ${
               comparePanel
                 ? "bg-purple-500 border-purple-500 text-white"
-                : "border-white/10 bg-white/2 text-[#AEB5C0] hover:text-white hover:bg-white/5"
+                : "border-white/10 bg-white/2 text-muted-foreground hover:text-white hover:bg-white/5"
             }`}
           >
             <Activity className="w-4 h-4" /> Comparison Matrix ({savedTwins.length})
@@ -584,7 +584,7 @@ export function DigitalTwinSimulator() {
 
           <button
             onClick={triggerExport}
-            className="px-4 py-2 text-xs font-bold rounded-xl border border-white/10 bg-[#07090e] text-[#AEB5C0] hover:text-white hover:border-white/20 transition-all flex items-center gap-1.5 cursor-pointer"
+            className="px-4 py-2 text-xs font-bold rounded-xl border border-white/10 bg-[#07090e] text-muted-foreground hover:text-white hover:border-white/20 transition-all flex items-center gap-1.5 cursor-pointer"
           >
             <FileDown className="w-4 h-4" /> Export Report
           </button>
@@ -606,7 +606,7 @@ export function DigitalTwinSimulator() {
 
             {/* Chemistry Dropdown */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cell Chemistry</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cell Chemistry</label>
               <select
                 value={chemistry}
                 onChange={(e) => {
@@ -625,7 +625,7 @@ export function DigitalTwinSimulator() {
 
             {/* Capacity Slider */}
             <div className="space-y-2">
-              <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+              <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">
                 <span>Energy Capacity</span>
                 <span className="text-white font-extrabold">{capacity} kWh</span>
               </div>
@@ -641,7 +641,7 @@ export function DigitalTwinSimulator() {
                 }}
                 className="w-full accent-purple-400 h-1 bg-white/10 rounded-lg appearance-none cursor-pointer"
               />
-              <div className="flex justify-between text-[8px] text-[#AEB5C0]/30 font-semibold">
+              <div className="flex justify-between text-[8px] text-muted-foreground/30 font-semibold">
                 <span>20 kWh</span>
                 <span>150 kWh</span>
               </div>
@@ -649,7 +649,7 @@ export function DigitalTwinSimulator() {
 
             {/* Target Vehicle Type */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Vehicle Architecture</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Vehicle Architecture</label>
               <select
                 value={vehicle}
                 onChange={(e) => {
@@ -669,7 +669,7 @@ export function DigitalTwinSimulator() {
 
             {/* Total Cell Count numeric input */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase block">Cell Assembly Target (Input)</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase block">Cell Assembly Target (Input)</label>
               <input
                 type="number"
                 value={cells}
@@ -686,7 +686,7 @@ export function DigitalTwinSimulator() {
 
             {/* Cooling Method */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cooling Architecture</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cooling Architecture</label>
               <div className="grid grid-cols-3 gap-1">
                 {[
                   { id: "air", label: "Air Cool", icon: Wind },
@@ -705,7 +705,7 @@ export function DigitalTwinSimulator() {
                       className={`py-2 rounded-lg border flex flex-col items-center justify-center gap-1 transition-all cursor-pointer ${
                         active
                           ? "bg-purple-500/20 border-purple-500/40 text-purple-300"
-                          : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                          : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                       }`}
                     >
                       <Icon className="w-3.5 h-3.5" />
@@ -718,7 +718,7 @@ export function DigitalTwinSimulator() {
 
             {/* Climate & Ambient */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Climate Chamber Ambient</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Climate Chamber Ambient</label>
               <div className="grid grid-cols-3 gap-1">
                 {[
                   { id: "cold", label: "Cold (-10°C)" },
@@ -736,7 +736,7 @@ export function DigitalTwinSimulator() {
                       className={`py-1.5 rounded-lg border text-[9px] font-extrabold cursor-pointer transition-colors ${
                         active
                           ? "bg-purple-500/20 border-purple-500/40 text-purple-300"
-                          : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                          : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                       }`}
                     >
                       {cl.label.split(" ")[0]}
@@ -748,7 +748,7 @@ export function DigitalTwinSimulator() {
 
             {/* Charging Target Dropdown */}
             <div className="space-y-1.5">
-              <label className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase block">Max Grid Power (Charging)</label>
+              <label className="text-[10px] text-muted-foreground/40 font-bold uppercase block">Max Grid Power (Charging)</label>
               <select
                 value={charging}
                 onChange={(e) => {
@@ -769,7 +769,7 @@ export function DigitalTwinSimulator() {
           </div>
 
           <div className="mt-5 border-t border-white/5 pt-4">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Series/Parallel Structuring</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Series/Parallel Structuring</span>
             <div className="flex items-center justify-between mt-1">
               <span className="text-xs text-white/50">Grouping:</span>
               <span className="text-xs font-black text-purple-300 uppercase tracking-widest">{calculations.configuration}</span>
@@ -796,7 +796,7 @@ export function DigitalTwinSimulator() {
                 className={`px-3 py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-all ${
                   explodeView
                     ? "bg-purple-500/20 border-purple-500/40 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.15)]"
-                    : "bg-white/3 border-white/5 text-[#AEB5C0] hover:text-white"
+                    : "bg-white/3 border-white/5 text-muted-foreground hover:text-white"
                 }`}
               >
                 Exploded View
@@ -810,7 +810,7 @@ export function DigitalTwinSimulator() {
                 className={`px-3 py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-all ${
                   crossSection
                     ? "bg-purple-500/20 border-purple-500/40 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.15)]"
-                    : "bg-white/3 border-white/5 text-[#AEB5C0] hover:text-white"
+                    : "bg-white/3 border-white/5 text-muted-foreground hover:text-white"
                 }`}
               >
                 Cross Section
@@ -824,7 +824,7 @@ export function DigitalTwinSimulator() {
                 className={`px-3 py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-all ${
                   thermalView
                     ? "bg-purple-500/20 border-purple-500/40 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.15)]"
-                    : "bg-white/3 border-white/5 text-[#AEB5C0] hover:text-white"
+                    : "bg-white/3 border-white/5 text-muted-foreground hover:text-white"
                 }`}
               >
                 Thermal Heat Map
@@ -832,7 +832,7 @@ export function DigitalTwinSimulator() {
             </div>
 
             {/* Rotation controllers */}
-            <div className="flex gap-1 items-center bg-white/2 rounded-lg border border-white/5 p-0.5 text-[9px] text-[#AEB5C0]">
+            <div className="flex gap-1 items-center bg-white/2 rounded-lg border border-white/5 p-0.5 text-[9px] text-muted-foreground">
               <button
                 onClick={() => setRotateY((y) => (y - 15) % 360)}
                 className="px-1.5 py-0.5 hover:text-white font-bold"
@@ -1045,14 +1045,14 @@ export function DigitalTwinSimulator() {
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: selectedComponent.color }} />
               <span className="text-xs font-black text-white">{selectedComponent.name}</span>
             </div>
-            <p className="text-[11px] text-[#AEB5C0]/85 leading-relaxed">{selectedComponent.purpose}</p>
+            <p className="text-[11px] text-muted-foreground/85 leading-relaxed">{selectedComponent.purpose}</p>
             <div className="grid grid-cols-2 gap-2 text-[10px] pt-1">
               <div>
-                <span className="text-[#AEB5C0]/40 uppercase tracking-wider block">Material Composition</span>
+                <span className="text-muted-foreground/40 uppercase tracking-wider block">Material Composition</span>
                 <span className="font-bold text-white block truncate">{selectedComponent.material}</span>
               </div>
               <div>
-                <span className="text-[#AEB5C0]/40 uppercase tracking-wider block">BMS Specifications</span>
+                <span className="text-muted-foreground/40 uppercase tracking-wider block">BMS Specifications</span>
                 <span className="font-bold text-purple-300 block truncate">{selectedComponent.specs}</span>
               </div>
             </div>
@@ -1072,8 +1072,8 @@ export function DigitalTwinSimulator() {
             {/* Overall Score Dial */}
             <div className="flex items-center justify-between bg-white/2 p-3 rounded-xl border border-white/5">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Engineering Score</span>
-                <span className="text-xl font-black text-white">{calculations.engineeringScore} <span className="text-xs font-normal text-[#AEB5C0]/65">/100</span></span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Engineering Score</span>
+                <span className="text-xl font-black text-white">{calculations.engineeringScore} <span className="text-xs font-normal text-muted-foreground/65">/100</span></span>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-purple-500/30 flex items-center justify-center font-black text-xs text-purple-300 bg-purple-500/10">
                 {calculations.engineeringScore >= 80 ? "A+" : calculations.engineeringScore >= 65 ? "B" : "C-"}
@@ -1083,55 +1083,55 @@ export function DigitalTwinSimulator() {
             <div className="space-y-3.5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Range Projection</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Range Projection</span>
                   <span className="text-sm font-extrabold text-[#10B981]">{calculations.range} mi</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Charge Duration</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Charge Duration</span>
                   <span className="text-sm font-extrabold text-white">{calculations.chargeTime} min</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Pack Weight</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Pack Weight</span>
                   <span className="text-sm font-extrabold text-white">{calculations.weight} kg</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Total Build Cost</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Total Build Cost</span>
                   <span className="text-sm font-extrabold text-[#10B981]">${calculations.cost.toLocaleString()}</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-3">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Density</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Density</span>
                   <span className="text-xs font-bold text-white">{calculations.density} Wh/kg</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Power Density</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Power Density</span>
                   <span className="text-xs font-bold text-white">{calculations.powerDensity} W/kg</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Nominal Voltage</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Nominal Voltage</span>
                   <span className="text-xs font-bold text-white">{calculations.voltage} V</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Max Safe Current</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Max Safe Current</span>
                   <span className="text-xs font-bold text-white">{calculations.maxCurrent} A</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Internal Resistance</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Internal Resistance</span>
                   <span className="text-xs font-bold text-white">{calculations.internalResistance} mΩ</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">CO₂ Savings (10Y)</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">CO₂ Savings (10Y)</span>
                   <span className="text-xs font-bold text-white">{calculations.co2Saved} Tons</span>
                 </div>
               </div>
@@ -1165,7 +1165,7 @@ export function DigitalTwinSimulator() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/5 pb-3">
               <div>
                 <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">15-Year Life Cycle Simulation</h4>
-                <p className="text-[11px] text-[#AEB5C0]/50 mt-0.5">Drag the slider to predict calendar aging and capacity fade over time.</p>
+                <p className="text-[11px] text-muted-foreground/50 mt-0.5">Drag the slider to predict calendar aging and capacity fade over time.</p>
               </div>
               <span className="text-xs font-extrabold text-[#10B981] bg-[#10B981]/10 px-2.5 py-0.5 rounded border border-[#10B981]/25">
                 Advice: {degradationProjection.replacement}
@@ -1174,7 +1174,7 @@ export function DigitalTwinSimulator() {
 
             <div className="grid sm:grid-cols-12 gap-6 items-center">
               <div className="sm:col-span-4 space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block">Timeline Age</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block">Timeline Age</span>
                 <div className="flex gap-2 items-center">
                   <span className="text-2xl font-black text-white">{degradYears}</span>
                   <span className="text-xs text-purple-400 font-bold">Years Operational</span>
@@ -1194,7 +1194,7 @@ export function DigitalTwinSimulator() {
                   }}
                   className="w-full accent-purple-400 h-1 bg-white/10 rounded-lg appearance-none cursor-pointer"
                 />
-                <div className="flex justify-between text-[9px] text-[#AEB5C0]/40 font-bold">
+                <div className="flex justify-between text-[9px] text-muted-foreground/40 font-bold">
                   <span>Factory Fresh (Yr 0)</span>
                   <span>Mid Life (Yr 7)</span>
                   <span>End of Life (Yr 15)</span>
@@ -1204,15 +1204,15 @@ export function DigitalTwinSimulator() {
 
             <div className="grid grid-cols-3 gap-4 border-t border-white/5 pt-4">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Remaining Capacity</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Remaining Capacity</span>
                 <span className="text-sm font-black text-white">{degradationProjection.health}%</span>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Available Range</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Available Range</span>
                 <span className="text-sm font-black text-[#10B981]">{degradationProjection.range} mi</span>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Efficiency Loss</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Efficiency Loss</span>
                 <span className="text-sm font-black text-red-400">+{degradationProjection.efficiencyLoss}%</span>
               </div>
             </div>
@@ -1227,7 +1227,7 @@ export function DigitalTwinSimulator() {
             <div className="grid sm:grid-cols-2 gap-6">
               {/* Chart 1: SOH Degradation Curve */}
               <div className="rounded-xl border border-white/5 bg-black/40 p-4">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2">Predicted SOH Degradation</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Predicted SOH Degradation</span>
                 <div className="h-[120px] w-full flex items-center justify-center">
                   <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible">
                     <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1272,7 +1272,7 @@ export function DigitalTwinSimulator() {
 
               {/* Chart 2: Fast Charging Throttling Curve */}
               <div className="rounded-xl border border-white/5 bg-black/40 p-4">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2">SOC Charging Power Throttling</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">SOC Charging Power Throttling</span>
                 <div className="h-[120px] w-full flex items-center justify-center">
                   <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible">
                     <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1327,29 +1327,29 @@ export function DigitalTwinSimulator() {
 
             <div className="space-y-3.5">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Runaway Hazard Rating</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Thermal Runaway Hazard Rating</span>
                 <span className={`text-xs font-black block mt-0.5 uppercase tracking-wide ${aiEvaluation.safetyGlow}`}>
                   {aiEvaluation.safetyRating}
                 </span>
               </div>
 
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Key Advantage</span>
-                <p className="text-[11px] text-[#AEB5C0]/85 leading-relaxed mt-0.5">
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Key Advantage</span>
+                <p className="text-[11px] text-muted-foreground/85 leading-relaxed mt-0.5">
                   {aiEvaluation.advantages[0]}
                 </p>
               </div>
 
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Electrochemistry Limitation</span>
-                <p className="text-[11px] text-[#AEB5C0]/75 leading-relaxed mt-0.5">
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Electrochemistry Limitation</span>
+                <p className="text-[11px] text-muted-foreground/75 leading-relaxed mt-0.5">
                   {aiEvaluation.weaknesses[0]}
                 </p>
               </div>
 
               <div className="p-3 bg-white/2 rounded-xl border border-white/5 space-y-1">
                 <span className="text-[9px] text-[#C084FC] font-extrabold uppercase block">Suggested Upgrade</span>
-                <p className="text-[10.5px] text-[#AEB5C0]/85 leading-relaxed">
+                <p className="text-[10.5px] text-muted-foreground/85 leading-relaxed">
                   {aiEvaluation.upgradeSuggest}
                 </p>
               </div>
@@ -1362,7 +1362,7 @@ export function DigitalTwinSimulator() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
               <span className="text-[9px] font-bold text-white uppercase tracking-wider">Twin Console Log Output</span>
             </div>
-            <div className="flex-1 overflow-y-auto font-mono text-[9px] text-[#AEB5C0]/65 space-y-1.5 scrollbar-thin scrollbar-thumb-white/10">
+            <div className="flex-1 overflow-y-auto font-mono text-[9px] text-muted-foreground/65 space-y-1.5 scrollbar-thin scrollbar-thumb-white/10">
               {twinLogs.map((log, idx) => (
                 <div key={idx} className="leading-normal truncate">
                   {log}
@@ -1385,19 +1385,19 @@ export function DigitalTwinSimulator() {
                   <Activity className="w-5 h-5 text-purple-400" />
                   <div>
                     <h3 className="text-lg font-bold text-white">Saved Configuration Matrix</h3>
-                    <span className="text-xs text-[#AEB5C0]/60">Compare up to 3 custom battery designs side by side</span>
+                    <span className="text-xs text-muted-foreground/60">Compare up to 3 custom battery designs side by side</span>
                   </div>
                 </div>
                 <button
                   onClick={() => setComparePanel(false)}
-                  className="p-1.5 rounded-lg hover:bg-white/5 text-[#AEB5C0]/50 hover:text-white transition-colors cursor-pointer"
+                  className="p-1.5 rounded-lg hover:bg-white/5 text-muted-foreground/50 hover:text-white transition-colors cursor-pointer"
                 >
                   <Check className="w-5 h-5" />
                 </button>
               </div>
 
               {savedTwins.length === 0 ? (
-                <div className="text-center py-12 text-[#AEB5C0]/40 text-sm">
+                <div className="text-center py-12 text-muted-foreground/40 text-sm">
                   No saved configurations to compare. Click &quot;Save Twin&quot; in the header toolbar to register setups.
                 </div>
               ) : (
@@ -1417,7 +1417,7 @@ export function DigitalTwinSimulator() {
                         <span className="text-[10px] text-purple-400 font-bold block">{t.chemistry.toUpperCase()} | {t.capacity}kWh</span>
                       </div>
 
-                      <div className="space-y-2.5 border-t border-white/5 pt-3.5 text-xs text-[#AEB5C0]/85">
+                      <div className="space-y-2.5 border-t border-white/5 pt-3.5 text-xs text-muted-foreground/85">
                         <div className="flex justify-between">
                           <span>Nominal Voltage:</span>
                           <strong className="text-white">{t.stats.voltage} V</strong>

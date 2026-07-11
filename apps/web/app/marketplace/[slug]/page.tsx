@@ -40,14 +40,14 @@ const DATA_MAP: Record<string, {
               <Car className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart Commuter Sedans</p>
-                <p className="text-xs text-[#AEB5C0]/75">High efficiency daily drivers with over 320 miles of range.</p>
+                <p className="text-xs text-muted-foreground/75">High efficiency daily drivers with over 320 miles of range.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Test Drive Booking</p>
-                <p className="text-xs text-[#AEB5C0]/75">Schedule a home test drive with our verified local dealers.</p>
+                <p className="text-xs text-muted-foreground/75">Schedule a home test drive with our verified local dealers.</p>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const DATA_MAP: Record<string, {
         title: "Commercial Logistics EVs",
         description: "Explore clean cargo vans and logistics fleets designed for lowest cost-per-mile operations.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Logistics Fleets:</span> Optimized payload capacity up to 1.5 metric tons.
             </div>
@@ -89,14 +89,14 @@ const DATA_MAP: Record<string, {
               <Battery className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart Balancing BMS</p>
-                <p className="text-xs text-[#AEB5C0]/75">Keeps all cell voltages uniform during heavy current fast charging.</p>
+                <p className="text-xs text-muted-foreground/75">Keeps all cell voltages uniform during heavy current fast charging.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <RefreshCw className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Hydrometallurgical Return</p>
-                <p className="text-xs text-[#AEB5C0]/75">Trade in old degraded batteries for core material exchange credit.</p>
+                <p className="text-xs text-muted-foreground/75">Trade in old degraded batteries for core material exchange credit.</p>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const DATA_MAP: Record<string, {
         title: "Thermal Runaway Protections",
         description: "Equipped with advanced fire-retardant structural aerogels and active coolant ports.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Aerogel Insulated:</span> Prevents heat migration between cells.
             </div>
@@ -138,14 +138,14 @@ const DATA_MAP: Record<string, {
               <Plug className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">7.4kW - 22kW Wallboxes</p>
-                <p className="text-xs text-[#AEB5C0]/75">Includes robust cables and custom mounting brackets.</p>
+                <p className="text-xs text-muted-foreground/75">Includes robust cables and custom mounting brackets.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Monetization Software</p>
-                <p className="text-xs text-[#AEB5C0]/75">Perfect for setting up paid parking charging portals.</p>
+                <p className="text-xs text-muted-foreground/75">Perfect for setting up paid parking charging portals.</p>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const DATA_MAP: Record<string, {
         title: "DC Fast Charging Corridors",
         description: "Heavy-duty commercial charging systems with liquid-cooled cables to minimize thermal limits.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">150kW - 350kW DC:</span> Recharges commercial trucks in 25 minutes.
             </div>
@@ -187,14 +187,14 @@ const DATA_MAP: Record<string, {
               <Wrench className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">CCS2 to GB/T Adapters</p>
-                <p className="text-xs text-[#AEB5C0]/75">Sturdy weather-resistant adapters for imported vehicles.</p>
+                <p className="text-xs text-muted-foreground/75">Sturdy weather-resistant adapters for imported vehicles.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart OBD2 Adapters</p>
-                <p className="text-xs text-[#AEB5C0]/75">Connects your vehicle diagnostic stream to the Nexiora app.</p>
+                <p className="text-xs text-muted-foreground/75">Connects your vehicle diagnostic stream to the Nexiora app.</p>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ const DATA_MAP: Record<string, {
         title: "Aerodynamics & Low Roll Tires",
         description: "Specialized tires designed to reduce road drag friction and save battery range.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Range Extender Tyres:</span> Boosts highway range by up to 5%.
             </div>
@@ -236,14 +236,14 @@ const DATA_MAP: Record<string, {
               <GitCompare className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Compare Range curves</p>
-                <p className="text-xs text-[#AEB5C0]/75">See range behavior under hot summer or cold winter climates.</p>
+                <p className="text-xs text-muted-foreground/75">See range behavior under hot summer or cold winter climates.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <BarChart3 className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Total Cost of Ownership (TCO)</p>
-                <p className="text-xs text-[#AEB5C0]/75">Calculates grid savings vs gasoline over a 5-year driving span.</p>
+                <p className="text-xs text-muted-foreground/75">Calculates grid savings vs gasoline over a 5-year driving span.</p>
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ const DATA_MAP: Record<string, {
         title: "Fast-Charging Time Comparison",
         description: "Compare charging speeds across home wallboxes and DC commercial networks.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">10% to 80% Fast Charge:</span> Ranks vehicles by active cooling speeds.
             </div>
@@ -285,14 +285,14 @@ const DATA_MAP: Record<string, {
               <Tag className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">B2B Volume Programs</p>
-                <p className="text-xs text-[#AEB5C0]/75">Unlock custom bulk tariffs for workplace charging equipment.</p>
+                <p className="text-xs text-muted-foreground/75">Unlock custom bulk tariffs for workplace charging equipment.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Subsidies Mapping API</p>
-                <p className="text-xs text-[#AEB5C0]/75">Computes state subsidies and road tax write-offs automatically.</p>
+                <p className="text-xs text-muted-foreground/75">Computes state subsidies and road tax write-offs automatically.</p>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ const DATA_MAP: Record<string, {
         title: "Gasoline Vehicle Trade-in",
         description: "Appraise your old ICE vehicle instantly online and trade it in for direct discounts on a new EV.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Instant Appraisals:</span> Get trade-in valuation quotes within 3 minutes.
             </div>
@@ -334,14 +334,14 @@ const DATA_MAP: Record<string, {
               <Store className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Local Showroom Map</p>
-                <p className="text-xs text-[#AEB5C0]/75">Click to find certified partner dealerships offering test drives.</p>
+                <p className="text-xs text-muted-foreground/75">Click to find certified partner dealerships offering test drives.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Original Spare Catalogs</p>
-                <p className="text-xs text-[#AEB5C0]/75">Browse manufacturer certified replacement suspension, gears and tyres.</p>
+                <p className="text-xs text-muted-foreground/75">Browse manufacturer certified replacement suspension, gears and tyres.</p>
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@ const DATA_MAP: Record<string, {
         title: "Battery Swap Station Owners",
         description: "Find local private swap cabinet operators cooperating with our vehicle fleets.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Station Audits:</span> Ensures regular diagnostic tests on active cabinets.
             </div>
@@ -383,14 +383,14 @@ const DATA_MAP: Record<string, {
               <Bot className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart Financial Profiling</p>
-                <p className="text-xs text-[#AEB5C0]/75">Calculates interest rates, battery leasing offsets, and charging costs.</p>
+                <p className="text-xs text-muted-foreground/75">Calculates interest rates, battery leasing offsets, and charging costs.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#2563EB]" />
               <div>
                 <p className="text-sm font-bold text-white">Daily Commute Profiling</p>
-                <p className="text-xs text-[#AEB5C0]/75">Matches battery capacities to employee shift distributions.</p>
+                <p className="text-xs text-muted-foreground/75">Matches battery capacities to employee shift distributions.</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ const DATA_MAP: Record<string, {
         title: "Smart Charger Profiling",
         description: "Suggests charger power capabilities based on your local utility grid limit rules.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#2563EB]/5 border border-[#2563EB]/10">
               <span className="text-[#2563EB] font-bold">Utility Caps:</span> Analyzes substation limits before suggesting high-power AC.
             </div>

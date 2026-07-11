@@ -29,7 +29,7 @@ export function EnergyCostTools() {
     <section id="energy" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">EV vs ICE Fuel Cost Savings</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Calculate monthly cost differences and annual net financial savings.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Calculate monthly cost differences and annual net financial savings.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -38,7 +38,7 @@ export function EnergyCostTools() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Monthly Distance</span>
+              <span className="text-muted-foreground/40 uppercase">Monthly Distance</span>
               <span className="text-white">{miles} km</span>
             </div>
             <input
@@ -54,7 +54,7 @@ export function EnergyCostTools() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Petrol/Diesel Price</span>
+              <span className="text-muted-foreground/40 uppercase">Petrol/Diesel Price</span>
               <span className="text-white">₹{fuelPrice} /L</span>
             </div>
             <input
@@ -74,15 +74,15 @@ export function EnergyCostTools() {
           
           <div className="grid grid-cols-2 gap-4 text-xs font-semibold">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">ICE Fuel Cost</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">ICE Fuel Cost</span>
               <strong className="text-sm text-white block mt-0.5">₹{costStats.iceCost}</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">EV charging electricity cost</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">EV charging electricity cost</span>
               <strong className="text-sm text-white block mt-0.5">₹{costStats.evCost}</strong>
             </div>
             <div className="col-span-2 border-t border-white/5 pt-3">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Net Savings</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Net Savings</span>
               <strong className="text-lg text-[#00C853] block mt-0.5">₹{costStats.savings} / month</strong>
             </div>
           </div>
@@ -102,7 +102,7 @@ export function EnvironmentalTools() {
     <section id="environment" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Environmental Carbon Offsets</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Understand tailpipe emission savings indices standard across WLTP calculators.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Understand tailpipe emission savings indices standard across WLTP calculators.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -111,7 +111,7 @@ export function EnvironmentalTools() {
             <Globe className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">CO₂ Savings Index</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             The average petrol passenger car emits ~120 grams of CO₂ per km. Transitioning to EV eliminates tailpipe emissions directly, offset only by the grid&apos;s local energy mix index.
           </p>
         </div>
@@ -121,7 +121,7 @@ export function EnvironmentalTools() {
             <Award className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Tree absorption equivalence</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             A mature pine tree absorbs ~22 kg of carbon dioxide annually. Saving 1,000 kg of carbon emissions annually yields the offset equivalent of planting ~45 trees.
           </p>
         </div>
@@ -152,7 +152,7 @@ export function ConvertersSection() {
     <section id="converters" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Engineering Converters</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Quickly translate units between SI and Imperial scales (Power, Torque).</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Quickly translate units between SI and Imperial scales (Power, Torque).</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -182,7 +182,7 @@ export function ConvertersSection() {
         {/* Readout Right */}
         <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[130px]">
           <div className="space-y-1">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Conversion Output</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Conversion Output</span>
             <strong className="text-xl font-black text-[#00C853] block mt-2">
               {converted}
             </strong>
@@ -203,15 +203,15 @@ export function FormulaLibrary() {
     <section id="formulas" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Formula & Technical References Library</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Inspect physical equations and chemical limits reference sheets.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Inspect physical equations and chemical limits reference sheets.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Equations Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase block tracking-wider">Electrochemical Cell Balancing</span>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase block tracking-wider">Electrochemical Cell Balancing</span>
+          <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
             Equation: <strong>Q = I * t</strong><br />
             Units: Ampere-seconds (As) or Ampere-hours (Ah). Balances cells variance capacities relative to shunt currents profiles.
           </p>
@@ -219,8 +219,8 @@ export function FormulaLibrary() {
 
         {/* Reference Tables Right */}
         <div id="references" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase block tracking-wider">Cell chemistry benchmarks</span>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase block tracking-wider">Cell chemistry benchmarks</span>
+          <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
             NMC Cells: 3.7 Nominal Volts. High specific energy density.<br />
             LFP Cells: 3.2 Nominal Volts. High lifecycle safety profiles, lower costs.
           </p>
@@ -261,7 +261,7 @@ export function AIPlanner() {
         
         {/* Buttons Left */}
         <div className="md:col-span-5 flex flex-col gap-2 p-3 rounded-2xl border border-white/5 bg-black/40">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">Select Equation Workspace</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">Select Equation Workspace</span>
           {[
             { id: "capacity", label: "Recommend battery pack sizing cells spacing" },
             { id: "drag", label: "Analyze aerodynamic drag range impacts" },
@@ -273,7 +273,7 @@ export function AIPlanner() {
               className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer ${
                 selectedCalc === q.id
                   ? "bg-[#00C853]/15 border-[#00C853]/30 text-[#00C853]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0] hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground hover:text-white"
               }`}
             >
               {q.label}
@@ -286,12 +286,12 @@ export function AIPlanner() {
           {advice ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">AI Advisor diagnostics</span>
-              <p className="text-xs text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+              <p className="text-xs text-muted-foreground/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
                 {advice}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/35 text-xs">
+            <div className="text-center p-4 text-muted-foreground/35 text-xs">
               Select an engineering equation workspace profile on the left to consult the AI Assistant.
             </div>
           )}
@@ -313,18 +313,18 @@ export function DownloadsCenter() {
         
         {/* PDF Downloads Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads Center</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads Center</span>
           
           <div className="grid grid-cols-2 gap-2 text-xs font-semibold">
             <button
               onClick={() => alert("Downloading: Engineering-Formula-Book.pdf")}
-              className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] cursor-pointer"
+              className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] cursor-pointer"
             >
               Formula Handbook PDF
             </button>
             <button
               onClick={() => alert("Downloading: Standards-Guide.pdf")}
-              className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] cursor-pointer"
+              className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] cursor-pointer"
             >
               SAE Standards Guide
             </button>
@@ -336,7 +336,7 @@ export function DownloadsCenter() {
           <div>
             <span className="text-[9px] text-[#00C853] font-extrabold uppercase tracking-wider block">Conclude Toolkit Analysis</span>
             <h4 className="text-xs font-black text-white mt-1.5 uppercase tracking-wide">Continue to AI EV Assistant</h4>
-            <p className="text-[11.5px] text-[#AEB5C0]/65 mt-2 leading-relaxed">
+            <p className="text-[11.5px] text-muted-foreground/65 mt-2 leading-relaxed">
               Transition to the main platform AI interface. Prompt queries to draft summary reports.
             </p>
           </div>
@@ -368,7 +368,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Frequently Asked Questions</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore standard equations assumptions queries.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore standard equations assumptions queries.</p>
       </div>
 
       <div className="space-y-2">
@@ -388,10 +388,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#00C853]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#00C853]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>

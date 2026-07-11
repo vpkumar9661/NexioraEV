@@ -23,7 +23,7 @@ export function AcademyHero() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight font-sans">
             Welcome to NexioraEV Academy™
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Master Electric Vehicle engineering and cell chemistries through structured courses, virtual laboratories, interactive projects, AI tutoring, and professional certifications.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -88,14 +88,14 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
             <span className="text-xs font-black text-white block">
               {stat.value}
             </span>
-            <span className="text-[9.5px] text-[#AEB5C0]/50 block mt-1">
+            <span className="text-[9.5px] text-muted-foreground/50 block mt-1">
               {stat.desc}
             </span>
           </div>
@@ -114,7 +114,7 @@ export function PersonalDashboard() {
     <section id="personal" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Student Progress Dashboard</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Track your ongoing courses, streak metrics, and technical credentials.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Track your ongoing courses, streak metrics, and technical credentials.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -124,12 +124,12 @@ export function PersonalDashboard() {
           <div>
             <span className="text-[9.5px] font-extrabold text-[#F5B301] uppercase tracking-widest block">Active enrollment</span>
             <h3 className="text-sm font-black text-white mt-1">Lithium Battery Engineering & Chemistry</h3>
-            <p className="text-xs text-[#AEB5C0]/60 mt-1 leading-normal">Module 3: Battery Thermal runaway boundaries under charging cycles.</p>
+            <p className="text-xs text-muted-foreground/60 mt-1 leading-normal">Module 3: Battery Thermal runaway boundaries under charging cycles.</p>
           </div>
 
           <div className="space-y-2 pt-2">
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-[#AEB5C0]/50">Path Progress</span>
+              <span className="text-muted-foreground/50">Path Progress</span>
               <span className="text-white">65% Completed</span>
             </div>
             <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
@@ -141,11 +141,11 @@ export function PersonalDashboard() {
         {/* Learning metrics right */}
         <div className="md:col-span-5 grid grid-cols-2 gap-4">
           <div className="p-4 rounded-xl border border-white/5 bg-black/40 flex flex-col justify-between">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Daily Streak</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Daily Streak</span>
             <strong className="text-lg text-white block mt-2">12 Days 🔥</strong>
           </div>
           <div className="p-4 rounded-xl border border-white/5 bg-black/40 flex flex-col justify-between">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Hours studied</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Hours studied</span>
             <strong className="text-lg text-[#F5B301] block mt-2">18.5 hrs</strong>
           </div>
         </div>
@@ -173,7 +173,7 @@ export function LearningPaths() {
     <section id="paths" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Curated Learning Paths</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Select a structured pathway milestone to filter engineering roadmap modules.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Select a structured pathway milestone to filter engineering roadmap modules.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -189,9 +189,9 @@ export function LearningPaths() {
                   : "bg-white/2 border-white/5 hover:border-white/10 hover:bg-white/4"
               }`}
             >
-              <span className="text-[9.5px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block">{p.level}</span>
+              <span className="text-[9.5px] font-bold text-muted-foreground/40 uppercase tracking-widest block">{p.level}</span>
               <h4 className="text-xs font-black text-white mt-1">{p.name}</h4>
-              <span className="text-[10px] text-[#AEB5C0]/50 block mt-2">
+              <span className="text-[10px] text-muted-foreground/50 block mt-2">
                 {p.modules} Modules • {p.duration}
               </span>
             </div>
@@ -218,7 +218,7 @@ export function CourseLibrary() {
     <section id="courses" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Course Library</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Filter and enroll in specialized self-paced engineering video classes.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Filter and enroll in specialized self-paced engineering video classes.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -238,7 +238,7 @@ export function CourseLibrary() {
             </div>
 
             <div className="flex justify-between items-center border-t border-white/5 pt-3.5 mt-2">
-              <span className="text-[10px] text-[#AEB5C0]/50 font-bold flex items-center gap-1">
+              <span className="text-[10px] text-muted-foreground/50 font-bold flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5 text-cyan-400" /> {course.duration}
               </span>
               <button
@@ -270,7 +270,7 @@ export function VirtualLabs() {
     <section id="labs" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Integrated Virtual Laboratories</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Access platform simulations directly to gain laboratory practical hours credits.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Access platform simulations directly to gain laboratory practical hours credits.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -282,7 +282,7 @@ export function VirtualLabs() {
             <div>
               <span className="text-[9px] text-[#F5B301] font-bold uppercase tracking-wider block">Simulator Sandbox</span>
               <h4 className="text-xs font-bold text-white mt-1 uppercase tracking-wide">{lab.title}</h4>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-2 leading-relaxed">{lab.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-2 leading-relaxed">{lab.desc}</p>
             </div>
             <a
               href={lab.url}
@@ -311,7 +311,7 @@ export function EngineeringProjects() {
     <section id="projects" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Engineering Design Projects</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Solve engineering scenarios using calculations tools to qualify for credentials.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Solve engineering scenarios using calculations tools to qualify for credentials.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -326,7 +326,7 @@ export function EngineeringProjects() {
             </div>
 
             <div className="flex justify-between items-center text-xs">
-              <span className="text-[10px] text-[#AEB5C0]/50 font-semibold">Estimated: {proj.time}</span>
+              <span className="text-[10px] text-muted-foreground/50 font-semibold">Estimated: {proj.time}</span>
               <button
                 onClick={() => alert(`Starting engineering task: ${proj.title}`)}
                 className="text-[10.5px] font-black text-[#F5B301] hover:text-white cursor-pointer"

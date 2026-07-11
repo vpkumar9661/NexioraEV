@@ -40,14 +40,14 @@ const DATA_MAP: Record<string, {
               <Landmark className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">E-Voucher Subsidies</p>
-                <p className="text-xs text-[#AEB5C0]/75">Generated at the time of purchase to give buyers instant cashbacks.</p>
+                <p className="text-xs text-muted-foreground/75">Generated at the time of purchase to give buyers instant cashbacks.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Advanced Battery Testing</p>
-                <p className="text-xs text-[#AEB5C0]/75">Subsidized packs must undergo structural thermal testing audits.</p>
+                <p className="text-xs text-muted-foreground/75">Subsidized packs must undergo structural thermal testing audits.</p>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const DATA_MAP: Record<string, {
         title: "Phased Manufacturing Program (PMP)",
         description: "Evaluates domestic value addition criteria required for OEMs to claim central government incentives.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">Local Cell Sourcing:</span> Cells must be packaged into local battery assemblies.
             </div>
@@ -89,14 +89,14 @@ const DATA_MAP: Record<string, {
               <Map className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Maharashtra EV Policy</p>
-                <p className="text-xs text-[#AEB5C0]/75">Features excellent upfront purchase incentives for electric fleets.</p>
+                <p className="text-xs text-muted-foreground/75">Features excellent upfront purchase incentives for electric fleets.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Delhi EV Capital Grant</p>
-                <p className="text-xs text-[#AEB5C0]/75">Additional cashbacks linked to scrappage certificates.</p>
+                <p className="text-xs text-muted-foreground/75">Additional cashbacks linked to scrappage certificates.</p>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const DATA_MAP: Record<string, {
         title: "Municipal Parking Incentives",
         description: "Lists municipal councils that offer free parking slots and dedicated bays for green-plate EVs.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">Free Parking:</span> Green plate parking is 100% free in select metro parking spots.
             </div>
@@ -138,14 +138,14 @@ const DATA_MAP: Record<string, {
               <Calculator className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Dynamic Battery Calculator</p>
-                <p className="text-xs text-[#AEB5C0]/75">Calculates ₹5,000 per kWh for eligible two-wheeled EVs.</p>
+                <p className="text-xs text-muted-foreground/75">Calculates ₹5,000 per kWh for eligible two-wheeled EVs.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Stacked State Cashback</p>
-                <p className="text-xs text-[#AEB5C0]/75">Computes state incentives layered on top of central subsidies.</p>
+                <p className="text-xs text-muted-foreground/75">Computes state incentives layered on top of central subsidies.</p>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const DATA_MAP: Record<string, {
         title: "Central vs State Stacked Benefits",
         description: "Lists how stacking regional tax waivers creates massive upfront capital savings.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">State Subsidy:</span> Stacked benefits up to ₹10,000 for select cities.
             </div>
@@ -187,14 +187,14 @@ const DATA_MAP: Record<string, {
               <Route className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Loan Interest Offsets</p>
-                <p className="text-xs text-[#AEB5C0]/75">Claims up to ₹1,50,000 off taxable income for personal EV purchases.</p>
+                <p className="text-xs text-muted-foreground/75">Claims up to ₹1,50,000 off taxable income for personal EV purchases.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Green License Plates</p>
-                <p className="text-xs text-[#AEB5C0]/75">License plates that grant access to toll-free lanes in select cities.</p>
+                <p className="text-xs text-muted-foreground/75">License plates that grant access to toll-free lanes in select cities.</p>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ const DATA_MAP: Record<string, {
         title: "Registration Fee Exemptions",
         description: "RTO rules across India waiving standard processing charges for electric drivetrains.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">RTO Registration:</span> Waived completely across multiple major states.
             </div>
@@ -236,14 +236,14 @@ const DATA_MAP: Record<string, {
               <Factory className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Fleet Asset Depreciation</p>
-                <p className="text-xs text-[#AEB5C0]/75">Enables faster corporate tax offsets compared to standard ICE assets.</p>
+                <p className="text-xs text-muted-foreground/75">Enables faster corporate tax offsets compared to standard ICE assets.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Production Linked Incentives (PLI)</p>
-                <p className="text-xs text-[#AEB5C0]/75">Subsidizes large-scale cell chemistries and core powertrain parts.</p>
+                <p className="text-xs text-muted-foreground/75">Subsidizes large-scale cell chemistries and core powertrain parts.</p>
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ const DATA_MAP: Record<string, {
         title: "State Industrial Park Hubs",
         description: "Government-supported special economic zones dedicated to battery swapping and local assembly.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">EV SEZ Parks:</span> Rent subsidies and grid power priority support.
             </div>
@@ -285,14 +285,14 @@ const DATA_MAP: Record<string, {
               <Plug className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">DC Charger Capital Grants</p>
-                <p className="text-xs text-[#AEB5C0]/75">Subsidizes upfront equipment procurement up to 70%.</p>
+                <p className="text-xs text-muted-foreground/75">Subsidizes upfront equipment procurement up to 70%.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">DISCOM EV Tariff Codes</p>
-                <p className="text-xs text-[#AEB5C0]/75">Discounted commercial rates for high-tension lines.</p>
+                <p className="text-xs text-muted-foreground/75">Discounted commercial rates for high-tension lines.</p>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ const DATA_MAP: Record<string, {
         title: "Residential Society Sub-meters",
         description: "Guides housing societies on applying for dedicated EV sub-meters with discounted tariffs.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">Society EV Charger:</span> Local municipal cashbacks for shared chargers.
             </div>
@@ -334,14 +334,14 @@ const DATA_MAP: Record<string, {
               <Newspaper className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">E-Voucher Voucher Rules</p>
-                <p className="text-xs text-[#AEB5C0]/75">Requires verified Aadhaar bindings to prevent multiple claims.</p>
+                <p className="text-xs text-muted-foreground/75">Requires verified Aadhaar bindings to prevent multiple claims.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">CAFE Compliances</p>
-                <p className="text-xs text-[#AEB5C0]/75">Forces automakers to scale electric drivetrain ratios next quarter.</p>
+                <p className="text-xs text-muted-foreground/75">Forces automakers to scale electric drivetrain ratios next quarter.</p>
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@ const DATA_MAP: Record<string, {
         title: "AIS 156 Battery Safety Codes",
         description: "Important safety amendments requiring active battery sensors to report temperature anomalies.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">Overcharge Protections:</span> Mandatory smart relays inside BMS boards.
             </div>
@@ -383,14 +383,14 @@ const DATA_MAP: Record<string, {
               <BadgeCheck className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Aadhaar Mobile Link</p>
-                <p className="text-xs text-[#AEB5C0]/75">Subsidies are mapped dynamically via Aadhaar OTP checks.</p>
+                <p className="text-xs text-muted-foreground/75">Subsidies are mapped dynamically via Aadhaar OTP checks.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#4F46E5]" />
               <div>
                 <p className="text-sm font-bold text-white">Dealer Registration Check</p>
-                <p className="text-xs text-[#AEB5C0]/75">Confirm if the dealership is registered under the PM E-Drive scheme.</p>
+                <p className="text-xs text-muted-foreground/75">Confirm if the dealership is registered under the PM E-Drive scheme.</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ const DATA_MAP: Record<string, {
         title: "One-Click Aadhaar Sub-OTP Verification",
         description: "Sandboxed Aadhaar validation flow confirming you haven't claimed a similar EV subsidy this year.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#4F46E5]/5 border border-[#4F46E5]/10">
               <span className="text-[#4F46E5] font-bold">One Subsidy Limit:</span> PM E-Drive policies limit buyers to one subsidy per Aadhaar card.
             </div>

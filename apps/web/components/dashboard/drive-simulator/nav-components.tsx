@@ -57,27 +57,27 @@ export function PreStartHeader({ setup, onLaunch, onConfigChange }: PreStartHead
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-xs">
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Chassis Platform</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Chassis Platform</span>
           <strong className="text-white text-xs block uppercase">{setup.platform}</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Battery chemistry</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Battery chemistry</span>
           <strong className="text-white text-xs block uppercase">{setup.chemistry} ({setup.capacity} kWh)</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Traction Motor</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Traction Motor</span>
           <strong className="text-white text-xs block uppercase">{setup.motor}</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cooling Method</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cooling Method</span>
           <strong className="text-white text-xs block uppercase">{setup.cooling}</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Continuous Power</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Continuous Power</span>
           <strong className="text-white text-xs block">{power} kW</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Continuous Torque</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Continuous Torque</span>
           <strong className="text-white text-xs block">{torque} Nm</strong>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function EnvironmentSelector({ selectedEnv, onSelect }: EnvironmentSelect
     <section id="environments" className="space-y-6 relative z-20">
       <div>
         <h2 className="text-xl font-black text-white">Select Simulation Proving Ground</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Pick target environments. Different slopes, drag scales, and ambient limits change thermodynamics.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Pick target environments. Different slopes, drag scales, and ambient limits change thermodynamics.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -144,7 +144,7 @@ export function EnvironmentSelector({ selectedEnv, onSelect }: EnvironmentSelect
                   <div className="w-8 h-8 rounded-lg border flex items-center justify-center" style={{ backgroundColor: `${env.iconColor}15`, borderColor: `${env.iconColor}25` }}>
                     <Compass className="w-4 h-4" style={{ color: env.iconColor }} />
                   </div>
-                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-[#AEB5C0]/70">
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-muted-foreground/70">
                     Ambient: {env.ambientTemp}°C
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export function EnvironmentSelector({ selectedEnv, onSelect }: EnvironmentSelect
                   <h3 className={`text-xs font-bold transition-colors ${isSelected ? "text-[#22D3EE]" : "text-white group-hover:text-[#22D3EE]"}`}>
                     {env.name}
                   </h3>
-                  <p className="text-[11px] text-[#AEB5C0]/50 mt-1 leading-relaxed line-clamp-2">
+                  <p className="text-[11px] text-muted-foreground/50 mt-1 leading-relaxed line-clamp-2">
                     {env.desc}
                   </p>
                 </div>

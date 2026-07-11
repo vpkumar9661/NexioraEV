@@ -46,7 +46,7 @@ export function ContinueCTA() {
             Battery Lab
           </span>
         </h2>
-        <p className="text-[#AEB5C0]/70 text-sm leading-relaxed max-w-lg">
+        <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-lg">
           You&apos;ve mastered the fundamentals. Dive deeper into battery chemistry, BMS architecture, thermal management, and cell manufacturing in our Battery Lab module.
         </p>
         <div className="flex flex-wrap items-center gap-3">

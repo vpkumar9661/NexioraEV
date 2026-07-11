@@ -24,7 +24,7 @@ export function AIHero() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight font-sans">
             NexioraEV AI Command Center™
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Your intelligent EV co-pilot for learning, battery engineering design, charging planner simulation optimization, and decision making.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -85,7 +85,7 @@ export function AIQuickActions({ onSelectAction }: AIQuickActionsProps) {
     <section id="quickactions" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">AI Quick Actions</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Select a shortcut template to pre-fill prompts inside the conversation workspace.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Select a shortcut template to pre-fill prompts inside the conversation workspace.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -97,7 +97,7 @@ export function AIQuickActions({ onSelectAction }: AIQuickActionsProps) {
           >
             <span className="text-[10px] text-purple-400 font-extrabold uppercase tracking-wider block">Prompt template</span>
             <h4 className="text-xs font-bold text-white mt-1.5 leading-snug">{s.label}</h4>
-            <span className="text-[9px] text-[#AEB5C0]/50 block mt-2">Activate prompt →</span>
+            <span className="text-[9px] text-muted-foreground/50 block mt-2">Activate prompt →</span>
           </div>
         ))}
       </div>

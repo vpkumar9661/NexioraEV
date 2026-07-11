@@ -51,19 +51,19 @@ export function TopToolbar({
       <div className="flex items-center gap-2 text-xs">
         <button
           onClick={onSave}
-          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-[#AEB5C0] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-muted-foreground hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
         >
           <Save className="w-3.5 h-3.5" /> Save
         </button>
         <button
           onClick={onDuplicate}
-          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-[#AEB5C0] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-muted-foreground hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
         >
           <Copy className="w-3.5 h-3.5" /> Duplicate
         </button>
         <button
           onClick={onShare}
-          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-[#AEB5C0] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+          className="px-3 py-1.5 rounded-lg border border-white/5 bg-white/3 hover:bg-white/5 text-muted-foreground hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
         >
           <Share2 className="w-3.5 h-3.5" /> Share
         </button>
@@ -91,7 +91,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
       <div className="space-y-4 text-xs">
         {/* Chemistry */}
         <div className="space-y-1">
-          <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Chemistry</label>
+          <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Chemistry</label>
           <select
             value={setup.chemistry}
             onChange={(e) => onChange({ chemistry: e.target.value })}
@@ -106,7 +106,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
 
         {/* Vehicle Platform */}
         <div className="space-y-1">
-          <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Vehicle Platform</label>
+          <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Vehicle Platform</label>
           <select
             value={setup.platform}
             onChange={(e) => onChange({ platform: e.target.value })}
@@ -122,7 +122,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
         {/* Capacity Slider */}
         <div className="space-y-1.5">
           <div className="flex justify-between font-bold text-[10px]">
-            <span className="text-[#AEB5C0]/40 uppercase">Capacity</span>
+            <span className="text-muted-foreground/40 uppercase">Capacity</span>
             <span className="text-white">{setup.capacity} kWh</span>
           </div>
           <input
@@ -139,7 +139,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
         {/* Series Cells Slider */}
         <div className="space-y-1.5">
           <div className="flex justify-between font-bold text-[10px]">
-            <span className="text-[#AEB5C0]/40 uppercase">Series Cells (S)</span>
+            <span className="text-muted-foreground/40 uppercase">Series Cells (S)</span>
             <span className="text-white">{setup.series} cells</span>
           </div>
           <input
@@ -155,7 +155,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
         {/* Parallel Cells Slider */}
         <div className="space-y-1.5">
           <div className="flex justify-between font-bold text-[10px]">
-            <span className="text-[#AEB5C0]/40 uppercase">Parallel Cells (P)</span>
+            <span className="text-muted-foreground/40 uppercase">Parallel Cells (P)</span>
             <span className="text-white">{setup.parallel} cells</span>
           </div>
           <input
@@ -170,7 +170,7 @@ export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
 
         {/* Cooling Select */}
         <div className="space-y-1">
-          <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cooling Method</label>
+          <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cooling Method</label>
           <select
             value={setup.cooling}
             onChange={(e) => onChange({ cooling: e.target.value })}
@@ -209,19 +209,19 @@ export function RightDiagnosticsSidebar({ stats }: RightDiagnosticsSidebarProps)
 
       <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 text-xs font-semibold">
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/45 font-bold uppercase block tracking-wider">Pack Voltage</span>
+          <span className="text-[9px] text-muted-foreground/45 font-bold uppercase block tracking-wider">Pack Voltage</span>
           <strong className="text-sm text-white block">{stats.voltage} V</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/45 font-bold uppercase block tracking-wider">Estimated Weight</span>
+          <span className="text-[9px] text-muted-foreground/45 font-bold uppercase block tracking-wider">Estimated Weight</span>
           <strong className="text-sm text-white block">~{stats.weight} kg</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/45 font-bold uppercase block tracking-wider">Calculated Range</span>
+          <span className="text-[9px] text-muted-foreground/45 font-bold uppercase block tracking-wider">Calculated Range</span>
           <strong className="text-sm text-[#00C853] block">{stats.range} km</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
-          <span className="text-[9px] text-[#AEB5C0]/45 font-bold uppercase block tracking-wider">Engineering Score</span>
+          <span className="text-[9px] text-muted-foreground/45 font-bold uppercase block tracking-wider">Engineering Score</span>
           <strong className="text-sm text-white block">{stats.efficiency} / 100</strong>
         </div>
         <div className="p-3.5 rounded-xl bg-[#00C853]/5 border border-[#00C853]/15 space-y-1">

@@ -42,7 +42,7 @@ export function HealthCenter() {
     <section id="health" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Health Center</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Estimate battery State of Health (SOH) and degradation kinetics under custom operating conditions</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Estimate battery State of Health (SOH) and degradation kinetics under custom operating conditions</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
@@ -56,7 +56,7 @@ export function HealthCenter() {
           {/* Slider 1: Cycles */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#AEB5C0]/70 font-semibold">Total Charge Cycles</span>
+              <span className="text-muted-foreground/70 font-semibold">Total Charge Cycles</span>
               <span className="text-white font-extrabold">{cycles} Cycles</span>
             </div>
             <input
@@ -68,7 +68,7 @@ export function HealthCenter() {
               onChange={(e) => setCycles(parseInt(e.target.value))}
               className="w-full accent-[#10B981] bg-white/5 h-1.5 rounded-lg appearance-none cursor-pointer"
             />
-            <div className="flex items-center justify-between text-[9px] text-[#AEB5C0]/40">
+            <div className="flex items-center justify-between text-[9px] text-muted-foreground/40">
               <span>Fresh Pack (0)</span>
               <span>End-of-life (5,000)</span>
             </div>
@@ -77,7 +77,7 @@ export function HealthCenter() {
           {/* Slider 2: Fast Charge */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#AEB5C0]/70 font-semibold">Fast DC Charging Ratio</span>
+              <span className="text-muted-foreground/70 font-semibold">Fast DC Charging Ratio</span>
               <span className="text-white font-extrabold">{fastChargeRatio}%</span>
             </div>
             <input
@@ -89,7 +89,7 @@ export function HealthCenter() {
               onChange={(e) => setFastChargeRatio(parseInt(e.target.value))}
               className="w-full accent-[#10B981] bg-white/5 h-1.5 rounded-lg appearance-none cursor-pointer"
             />
-            <div className="flex items-center justify-between text-[9px] text-[#AEB5C0]/40">
+            <div className="flex items-center justify-between text-[9px] text-muted-foreground/40">
               <span>Mainly AC Home (0%)</span>
               <span>Always Fast DC (100%)</span>
             </div>
@@ -98,7 +98,7 @@ export function HealthCenter() {
           {/* Slider 3: Average Temp */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#AEB5C0]/70 font-semibold">Average Climatic/Operating Temp</span>
+              <span className="text-muted-foreground/70 font-semibold">Average Climatic/Operating Temp</span>
               <span className="text-white font-extrabold">{avgTemp}°C</span>
             </div>
             <input
@@ -110,7 +110,7 @@ export function HealthCenter() {
               onChange={(e) => setAvgTemp(parseInt(e.target.value))}
               className="w-full accent-[#10B981] bg-white/5 h-1.5 rounded-lg appearance-none cursor-pointer"
             />
-            <div className="flex items-center justify-between text-[9px] text-[#AEB5C0]/40">
+            <div className="flex items-center justify-between text-[9px] text-muted-foreground/40">
               <span>Cold (10°C)</span>
               <span>Extreme Heat (50°C)</span>
             </div>
@@ -140,14 +140,14 @@ export function HealthCenter() {
             {/* Score Ring */}
             <div className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/1 border border-white/5 h-[140px] relative">
               <span className="text-3xl font-extrabold text-white">{analytics.healthScore}%</span>
-              <span className="text-[10px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider mt-1.5">Calculated SOH</span>
+              <span className="text-[10px] text-muted-foreground/50 font-bold uppercase tracking-wider mt-1.5">Calculated SOH</span>
             </div>
 
             <div className="space-y-3">
               <div className="p-3 rounded-xl bg-white/1 border border-white/5 flex items-center gap-2.5">
                 <Calendar className="w-4 h-4 text-[#3B82F6]" />
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Est. Lifespan</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Est. Lifespan</span>
                   <span className="text-xs font-bold text-white mt-0.5 block">{analytics.remainingYears} Years Left</span>
                 </div>
               </div>
@@ -155,14 +155,14 @@ export function HealthCenter() {
               <div className="p-3 rounded-xl bg-white/1 border border-white/5 flex items-center gap-2.5">
                 <Battery className="w-4 h-4 text-[#10B981]" />
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Total Degradation</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Total Degradation</span>
                   <span className="text-xs font-bold text-white mt-0.5 block">-{100 - analytics.healthScore}% Capacity</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/1 border border-white/5 text-[11px] text-[#AEB5C0]/65 leading-normal">
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/1 border border-white/5 text-[11px] text-muted-foreground/65 leading-normal">
             <ShieldAlert className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
             <span>Avoid keeping cells stored above 80% charge level in ambient temperatures exceeding 35°C to limit calendar aging.</span>
           </div>

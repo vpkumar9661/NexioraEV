@@ -14,7 +14,7 @@ import {
 export function AIBreadcrumb() {
   return (
     <nav className="sticky top-[72px] z-40 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/5 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3">
-      <div className="max-w-7xl mx-auto flex items-center justify-between text-[12px] font-semibold text-[#AEB5C0]/60">
+      <div className="max-w-7xl mx-auto flex items-center justify-between text-[12px] font-semibold text-muted-foreground/60">
         <div className="flex items-center gap-2">
           <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
@@ -69,7 +69,7 @@ export function AILeftSidebar({ activeSection, onNewChat }: AILeftSidebarProps) 
         </button>
 
         <nav className="space-y-0.5">
-          <p className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2.5 pb-2">
+          <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2.5 pb-2">
             AI Map
           </p>
           {SECTIONS.map((section) => {
@@ -81,7 +81,7 @@ export function AILeftSidebar({ activeSection, onNewChat }: AILeftSidebarProps) 
                 className={`flex items-center px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-all duration-200 border ${
                   isActive
                     ? "bg-[#7C4DFF]/10 text-[#7C4DFF] border-[#7C4DFF]/25 shadow-[0_0_10px_rgba(124,77,255,0.1)]"
-                    : "text-[#AEB5C0]/60 hover:text-white hover:bg-white/3 border-transparent"
+                    : "text-muted-foreground/60 hover:text-white hover:bg-white/3 border-transparent"
                 }`}
               >
                 <span className="truncate">{section.label}</span>
@@ -132,7 +132,7 @@ export function AIFloatingToolbar({ onNewChat }: AIFloatingToolbarProps) {
         className={`p-2.5 rounded-xl border transition-all shadow-lg cursor-pointer ${
           isBookmarked
             ? "bg-[#7C4DFF] border-[#7C4DFF] text-white"
-            : "bg-[#131722]/90 border-white/10 text-[#AEB5C0] hover:text-white hover:bg-white/5"
+            : "bg-[#131722]/90 border-white/10 text-muted-foreground hover:text-white hover:bg-white/5"
         }`}
       >
         <Bookmark className="w-4.5 h-4.5" />
@@ -141,7 +141,7 @@ export function AIFloatingToolbar({ onNewChat }: AIFloatingToolbarProps) {
       <a
         href="#chat"
         title="Focus Chat Workspace"
-        className="p-2.5 rounded-xl border bg-[#131722]/90 border-white/10 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all shadow-lg flex items-center justify-center"
+        className="p-2.5 rounded-xl border bg-[#131722]/90 border-white/10 text-muted-foreground hover:text-white hover:bg-white/5 transition-all shadow-lg flex items-center justify-center"
       >
         <MessageSquare className="w-4.5 h-4.5" />
       </a>
@@ -149,7 +149,7 @@ export function AIFloatingToolbar({ onNewChat }: AIFloatingToolbarProps) {
       <button
         onClick={handleShare}
         title="Share AI Center Link"
-        className="p-2.5 rounded-xl border bg-[#131722]/90 border-white/10 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all shadow-lg cursor-pointer"
+        className="p-2.5 rounded-xl border bg-[#131722]/90 border-white/10 text-muted-foreground hover:text-white hover:bg-white/5 transition-all shadow-lg cursor-pointer"
       >
         <Share2 className="w-4.5 h-4.5" />
       </button>

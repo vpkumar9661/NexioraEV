@@ -33,7 +33,7 @@ export function TripPlanner() {
     <section id="planner" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">AI Trip & Route Planner</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Plan long distance journeys. AI calculates estimated energy consumption, charging stops, and arrival state-of-charge.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Plan long distance journeys. AI calculates estimated energy consumption, charging stops, and arrival state-of-charge.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -41,7 +41,7 @@ export function TripPlanner() {
         {/* Form Inputs Left */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1">
-            <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Origin City</label>
+            <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Origin City</label>
             <input
               type="text"
               value={origin}
@@ -50,7 +50,7 @@ export function TripPlanner() {
             />
           </div>
           <div className="space-y-1">
-            <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Destination City</label>
+            <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Destination City</label>
             <input
               type="text"
               value={destination}
@@ -66,19 +66,19 @@ export function TripPlanner() {
           
           <div className="grid grid-cols-2 gap-4 text-xs font-semibold">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Travel Distance</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Travel Distance</span>
               <strong className="text-sm text-white block mt-0.5">{tripStats.dist} km</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Consumption</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Consumption</span>
               <strong className="text-sm text-white block mt-0.5">~{tripStats.totalEnergy} kWh</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Arrival SOC</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Arrival SOC</span>
               <strong className="text-sm text-[#7C4DFF] block mt-0.5">{tripStats.socPercent}% remaining</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Charging stops</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Charging stops</span>
               <strong className="text-sm text-white block mt-0.5">0 Stops (Within Range)</strong>
             </div>
           </div>
@@ -100,21 +100,21 @@ export function AdvisorsSection() {
     <section id="battery" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">AI Specialized Advisors</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Select a chemistry to query the AI Battery & Charging Advisor.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Select a chemistry to query the AI Battery & Charging Advisor.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Toggle Left */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
-          <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Sized Chemistry</label>
+          <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Sized Chemistry</label>
           <div className="grid grid-cols-2 gap-1.5">
             <button
               onClick={() => setChem("nmc")}
               className={`py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                 chem === "nmc"
                   ? "bg-[#7C4DFF]/15 border-[#7C4DFF]/30 text-purple-300"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
               }`}
             >
               NMC cells
@@ -124,7 +124,7 @@ export function AdvisorsSection() {
               className={`py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                 chem === "lfp"
                   ? "bg-[#7C4DFF]/15 border-[#7C4DFF]/30 text-purple-300"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
               }`}
             >
               LFP Prismatic
@@ -134,8 +134,8 @@ export function AdvisorsSection() {
 
         {/* Text Output Right */}
         <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[140px] text-xs">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Advisor Recommendation</span>
-          <p className="text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 mt-2 font-semibold">
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Advisor Recommendation</span>
+          <p className="text-muted-foreground/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 mt-2 font-semibold">
             {chem === "nmc" && "NMC battery configurations feature high energy density, but require active liquid cooling radiators to stabilize cell balancing temperatures."}
             {chem === "lfp" && "LFP chemistry provides high cycle longevity and safety boundaries, making it ideal for standard sedan platforms where volume constraints are lower."}
           </p>
@@ -171,8 +171,8 @@ export function VoiceModeSection() {
         {/* Voice push to talk Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-[160px]">
           <div>
-            <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">AI Voice Mode</span>
-            <p className="text-xs text-[#AEB5C0]/65 mt-2 leading-relaxed">
+            <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">AI Voice Mode</span>
+            <p className="text-xs text-muted-foreground/65 mt-2 leading-relaxed">
               Activate the microphone to transcribe technical EV queries verbally.
             </p>
           </div>
@@ -197,8 +197,8 @@ export function VoiceModeSection() {
         {/* Document summarizer Right */}
         <div id="document" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-[160px]">
           <div>
-            <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Technical Document Summarizer</span>
-            <p className="text-xs text-[#AEB5C0]/65 mt-2 leading-relaxed">
+            <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Technical Document Summarizer</span>
+            <p className="text-xs text-muted-foreground/65 mt-2 leading-relaxed">
               Upload technical documents (PDF notes, CAD spreadsheets) to generate structured bullet summaries.
             </p>
           </div>
@@ -232,7 +232,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Frequently Asked Questions</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore standard LLM advisory queries.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore standard LLM advisory queries.</p>
       </div>
 
       <div className="space-y-2">
@@ -252,10 +252,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#7C4DFF]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#7C4DFF]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>

@@ -30,7 +30,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
               <span className="text-white">Cooling optimization rating</span>
               <span className="text-[#00C853]">94% Confidence</span>
             </div>
-            <p className="text-[#AEB5C0]/75 mt-1">
+            <p className="text-muted-foreground/75 mt-1">
               * Sizing {setup.series}S cell series arrays under {setup.cooling} cooling thresholds. Liquid cooling is recommended to prevent hot spot decay spikes.
             </p>
           </div>
@@ -40,7 +40,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
               <span className="text-white">Chemistry selection feedback</span>
               <span className="text-purple-300">89% Confidence</span>
             </div>
-            <p className="text-[#AEB5C0]/75 mt-1">
+            <p className="text-muted-foreground/75 mt-1">
               * Choosing {setup.chemistry.toUpperCase()} chemistry provides high energy densities but requires close temperature balance monitoring.
             </p>
           </div>
@@ -50,7 +50,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
       {/* Formula Library Right */}
       <div className="md:col-span-5 p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4">
         <div>
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
             Formula Reference sheets
           </span>
 
@@ -60,7 +60,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
               className={`py-1 rounded font-bold border transition-colors cursor-pointer text-[10px] ${
                 selectedFormula === "balancing"
                   ? "bg-[#00C853]/15 border-[#00C853]/35 text-[#00C853]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
               }`}
             >
               Cell Balancing
@@ -70,7 +70,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
               className={`py-1 rounded font-bold border transition-colors cursor-pointer text-[10px] ${
                 selectedFormula === "energy"
                   ? "bg-[#00C853]/15 border-[#00C853]/35 text-[#00C853]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
               }`}
             >
               Specific Energy
@@ -78,7 +78,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
           </div>
         </div>
 
-        <div className="border border-white/5 p-3.5 rounded-xl bg-black/40 text-xs font-mono text-[#AEB5C0] min-h-[70px] flex items-center justify-center text-center leading-normal">
+        <div className="border border-white/5 p-3.5 rounded-xl bg-black/40 text-xs font-mono text-muted-foreground min-h-[70px] flex items-center justify-center text-center leading-normal">
           {selectedFormula === "balancing" ? balancingFormula : specificEnergy}
         </div>
       </div>

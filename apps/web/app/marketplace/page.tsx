@@ -67,7 +67,7 @@ export default function MarketplaceIndexPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-linear-to-r from-white via-white to-[#2563EB]/80 bg-clip-text text-transparent">
             Electric Mobility Commerce Hub
           </h1>
-          <p className="text-[#AEB5C0]/80 text-base sm:text-lg leading-relaxed">
+          <p className="text-muted-foreground/80 text-base sm:text-lg leading-relaxed">
             Everything for Electric Mobility in one place. Discover leading EV models, high-performance battery modules, verified charging hardware, and smart accessories.
           </p>
         </section>
@@ -90,13 +90,13 @@ export default function MarketplaceIndexPage() {
                 
                 <div className="space-y-4 relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#2563EB]/40 transition-colors">
-                    <Icon className="w-6 h-6 text-[#AEB5C0] group-hover:text-[#2563EB] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
+                    <Icon className="w-6 h-6 text-muted-foreground group-hover:text-[#2563EB] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="text-[18px] font-bold text-white group-hover:text-[#2563EB] transition-colors leading-tight">
                       {category.name}
                     </h3>
-                    <p className="text-[13px] text-[#AEB5C0]/70 line-clamp-3 leading-relaxed">
+                    <p className="text-[13px] text-muted-foreground/70 line-clamp-3 leading-relaxed">
                       {category.description}
                     </p>
                   </div>

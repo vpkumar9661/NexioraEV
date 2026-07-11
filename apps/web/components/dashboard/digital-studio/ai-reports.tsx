@@ -57,29 +57,29 @@ export function AIReports({ config, telemetry, onExport }: AIReportsProps) {
         <div className="md:col-span-8 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-4">
           <div className="flex items-center gap-2 border-b border-white/5 pb-2.5">
             <BrainCircuit className="w-5 h-5 text-purple-400 animate-pulse" />
-            <span className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">AI Engineering Specialist</span>
+            <span className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">AI Engineering Specialist</span>
           </div>
 
           <div className="grid grid-cols-4 gap-2 text-center text-xs">
             <div className="p-2.5 rounded-xl bg-black/40 border border-white/5">
-              <span className="text-[8.5px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Performance</span>
+              <span className="text-[8.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Performance</span>
               <strong className="text-white block mt-1">{ratings.perf} / 100</strong>
             </div>
             <div className="p-2.5 rounded-xl bg-black/40 border border-white/5">
-              <span className="text-[8.5px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Efficiency</span>
+              <span className="text-[8.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Efficiency</span>
               <strong className="text-cyan-300 block mt-1">{ratings.eff} / 100</strong>
             </div>
             <div className="p-2.5 rounded-xl bg-black/40 border border-white/5">
-              <span className="text-[8.5px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cost Rating</span>
+              <span className="text-[8.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cost Rating</span>
               <strong className="text-white block mt-1">{ratings.cost} / 100</strong>
             </div>
             <div className="p-2.5 rounded-xl bg-black/40 border border-white/5">
-              <span className="text-[8.5px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Safety index</span>
+              <span className="text-[8.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Safety index</span>
               <strong className="text-[#10B981] block mt-1">{ratings.safety} / 100</strong>
             </div>
           </div>
 
-          <div className="p-4 bg-white/1 rounded-xl border border-white/5 space-y-2 text-xs leading-relaxed text-[#AEB5C0]/85">
+          <div className="p-4 bg-white/1 rounded-xl border border-white/5 space-y-2 text-xs leading-relaxed text-muted-foreground/85">
             <p>
               * Your <strong>{config.platform.toUpperCase()}</strong> uses a <strong>{config.chemistry.toUpperCase()}</strong> battery module with {config.cooling} loop cooling and {config.motor.toUpperCase()} drive linkage.
             </p>
@@ -97,8 +97,8 @@ export function AIReports({ config, telemetry, onExport }: AIReportsProps) {
         {/* Branded Reports export panel */}
         <div className="md:col-span-4 p-5 rounded-[20px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4">
           <div>
-            <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block border-b border-white/5 pb-2">Technical Reports HUD</span>
-            <p className="text-[11.5px] text-[#AEB5C0]/65 mt-2.5 leading-relaxed">
+            <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block border-b border-white/5 pb-2">Technical Reports HUD</span>
+            <p className="text-[11.5px] text-muted-foreground/65 mt-2.5 leading-relaxed">
               Export CAD configurations specifications summaries, structural lists, cost bounds analysis, and efficiency charts.
             </p>
           </div>
@@ -115,12 +115,12 @@ export function AIReports({ config, telemetry, onExport }: AIReportsProps) {
 
       {/* Comparison table configurations matrices */}
       <div className="p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-4">
-        <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block border-b border-white/5 pb-2">Active Designs Matrix</span>
+        <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block border-b border-white/5 pb-2">Active Designs Matrix</span>
         
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b border-white/5 text-[#AEB5C0]/40 text-[9px] uppercase font-bold tracking-wider">
+              <tr className="border-b border-white/5 text-muted-foreground/40 text-[9px] uppercase font-bold tracking-wider">
                 <th className="pb-3">Design Version</th>
                 <th className="pb-3">Platform</th>
                 <th className="pb-3">Chemistry</th>

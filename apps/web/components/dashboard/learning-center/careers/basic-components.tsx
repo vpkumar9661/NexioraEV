@@ -23,7 +23,7 @@ export function CareerHero() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight font-sans">
             NexioraEV Career & Skill Development Hub™
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Transform your EV knowledge into industry-ready skills through structured career roadmaps, practical projects, certifications, portfolio development, and AI career guidance.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -88,14 +88,14 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
             <span className="text-xs font-black text-white block">
               {stat.value}
             </span>
-            <span className="text-[9.5px] text-[#AEB5C0]/50 block mt-1">
+            <span className="text-[9.5px] text-muted-foreground/50 block mt-1">
               {stat.desc}
             </span>
           </div>
@@ -114,7 +114,7 @@ export function PersonalDashboard() {
     <section id="personal" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Career Progress Dashboard</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Track your ongoing tracks accomplishments, portfolio strength index, and checklist goals.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Track your ongoing tracks accomplishments, portfolio strength index, and checklist goals.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -124,12 +124,12 @@ export function PersonalDashboard() {
           <div>
             <span className="text-[9.5px] font-extrabold text-[#F4B400] uppercase tracking-widest block">Active Career Path Target</span>
             <h3 className="text-sm font-black text-white mt-1">High-Voltage Battery Engineer</h3>
-            <p className="text-xs text-[#AEB5C0]/60 mt-1 leading-normal">BMS safety balancing algorithms, pack liquid cooling integration strategies.</p>
+            <p className="text-xs text-muted-foreground/60 mt-1 leading-normal">BMS safety balancing algorithms, pack liquid cooling integration strategies.</p>
           </div>
 
           <div className="space-y-2 pt-2">
             <div className="flex justify-between items-center text-xs font-bold">
-              <span className="text-[#AEB5C0]/50">Path Readiness Score</span>
+              <span className="text-muted-foreground/50">Path Readiness Score</span>
               <span className="text-white">72% Ready</span>
             </div>
             <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
@@ -141,11 +141,11 @@ export function PersonalDashboard() {
         {/* Readiness grid right */}
         <div className="md:col-span-5 grid grid-cols-2 gap-4">
           <div className="p-4 rounded-xl border border-white/5 bg-black/40 flex flex-col justify-between">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Portfolio Strength</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Portfolio Strength</span>
             <strong className="text-lg text-white block mt-2">Level 4 (Strong)</strong>
           </div>
           <div className="p-4 rounded-xl border border-white/5 bg-black/40 flex flex-col justify-between">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Completed Projects</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Completed Projects</span>
             <strong className="text-lg text-[#F4B400] block mt-2">4 designs</strong>
           </div>
         </div>
@@ -173,7 +173,7 @@ export function CareerRoadmaps() {
     <section id="roadmaps" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">EV Career Pathways</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Toggle career roadmap cards to track target hours, industry demand levels, and annual growth indicators.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Toggle career roadmap cards to track target hours, industry demand levels, and annual growth indicators.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -189,9 +189,9 @@ export function CareerRoadmaps() {
                   : "bg-white/2 border-white/5 hover:border-white/10 hover:bg-white/4"
               }`}
             >
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block">{r.demand} Demand</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block">{r.demand} Demand</span>
               <h4 className="text-xs font-black text-white mt-1 leading-snug">{r.name}</h4>
-              <span className="text-[10px] text-[#AEB5C0]/50 block mt-2">
+              <span className="text-[10px] text-muted-foreground/50 block mt-2">
                 {r.duration} • Growth {r.growth}
               </span>
             </div>
@@ -218,14 +218,14 @@ export function SkillsMatrix() {
     <section id="skills" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Competency Skills Matrix</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Track your proficiency levels relative to target levels standard across manufacturers.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Track your proficiency levels relative to target levels standard across manufacturers.</p>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
         {SKILLS.map((s, idx) => (
           <div key={idx} className="p-4 rounded-2xl bg-black/40 border border-white/5 space-y-3.5">
             <div className="flex justify-between items-center text-xs">
-              <span className="text-[#AEB5C0]/80 font-bold block">{s.name}</span>
+              <span className="text-muted-foreground/80 font-bold block">{s.name}</span>
               <span className="text-white font-bold">{s.current}% / {s.target}% Target</span>
             </div>
             
@@ -256,14 +256,14 @@ export function PortfolioBuilder() {
     <section id="portfolio" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Engineering Portfolio Builder</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Link laboratory simulations, technical sheets drafts, and blueprints files to generate exportable technical portfolios.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Link laboratory simulations, technical sheets drafts, and blueprints files to generate exportable technical portfolios.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Showcase left */}
         <div id="showcase" className="md:col-span-7 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Active portfolio items</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Active portfolio items</span>
           <div className="space-y-2">
             {PROJECTS.map((p, idx) => (
               <div key={idx} className="flex justify-between items-center text-xs p-3 rounded-xl bg-white/1 border border-white/5">
@@ -274,7 +274,7 @@ export function PortfolioBuilder() {
                     <strong className="text-white block mt-0.5 font-sans leading-snug">{p.title}</strong>
                   </div>
                 </div>
-                <span className="text-[#AEB5C0]/50 font-bold shrink-0">{p.size}</span>
+                <span className="text-muted-foreground/50 font-bold shrink-0">{p.size}</span>
               </div>
             ))}
           </div>
@@ -283,8 +283,8 @@ export function PortfolioBuilder() {
         {/* Export center right */}
         <div className="md:col-span-5 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md flex flex-col justify-between gap-4">
           <div>
-            <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Technical Portfolio Exports</span>
-            <p className="text-xs text-[#AEB5C0]/60 mt-3 leading-relaxed">
+            <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Technical Portfolio Exports</span>
+            <p className="text-xs text-muted-foreground/60 mt-3 leading-relaxed">
               Compile your virtual lab reports, battery simulations, and credentials to export as a formatted PDF for employers.
             </p>
           </div>

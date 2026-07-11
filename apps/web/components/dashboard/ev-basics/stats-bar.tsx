@@ -73,7 +73,7 @@ export function StatsBar() {
               <Icon className="w-4 h-4 text-[#A78BFA]" />
             </div>
             <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-            <span className="text-[11px] font-semibold text-[#AEB5C0]/55 mt-1 block">
+            <span className="text-[11px] font-semibold text-muted-foreground/55 mt-1 block">
               {stat.label}
             </span>
           </div>

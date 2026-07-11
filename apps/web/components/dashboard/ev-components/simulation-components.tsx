@@ -29,13 +29,13 @@ export function PowerFlow() {
     <section id="powerflow" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Power Flow Simulator</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Animate real-time energy flow tracking from the storage cells out to traction wheels.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Animate real-time energy flow tracking from the storage cells out to traction wheels.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Animation window */}
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+          <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">
             <span>Dynamic energy transmission paths</span>
             <div className="flex gap-2">
               <button
@@ -98,9 +98,9 @@ export function PowerFlow() {
 
         {/* Readout statistics */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4 text-xs">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Telemetry diagnostics</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Telemetry diagnostics</span>
           
-          <div className="space-y-3 font-semibold text-[#AEB5C0]/85">
+          <div className="space-y-3 font-semibold text-muted-foreground/85">
             <div className="flex justify-between">
               <span>Converter Voltage:</span>
               <strong className="text-white">{stats.volt} V DC</strong>
@@ -133,13 +133,13 @@ export function ComponentComparison() {
     <section id="compare" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Component Specifications Matrix</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Examine side-by-side spec comparisons for motor and power electronics lines.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Examine side-by-side spec comparisons for motor and power electronics lines.</p>
       </div>
 
       <div className="rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md overflow-x-auto">
         <table className="w-full text-xs text-left border-collapse min-w-[500px]">
           <thead>
-            <tr className="border-b border-white/5 text-[#AEB5C0]/50 text-[10px] uppercase font-bold tracking-wider bg-white/1">
+            <tr className="border-b border-white/5 text-muted-foreground/50 text-[10px] uppercase font-bold tracking-wider bg-white/1">
               <th className="p-4">Component Profile</th>
               <th className="p-4">Efficiency</th>
               <th className="p-4">Operating Speed</th>
@@ -206,7 +206,7 @@ export function AIComponentAssistant() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Buttons list */}
         <div className="md:col-span-5 flex flex-col gap-2 p-3 rounded-2xl border border-white/5 bg-black/40">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">Select Query Profile</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">Select Query Profile</span>
           {[
             { id: "pmsm", label: "How does a PMSM work?" },
             { id: "inverter", label: "What is an inverter's core function?" },
@@ -219,7 +219,7 @@ export function AIComponentAssistant() {
               className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer ${
                 selectedQuestion === q.id
                   ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-[#22D3EE]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0] hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground hover:text-white"
               }`}
             >
               {q.label}
@@ -231,14 +231,14 @@ export function AIComponentAssistant() {
         <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
           {answer ? (
             <div className="space-y-2">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">AI Agent Diagnostics</span>
-              <p className="text-xs text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Agent Diagnostics</span>
+              <p className="text-xs text-muted-foreground/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
                 {answer}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/45 text-xs flex flex-col items-center justify-center gap-2">
-              <BrainCircuit className="w-8 h-8 text-[#AEB5C0]/20" />
+            <div className="text-center p-4 text-muted-foreground/45 text-xs flex flex-col items-center justify-center gap-2">
+              <BrainCircuit className="w-8 h-8 text-muted-foreground/20" />
               <span>Select an EV engineering question profile on the left to activate AI advisor simulation.</span>
             </div>
           )}
@@ -305,7 +305,7 @@ export function ComponentQuiz() {
     <section id="quiz" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Interactive Certification Quiz</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Answer technical questions to earn EV Component certifications.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Answer technical questions to earn EV Component certifications.</p>
       </div>
 
       <div className="max-w-2xl rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md p-5 sm:p-6 space-y-6">
@@ -313,7 +313,7 @@ export function ComponentQuiz() {
           <div className="text-center py-6 space-y-4">
             <Award className="w-12 h-12 text-[#22D3EE] mx-auto animate-bounce" />
             <h4 className="text-base font-extrabold text-white">Quiz Module Complete!</h4>
-            <p className="text-xs text-[#AEB5C0]/75">
+            <p className="text-xs text-muted-foreground/75">
               Score achieved: <strong>{score} / {QUESTIONS.length}</strong> correct answers.
             </p>
             <button
@@ -325,7 +325,7 @@ export function ComponentQuiz() {
           </div>
         ) : (
           <div className="space-y-4">
-            <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+            <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">
               <span>Question {activeIdx + 1} of {QUESTIONS.length}</span>
               <span>Score: {score}</span>
             </div>
@@ -359,8 +359,8 @@ export function ComponentQuiz() {
 
             {showFeedback && (
               <div className="space-y-3 border-t border-white/5 pt-4">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Engineering Explanation</span>
-                <p className="text-xs text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Engineering Explanation</span>
+                <p className="text-xs text-muted-foreground/80 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
                   {QUESTIONS[activeIdx]!.exp}
                 </p>
                 <button

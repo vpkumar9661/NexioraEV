@@ -58,7 +58,7 @@ export function SiteFooter() {
               </span>
             </div>
             
-            <p className="text-sm text-[#AEB5C0]/80 leading-relaxed">
+            <p className="text-sm text-muted-foreground/80 leading-relaxed">
               NexioraEV is India&apos;s next-generation AI-powered Electric Vehicle ecosystem, bringing together technology, intelligent solutions, marketplace services, government resources, and future mobility innovation on one premium platform.
             </p>
             
@@ -80,7 +80,7 @@ export function SiteFooter() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visit our ${social.name}`}
-                    className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 border border-white/8 text-[#AEB5C0]/85 hover:text-[#00D26A] hover:bg-[#00D26A]/10 hover:border-[#00D26A]/40 transition-all duration-300 hover:scale-[1.1] hover:shadow-[0_0_12px_rgba(0,210,106,0.2)]"
+                    className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 border border-white/8 text-muted-foreground/85 hover:text-[#00D26A] hover:bg-[#00D26A]/10 hover:border-[#00D26A]/40 transition-all duration-300 hover:scale-[1.1] hover:shadow-[0_0_12px_rgba(0,210,106,0.2)]"
                   >
                     <SocIcon className="w-4.5 h-4.5" strokeWidth={1.8} />
                   </a>
@@ -94,7 +94,7 @@ export function SiteFooter() {
             <h4 className="text-[11px] font-extrabold tracking-widest text-[#00D26A] uppercase">
               Products
             </h4>
-            <ul className="space-y-3 text-[13.5px] font-medium text-[#AEB5C0]/75">
+            <ul className="space-y-3 text-[13.5px] font-medium text-muted-foreground/75">
               {[
                 { name: "EVTech", href: "/evtech" },
                 { name: "Solutions", href: "/solutions" },
@@ -118,7 +118,7 @@ export function SiteFooter() {
             <h4 className="text-[11px] font-extrabold tracking-widest text-[#3B82F6] uppercase">
               Resources
             </h4>
-            <ul className="space-y-3 text-[13.5px] font-medium text-[#AEB5C0]/75">
+            <ul className="space-y-3 text-[13.5px] font-medium text-muted-foreground/75">
               {[
                 { name: "Learning Center", href: "/evtech/learning-center" },
                 { name: "Battery Lab", href: "/evtech/battery-lab" },
@@ -145,7 +145,7 @@ export function SiteFooter() {
             <h4 className="text-[11px] font-extrabold tracking-widest text-[#8B5CF6] uppercase">
               Company
             </h4>
-            <ul className="space-y-3 text-[13.5px] font-medium text-[#AEB5C0]/75">
+            <ul className="space-y-3 text-[13.5px] font-medium text-muted-foreground/75">
               {[
                 { name: "About", href: "/company/about" },
                 { name: "Our Team", href: "/company/team" },
@@ -166,10 +166,10 @@ export function SiteFooter() {
 
           {/* Column 4: Support */}
           <div className="space-y-4">
-            <h4 className="text-[11px] font-extrabold tracking-widest text-[#AEB5C0]/60 uppercase">
+            <h4 className="text-[11px] font-extrabold tracking-widest text-muted-foreground/60 uppercase">
               Support
             </h4>
-            <ul className="space-y-3 text-[13.5px] font-medium text-[#AEB5C0]/75">
+            <ul className="space-y-3 text-[13.5px] font-medium text-muted-foreground/75">
               {[
                 { name: "Help Center", href: "/company/support" },
                 { name: "Documentation", href: "/company/developers" },
@@ -195,10 +195,10 @@ export function SiteFooter() {
           
           {/* Corporate Contact Info */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-[11px] font-extrabold tracking-widest text-[#AEB5C0]/50 uppercase">
+            <h4 className="text-[11px] font-extrabold tracking-widest text-muted-foreground/50 uppercase">
               Contact Desk
             </h4>
-            <ul className="space-y-3.5 text-[13.5px] text-[#AEB5C0]/85 font-medium">
+            <ul className="space-y-3.5 text-[13.5px] text-muted-foreground/85 font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4.5 h-4.5 text-[#00D26A] shrink-0 mt-0.5" strokeWidth={1.8} />
                 <span>Aerocity Aviation District, New Delhi 110037, India</span>
@@ -215,7 +215,7 @@ export function SiteFooter() {
                 <Clock className="w-4.5 h-4.5 text-[#00D26A] shrink-0 mt-0.5" strokeWidth={1.8} />
                 <div>
                   <p>Working Hours: Mon - Fri (9:00 AM - 6:00 PM IST)</p>
-                  <p className="text-[11px] text-[#AEB5C0]/55 mt-0.5">AI support lines are open 24/7</p>
+                  <p className="text-[11px] text-muted-foreground/55 mt-0.5">AI support lines are open 24/7</p>
                 </div>
               </li>
             </ul>
@@ -233,7 +233,7 @@ export function SiteFooter() {
                 <Sparkles className="w-4 h-4 text-[#00D26A] animate-pulse" />
                 Stay Updated
               </h5>
-              <p className="text-[12px] text-[#AEB5C0]/75 leading-relaxed">
+              <p className="text-[12px] text-muted-foreground/75 leading-relaxed">
                 Receive the latest EV news, battery innovations, charging technology updates, and AI insights.
               </p>
             </div>
@@ -246,7 +246,7 @@ export function SiteFooter() {
                   placeholder="Enter email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-[13px] text-white placeholder-[#AEB5C0]/40 focus:outline-none focus:border-[#00D26A]/40 focus:ring-1 focus:ring-[#00D26A]/30 w-full transition-all"
+                  className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-[13px] text-white placeholder-muted-foreground/40 focus:outline-none focus:border-[#00D26A]/40 focus:ring-1 focus:ring-[#00D26A]/30 w-full transition-all"
                 />
                 <button
                   type="submit"
@@ -280,7 +280,7 @@ export function SiteFooter() {
             return (
               <div 
                 key={badge.label}
-                className="px-3.5 py-2 rounded-xl border border-white/6 bg-white/1 text-[11.5px] font-bold text-[#AEB5C0]/85 flex items-center gap-2 hover:bg-white/3 hover:border-white/10 hover:text-white transition-all cursor-default"
+                className="px-3.5 py-2 rounded-xl border border-white/6 bg-white/1 text-[11.5px] font-bold text-muted-foreground/85 flex items-center gap-2 hover:bg-white/3 hover:border-white/10 hover:text-white transition-all cursor-default"
               >
                 <BadgeIcon className="w-4 h-4 text-[#00D26A]" />
                 {badge.label}
@@ -290,11 +290,11 @@ export function SiteFooter() {
         </section>
 
         {/* Bottom Bar Footer Details */}
-        <section className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] font-semibold text-[#AEB5C0]/65">
+        <section className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] font-semibold text-muted-foreground/65">
           <div>
             © 2026 NexioraEV
           </div>
-          <div className="flex items-center gap-1.5 text-center text-[#AEB5C0]/80">
+          <div className="flex items-center gap-1.5 text-center text-muted-foreground/80">
             Building the Future of Electric Mobility with Intelligence, Innovation, and Sustainability.
           </div>
           <div className="flex items-center gap-2">

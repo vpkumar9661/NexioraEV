@@ -26,7 +26,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
   return (
     <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-[140px] w-[180px] z-30">
       <nav className="p-3 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-1">
-        <p className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">
+        <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">
           Navigation
         </p>
         {SECTIONS.map((section) => {
@@ -39,7 +39,7 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
               className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-[12px] font-semibold transition-all duration-200 ${
                 isActive
                   ? "bg-[#8B5CF6]/10 text-[#A78BFA] border border-[#8B5CF6]/20"
-                  : "text-[#AEB5C0]/60 hover:text-white hover:bg-white/5 border border-transparent"
+                  : "text-muted-foreground/60 hover:text-white hover:bg-white/5 border border-transparent"
               }`}
             >
               <Icon className="w-3.5 h-3.5 shrink-0" />

@@ -27,7 +27,7 @@ export function AcademyQuiz() {
     <section id="assessments" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Academy Assessments</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Test your EV systems design knowledge with graded conceptual practice exams.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Test your EV systems design knowledge with graded conceptual practice exams.</p>
       </div>
 
       <div className="max-w-2xl p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
@@ -60,8 +60,8 @@ export function AcademyQuiz() {
 
         {showFeedback && (
           <div className="space-y-2 border-t border-white/5 pt-3">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Detailed Explanation</span>
-            <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Detailed Explanation</span>
+            <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
               {QUESTIONS[0]!.exp}
             </p>
           </div>
@@ -99,7 +99,7 @@ export function CertificationCenter() {
     <section id="certifications" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Certification Center</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Input your name and select a path to generate downloadable verification certificates.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Input your name and select a path to generate downloadable verification certificates.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -108,17 +108,17 @@ export function CertificationCenter() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[220px]">
           <form onSubmit={handleIssue} className="space-y-4 text-xs">
             <div className="space-y-1">
-              <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Candidate Name</label>
+              <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Candidate Name</label>
               <input
                 type="text"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
                 placeholder="e.g. Alan Turing"
-                className="w-full px-3 py-2 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F5B301] placeholder:text-[#AEB5C0]/20"
+                className="w-full px-3 py-2 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F5B301] placeholder:text-muted-foreground/20"
               />
             </div>
             <div className="space-y-1">
-              <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Specialized Track</label>
+              <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Specialized Track</label>
               <select
                 value={certType}
                 onChange={(e) => setCertType(e.target.value)}
@@ -151,11 +151,11 @@ export function CertificationCenter() {
               </div>
 
               <div className="border-t border-white/5 pt-3.5">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Candidate</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Candidate</span>
                 <strong className="text-base text-white block uppercase tracking-wide">{issuedCert.name}</strong>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-white/5 pt-3 text-[10px] text-[#AEB5C0]/50 font-semibold">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-t border-white/5 pt-3 text-[10px] text-muted-foreground/50 font-semibold">
                 <span>Verification ID: {issuedCert.id}</span>
                 <span>Issued Date: {issuedCert.date}</span>
                 <span className="text-emerald-400 font-extrabold cursor-pointer hover:underline" onClick={() => alert("Verification code matches.")}>
@@ -164,8 +164,8 @@ export function CertificationCenter() {
               </div>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/40 text-xs flex flex-col items-center justify-center gap-2">
-              <Award className="w-8 h-8 text-[#AEB5C0]/25" />
+            <div className="text-center p-4 text-muted-foreground/40 text-xs flex flex-col items-center justify-center gap-2">
+              <Award className="w-8 h-8 text-muted-foreground/25" />
               <span>Input a candidate name to issue a professional certificate.</span>
             </div>
           )}
@@ -190,7 +190,7 @@ export function ResourceLibrary() {
     <section id="library" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Books & Papers Library</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Read technical notes and reference manuals.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Read technical notes and reference manuals.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -208,7 +208,7 @@ export function ResourceLibrary() {
             </div>
             <button
               onClick={() => alert(`Downloading: ${p.doc}`)}
-              className="p-2 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 cursor-pointer"
+              className="p-2 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 cursor-pointer"
             >
               <FileDown className="w-4.5 h-4.5" />
             </button>
@@ -233,7 +233,7 @@ export function VideoAcademy() {
     <section id="videos" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Video Academy</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Watch tutorials detailing high-voltage electronics and component configurations.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Watch tutorials detailing high-voltage electronics and component configurations.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -246,7 +246,7 @@ export function VideoAcademy() {
               <Play className="w-4 h-4 text-[#F5B301] fill-[#F5B301] shrink-0" />
               <strong className="text-white block font-sans">{vid.title}</strong>
             </div>
-            <span className="text-[10px] text-[#AEB5C0]/50 font-bold">{vid.duration}</span>
+            <span className="text-[10px] text-muted-foreground/50 font-bold">{vid.duration}</span>
           </div>
         ))}
       </div>
@@ -290,13 +290,13 @@ export function AITutor() {
         {/* Form panel Left */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[160px]">
           <form onSubmit={handleAsk} className="space-y-3 text-xs">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Ask Tutor</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Ask Tutor</span>
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="e.g. Explain C-rate"
-              className="w-full px-3 py-1.5 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F5B301] placeholder:text-[#AEB5C0]/25"
+              className="w-full px-3 py-1.5 rounded-xl border border-white/10 bg-[#07090e] font-bold text-white focus:outline-none focus:border-[#F5B301] placeholder:text-muted-foreground/25"
             />
             <button
               type="submit"
@@ -312,12 +312,12 @@ export function AITutor() {
           {reply ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">Tutor Prognostics</span>
-              <p className="text-xs text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
+              <p className="text-xs text-muted-foreground/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5">
                 {reply}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/35 text-xs">
+            <div className="text-center p-4 text-muted-foreground/35 text-xs">
               Consult the AI Tutor by submitting a concept question on the left.
             </div>
           )}
@@ -338,7 +338,7 @@ export function CommunityHub() {
         
         {/* Forums Discussions Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Discussion Forums</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Discussion Forums</span>
           <div className="space-y-2">
             {[
               { title: "Tesla structural pack battery design analysis", count: "12 replies" },
@@ -346,7 +346,7 @@ export function CommunityHub() {
             ].map((th, idx) => (
               <div key={idx} className="flex justify-between items-center text-xs p-2 rounded-lg bg-white/1 border border-white/5">
                 <span className="text-white font-bold truncate pr-3">{th.title}</span>
-                <span className="text-[#AEB5C0]/50 shrink-0">{th.count}</span>
+                <span className="text-muted-foreground/50 shrink-0">{th.count}</span>
               </div>
             ))}
           </div>
@@ -354,7 +354,7 @@ export function CommunityHub() {
 
         {/* Leaderboard Streaks Right */}
         <div id="leaderboard" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Student Leaderboard</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Student Leaderboard</span>
           
           <div className="space-y-2">
             {[
@@ -385,7 +385,7 @@ export function AchievementsHub() {
         
         {/* Badges Left */}
         <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Unlocked badges</span>
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Unlocked badges</span>
           
           <div className="space-y-2">
             {[
@@ -398,7 +398,7 @@ export function AchievementsHub() {
                 </div>
                 <div>
                   <strong className="text-white block">{b.title}</strong>
-                  <span className="text-[10px] text-[#AEB5C0]/50 block">{b.desc}</span>
+                  <span className="text-[10px] text-muted-foreground/50 block">{b.desc}</span>
                 </div>
               </div>
             ))}
@@ -408,18 +408,18 @@ export function AchievementsHub() {
         {/* Handbooks Downloads Right */}
         <div id="downloads" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between">
           <div>
-            <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads center</span>
+            <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Downloads center</span>
             
             <div className="grid grid-cols-2 gap-2 mt-4 text-xs">
               <button
                 onClick={() => alert("Downloading: EV-Handbooks.pdf")}
-                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
+                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
               >
                 Engineering Handbook
               </button>
               <button
                 onClick={() => alert("Downloading: Formula-Sheets.pdf")}
-                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
+                className="py-2.5 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 transition-all text-[11px] font-bold cursor-pointer"
               >
                 Formula Sheet
               </button>

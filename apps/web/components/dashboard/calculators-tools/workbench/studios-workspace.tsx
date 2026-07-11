@@ -52,7 +52,7 @@ export function StudiosWorkspace({
             className={`px-4 py-2 rounded-lg font-bold border transition-colors cursor-pointer ${
               activeTab === tab.id
                 ? "bg-[#00C853]/15 border-[#00C853]/35 text-[#00C853] shadow-[0_0_10px_rgba(0,200,83,0.06)]"
-                : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
             }`}
           >
             {tab.label}
@@ -68,31 +68,31 @@ export function StudiosWorkspace({
           <div className="space-y-6">
             <div>
               <h3 className="text-sm font-black text-white uppercase tracking-wider">Battery Pack Matrix Design</h3>
-              <p className="text-xs text-[#AEB5C0]/50 mt-0.5">Cell series/parallel distributions visualizations.</p>
+              <p className="text-xs text-muted-foreground/50 mt-0.5">Cell series/parallel distributions visualizations.</p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold">
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Series Cells</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Series Cells</span>
                 <strong className="text-white block">{setup.series}S</strong>
               </div>
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Parallel Cells</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Parallel Cells</span>
                 <strong className="text-white block">{setup.parallel}P</strong>
               </div>
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Pack Energy</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Pack Energy</span>
                 <strong className="text-[#00C853] block">{capacityKwh} kWh</strong>
               </div>
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Continuous Capacity</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Continuous Capacity</span>
                 <strong className="text-white block">{totalAh} Ah</strong>
               </div>
             </div>
 
             {/* Matrix Visual */}
             <div className="border border-white/5 rounded-xl bg-black/40 p-4 flex flex-col justify-center min-h-[120px]">
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block mb-3">Series-Parallel configuration board</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block mb-3">Series-Parallel configuration board</span>
               <svg viewBox="-80 -30 160 60" className="w-full max-w-[180px] mx-auto overflow-visible">
                 {/* Visual rendering cells blocks */}
                 <rect x="-45" y="-12" width="22" height="24" rx="2" fill="rgba(0,200,83,0.15)" stroke="#00C853" strokeWidth="0.8" />
@@ -112,12 +112,12 @@ export function StudiosWorkspace({
           <div className="space-y-6">
             <div>
               <h3 className="text-sm font-black text-white uppercase tracking-wider">Charging Cost & Planner</h3>
-              <p className="text-xs text-[#AEB5C0]/50 mt-0.5">Estimate charging budget offsets compared to petrol equivalents.</p>
+              <p className="text-xs text-muted-foreground/50 mt-0.5">Estimate charging budget offsets compared to petrol equivalents.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4 text-xs">
               <div className="p-4 rounded-xl border border-white/5 bg-black/40 space-y-2">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Home Electricity Rate</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Home Electricity Rate</span>
                 <input
                   type="number"
                   value={elecRate}
@@ -127,15 +127,15 @@ export function StudiosWorkspace({
               </div>
 
               <div className="p-5 rounded-xl border border-white/5 bg-black/40 space-y-4">
-                <span className="text-[9.5px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block border-b border-white/5 pb-2">Estimated charging cost bills</span>
+                <span className="text-[9.5px] font-bold text-muted-foreground/40 uppercase tracking-widest block border-b border-white/5 pb-2">Estimated charging cost bills</span>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Monthly Charge bill</span>
+                    <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Monthly Charge bill</span>
                     <strong className="text-sm text-white block mt-0.5">₹{monthlyCost}</strong>
                   </div>
                   <div>
-                    <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Annual Petrol savings</span>
+                    <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Annual Petrol savings</span>
                     <strong className="text-sm text-[#00C853] block mt-0.5">₹{Math.round(monthlyCost * 4.2 * 12)} saved</strong>
                   </div>
                 </div>
@@ -149,16 +149,16 @@ export function StudiosWorkspace({
           <div className="space-y-6">
             <div>
               <h3 className="text-sm font-black text-white uppercase tracking-wider">Vehicle Performance & Speed estimations</h3>
-              <p className="text-xs text-[#AEB5C0]/50 mt-0.5">Observe estimated speed bounds and drag reduction ranges.</p>
+              <p className="text-xs text-muted-foreground/50 mt-0.5">Observe estimated speed bounds and drag reduction ranges.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-xs font-semibold">
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Top Speed</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Top Speed</span>
                 <strong className="text-white block">{speed} km/h</strong>
               </div>
               <div className="p-3.5 bg-black/40 border border-white/5 rounded-xl space-y-1">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Drag Coefficient</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Estimated Drag Coefficient</span>
                 <strong className="text-white block">{dragCoeff} Cd</strong>
               </div>
             </div>
@@ -170,7 +170,7 @@ export function StudiosWorkspace({
           <div className="space-y-6">
             <div>
               <h3 className="text-sm font-black text-white uppercase tracking-wider">Sustainability Analyzer</h3>
-              <p className="text-xs text-[#AEB5C0]/50 mt-0.5">Calculate tailpipe emissions reductions indexes.</p>
+              <p className="text-xs text-muted-foreground/50 mt-0.5">Calculate tailpipe emissions reductions indexes.</p>
             </div>
 
             <div className="p-4 bg-emerald-500/5 border border-emerald-500/10 text-emerald-400 text-xs rounded-xl">
@@ -185,7 +185,7 @@ export function StudiosWorkspace({
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="text-sm font-black text-white uppercase tracking-wider">Engineering Report Generator</h3>
-                <p className="text-xs text-[#AEB5C0]/50 mt-0.5">Compile configurator parameters to export technical reports.</p>
+                <p className="text-xs text-muted-foreground/50 mt-0.5">Compile configurator parameters to export technical reports.</p>
               </div>
               <button
                 onClick={() => alert("Initiating Workbench compiled specifications exports...")}
@@ -195,7 +195,7 @@ export function StudiosWorkspace({
               </button>
             </div>
 
-            <div className="border border-white/5 p-4 rounded-xl bg-black/40 text-xs font-mono space-y-1 text-[#AEB5C0]">
+            <div className="border border-white/5 p-4 rounded-xl bg-black/40 text-xs font-mono space-y-1 text-muted-foreground">
               <span className="text-[#00C853] font-bold block mb-1">&gt;&gt; NexioraEV compiled diagnostics reports:</span>
               <div>* Platform: {setup.platform.toUpperCase()}</div>
               <div>* Battery: {setup.chemistry.toUpperCase()} ({capacityKwh} kWh energy)</div>

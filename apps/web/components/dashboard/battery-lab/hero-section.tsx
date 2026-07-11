@@ -26,7 +26,7 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Explore battery chemistry, performance, charging behaviour, thermal management, safety and the future of EV battery technology.
           </p>
 
@@ -46,7 +46,7 @@ export function HeroSection() {
             </a>
             <a
               href="#ai"
-              className="px-5 py-3 rounded-xl font-bold bg-transparent border border-white/15 hover:border-[#10B981]/40 text-[#AEB5C0] hover:text-white transition-all duration-300 flex items-center gap-2 text-sm"
+              className="px-5 py-3 rounded-xl font-bold bg-transparent border border-white/15 hover:border-[#10B981]/40 text-muted-foreground hover:text-white transition-all duration-300 flex items-center gap-2 text-sm"
             >
               <Sparkles className="w-4 h-4 text-[#6EE7B7]" />
               Ask AI
@@ -66,7 +66,7 @@ export function HeroSection() {
               <BatteryCharging className="w-4 h-4 text-[#6EE7B7]" />
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider block">Temp Control</span>
+              <span className="text-[9px] text-muted-foreground/50 font-bold uppercase tracking-wider block">Temp Control</span>
               <span className="text-[11px] font-bold text-white block">24.5°C Active</span>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export function HeroSection() {
               <Zap className="w-4 h-4 text-[#60A5FA]" />
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider block">BMS Status</span>
+              <span className="text-[9px] text-muted-foreground/50 font-bold uppercase tracking-wider block">BMS Status</span>
               <span className="text-[11px] font-bold text-white block">SOC: 98% (CC/CV)</span>
             </div>
           </motion.div>

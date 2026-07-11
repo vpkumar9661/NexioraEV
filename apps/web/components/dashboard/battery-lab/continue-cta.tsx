@@ -46,7 +46,7 @@ export function ContinueCTA() {
             Charging Hub
           </span>
         </h2>
-        <p className="text-[#AEB5C0]/70 text-sm leading-relaxed max-w-lg">
+        <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-lg">
           Explore AC/DC high-voltage grid topologies, rapid charging connector standards, and smart load-balancing setups in our Charging Hub.
         </p>
         <div className="flex flex-wrap items-center gap-3">

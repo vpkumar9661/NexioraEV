@@ -1,57 +1,57 @@
 import Link from "next/link";
 import { 
-  Plug, Battery, Truck, Sun, Building, Activity, Brain, Headphones, ArrowRight, Box 
+  Plug, Battery, Truck, Sun, Building, Activity, Brain, Headphones, ArrowRight, Box, Sparkles 
 } from "lucide-react";
 
 const SOLUTIONS = [
   {
     name: "EV Charging Solutions",
     description: "Home chargers, commercial charging stations, DC fast charging and smart charging infrastructure.",
-    href: "/solutions/charging",
+    href: "/solutions/charging-solutions",
     icon: Plug,
     color: "#00D26A"
   },
   {
     name: "Battery Solutions",
     description: "Battery systems, swapping, thermal management, recycling and energy storage.",
-    href: "/solutions/battery",
+    href: "/solutions/battery-solutions",
     icon: Battery,
     color: "#00D26A"
   },
   {
     name: "Fleet Solutions",
     description: "Complete EV fleet management for businesses, logistics, ride sharing and commercial transport.",
-    href: "/solutions/fleet",
+    href: "/solutions/fleet-solutions",
     icon: Truck,
     color: "#00D26A"
   },
   {
-    name: "Solar + EV",
-    description: "Integrate rooftop solar with EV charging for maximum energy savings.",
-    href: "/solutions/solar",
+    name: "Solar + EV Solutions",
+    description: "Integrated solar panels, battery storage systems, charging hubs and home microgrids.",
+    href: "/solutions/solar-ev-solutions",
     icon: Sun,
     color: "#00D26A"
   },
   {
     name: "Business Solutions",
     description: "EV infrastructure for offices, industries, apartments and commercial facilities.",
-    href: "/solutions/business",
+    href: "/solutions/business-solutions",
     icon: Building,
     color: "#00D26A"
   },
   {
-    name: "Smart Energy",
+    name: "Smart Energy Solutions",
     description: "Energy monitoring, V2G, smart grid integration and intelligent energy optimization.",
-    href: "/solutions/energy",
+    href: "/solutions/smart-energy-solutions",
     icon: Activity,
     color: "#00D26A"
   },
   {
     name: "AI Solutions",
-    description: "Predictive maintenance, AI diagnostics, smart charging optimization and analytics.",
-    href: "/solutions/ai",
-    icon: Brain,
-    color: "#00D26A"
+    description: "Enterprise EV intelligence platform connecting every system.",
+    href: "/solutions/ai-solutions",
+    icon: Sparkles,
+    color: "#8B5CF6"
   },
   {
     name: "Consultation",
@@ -75,7 +75,7 @@ export default function SolutionsIndexPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-linear-to-r from-white via-white to-[#00D26A]/80 bg-clip-text text-transparent">
             Complete EV Solutions
           </h1>
-          <p className="text-[#AEB5C0]/80 text-base sm:text-lg leading-relaxed">
+          <p className="text-muted-foreground/80 text-base sm:text-lg leading-relaxed">
             From smart charging stations and high-performance battery swapping to custom fleet management and advanced AI diagnostics, we power the future of electric mobility.
           </p>
         </section>
@@ -95,13 +95,13 @@ export default function SolutionsIndexPage() {
                 
                 <div className="space-y-4 relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#00D26A]/40 transition-colors">
-                    <Icon className="w-6 h-6 text-[#AEB5C0] group-hover:text-[#00D26A] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
+                    <Icon className="w-6 h-6 text-muted-foreground group-hover:text-[#00D26A] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="text-[18px] font-bold text-white group-hover:text-[#00D26A] transition-colors leading-tight">
                       {solution.name}
                     </h3>
-                    <p className="text-[13px] text-[#AEB5C0]/70 line-clamp-3 leading-relaxed">
+                    <p className="text-[13px] text-muted-foreground/70 line-clamp-3 leading-relaxed">
                       {solution.description}
                     </p>
                   </div>

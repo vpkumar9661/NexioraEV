@@ -33,7 +33,7 @@ export function PackExplorer() {
     <section id="pack" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Interactive Battery Pack Explorer</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Explore structural components inside a high-voltage battery housing</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Explore structural components inside a high-voltage battery housing</p>
       </div>
 
       <div className="relative rounded-[20px] border border-white/5 bg-white/2 overflow-hidden min-h-[380px] flex flex-col justify-between">
@@ -105,12 +105,12 @@ export function PackExplorer() {
               </div>
               <button
                 onClick={() => setActiveId(null)}
-                className="text-[#AEB5C0]/40 hover:text-white transition-colors"
+                className="text-muted-foreground/40 hover:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-[12px] text-[#AEB5C0]/85 leading-relaxed">{activeItem.desc}</p>
+            <p className="text-[12px] text-muted-foreground/85 leading-relaxed">{activeItem.desc}</p>
           </div>
         )}
       </div>

@@ -31,7 +31,7 @@ export function FloatingToolbar() {
               <button
                 onMouseEnter={() => setHoveredTool(tool.id)}
                 onMouseLeave={() => setHoveredTool(null)}
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-[#AEB5C0]/60 hover:text-[#A78BFA] hover:bg-[#8B5CF6]/10 transition-all duration-200 border border-transparent hover:border-[#8B5CF6]/20"
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground/60 hover:text-[#A78BFA] hover:bg-[#8B5CF6]/10 transition-all duration-200 border border-transparent hover:border-[#8B5CF6]/20"
                 aria-label={tool.label}
               >
                 <Icon className="w-4 h-4" />
@@ -49,7 +49,7 @@ export function FloatingToolbar() {
 
         <button
           onClick={scrollToTop}
-          className="w-9 h-9 rounded-lg flex items-center justify-center text-[#AEB5C0]/60 hover:text-[#A78BFA] hover:bg-[#8B5CF6]/10 transition-all duration-200 border border-transparent hover:border-[#8B5CF6]/20"
+          className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground/60 hover:text-[#A78BFA] hover:bg-[#8B5CF6]/10 transition-all duration-200 border border-transparent hover:border-[#8B5CF6]/20"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-4 h-4" />

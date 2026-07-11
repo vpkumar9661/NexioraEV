@@ -29,7 +29,7 @@ export function InnovationTimeline() {
     <section id="timeline" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Innovation Timeline</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Trace the evolution of energy storage technologies from early lead cells to solid-state systems</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Trace the evolution of energy storage technologies from early lead cells to solid-state systems</p>
       </div>
 
       <div className="rounded-[20px] border border-white/5 bg-white/2 p-6 space-y-8">
@@ -53,7 +53,7 @@ export function InnovationTimeline() {
                   className={`w-10 h-10 rounded-full flex items-center justify-center border font-bold text-xs transition-all ${
                     isActive
                       ? "bg-[#10B981] border-[#10B981] text-white shadow-[0_0_12px_rgba(16,185,129,0.4)]"
-                      : "bg-[#131722] border-white/10 text-[#AEB5C0]"
+                      : "bg-[#131722] border-white/10 text-muted-foreground"
                   }`}
                 >
                   {event.year.replace("+", "")}
@@ -77,7 +77,7 @@ export function InnovationTimeline() {
             <div className="md:col-span-8 space-y-4">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-[#10B981]" />
-                <span className="text-xs text-[#AEB5C0]/60">Historical Event — Year {current.year}</span>
+                <span className="text-xs text-muted-foreground/60">Historical Event — Year {current.year}</span>
               </div>
               <div>
                 <h4 className="text-base font-extrabold text-white">{current.title}</h4>
@@ -85,19 +85,19 @@ export function InnovationTimeline() {
                   Structure: {current.chemistry}
                 </span>
               </div>
-              <p className="text-[13px] text-[#AEB5C0]/80 leading-relaxed">
+              <p className="text-[13px] text-muted-foreground/80 leading-relaxed">
                 {current.summary}
               </p>
             </div>
 
             <div className="md:col-span-4 flex flex-col justify-between gap-4 border-t md:border-t-0 md:border-l border-white/5 pt-4 md:pt-0 md:pl-6">
               <div className="space-y-1">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Chemical Compounds</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Chemical Compounds</span>
                 <span className="text-xs font-bold text-white block">{current.compounds}</span>
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Industry Impact</span>
-                <span className="text-xs font-bold text-[#AEB5C0]/85 leading-normal block">{current.impact}</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Industry Impact</span>
+                <span className="text-xs font-bold text-muted-foreground/85 leading-normal block">{current.impact}</span>
               </div>
             </div>
           </div>

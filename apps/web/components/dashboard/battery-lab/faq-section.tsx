@@ -31,24 +31,24 @@ export function FAQSection() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-extrabold text-white">Frequently Asked Questions</h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">Common answers about high-voltage battery technologies</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Common answers about high-voltage battery technologies</p>
         </div>
 
         <div className="relative w-full sm:w-[280px]">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#AEB5C0]/40" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/40" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search questions..."
-            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/3 border border-white/10 text-sm text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40 focus:bg-[#10B981]/3 transition-all"
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/3 border border-white/10 text-sm text-white placeholder:text-muted-foreground/30 focus:outline-none focus:border-[#10B981]/40 focus:bg-[#10B981]/3 transition-all"
           />
         </div>
       </div>
 
       <div className="space-y-2">
         {filtered.length === 0 && (
-          <div className="text-center py-12 text-[#AEB5C0]/40 text-sm">
+          <div className="text-center py-12 text-muted-foreground/40 text-sm">
             No questions found matching &quot;{search}&quot;
           </div>
         )}
@@ -67,14 +67,14 @@ export function FAQSection() {
                 onClick={() => setOpenIdx(isOpen ? null : idx)}
                 className="w-full flex items-center gap-3 px-5 py-4 text-left font-bold text-xs"
               >
-                <HelpCircle className={`w-4 h-4 shrink-0 transition-colors ${isOpen ? "text-[#6EE7B7]" : "text-[#AEB5C0]/40"}`} />
-                <span className={`flex-1 transition-colors ${isOpen ? "text-white" : "text-[#AEB5C0]/85"}`}>
+                <HelpCircle className={`w-4 h-4 shrink-0 transition-colors ${isOpen ? "text-[#6EE7B7]" : "text-muted-foreground/40"}`} />
+                <span className={`flex-1 transition-colors ${isOpen ? "text-white" : "text-muted-foreground/85"}`}>
                   {faq.q}
                 </span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 text-[#6EE7B7]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 text-[#6EE7B7]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-5 text-[12.5px] text-[#AEB5C0]/70 leading-relaxed pl-12">
+                <p className="px-5 pb-5 text-[12.5px] text-muted-foreground/70 leading-relaxed pl-12">
                   {faq.a}
                 </p>
               </div>

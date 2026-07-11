@@ -19,7 +19,7 @@ export function LearningModules() {
     <section id="modules" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Learning Modules</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">8 comprehensive modules covering everything about Electric Vehicles</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">8 comprehensive modules covering everything about Electric Vehicles</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -38,20 +38,20 @@ export function LearningModules() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#AEB5C0]/40">Module {mod.id}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground/40">Module {mod.id}</span>
                   </div>
                   <h3 className="text-sm font-bold text-white group-hover:text-[#A78BFA] transition-colors truncate">{mod.title}</h3>
-                  <p className="text-[12px] text-[#AEB5C0]/60 mt-1 leading-relaxed line-clamp-2">{mod.desc}</p>
+                  <p className="text-[12px] text-muted-foreground/60 mt-1 leading-relaxed line-clamp-2">{mod.desc}</p>
                   <div className="flex items-center gap-3 mt-3">
-                    <span className="flex items-center gap-1 text-[11px] text-[#AEB5C0]/50">
+                    <span className="flex items-center gap-1 text-[11px] text-muted-foreground/50">
                       <Clock className="w-3 h-3" /> {mod.time}
                     </span>
-                    <span className="flex items-center gap-1 text-[11px] text-[#AEB5C0]/50">
+                    <span className="flex items-center gap-1 text-[11px] text-muted-foreground/50">
                       <BarChart className="w-3 h-3" /> {mod.difficulty}
                     </span>
                   </div>
                 </div>
-                <ChevronRight className="w-4 h-4 text-[#AEB5C0]/20 group-hover:text-[#A78BFA] group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+                <ChevronRight className="w-4 h-4 text-muted-foreground/20 group-hover:text-[#A78BFA] group-hover:translate-x-1 transition-all shrink-0 mt-1" />
               </div>
             </div>
           );

@@ -5,7 +5,7 @@ export function EVArchitecture() {
     <section id="architecture" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">EV Architecture</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">How energy flows through an Electric Vehicle — from battery to wheel</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">How energy flows through an Electric Vehicle — from battery to wheel</p>
       </div>
 
       <div className="rounded-[20px] border border-white/5 bg-white/2 overflow-hidden p-6 sm:p-8 relative">

@@ -30,7 +30,7 @@ export function ThermalManagement() {
     <section id="thermal" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Thermal Management</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Compare thermal control configurations and observe cell heat distribution anomalies</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Compare thermal control configurations and observe cell heat distribution anomalies</p>
       </div>
 
       {/* Selectors */}
@@ -45,7 +45,7 @@ export function ThermalManagement() {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-bold border transition-all duration-300 ${
                 isActive
                   ? "text-white"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-muted-foreground/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -65,19 +65,19 @@ export function ThermalManagement() {
         <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <div className="space-y-4">
             <h4 className="text-base font-extrabold text-white">{selectedSystem.label} Parameters</h4>
-            <p className="text-sm text-[#AEB5C0]/80 leading-relaxed">{selectedSystem.desc}</p>
+            <p className="text-sm text-muted-foreground/80 leading-relaxed">{selectedSystem.desc}</p>
             
             <div className="grid grid-cols-3 gap-3 pt-2">
               <div className="p-3 rounded-xl bg-white/1 border border-white/5">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Heat Capture</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Heat Capture</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.efficiency}</span>
               </div>
               <div className="p-3 rounded-xl bg-white/1 border border-white/5">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">System Complexity</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">System Complexity</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.complexity}</span>
               </div>
               <div className="p-3 rounded-xl bg-white/1 border border-white/5">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Relative Cost</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Relative Cost</span>
                 <span className="text-xs font-bold text-white mt-1 block">{selectedSystem.cost}</span>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function ThermalManagement() {
           <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/1">
             <Thermometer className="w-5 h-5 text-[#3B82F6]" />
             <div>
-              <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Gradient Delta</span>
+              <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Thermal Gradient Delta</span>
               <span className="text-xs font-bold text-white mt-0.5 block">
                 {selectedSystem.id === "liquid" ? "< 2°C Variance (Ideal)" : selectedSystem.id === "air" ? "> 8°C Variance (Critical hotspots)" : "Passive regulation"}
               </span>
@@ -156,7 +156,7 @@ export function ThermalManagement() {
             </svg>
           </div>
 
-          <div className="flex items-center justify-between text-[10px] text-[#AEB5C0]/40">
+          <div className="flex items-center justify-between text-[10px] text-muted-foreground/40">
             <span>Cool (15°C)</span>
             <span>Ideal (25°C)</span>
             <span>Overheating (55°C)</span>

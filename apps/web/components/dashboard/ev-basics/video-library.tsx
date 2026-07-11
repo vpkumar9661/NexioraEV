@@ -17,7 +17,7 @@ export function VideoLibrary() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-extrabold text-white">Video Library</h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">Curated video lessons from top EV educators</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Curated video lessons from top EV educators</p>
         </div>
         <span className="text-[11px] font-bold text-[#A78BFA] bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 px-3 py-1 rounded-full">
           {VIDEOS.length} Videos
@@ -50,7 +50,7 @@ export function VideoLibrary() {
             <div className="p-4 space-y-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A78BFA]">{video.category}</span>
               <h4 className="text-sm font-bold text-white group-hover:text-[#A78BFA] transition-colors line-clamp-1">{video.title}</h4>
-              <div className="flex items-center gap-3 text-[11px] text-[#AEB5C0]/50">
+              <div className="flex items-center gap-3 text-[11px] text-muted-foreground/50">
                 <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {video.duration}</span>
                 <span className="flex items-center gap-1"><Eye className="w-3 h-3" /> {video.views}</span>
               </div>

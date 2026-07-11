@@ -39,14 +39,14 @@ export function ChargingStandards() {
     <section id="standards" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Charging Standards Comparison</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Analyze global connector capacities, maximum voltages, and regional grids.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Analyze global connector capacities, maximum voltages, and regional grids.</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-6 items-stretch">
         {/* Selector & Chart */}
         <div className="lg:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between gap-5">
           <div className="space-y-1">
-            <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">Choose Standard</span>
+            <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">Choose Standard</span>
             <select
               value={selectedStd.id}
               onChange={(e) => setSelectedStd(STANDARDS_LIST.find((s) => s.id === e.target.value)!)}
@@ -60,7 +60,7 @@ export function ChargingStandards() {
 
           {/* SVG Power Comparison bar chart */}
           <div className="space-y-2">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Max Power Limit (kW)</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Max Power Limit (kW)</span>
             <svg viewBox="0 0 200 110" className="w-full overflow-visible">
               {STANDARDS_LIST.map((std, idx) => {
                 const barWidth = (std.power / 900) * 135;
@@ -98,31 +98,31 @@ export function ChargingStandards() {
 
           <div className="grid grid-cols-2 gap-4 text-xs">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Max Power Output</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Max Power Output</span>
               <strong className="text-sm text-[#22D3EE] mt-0.5 block">{selectedStd.power} kW</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Voltage Range</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Voltage Range</span>
               <strong className="text-xs text-white mt-0.5 block">{selectedStd.voltage}</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Current Threshold</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Current Threshold</span>
               <strong className="text-xs text-white mt-0.5 block">{selectedStd.current}</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Regional Grid Deployment</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Regional Grid Deployment</span>
               <strong className="text-xs text-white mt-0.5 block">{selectedStd.regions}</strong>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-3 border-t border-white/5 pt-4 text-[11px] leading-relaxed">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block mb-1">Key Advantage</span>
-              <p className="text-[#AEB5C0]">{selectedStd.pros}</p>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block mb-1">Key Advantage</span>
+              <p className="text-muted-foreground">{selectedStd.pros}</p>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block mb-1">Grid Challenge</span>
-              <p className="text-[#AEB5C0]">{selectedStd.cons}</p>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block mb-1">Grid Challenge</span>
+              <p className="text-muted-foreground">{selectedStd.cons}</p>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export function InteractiveStation() {
     <section id="station" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Interactive Charging Station</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Inspect individual hardware sub-systems in a fast-charging DC station pedestal.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Inspect individual hardware sub-systems in a fast-charging DC station pedestal.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -241,11 +241,11 @@ export function InteractiveStation() {
             </div>
             <div className="space-y-3.5">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Operational Purpose</span>
-                <p className="text-xs text-[#AEB5C0]/85 mt-1 leading-relaxed">{selectedPart.purpose}</p>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Operational Purpose</span>
+                <p className="text-xs text-muted-foreground/85 mt-1 leading-relaxed">{selectedPart.purpose}</p>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Structural Materials</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Structural Materials</span>
                 <p className="text-xs text-white font-bold mt-1">{selectedPart.material}</p>
               </div>
             </div>
@@ -259,7 +259,7 @@ export function InteractiveStation() {
                 className={`py-1.5 rounded-lg border text-[9px] font-extrabold cursor-pointer transition-colors ${
                   selectedPart.id === p.id
                     ? "bg-white/5 border-cyan-500/40 text-[#22D3EE]"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 {p.name.split(" ")[0]}
@@ -296,13 +296,13 @@ export function ConnectorExplorer() {
     <section id="connector" className="space-y-6 border-t border-white/5 pt-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Connector Gallery & Pinouts</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Zoom and inspect physical charging pins layout designs.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Zoom and inspect physical charging pins layout designs.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* SVG connector layout pins */}
         <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2">Cross-section pin connector HUD</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Cross-section pin connector HUD</span>
           
           <div className="flex-1 flex items-center justify-center relative py-4">
             <svg viewBox="-80 -80 160 160" className="w-full max-w-[150px] aspect-square overflow-visible">
@@ -347,7 +347,7 @@ export function ConnectorExplorer() {
         <div className="md:col-span-6 flex flex-col justify-between gap-4">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="space-y-1">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block">Connector Model</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block">Connector Model</span>
               <select
                 value={selectedConn.id}
                 onChange={(e) => setSelectedConn(CONNECTOR_LIST.find((c) => c.id === e.target.value)!)}
@@ -359,17 +359,17 @@ export function ConnectorExplorer() {
             </div>
 
             <div className="space-y-1.5 text-xs border-t border-white/5 pt-3">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Pins Structure Specs</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Pins Structure Specs</span>
               <p className="text-white font-bold">{selectedConn.pins}</p>
             </div>
 
             <div className="space-y-1.5 text-xs">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Grid Voltage Sizing</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Grid Voltage Sizing</span>
               <p className="text-white font-bold">{selectedConn.voltageType}</p>
             </div>
           </div>
 
-          <p className="text-[11px] text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+          <p className="text-[11px] text-muted-foreground/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
             {selectedConn.description}
           </p>
         </div>
@@ -393,7 +393,7 @@ export function SafetyCenter() {
     <section id="safety" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Charging Safety Center</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Learn about high-voltage isolation, active fire safeguards, and auto-cutoff parameters.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Learn about high-voltage isolation, active fire safeguards, and auto-cutoff parameters.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -406,7 +406,7 @@ export function SafetyCenter() {
               <ShieldCheck className="w-4.5 h-4.5" />
               <h4 className="text-xs font-black uppercase tracking-wider">{card.title}</h4>
             </div>
-            <p className="text-[11px] text-[#AEB5C0]/80 leading-relaxed">
+            <p className="text-[11px] text-muted-foreground/80 leading-relaxed">
               {card.desc}
             </p>
           </div>
@@ -425,7 +425,7 @@ export function SmartCharging() {
     <section id="smart" className="space-y-6 border-t border-white/5 pt-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Smart Charging & V2G (Vehicle-to-Grid)</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Explore bidirectional grid integration and load balancing algorithms.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Explore bidirectional grid integration and load balancing algorithms.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -434,7 +434,7 @@ export function SmartCharging() {
             <Layers className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Dynamic Load Balancing</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Distributes available building power dynamically across multiple active EV charging plugs. This prevents stepping over local grid substation transformer capacity ceilings, eliminating peak-demand penalty fees.
           </p>
         </div>
@@ -444,7 +444,7 @@ export function SmartCharging() {
             <Activity className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Vehicle-to-Grid (V2G) Bi-Direction</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Allows parked EVs to act as distributed grid batteries. During peak hours (e.g. 6 PM - 9 PM), the station pulls power from the vehicle, supplying grid loads. Cells are recharged at cheaper overnight rates.
           </p>
         </div>

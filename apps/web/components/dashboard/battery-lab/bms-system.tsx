@@ -28,7 +28,7 @@ export function BMSSystem() {
     <section id="bms" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Management System (BMS)</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Learn how high-voltage controllers maintain safety, balancing, and state calculations</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Learn how high-voltage controllers maintain safety, balancing, and state calculations</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
@@ -54,7 +54,7 @@ export function BMSSystem() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">{feat.label}</span>
-                    <span className="text-[10px] text-[#AEB5C0]/50 block mt-0.5">{feat.metric}</span>
+                    <span className="text-[10px] text-muted-foreground/50 block mt-0.5">{feat.metric}</span>
                   </div>
                 </div>
                 {isActive && (
@@ -73,7 +73,7 @@ export function BMSSystem() {
           <div className="flex items-start justify-between border-b border-white/5 pb-3">
             <div>
               <span className="text-xs font-bold text-white uppercase tracking-wider block">{activeFeature.label} Function</span>
-              <span className="text-[11px] text-[#AEB5C0]/50 mt-1 block">Live logic parameters & signal diagnostics</span>
+              <span className="text-[11px] text-muted-foreground/50 mt-1 block">Live logic parameters & signal diagnostics</span>
             </div>
             <div className="flex items-center gap-2 px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">
               <ShieldCheck className="w-3.5 h-3.5" /> SECURE
@@ -125,7 +125,7 @@ export function BMSSystem() {
           </div>
 
           {/* Description */}
-          <p className="text-[12.5px] text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
+          <p className="text-[12.5px] text-muted-foreground/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
             {activeFeature.desc}
           </p>
         </div>

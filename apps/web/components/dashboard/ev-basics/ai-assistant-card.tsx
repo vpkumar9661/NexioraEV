@@ -28,7 +28,7 @@ export function AIAssistantCard() {
           </div>
         </div>
 
-        <p className="text-[12.5px] text-[#AEB5C0]/65 leading-relaxed">
+        <p className="text-[12.5px] text-muted-foreground/65 leading-relaxed">
           Ask anything about Electric Vehicles — from basics to advanced engineering.
         </p>
 
@@ -39,7 +39,7 @@ export function AIAssistantCard() {
               className="flex items-center gap-2 p-2.5 rounded-lg bg-white/3 border border-white/5 hover:border-[#8B5CF6]/20 hover:bg-[#8B5CF6]/4 transition-all duration-200 cursor-pointer group"
             >
               <Sparkles className="w-3 h-3 text-[#A78BFA]/50 shrink-0" />
-              <span className="text-[11.5px] text-[#AEB5C0]/70 group-hover:text-white transition-colors">{q}</span>
+              <span className="text-[11.5px] text-muted-foreground/70 group-hover:text-white transition-colors">{q}</span>
             </div>
           ))}
         </div>

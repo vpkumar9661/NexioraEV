@@ -15,7 +15,7 @@ export function ResearchLibrary() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-extrabold text-white">Technical Research Library</h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">Access peer-reviewed documents, engineering reports, and chemistry case studies</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Access peer-reviewed documents, engineering reports, and chemistry case studies</p>
         </div>
         <span className="text-[11px] font-bold text-[#6EE7B7] bg-[#10B981]/10 border border-[#10B981]/20 px-3 py-1 rounded-full">
           {PAPERS.length} Available
@@ -40,10 +40,10 @@ export function ResearchLibrary() {
                 <div className="flex-1 min-w-0">
                   <span className="text-[9px] font-bold uppercase tracking-wider" style={{ color: paper.color }}>{paper.type}</span>
                   <h4 className="text-sm font-bold text-white group-hover:text-[#6EE7B7] transition-colors truncate mt-0.5">{paper.title}</h4>
-                  <p className="text-[11.5px] text-[#AEB5C0]/65 mt-1.5 line-clamp-2 leading-relaxed">{paper.desc}</p>
+                  <p className="text-[11.5px] text-muted-foreground/65 mt-1.5 line-clamp-2 leading-relaxed">{paper.desc}</p>
                   
                   <div className="flex items-center justify-between mt-4">
-                    <span className="text-[10px] text-[#AEB5C0]/40 font-semibold">Author: {paper.author}</span>
+                    <span className="text-[10px] text-muted-foreground/40 font-semibold">Author: {paper.author}</span>
                     <div className="flex items-center gap-1 text-[10px] font-bold text-[#6EE7B7] hover:underline">
                       <Download className="w-3.5 h-3.5" /> Download ({paper.size})
                     </div>

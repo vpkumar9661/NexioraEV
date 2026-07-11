@@ -122,7 +122,7 @@ export function TechExplorer() {
     <section id="explorer" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Technology Explorer</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Interact with core EV cell configurations and structural chemistries</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Interact with core EV cell configurations and structural chemistries</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -139,13 +139,13 @@ export function TechExplorer() {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center border" style={{ backgroundColor: `${chem.color}15`, borderColor: `${chem.color}25` }}>
                   <BrainCircuit className="w-4 h-4" style={{ color: chem.color }} />
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-[#AEB5C0]/75">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-muted-foreground/75">
                   {chem.energyDensity.split(" ")[0]} Wh/kg
                 </span>
               </div>
               <div>
                 <h3 className="text-sm font-bold text-white group-hover:text-[#6EE7B7] transition-colors">{chem.name}</h3>
-                <p className="text-[11.5px] text-[#AEB5C0]/50 mt-1 line-clamp-2 leading-relaxed">{chem.desc}</p>
+                <p className="text-[11.5px] text-muted-foreground/50 mt-1 line-clamp-2 leading-relaxed">{chem.desc}</p>
               </div>
             </div>
           </div>
@@ -165,12 +165,12 @@ export function TechExplorer() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">{selectedChem.name}</h3>
-                  <span className="text-xs text-[#AEB5C0]/60">Structural Cell Chemistry Details</span>
+                  <span className="text-xs text-muted-foreground/60">Structural Cell Chemistry Details</span>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedChem(null)}
-                className="p-1.5 rounded-lg hover:bg-white/5 text-[#AEB5C0]/40 hover:text-white transition-all"
+                className="p-1.5 rounded-lg hover:bg-white/5 text-muted-foreground/40 hover:text-white transition-all"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -179,25 +179,25 @@ export function TechExplorer() {
             {/* Grid specs */}
             <div className="grid grid-cols-2 gap-4">
               <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Density</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Density</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.energyDensity}</span>
               </div>
               <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Safety Profile</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Safety Profile</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.safetyScore}</span>
               </div>
               <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cycle Life</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cycle Life</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.cycleLife}</span>
               </div>
               <div className="p-3.5 rounded-xl bg-white/2 border border-white/5">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Typical Cost</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Typical Cost</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedChem.cost}</span>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-sm text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
+            <p className="text-sm text-muted-foreground/80 leading-relaxed bg-white/1 p-4 rounded-xl border border-white/5">
               {selectedChem.desc}
             </p>
 
@@ -205,13 +205,13 @@ export function TechExplorer() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <span className="text-[11px] font-extrabold text-[#10B981] uppercase tracking-wider block">Advantages</span>
-                <ul className="space-y-1.5 text-xs text-[#AEB5C0]/75 list-disc pl-4">
+                <ul className="space-y-1.5 text-xs text-muted-foreground/75 list-disc pl-4">
                   {selectedChem.pros.map((pro, i) => <li key={i}>{pro}</li>)}
                 </ul>
               </div>
               <div className="space-y-2">
                 <span className="text-[11px] font-extrabold text-[#EF4444] uppercase tracking-wider block">Limitations</span>
-                <ul className="space-y-1.5 text-xs text-[#AEB5C0]/75 list-disc pl-4">
+                <ul className="space-y-1.5 text-xs text-muted-foreground/75 list-disc pl-4">
                   {selectedChem.cons.map((con, i) => <li key={i}>{con}</li>)}
                 </ul>
               </div>

@@ -38,7 +38,7 @@ export function PhysicsViewport({
     <section id="viewport" className="space-y-6 relative z-20">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Interactive Proving Viewport</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Control vehicle throttle states. Slide accelerator and brake inputs to test chassis dynamics.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Control vehicle throttle states. Slide accelerator and brake inputs to test chassis dynamics.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -46,7 +46,7 @@ export function PhysicsViewport({
         {/* SVG Rolling Road Viewport Left */}
         <div className="md:col-span-7 rounded-[24px] border border-white/5 bg-black/50 p-6 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
           {/* Engineering blueprint coordinates overlay */}
-          <div className="absolute top-4 left-4 z-10 text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+          <div className="absolute top-4 left-4 z-10 text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider">
             Vector proving coordinates HUD
           </div>
 
@@ -135,7 +135,7 @@ export function PhysicsViewport({
           
           {/* Notification feed top */}
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex-1 flex flex-col justify-center min-h-[100px]">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2 border-b border-white/5 pb-1">
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2 border-b border-white/5 pb-1">
               Engineering alerts feed
             </span>
             <AnimatePresence mode="wait">
@@ -150,11 +150,11 @@ export function PhysicsViewport({
                   <AlertCircle className="w-4.5 h-4.5 text-[#22D3EE] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">Systems notification</strong>
-                    <span className="text-[#AEB5C0]/75">{currentEvent}</span>
+                    <span className="text-muted-foreground/75">{currentEvent}</span>
                   </div>
                 </motion.div>
               ) : (
-                <div className="text-center text-[#AEB5C0]/35 text-xs py-4">
+                <div className="text-center text-muted-foreground/35 text-xs py-4">
                   Normal continuous cruising patterns.
                 </div>
               )}
@@ -166,7 +166,7 @@ export function PhysicsViewport({
             <span className="text-[9px] text-purple-400 font-black uppercase tracking-wider block">
               AI Coach advice
             </span>
-            <p className="text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 font-semibold">
+            <p className="text-muted-foreground/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 font-semibold">
               {aiAdvice}
             </p>
           </div>

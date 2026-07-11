@@ -43,7 +43,7 @@ export function ChemistryComparison() {
     <section id="comparison" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Chemistry Comparison</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Cross-compare core attributes of current and future battery configurations</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Cross-compare core attributes of current and future battery configurations</p>
       </div>
 
       {/* Select buttons */}
@@ -57,7 +57,7 @@ export function ChemistryComparison() {
               className={`px-4 py-2 rounded-xl text-[12px] font-bold border transition-all duration-300 ${
                 isActive
                   ? `text-white`
-                  : "bg-white/2 border-white/5 text-[#AEB5C0]/50 hover:border-white/10"
+                  : "bg-white/2 border-white/5 text-muted-foreground/50 hover:border-white/10"
               }`}
               style={
                 isActive
@@ -84,7 +84,7 @@ export function ChemistryComparison() {
                 }`}
               >
                 <div className="flex items-center gap-2.5 w-48 shrink-0">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center border border-white/5 text-[#AEB5C0]">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center border border-white/5 text-muted-foreground">
                     <Icon className="w-4 h-4" />
                   </div>
                   <span className="text-[12px] font-bold text-white uppercase tracking-wider">{param.label}</span>
@@ -119,7 +119,7 @@ export function ChemistryComparison() {
         <div className="lg:col-span-4 rounded-[20px] border border-white/5 bg-white/2 p-5 space-y-4">
           <div className="border-b border-white/5 pb-3">
             <span className="text-xs font-bold text-white block">Density vs. Cost Benchmark</span>
-            <span className="text-[10px] text-[#AEB5C0]/50 mt-1 block">Higher density & higher score is optimal</span>
+            <span className="text-[10px] text-muted-foreground/50 mt-1 block">Higher density & higher score is optimal</span>
           </div>
 
           <div className="relative h-[220px] flex items-center justify-center border border-white/4 bg-[#131722]/40 rounded-xl overflow-hidden">

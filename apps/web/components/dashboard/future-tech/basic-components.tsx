@@ -26,7 +26,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight font-sans">
             Future Tech Lab
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Discover the next generation of electric mobility through immersive simulations, artificial intelligence, smart cities grid layouts, and emerging battery chemistries.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -121,14 +121,14 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
             <span className="text-xs font-black text-white block">
               {stat.value}
             </span>
-            <span className="text-[9.5px] text-[#AEB5C0]/50 block mt-1">
+            <span className="text-[9.5px] text-muted-foreground/50 block mt-1">
               {stat.desc}
             </span>
           </div>
@@ -164,13 +164,13 @@ export function TechTimeline() {
     <section id="timeline" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Innovation Timeline</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore estimated timelines of upcoming electric mobility breakthroughs.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore estimated timelines of upcoming electric mobility breakthroughs.</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-6 items-stretch">
         {/* Nodes lists */}
         <div className="lg:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col gap-3 justify-between">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block mb-1">Select Year Milestone</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block mb-1">Select Year Milestone</span>
           {TIMELINE.map((n) => (
             <button
               key={n.year}
@@ -178,7 +178,7 @@ export function TechTimeline() {
               className={`w-full py-2.5 px-4 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer flex justify-between items-center ${
                 selectedNode.year === n.year
                   ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.06)]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0] hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground hover:text-white"
               }`}
             >
               <span>{n.year} Milestone</span>
@@ -194,7 +194,7 @@ export function TechTimeline() {
               Year {selectedNode.year} Target
             </span>
             <h4 className="text-sm font-black text-white">{selectedNode.title}</h4>
-            <p className="text-xs text-[#AEB5C0]/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+            <p className="text-xs text-muted-foreground/75 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
               {selectedNode.desc}
             </p>
           </div>
@@ -222,7 +222,7 @@ export function InnovationHub() {
     <section id="hub" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Interactive Innovation Hub</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Dissect operational specifications and grids configurations of next-gen techs.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Dissect operational specifications and grids configurations of next-gen techs.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -235,7 +235,7 @@ export function InnovationHub() {
               <div className="flex justify-between items-center text-xs">
                 <h4 className="font-bold text-white uppercase tracking-wider">{inn.title}</h4>
               </div>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 leading-relaxed">{inn.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 leading-relaxed">{inn.desc}</p>
             </div>
             <span className="text-[9.5px] font-bold text-cyan-400 mt-2 block">
               Specs: {inn.spec}
@@ -263,7 +263,7 @@ export function FutureConceptGallery() {
     <section id="concepts" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Future Concepts Gallery</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">View speculative design outlines and visual vehicle mockups.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">View speculative design outlines and visual vehicle mockups.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -275,7 +275,7 @@ export function FutureConceptGallery() {
             <div>
               <span className="text-[9px] text-purple-400 font-extrabold uppercase tracking-widest block">Nexiora Studio Concept</span>
               <h4 className="text-xs font-bold text-white mt-1 uppercase tracking-wide">{c.title}</h4>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-2 leading-relaxed">{c.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-2 leading-relaxed">{c.desc}</p>
             </div>
             <span className="text-[9.5px] font-bold text-cyan-400 block cursor-pointer">View Blueprint →</span>
           </div>
@@ -301,7 +301,7 @@ export function ResearchLibrary() {
     <section id="library" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Technical Publications Library</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Read peer-reviewed research papers and global engineering documentation.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Read peer-reviewed research papers and global engineering documentation.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -319,7 +319,7 @@ export function ResearchLibrary() {
             </div>
             <button
               onClick={() => alert(`Initiating mock download: ${paper.doc}`)}
-              className="p-2 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 cursor-pointer"
+              className="p-2 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 cursor-pointer"
             >
               <FileDown className="w-4.5 h-4.5" />
             </button>
@@ -345,7 +345,7 @@ export function VideoCenter() {
     <section id="videos" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Innovation Video Center</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Watch video lectures covering next-generation cells and smart infrastructure.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Watch video lectures covering next-generation cells and smart infrastructure.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -363,9 +363,9 @@ export function VideoCenter() {
               </span>
             </div>
             <div className="p-4 space-y-2">
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block">{vid.level}</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block">{vid.level}</span>
               <h4 className="text-xs font-bold text-white leading-snug group-hover:text-[#22D3EE] transition-colors">{vid.title}</h4>
-              <span className="text-[10px] text-[#AEB5C0]/50 block">Speaker: {vid.author}</span>
+              <span className="text-[10px] text-muted-foreground/50 block">Speaker: {vid.author}</span>
             </div>
           </div>
         ))}
@@ -383,7 +383,7 @@ export function DownloadCenter() {
     <section id="downloads" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Download Center</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Download reference documents and technology maps.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Download reference documents and technology maps.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -398,7 +398,7 @@ export function DownloadCenter() {
           >
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">{item.title}</h4>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-1 leading-normal">{item.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-1 leading-normal">{item.desc}</p>
             </div>
             <button
               onClick={() => alert(`Downloading: ${item.file}`)}
@@ -430,7 +430,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Frequently Asked Questions</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Dissect standard queries relating to solid state chemistry and smart microgrids.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Dissect standard queries relating to solid state chemistry and smart microgrids.</p>
       </div>
 
       <div className="space-y-2">
@@ -450,10 +450,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>
@@ -477,7 +477,7 @@ export function ContinueCTA() {
         <div className="space-y-2">
           <span className="text-[9.5px] font-extrabold text-purple-400 uppercase tracking-widest block">Next Subject Module</span>
           <h3 className="text-lg font-bold text-white">General Learning Center</h3>
-          <p className="text-xs text-[#AEB5C0]/60 max-w-md leading-relaxed">
+          <p className="text-xs text-muted-foreground/60 max-w-md leading-relaxed">
             Transition to the main learning center module. Explore courses, tutorials, and certifications for engineers and buyers.
           </p>
         </div>

@@ -36,7 +36,7 @@ export function WeatherModes({
       
       {/* Weather Engine Controllers Left */}
       <div className="lg:col-span-6 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-4">
-        <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
+        <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
           Weather & Road surface Engine
         </span>
 
@@ -44,7 +44,7 @@ export function WeatherModes({
           {/* Temperature slider */}
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/50 uppercase flex items-center gap-1">
+              <span className="text-muted-foreground/50 uppercase flex items-center gap-1">
                 <Thermometer className="w-3.5 h-3.5" /> Temp
               </span>
               <span className="text-white">{weather.temp}°C</span>
@@ -62,7 +62,7 @@ export function WeatherModes({
           {/* Humidity slider */}
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/50 uppercase flex items-center gap-1">
+              <span className="text-muted-foreground/50 uppercase flex items-center gap-1">
                 <Wind className="w-3.5 h-3.5" /> Humidity
               </span>
               <span className="text-white">{weather.humidity}%</span>
@@ -80,7 +80,7 @@ export function WeatherModes({
 
         {/* Road Surface Options */}
         <div className="space-y-1.5 text-xs pt-1.5">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Road Surface Condition</span>
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Road Surface Condition</span>
           <div className="grid grid-cols-4 gap-1">
             {[
               { id: "dry", label: "Dry Asphalt" },
@@ -94,7 +94,7 @@ export function WeatherModes({
                 className={`py-1 rounded text-[10px] font-bold border transition-colors cursor-pointer ${
                   weather.road === r.id
                     ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 {r.label.split(" ")[1] || r.label.split(" ")[0]}
@@ -107,7 +107,7 @@ export function WeatherModes({
       {/* Driving Modes Right */}
       <div className="lg:col-span-6 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md flex flex-col justify-between gap-4">
         <div>
-          <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
+          <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
             Active Drive Modes
           </span>
           
@@ -119,7 +119,7 @@ export function WeatherModes({
                 className={`py-2 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                   drivingMode === m.id
                     ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.06)]"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 {m.label}
@@ -128,7 +128,7 @@ export function WeatherModes({
           </div>
         </div>
 
-        <p className="text-[11px] text-[#AEB5C0]/60 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
+        <p className="text-[11px] text-muted-foreground/60 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
           * Mode switches immediately adjust inverter continuous switching thresholds, throttling maximum torque power limit ranges.
         </p>
       </div>

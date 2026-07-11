@@ -40,14 +40,14 @@ const DATA_MAP: Record<string, {
               <Building className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Grid-Scale Electrification</p>
-                <p className="text-xs text-[#AEB5C0]/75">Connecting vehicles directly to grid storage buffers.</p>
+                <p className="text-xs text-muted-foreground/75">Connecting vehicles directly to grid storage buffers.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Closed-Loop Recycling</p>
-                <p className="text-xs text-[#AEB5C0]/75">Recovering 95% of active battery core elements.</p>
+                <p className="text-xs text-muted-foreground/75">Recovering 95% of active battery core elements.</p>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const DATA_MAP: Record<string, {
         title: "ESG & Clean Compliance",
         description: "Details how we maintain carbon-neutral server footprints and execute 100% recyclable battery swaps.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Zero Carbon:</span> 100% solar-backed computational servers.
             </div>
@@ -89,14 +89,14 @@ const DATA_MAP: Record<string, {
               <Users className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Telematics IoT Group</p>
-                <p className="text-xs text-[#AEB5C0]/75">Manages millions of concurrent telemetry points.</p>
+                <p className="text-xs text-muted-foreground/75">Manages millions of concurrent telemetry points.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Diagnostics AI Team</p>
-                <p className="text-xs text-[#AEB5C0]/75">Predicts battery degradations and cell faults.</p>
+                <p className="text-xs text-muted-foreground/75">Predicts battery degradations and cell faults.</p>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const DATA_MAP: Record<string, {
         title: "Scientific Publications",
         description: "We publish peer-reviewed papers mapping battery behaviors to public databases.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Impedance Curves:</span> Published in the Journal of Battery Science.
             </div>
@@ -138,14 +138,14 @@ const DATA_MAP: Record<string, {
               <Handshake className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Commercial Hosts</p>
-                <p className="text-xs text-[#AEB5C0]/75">Properties earn shared revenue margins on public charging nodes.</p>
+                <p className="text-xs text-muted-foreground/75">Properties earn shared revenue margins on public charging nodes.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Fleet Operators</p>
-                <p className="text-xs text-[#AEB5C0]/75">Unlock custom bulk charger booking APIs.</p>
+                <p className="text-xs text-muted-foreground/75">Unlock custom bulk charger booking APIs.</p>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const DATA_MAP: Record<string, {
         title: "POWERTRAIN Collaborators",
         description: "Sourcing certified safe motor controllers and battery packs with manufacturer backed warranties.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Cell Partnerships:</span> Access early battery lab prototypes.
             </div>
@@ -187,14 +187,14 @@ const DATA_MAP: Record<string, {
               <Briefcase className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Rust Backend Engineer</p>
-                <p className="text-xs text-[#AEB5C0]/75">Design low-latency MQTT stream parsers.</p>
+                <p className="text-xs text-muted-foreground/75">Design low-latency MQTT stream parsers.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">AI Diagnostics Engineer</p>
-                <p className="text-xs text-[#AEB5C0]/75">Refine thermal cell prediction ML algorithms.</p>
+                <p className="text-xs text-muted-foreground/75">Refine thermal cell prediction ML algorithms.</p>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ const DATA_MAP: Record<string, {
         title: "Culture & Compensation",
         description: "Features dedicated volunteer programs, green hackathons, and educational support guidelines.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Hackathons:</span> Annual clean-mobility coding events with cash awards.
             </div>
@@ -236,14 +236,14 @@ const DATA_MAP: Record<string, {
               <Mic className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Series B Funding Round</p>
-                <p className="text-xs text-[#AEB5C0]/75">Raised capital to scale charging software integrations across India.</p>
+                <p className="text-xs text-muted-foreground/75">Raised capital to scale charging software integrations across India.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Software Hub Launches</p>
-                <p className="text-xs text-[#AEB5C0]/75">Unveiled central portals tracking charging slot queues.</p>
+                <p className="text-xs text-muted-foreground/75">Unveiled central portals tracking charging slot queues.</p>
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ const DATA_MAP: Record<string, {
         title: "Official Brand Assets",
         description: "Download official vector assets, guidelines, and hex layouts.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Logo Package:</span> SVG, PNG formats with dark/light variants.
             </div>
@@ -285,14 +285,14 @@ const DATA_MAP: Record<string, {
               <Code className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">JSON Pack Schema</p>
-                <p className="text-xs text-[#AEB5C0]/75">Details coordinates, state-of-charge, and voltage fields.</p>
+                <p className="text-xs text-muted-foreground/75">Details coordinates, state-of-charge, and voltage fields.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">OAuth 2.0 Auth</p>
-                <p className="text-xs text-[#AEB5C0]/75">Secure machine-to-machine integrations using JWT headers.</p>
+                <p className="text-xs text-muted-foreground/75">Secure machine-to-machine integrations using JWT headers.</p>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ const DATA_MAP: Record<string, {
         title: "API Endpoint Reference",
         description: "Details rate limits, testing consoles, and sandbox configurations.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Query Limits:</span> Standard tier grants 1,000 queries per minute.
             </div>
@@ -334,14 +334,14 @@ const DATA_MAP: Record<string, {
               <Headphones className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">OCPP Connection Fails</p>
-                <p className="text-xs text-[#AEB5C0]/75">Audit internet connections and SSL certificates on the wallbox.</p>
+                <p className="text-xs text-muted-foreground/75">Audit internet connections and SSL certificates on the wallbox.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Reset Charge Controllers</p>
-                <p className="text-xs text-[#AEB5C0]/75">Instructions to safely power-cycle logic chips on chargers.</p>
+                <p className="text-xs text-muted-foreground/75">Instructions to safely power-cycle logic chips on chargers.</p>
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@ const DATA_MAP: Record<string, {
         title: "Live Ticket Dashboard",
         description: "Track resolved issue benchmarks, SLA response queues, and system audits.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">Severity 1 Issues:</span> Instant phone-support line callbacks.
             </div>
@@ -383,14 +383,14 @@ const DATA_MAP: Record<string, {
               <Mail className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Email Address</p>
-                <p className="text-xs text-[#AEB5C0]/75">partner@nexioraev.com</p>
+                <p className="text-xs text-muted-foreground/75">partner@nexioraev.com</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#EC4899]" />
               <div>
                 <p className="text-sm font-bold text-white">Book Video Call</p>
-                <p className="text-xs text-[#AEB5C0]/75">Schedule a slot directly on our corporate calendar.</p>
+                <p className="text-xs text-muted-foreground/75">Schedule a slot directly on our corporate calendar.</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ const DATA_MAP: Record<string, {
         title: "Global Office Directory",
         description: "Addresses and telephone lines for our global offices and engineering zones.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#EC4899]/5 border border-[#EC4899]/10">
               <span className="text-[#EC4899] font-bold">New Delhi HQ:</span> Aerocity, Technical District, Delhi 110037.
             </div>

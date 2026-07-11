@@ -16,7 +16,7 @@ export function DownloadCenter() {
     <section id="downloads" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Download Center</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Free resources, guides, and research materials</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Free resources, guides, and research materials</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -33,13 +33,13 @@ export function DownloadCenter() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="text-sm font-bold text-white group-hover:text-[#A78BFA] transition-colors truncate">{item.title}</h4>
-                  <p className="text-[11.5px] text-[#AEB5C0]/55 mt-1 line-clamp-2 leading-relaxed">{item.desc}</p>
+                  <p className="text-[11.5px] text-muted-foreground/55 mt-1 line-clamp-2 leading-relaxed">{item.desc}</p>
                   <div className="flex items-center justify-between mt-3">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/5 text-[#AEB5C0]/60">{item.format}</span>
-                      <span className="text-[10px] text-[#AEB5C0]/40">{item.size}</span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/5 text-muted-foreground/60">{item.format}</span>
+                      <span className="text-[10px] text-muted-foreground/40">{item.size}</span>
                     </div>
-                    <Download className="w-4 h-4 text-[#AEB5C0]/30 group-hover:text-[#A78BFA] transition-colors" />
+                    <Download className="w-4 h-4 text-muted-foreground/30 group-hover:text-[#A78BFA] transition-colors" />
                   </div>
                 </div>
               </div>

@@ -20,7 +20,7 @@ export function EVExplorer() {
     <section id="explorer" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Interactive EV Explorer</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Hover or tap on components to learn about each part of an Electric Vehicle</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Hover or tap on components to learn about each part of an Electric Vehicle</p>
       </div>
 
       <div className="relative rounded-[20px] border border-white/5 bg-white/2 overflow-hidden min-h-[380px]">
@@ -89,12 +89,12 @@ export function EVExplorer() {
               </div>
               <button
                 onClick={() => setActiveComponent(null)}
-                className="text-[#AEB5C0]/40 hover:text-white transition-colors"
+                className="text-muted-foreground/40 hover:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-[12.5px] text-[#AEB5C0]/80 leading-relaxed">{active.desc}</p>
+            <p className="text-[12.5px] text-muted-foreground/80 leading-relaxed">{active.desc}</p>
           </div>
         )}
       </div>

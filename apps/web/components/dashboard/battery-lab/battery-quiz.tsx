@@ -150,7 +150,7 @@ export function BatteryQuiz() {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
           <h2 className="text-2xl font-extrabold text-white">Battery Intelligence Quiz</h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">Test your electrochemistry knowledge and unlock battery credentials</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Test your electrochemistry knowledge and unlock battery credentials</p>
         </div>
 
         {/* Difficulty controls selector */}
@@ -169,7 +169,7 @@ export function BatteryQuiz() {
               className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200 ${
                 level === lvl
                   ? "bg-[#10B981] text-white shadow-md"
-                  : "text-[#AEB5C0]/60 hover:text-white"
+                  : "text-muted-foreground/60 hover:text-white"
               }`}
             >
               {lvl}
@@ -189,7 +189,7 @@ export function BatteryQuiz() {
             
             <div className="space-y-2">
               <h4 className="text-lg font-extrabold text-white">Quiz Completed!</h4>
-              <p className="text-sm text-[#AEB5C0]/60">
+              <p className="text-sm text-muted-foreground/60">
                 You scored <span className="text-[#6EE7B7] font-black">{score} out of {questions.length}</span> in the <span className="font-bold uppercase text-white">{level}</span> section.
               </p>
             </div>
@@ -204,7 +204,7 @@ export function BatteryQuiz() {
         ) : (
           <div className="space-y-6">
             {/* Progress indicator */}
-            <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest text-[#AEB5C0]/40">
+            <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest text-muted-foreground/40">
               <span>Question {qIndex + 1} of {questions.length}</span>
               <span>{level} Category</span>
             </div>
@@ -252,7 +252,7 @@ export function BatteryQuiz() {
 
             {/* Feedback Explanation */}
             {isSubmitted && (
-              <div className="p-4 rounded-xl bg-white/1 border border-white/5 text-[11.5px] text-[#AEB5C0]/85 leading-relaxed animate-in fade-in duration-200">
+              <div className="p-4 rounded-xl bg-white/1 border border-white/5 text-[11.5px] text-muted-foreground/85 leading-relaxed animate-in fade-in duration-200">
                 <span className="font-bold text-white block mb-1">Explanation:</span>
                 {activeQuestion.explanation}
               </div>

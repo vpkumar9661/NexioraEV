@@ -17,7 +17,7 @@ export default function DigitalTwinPage() {
       {/* Breadcrumb navigation */}
       <div className="pt-[72px] px-4 sm:px-6 lg:px-8 relative z-40">
         <nav className="sticky top-[72px] z-40 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/5 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-[12px] font-semibold text-[#AEB5C0]/60">
+          <div className="max-w-7xl mx-auto flex items-center gap-2 text-[12px] font-semibold text-muted-foreground/60">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />
               Home

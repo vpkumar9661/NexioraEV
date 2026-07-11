@@ -37,7 +37,7 @@ export function EvtechDashboardTemplate({
       <div className="max-w-7xl mx-auto space-y-8">
         
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-[12px] font-medium text-[#AEB5C0]/60">
+        <nav className="flex items-center gap-2 text-[12px] font-medium text-muted-foreground/60">
           <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             Home
@@ -63,7 +63,7 @@ export function EvtechDashboardTemplate({
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               {title}
             </h1>
-            <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed">
               {subtitle}
             </p>
           </div>
@@ -76,7 +76,7 @@ export function EvtechDashboardTemplate({
               key={idx}
               className="p-5 rounded-[16px] border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between h-[105px]"
             >
-              <span className="text-[12px] font-bold text-[#AEB5C0]/60 uppercase tracking-wider">{stat.label}</span>
+              <span className="text-[12px] font-bold text-muted-foreground/60 uppercase tracking-wider">{stat.label}</span>
               <div className="flex items-baseline justify-between mt-2">
                 <span className="text-2xl font-extrabold text-white">{stat.value}</span>
                 {stat.change && (
@@ -85,7 +85,7 @@ export function EvtechDashboardTemplate({
                       ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" 
                       : stat.changeType === "negative"
                       ? "bg-rose-500/10 text-rose-400 border border-rose-500/20"
-                      : "bg-white/5 text-[#AEB5C0] border border-white/10"
+                      : "bg-white/5 text-muted-foreground border border-white/10"
                   }`}>
                     {stat.change}
                   </span>
@@ -114,7 +114,7 @@ export function EvtechDashboardTemplate({
                 </div>
               </div>
               <div className="p-5 flex-1 flex flex-col justify-between min-h-[220px]">
-                <p className="text-[12.5px] text-[#AEB5C0]/70 mb-4">{widget.description}</p>
+                <p className="text-[12.5px] text-muted-foreground/70 mb-4">{widget.description}</p>
                 <div className="flex-1 flex items-center justify-center bg-white/1 border border-white/5 rounded-[12px] p-4">
                   {widget.content}
                 </div>

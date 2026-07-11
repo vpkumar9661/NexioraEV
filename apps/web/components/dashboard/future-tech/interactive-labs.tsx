@@ -18,21 +18,21 @@ export function SolidStateBatteryCenter() {
     <section id="solidstate" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Solid-State Battery Center</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Compare parameters of traditional liquid electrolyte cells against solid-state ceramic modules.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Compare parameters of traditional liquid electrolyte cells against solid-state ceramic modules.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Toggle & Graph Visual */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between gap-5 min-h-[200px]">
           <div className="space-y-1">
-            <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">Choose Battery Type</span>
+            <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">Choose Battery Type</span>
             <div className="grid grid-cols-2 gap-1.5">
               <button
                 onClick={() => setChem("li")}
                 className={`py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                   chem === "li"
                     ? "bg-purple-500/20 border-purple-500/30 text-purple-300"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 Liquid Li-Ion
@@ -42,7 +42,7 @@ export function SolidStateBatteryCenter() {
                 className={`py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                   chem === "solid"
                     ? "bg-[#22D3EE]/25 border-[#22D3EE]/40 text-cyan-300"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 Solid-State (Ceramic)
@@ -78,25 +78,25 @@ export function SolidStateBatteryCenter() {
 
           <div className="grid grid-cols-2 gap-4 text-xs">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Density Target</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Density Target</span>
               <strong className="text-xs text-white block mt-1">
                 {chem === "li" ? "250 - 280 Wh/kg" : "450 - 500+ Wh/kg"}
               </strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Runaway Risk</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Thermal Runaway Risk</span>
               <strong className="text-xs text-white block mt-1">
                 {chem === "li" ? "High (Liquid Flammable)" : "Zero (Solid Inert Ceramic)"}
               </strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">10-80% Fast Charge</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">10-80% Fast Charge</span>
               <strong className="text-xs text-white block mt-1">
                 {chem === "li" ? "25 - 35 minutes" : "8 - 12 minutes"}
               </strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cycle Life Sizing</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cycle Life Sizing</span>
               <strong className="text-xs text-[#22D3EE] block mt-1">
                 {chem === "li" ? "1,500 Cycles" : "4,000+ Cycles (Extended)"}
               </strong>
@@ -117,7 +117,7 @@ export function HydrogenLab() {
     <section id="hydrogen" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Hydrogen Fuel Cell Lab</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore hydrogen electricity production structures, step down valves, and air intake converters.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore hydrogen electricity production structures, step down valves, and air intake converters.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -126,7 +126,7 @@ export function HydrogenLab() {
             <Layers className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">700-Bar Storage Tanks</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Hydrogen is compressed and stored in carbon-fiber reinforced tanks. Pressure valves step down the hydrogen before feeding it into the membrane stacks.
           </p>
         </div>
@@ -136,7 +136,7 @@ export function HydrogenLab() {
             <Zap className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Proton Exchange Membrane (PEM)</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Combines hydrogen with oxygen from the air. Passing through a PEM membrane strips electrons, producing electricity and water emissions.
           </p>
         </div>
@@ -161,13 +161,13 @@ export function WirelessChargingLab() {
     <section id="wireless" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Dynamic Wireless Charging</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Observe magnetic field lines coupling adjustments relative to pad alignments.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Observe magnetic field lines coupling adjustments relative to pad alignments.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* SVG coil visualization */}
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Induction magnetic flux alignment HUD</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Induction magnetic flux alignment HUD</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
             <svg viewBox="-80 -50 160 100" className="w-full max-w-[180px] aspect-square overflow-visible">
@@ -203,7 +203,7 @@ export function WirelessChargingLab() {
           <div className="p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="space-y-1.5 text-xs">
               <div className="flex justify-between font-bold text-[10px]">
-                <span className="text-[#AEB5C0]/40 uppercase tracking-wider">Pad Offset Misalignment</span>
+                <span className="text-muted-foreground/40 uppercase tracking-wider">Pad Offset Misalignment</span>
                 <span className="text-white">{alignment} cm</span>
               </div>
               <input
@@ -218,11 +218,11 @@ export function WirelessChargingLab() {
 
             <div className="grid grid-cols-2 gap-4 text-xs border-t border-white/5 pt-3">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Transfer Efficiency</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Transfer Efficiency</span>
                 <strong className="text-sm text-cyan-300 block mt-0.5">{efficiency}%</strong>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Coupling status</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Coupling status</span>
                 <strong className={`text-xs block mt-0.5 ${alignment > 6 ? "text-red-400" : "text-[#10B981]"}`}>
                   {alignment > 6 ? "Weak Coupling" : "Stable Phase link"}
                 </strong>
@@ -246,14 +246,14 @@ export function AutonomousDrivingLab() {
     <section id="autonomous" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Autonomous Perception Lab</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Toggle sensor suites scans overlay to examine Lidar vector sweeps and Radar target tracking.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Toggle sensor suites scans overlay to examine Lidar vector sweeps and Radar target tracking.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* SVG scan window left */}
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2">Sensor fusion coordinate tracking HUD</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Sensor fusion coordinate tracking HUD</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
             <svg viewBox="-80 -50 160 100" className="w-full max-w-[200px] aspect-square overflow-visible">
@@ -288,7 +288,7 @@ export function AutonomousDrivingLab() {
         {/* Buttons and diagnostics right */}
         <div className="md:col-span-5 flex flex-col justify-between gap-4">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Active perception sensor</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Active perception sensor</span>
             <div className="grid grid-cols-3 gap-1 text-xs">
               {[
                 { id: "lidar", label: "LiDAR Sweep" },
@@ -301,7 +301,7 @@ export function AutonomousDrivingLab() {
                   className={`py-1.5 rounded text-[10px] font-bold border transition-colors cursor-pointer ${
                     activeSensor === s.id
                       ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300"
-                      : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                      : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                   }`}
                 >
                   {s.label}
@@ -310,7 +310,7 @@ export function AutonomousDrivingLab() {
             </div>
           </div>
 
-          <p className="text-[11px] text-[#AEB5C0]/70 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
+          <p className="text-[11px] text-muted-foreground/70 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
             {activeSensor === "lidar" && "LiDAR pulses infrared lasers to map three-dimensional space with millimetric accuracy, defining obstacle boundaries."}
             {activeSensor === "radar" && "Radar shoots radio waves to measure the speed and distance of target obstacles. Performs reliably under heavy fog or rain."}
             {activeSensor === "camera" && "Optical high-definition cameras capture visual data. AI computer engines analyze visual frames to read road signs and lanes."}
@@ -333,12 +333,12 @@ export function SmartCityExplorer() {
     <section id="smartcity" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Smart City Infrastructure</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Toggle solar road generation grids and V2G energy offsets to analyze grid loads.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Toggle solar road generation grids and V2G energy offsets to analyze grid loads.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Smart city microgrid distribution map</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Smart city microgrid distribution map</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
             <svg viewBox="-80 -50 160 100" className="w-full h-full max-h-[150px] overflow-visible">
@@ -365,7 +365,7 @@ export function SmartCityExplorer() {
         {/* Selectors and stats */}
         <div className="md:col-span-5 flex flex-col justify-between gap-4">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Active grid components</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Active grid components</span>
             
             <div className="space-y-2">
               <button
@@ -373,7 +373,7 @@ export function SmartCityExplorer() {
                 className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer flex justify-between items-center ${
                   solarRoads
                     ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]"
+                    : "bg-white/2 border-white/5 text-muted-foreground"
                 }`}
               >
                 <span>Solar Road Tiles</span>
@@ -385,7 +385,7 @@ export function SmartCityExplorer() {
                 className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer flex justify-between items-center ${
                   v2gActive
                     ? "bg-[#10B981]/15 border-[#10B981]/30 text-emerald-300"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]"
+                    : "bg-white/2 border-white/5 text-muted-foreground"
                 }`}
               >
                 <span>V2G Bidirectional</span>
@@ -408,7 +408,7 @@ export function V2G_V2H_Lab() {
     <section id="v2g" className="space-y-6 border-t border-white/5 pt-6">
       <div>
         <h2 className="text-xl font-black text-white">Bidirectional Power Loop (V2G & V2H)</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore standard bidirectional power paths and local battery setups.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore standard bidirectional power paths and local battery setups.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -417,7 +417,7 @@ export function V2G_V2H_Lab() {
             <Layers className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Vehicle-to-Home (V2H)</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Enables using the EV&apos;s traction battery to power auxiliary home appliances. Acts as an emergency backup generator during grid blackouts.
           </p>
         </div>
@@ -427,7 +427,7 @@ export function V2G_V2H_Lab() {
             <Activity className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Vehicle-to-Grid (V2G)</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Feeds battery power back to the municipal grid during high load peaks (e.g. late afternoon/evening), stabilizing grid frequencies and generating revenue for EV owners.
           </p>
         </div>

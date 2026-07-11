@@ -237,7 +237,7 @@ export default function DriveSimulatorPage() {
       {/* Breadcrumb navigation */}
       <div className="pt-[72px] px-4 sm:px-6 lg:px-8 relative z-40">
         <nav className="sticky top-[72px] z-40 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/5 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-[12px] font-semibold text-[#AEB5C0]/60">
+          <div className="max-w-7xl mx-auto flex items-center gap-2 text-[12px] font-semibold text-muted-foreground/60">
             <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
               <Home className="w-3.5 h-3.5" />
               Home
@@ -285,7 +285,7 @@ export default function DriveSimulatorPage() {
             {/* Live driving toolbar */}
             <div className="w-full p-4 rounded-xl border border-white/5 bg-white/2 backdrop-blur-md flex items-center justify-between z-20">
               <div className="flex items-center gap-3 text-xs">
-                <span className="text-[#AEB5C0]/40 font-bold uppercase block tracking-wider">Active Proving Grounds:</span>
+                <span className="text-muted-foreground/40 font-bold uppercase block tracking-wider">Active Proving Grounds:</span>
                 <strong className="text-white uppercase">{selectedEnv.name}</strong>
               </div>
               <button

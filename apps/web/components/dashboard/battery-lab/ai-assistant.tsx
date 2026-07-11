@@ -29,7 +29,7 @@ export function AIAssistant() {
     <section id="ai" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">AI Battery Assistant</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Get instant diagnostic or technical answers about high-voltage battery systems</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Get instant diagnostic or technical answers about high-voltage battery systems</p>
       </div>
 
       <div className="rounded-[24px] border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/3 via-transparent to-[#8B5CF6]/2 p-6 relative overflow-hidden grid lg:grid-cols-12 gap-6">
@@ -51,7 +51,7 @@ export function AIAssistant() {
                   <Bot className={`w-3.5 h-3.5 ${msg.sender === "user" ? "text-[#60A5FA]" : "text-[#6EE7B7]"}`} />
                 </div>
                 <div className={`p-3 rounded-xl text-xs leading-relaxed ${
-                  msg.sender === "user" ? "bg-[#3B82F6]/15 text-white" : "bg-white/5 text-[#AEB5C0]/85"
+                  msg.sender === "user" ? "bg-[#3B82F6]/15 text-white" : "bg-white/5 text-muted-foreground/85"
                 }`}>
                   {msg.text}
                 </div>
@@ -72,7 +72,7 @@ export function AIAssistant() {
                 }
               }}
               placeholder="Ask the Battery Assistant..."
-              className="flex-1 px-4 py-2.5 rounded-lg bg-white/3 border border-white/10 text-xs text-white placeholder:text-[#AEB5C0]/30 focus:outline-none focus:border-[#10B981]/40"
+              className="flex-1 px-4 py-2.5 rounded-lg bg-white/3 border border-white/10 text-xs text-white placeholder:text-muted-foreground/30 focus:outline-none focus:border-[#10B981]/40"
             />
             <button
               onClick={() => {
@@ -91,7 +91,7 @@ export function AIAssistant() {
         {/* Preset Questions list */}
         <div className="lg:col-span-5 flex flex-col justify-between gap-4">
           <div className="space-y-3">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Recommended Queries</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Recommended Queries</span>
             <div className="grid gap-2">
               {Object.keys(PRESETS).map((q) => (
                 <button
@@ -100,7 +100,7 @@ export function AIAssistant() {
                   className="w-full flex items-center gap-2 p-2.5 rounded-lg bg-white/2 border border-white/5 hover:border-[#10B981]/25 hover:bg-[#10B981]/3 transition-all text-left group"
                 >
                   <Sparkles className="w-3 h-3 text-[#6EE7B7]/40 group-hover:text-[#6EE7B7] shrink-0" />
-                  <span className="text-[11px] text-[#AEB5C0]/75 group-hover:text-white transition-colors">{q}</span>
+                  <span className="text-[11px] text-muted-foreground/75 group-hover:text-white transition-colors">{q}</span>
                 </button>
               ))}
             </div>

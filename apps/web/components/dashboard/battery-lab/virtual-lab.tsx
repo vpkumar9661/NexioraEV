@@ -364,7 +364,7 @@ export function VirtualBatteryLab() {
           <h2 className="text-3xl font-black tracking-tight mt-1.5 bg-linear-to-r from-white via-[#C084FC] to-white bg-clip-text text-transparent">
             Virtual Battery Laboratory
           </h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">
+          <p className="text-sm text-muted-foreground/60 mt-1">
             State-of-the-art interactive cell modeling, charging thermal response, and material mechanics simulation.
           </p>
         </div>
@@ -373,7 +373,7 @@ export function VirtualBatteryLab() {
       {/* TOP SIMULATION TOOLBAR */}
       <div className="p-4 rounded-[18px] border border-white/5 bg-[#131722]/80 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 z-20 shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-bold text-[#AEB5C0]/40 uppercase tracking-wider">Active Preset:</span>
+          <span className="text-xs font-bold text-muted-foreground/40 uppercase tracking-wider">Active Preset:</span>
           <select
             value={selectedPreset}
             onChange={(e) => applyPreset(e.target.value)}
@@ -390,35 +390,35 @@ export function VirtualBatteryLab() {
           <button
             onClick={resetSimulation}
             title="Reset Simulator"
-            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-[#AEB5C0]/85 hover:text-white transition-all duration-200"
+            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-muted-foreground/85 hover:text-white transition-all duration-200"
           >
             <RotateCcw className="w-4 h-4" />
           </button>
           <button
             onClick={downloadDiagnostics}
             title="Export Lab Diagnostic Report"
-            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-[#AEB5C0]/85 hover:text-white transition-all duration-200"
+            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-muted-foreground/85 hover:text-white transition-all duration-200"
           >
             <Download className="w-4 h-4" />
           </button>
           <button
             onClick={handleShare}
             title="Copy configuration link"
-            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-[#AEB5C0]/85 hover:text-white transition-all duration-200"
+            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-muted-foreground/85 hover:text-white transition-all duration-200"
           >
             <Share2 className="w-4 h-4" />
           </button>
           <button
             onClick={handleBookmark}
             title="Bookmark Simulation"
-            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-[#AEB5C0]/85 hover:text-white transition-all duration-200"
+            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-muted-foreground/85 hover:text-white transition-all duration-200"
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "text-purple-400 fill-purple-400" : ""}`} />
           </button>
           <button
             onClick={toggleFullscreen}
             title="Fullscreen Simulation Mode"
-            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-[#AEB5C0]/85 hover:text-white transition-all duration-200"
+            className="p-2 rounded-xl border border-white/5 bg-white/2 hover:bg-white/5 text-muted-foreground/85 hover:text-white transition-all duration-200"
           >
             <Maximize className="w-4 h-4" />
           </button>
@@ -429,7 +429,7 @@ export function VirtualBatteryLab() {
       <div className="grid lg:grid-cols-12 gap-6 items-stretch relative">
         {/* LEFT COMPACT LAB SELECTOR (TABS) */}
         <div className="lg:col-span-3 flex flex-col gap-2 p-3 rounded-[24px] border border-white/5 bg-[#131722]/40 backdrop-blur-xl h-fit">
-          <p className="text-[10px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2.5 py-1.5">
+          <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2.5 py-1.5">
             Laboratory Modules
           </p>
           {[
@@ -459,7 +459,7 @@ export function VirtualBatteryLab() {
                   className={`p-2 rounded-lg border transition-all ${
                     isActive
                       ? "bg-[#C084FC]/20 border-[#C084FC]/30 text-purple-300"
-                      : "bg-white/3 border-white/5 text-[#AEB5C0]/60 group-hover:text-white"
+                      : "bg-white/3 border-white/5 text-muted-foreground/60 group-hover:text-white"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -467,12 +467,12 @@ export function VirtualBatteryLab() {
                 <div>
                   <h4
                     className={`text-xs font-bold transition-all ${
-                      isActive ? "text-purple-300" : "text-[#AEB5C0]/80 group-hover:text-white"
+                      isActive ? "text-purple-300" : "text-muted-foreground/80 group-hover:text-white"
                     }`}
                   >
                     {tab.label}
                   </h4>
-                  <p className="text-[10px] text-[#AEB5C0]/40 mt-0.5">{tab.detail}</p>
+                  <p className="text-[10px] text-muted-foreground/40 mt-0.5">{tab.detail}</p>
                 </div>
                 {isActive && (
                   <motion.div
@@ -541,7 +541,7 @@ export function VirtualBatteryLab() {
 
             <div className="space-y-4">
               <div>
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cell Chemistry</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cell Chemistry</span>
                 <span className="text-sm font-extrabold text-white block mt-0.5 uppercase tracking-wide">
                   {chemistry === "solid-state" ? "Solid State (ASSB)" : chemistry}
                 </span>
@@ -549,13 +549,13 @@ export function VirtualBatteryLab() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cell Voltage</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cell Voltage</span>
                   <span className="text-base font-extrabold text-white mt-0.5 block tracking-tight">
                     {mathData.voltage} <span className="text-[10px] text-purple-400 font-bold">V</span>
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Temperature</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Temperature</span>
                   <span className="text-base font-extrabold text-white mt-0.5 block tracking-tight">
                     {temperature} <span className="text-[10px] text-[#10B981] font-bold">°C</span>
                   </span>
@@ -563,7 +563,7 @@ export function VirtualBatteryLab() {
               </div>
 
               <div>
-                <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider mb-1">
+                <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider mb-1">
                   <span>State of Charge</span>
                   <span className="text-purple-300 font-extrabold">{soc}%</span>
                 </div>
@@ -577,13 +577,13 @@ export function VirtualBatteryLab() {
 
               <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
                 <div>
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Capacity Density</span>
-                  <span className="text-xs font-bold text-[#AEB5C0]/85 mt-0.5 block">
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Capacity Density</span>
+                  <span className="text-xs font-bold text-muted-foreground/85 mt-0.5 block">
                     {mathData.capacity} Wh/kg
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Est. Lifespan</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Est. Lifespan</span>
                   <span className="text-xs font-bold text-[#10B981] mt-0.5 block">
                     {mathData.cycleLife} cycles
                   </span>
@@ -591,12 +591,12 @@ export function VirtualBatteryLab() {
               </div>
 
               <div className="border-t border-white/5 pt-4">
-                <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider mb-1.5">
+                <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider mb-1.5">
                   <span>Operating Efficiency</span>
                   <span className="text-[#10B981] font-extrabold">{mathData.efficiency}%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#AEB5C0]/60">Stress Index:</span>
+                  <span className="text-xs text-muted-foreground/60">Stress Index:</span>
                   <div className="flex items-center gap-1.5">
                     <div
                       className={`w-2.5 h-2.5 rounded-full ${
@@ -620,7 +620,7 @@ export function VirtualBatteryLab() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
               <span className="text-[10px] font-bold text-white uppercase tracking-wider">Lab Console Logs</span>
             </div>
-            <div className="flex-1 overflow-y-auto font-mono text-[9px] text-[#AEB5C0]/65 space-y-1.5 scrollbar-thin scrollbar-thumb-white/10 select-none">
+            <div className="flex-1 overflow-y-auto font-mono text-[9px] text-muted-foreground/65 space-y-1.5 scrollbar-thin scrollbar-thumb-white/10 select-none">
               {diagnosticLogs.map((log, idx) => (
                 <div key={idx} className="leading-normal truncate">
                   {log}
@@ -658,7 +658,7 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
     <div className="space-y-4 h-full flex flex-col">
       <div>
         <h3 className="text-base font-extrabold text-white">3D Battery Cell Explorer</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Manipulate structural cell layers to analyze internal electrode design configurations.
         </p>
       </div>
@@ -676,7 +676,7 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
               className={`text-[10px] font-bold px-3 py-1.5 rounded-lg border transition-all ${
                 exploded
                   ? "bg-purple-500/20 border-purple-500/40 text-purple-300"
-                  : "bg-white/5 border-white/5 text-[#AEB5C0]/85 hover:text-white"
+                  : "bg-white/5 border-white/5 text-muted-foreground/85 hover:text-white"
               }`}
             >
               {exploded ? "Collapse View" : "Exploded View"}
@@ -686,15 +686,15 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
               <button
                 onClick={() => setRotateAngle((p) => (p - 45) % 360)}
                 title="Rotate Left"
-                className="p-1 text-[10px] text-[#AEB5C0]/50 hover:text-white"
+                className="p-1 text-[10px] text-muted-foreground/50 hover:text-white"
               >
                 ↺
               </button>
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 px-1">ROTATION</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 px-1">ROTATION</span>
               <button
                 onClick={() => setRotateAngle((p) => (p + 45) % 360)}
                 title="Rotate Right"
-                className="p-1 text-[10px] text-[#AEB5C0]/50 hover:text-white"
+                className="p-1 text-[10px] text-muted-foreground/50 hover:text-white"
               >
                 ↻
               </button>
@@ -834,20 +834,20 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
 
           {/* Zoom controls */}
           <div className="flex justify-between items-center z-10 pt-2 border-t border-white/5">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider">
               {exploded ? "Exploded structural mesh view" : "Cylindrical Cell wireframe"}
             </span>
             <div className="flex gap-2">
               <button
                 onClick={() => setZoomScale((z) => Math.max(0.7, z - 0.15))}
-                className="w-5 h-5 flex items-center justify-center bg-white/5 rounded text-xs text-[#AEB5C0] hover:text-white cursor-pointer"
+                className="w-5 h-5 flex items-center justify-center bg-white/5 rounded text-xs text-muted-foreground hover:text-white cursor-pointer"
               >
                 -
               </button>
               <span className="text-[10px] font-bold text-white select-none">{Math.round(zoomScale * 100)}%</span>
               <button
                 onClick={() => setZoomScale((z) => Math.min(1.5, z + 0.15))}
-                className="w-5 h-5 flex items-center justify-center bg-white/5 rounded text-xs text-[#AEB5C0] hover:text-white cursor-pointer"
+                className="w-5 h-5 flex items-center justify-center bg-white/5 rounded text-xs text-muted-foreground hover:text-white cursor-pointer"
               >
                 +
               </button>
@@ -867,22 +867,22 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
             </div>
             <div className="space-y-3.5">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Component Purpose</span>
-                <p className="text-xs text-[#AEB5C0]/85 mt-1 leading-relaxed">{selectedPart.purpose}</p>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Component Purpose</span>
+                <p className="text-xs text-muted-foreground/85 mt-1 leading-relaxed">{selectedPart.purpose}</p>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Key Chemical Materials</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Key Chemical Materials</span>
                 <p className="text-xs text-white/90 font-bold mt-1">{selectedPart.material}</p>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Working Electrochemistry</span>
-                <p className="text-xs text-[#AEB5C0]/75 mt-1 leading-normal">{selectedPart.workingPrinciple}</p>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Working Electrochemistry</span>
+                <p className="text-xs text-muted-foreground/75 mt-1 leading-normal">{selectedPart.workingPrinciple}</p>
               </div>
             </div>
           </div>
 
           <div className="flex-1 flex flex-col justify-end">
-            <p className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider mb-2">Cell Assembly Catalog</p>
+            <p className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider mb-2">Cell Assembly Catalog</p>
             <div className="grid grid-cols-2 gap-1.5">
               {CELL_COMPONENTS.map((part) => (
                 <button
@@ -891,7 +891,7 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
                   className={`px-3 py-2 rounded-xl text-left border text-[11px] font-semibold transition-all cursor-pointer ${
                     selectedPart.id === part.id
                       ? "bg-white/5 border-purple-500/40 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.1)]"
-                      : "bg-white/2 border-white/5 text-[#AEB5C0]/60 hover:text-white"
+                      : "bg-white/2 border-white/5 text-muted-foreground/60 hover:text-white"
                   }`}
                 >
                   {part.name.split(" ")[0]} {part.name.split(" ")[1] || ""}
@@ -1005,7 +1005,7 @@ function LabChargingSimulation({
     <div className="space-y-4 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-base font-extrabold text-white">Live Charging Simulation</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Observe Constant Current (CC) & Constant Voltage (CV) dynamics during active charging.
         </p>
       </div>
@@ -1014,7 +1014,7 @@ function LabChargingSimulation({
         {/* Graph / Visualization */}
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">Charging Curves Profile</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Charging Curves Profile</span>
             <span className="text-[10px] font-extrabold text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">
               {chargingDetails.stage}
             </span>
@@ -1086,7 +1086,7 @@ function LabChargingSimulation({
         <div className="md:col-span-5 flex flex-col justify-between gap-3">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="space-y-1.5">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Set State of Charge</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Set State of Charge</span>
               <div className="flex items-center gap-3">
                 <input
                   type="range"
@@ -1104,7 +1104,7 @@ function LabChargingSimulation({
             </div>
 
             <div className="space-y-1.5">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Charging Speed Profile</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Charging Speed Profile</span>
               <div className="grid grid-cols-3 gap-1">
                 {[
                   { id: "slow", label: "AC 11kW" },
@@ -1120,7 +1120,7 @@ function LabChargingSimulation({
                     className={`py-1 rounded text-[10px] font-bold border transition-colors cursor-pointer ${
                       chargingSpeed === s.id
                         ? "bg-purple-500/20 border-purple-500/40 text-purple-300"
-                        : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                        : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                     }`}
                   >
                     {s.label.split(" ")[1]}
@@ -1131,11 +1131,11 @@ function LabChargingSimulation({
 
             <div className="grid grid-cols-2 gap-3.5 border-t border-white/5 pt-3">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Power Output</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Power Output</span>
                 <span className="text-sm font-black text-white">{chargingDetails.power} kW</span>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Current Flow</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Current Flow</span>
                 <span className="text-sm font-black text-white">{chargingDetails.amps} A</span>
               </div>
             </div>
@@ -1201,7 +1201,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
     <div className="space-y-4 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-base font-extrabold text-white">Thermal Loop response Chamber</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Simulate cell environmental controls to analyze temperature impact on cell capacity & internal resistance.
         </p>
       </div>
@@ -1225,14 +1225,14 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
           />
 
           <div className="flex items-center justify-between z-10">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">Thermal Imaging Mode</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Thermal Imaging Mode</span>
             <div className="flex gap-2">
               <span className={`text-[9px] font-extrabold px-2 py-0.5 rounded uppercase border bg-black/35 ${
                 thermalState.status === "danger"
                   ? "border-red-500/30 text-red-400"
                   : thermalState.status === "warning"
                   ? "border-orange-500/30 text-orange-400"
-                  : "border-white/5 text-[#AEB5C0]"
+                  : "border-white/5 text-muted-foreground"
               }`}>
                 {thermalState.status}
               </span>
@@ -1274,7 +1274,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
             </div>
           </div>
 
-          <div className="z-10 flex justify-between items-center border-t border-white/5 pt-2 text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+          <div className="z-10 flex justify-between items-center border-t border-white/5 pt-2 text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider">
             <span>Thermal Chamber Limits: -20°C to 70°C</span>
             <span>Sensor: calibrated</span>
           </div>
@@ -1284,7 +1284,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
         <div className="md:col-span-5 flex flex-col justify-between gap-3">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="space-y-1.5">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Environmental Temperature</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Environmental Temperature</span>
               <div className="flex items-center gap-3">
                 <input
                   type="range"
@@ -1303,18 +1303,18 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
 
             <div className="space-y-3.5 border-t border-white/5 pt-3">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Liquid Cooling Requirement</span>
-                <span className="text-sm font-black text-white">{thermalState.coolingKw} kW <span className="text-[10px] text-[#AEB5C0]/50 font-normal">Active load</span></span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Liquid Cooling Requirement</span>
+                <span className="text-sm font-black text-white">{thermalState.coolingKw} kW <span className="text-[10px] text-muted-foreground/50 font-normal">Active load</span></span>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Ion Flow Rate</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Ion Flow Rate</span>
                   <span className="text-xs font-bold text-white">
-                    {efficiency}% <span className="text-[9px] text-[#AEB5C0]/50 font-normal">Cap</span>
+                    {efficiency}% <span className="text-[9px] text-muted-foreground/50 font-normal">Cap</span>
                   </span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Internal Stress</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Internal Stress</span>
                   <span className="text-xs font-bold text-white">{stress}%</span>
                 </div>
               </div>
@@ -1323,7 +1323,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
 
           <div className="p-3 bg-white/2 rounded-xl border border-white/5 flex gap-2.5 items-start">
             <Info className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
-            <p className="text-[10.5px] text-[#AEB5C0]/75 leading-relaxed">
+            <p className="text-[10.5px] text-muted-foreground/75 leading-relaxed">
               At extreme low temperatures, electrolyte viscosity increases, limiting ion motility. At high temperatures, SEI layer degradation accelerates.
             </p>
           </div>
@@ -1384,7 +1384,7 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
     <div className="space-y-4 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-base font-extrabold text-white">Battery Chemistry Simulator</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Select different cathode structures to analyze trade-offs in density, stability, cycle metrics, and cost.
         </p>
       </div>
@@ -1392,7 +1392,7 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Radar Graph */}
         <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block mb-2">Interactive Material Radar mapping</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Interactive Material Radar mapping</span>
           
           <div className="flex-1 flex items-center justify-center relative">
             <svg viewBox="0 0 200 200" className="w-full max-w-[170px] aspect-square overflow-visible">
@@ -1474,7 +1474,7 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             {/* Switche select selector */}
             <div className="space-y-1">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Electrode Chemistry Selector</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Electrode Chemistry Selector</span>
               <select
                 value={activeChem}
                 onChange={(e) => {
@@ -1496,13 +1496,13 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">Pros & Characteristics</h4>
               <ul className="space-y-1">
                 {selectedDetails.pros.slice(0, 2).map((p, idx) => (
-                  <li key={idx} className="text-[11px] text-[#AEB5C0] flex items-center gap-1.5">
+                  <li key={idx} className="text-[11px] text-muted-foreground flex items-center gap-1.5">
                     <span className="w-1 h-1 bg-[#10B981] rounded-full shrink-0" />
                     {p}
                   </li>
                 ))}
                 {selectedDetails.cons.slice(0, 1).map((c, idx) => (
-                  <li key={idx} className="text-[11px] text-[#AEB5C0]/70 flex items-center gap-1.5">
+                  <li key={idx} className="text-[11px] text-muted-foreground/70 flex items-center gap-1.5">
                     <span className="w-1 h-1 bg-red-400 rounded-full shrink-0" />
                     {c}
                   </li>
@@ -1512,11 +1512,11 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
 
             <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-3">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy density Wh/kg</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy density Wh/kg</span>
                 <span className="text-xs font-extrabold text-white">{selectedDetails.energyDensity}</span>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Target Cost per kWh</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Target Cost per kWh</span>
                 <span className="text-xs font-extrabold text-white">${selectedDetails.cost} USD</span>
               </div>
             </div>
@@ -1590,7 +1590,7 @@ function LabDegradationKinetics({
     <div className="space-y-4 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-base font-extrabold text-white">Battery Degradation Simulator</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Predict calendar aging SOH loss based on daily load stress factors and storage environments.
         </p>
       </div>
@@ -1599,7 +1599,7 @@ function LabDegradationKinetics({
         {/* Degradation Retention Graph */}
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">Capacity retention curve</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Capacity retention curve</span>
             <span className="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/10 px-2 py-0.5 rounded border border-[#10B981]/20">
               10Y Retention: {degradationData.retention10Y}%
             </span>
@@ -1645,7 +1645,7 @@ function LabDegradationKinetics({
         <div className="md:col-span-5 flex flex-col justify-between gap-3">
           <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="space-y-1.5">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Fast Charging Percentage (DC)</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Fast Charging Percentage (DC)</span>
               <div className="flex items-center gap-3">
                 <input
                   type="range"
@@ -1663,7 +1663,7 @@ function LabDegradationKinetics({
             </div>
 
             <div className="space-y-1.5">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Driving Profile Style</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Driving Profile Style</span>
               <div className="grid grid-cols-3 gap-1">
                 {[
                   { id: "eco", label: "Eco-Cruise" },
@@ -1679,7 +1679,7 @@ function LabDegradationKinetics({
                     className={`py-1 rounded text-[10px] font-bold border transition-colors cursor-pointer ${
                       drivingStyle === d.id
                         ? "bg-purple-500/20 border-purple-500/40 text-purple-300"
-                        : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                        : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                     }`}
                   >
                     {d.label.split(" ")[0]}
@@ -1690,13 +1690,13 @@ function LabDegradationKinetics({
 
             <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-3">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Est. Pack Lifecycle</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Est. Pack Lifecycle</span>
                 <span className="text-xs font-extrabold text-white">
-                  {degradationData.replacementYear} Yrs <span className="text-[9px] text-[#AEB5C0]/50 font-normal">to 70%</span>
+                  {degradationData.replacementYear} Yrs <span className="text-[9px] text-muted-foreground/50 font-normal">to 70%</span>
                 </span>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Annual Cycles</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Annual Cycles</span>
                 <input
                   type="number"
                   value={cyclesPerYear}
@@ -1774,7 +1774,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
     <div className="space-y-4 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-base font-extrabold text-white">AI Battery Advisor</h3>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">
+        <p className="text-xs text-muted-foreground/60 mt-0.5">
           Specify operating parameters and vehicle goals to generate custom chemistry recommendations.
         </p>
       </div>
@@ -1782,12 +1782,12 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Form panel */}
         <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between gap-3 min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Operational Requirement Profile</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Operational Requirement Profile</span>
           
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block mb-1">Target Budget</label>
+                <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block mb-1">Target Budget</label>
                 <select
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
@@ -1800,7 +1800,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
               </div>
 
               <div>
-                <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block mb-1">Range Goals</label>
+                <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block mb-1">Range Goals</label>
                 <select
                   value={rangeNeed}
                   onChange={(e) => setRangeNeed(e.target.value)}
@@ -1813,7 +1813,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
             </div>
 
             <div>
-              <label className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase block mb-1">Local Climate</label>
+              <label className="text-[9px] text-muted-foreground/50 font-bold uppercase block mb-1">Local Climate</label>
               <select
                 value={climate}
                 onChange={(e) => setClimate(e.target.value)}
@@ -1842,24 +1842,24 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
             {isLoading ? (
               <div className="flex-1 flex flex-col items-center justify-center gap-2">
                 <div className="w-8 h-8 rounded-full border-2 border-purple-400 border-t-transparent animate-spin" />
-                <span className="text-xs text-[#AEB5C0]/60 font-bold">Validating structural models...</span>
+                <span className="text-xs text-muted-foreground/60 font-bold">Validating structural models...</span>
               </div>
             ) : advisorReport ? (
               <div className="space-y-3.5 flex-1 flex flex-col justify-between">
                 <div className="flex items-center justify-between border-b border-white/5 pb-2">
                   <div>
-                    <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block">Recommended Chemistry</span>
+                    <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block">Recommended Chemistry</span>
                     <span className="text-sm font-black text-purple-300">
                       {CHEM_DATA[advisorReport.recChem as ChemistryType].name}
                     </span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block">Confidence Score</span>
+                    <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block">Confidence Score</span>
                     <span className="text-sm font-black text-[#10B981]">{advisorReport.confidence}%</span>
                   </div>
                 </div>
 
-                <div className="space-y-2 text-[11px] leading-relaxed text-[#AEB5C0]/85">
+                <div className="space-y-2 text-[11px] leading-relaxed text-muted-foreground/85">
                   <p>
                     <strong className="text-white">Est. Lifetime:</strong> {advisorReport.lifespan}
                   </p>
@@ -1873,8 +1873,8 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
               </div>
             ) : (
               <div className="flex-1 flex flex-col items-center justify-center text-center p-4">
-                <BrainCircuit className="w-8 h-8 text-[#AEB5C0]/30 mb-2" />
-                <p className="text-xs text-[#AEB5C0]/50">
+                <BrainCircuit className="w-8 h-8 text-muted-foreground/30 mb-2" />
+                <p className="text-xs text-muted-foreground/50">
                   Configure operational goals and click &quot;Generate&quot; to receive an interactive expert system chemistry recommendation.
                 </p>
               </div>

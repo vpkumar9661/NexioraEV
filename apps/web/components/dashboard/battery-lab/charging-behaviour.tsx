@@ -29,7 +29,7 @@ export function ChargingBehaviour() {
     <section id="charging" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Charging Behaviour</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Understand constant current/voltage curves and battery health degradation during rapid charging</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Understand constant current/voltage curves and battery health degradation during rapid charging</p>
       </div>
 
       {/* Selector percentages tabs */}
@@ -48,7 +48,7 @@ export function ChargingBehaviour() {
               style={{ borderColor: isActive ? p.color : "rgba(255,255,255,0.05)" }}
             >
               <span className="text-white text-base">{p.percent}%</span>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider hidden sm:inline">Charge</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider hidden sm:inline">Charge</span>
             </button>
           );
         })}
@@ -60,7 +60,7 @@ export function ChargingBehaviour() {
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/5 pb-3">
               <div>
-                <span className="text-xs font-bold text-[#AEB5C0]/40 uppercase tracking-wider">Current Phase</span>
+                <span className="text-xs font-bold text-muted-foreground/40 uppercase tracking-wider">Current Phase</span>
                 <h4 className="text-base font-extrabold text-white mt-1">{selectedPhase.phase}</h4>
               </div>
               <span
@@ -75,18 +75,18 @@ export function ChargingBehaviour() {
               </span>
             </div>
 
-            <p className="text-sm text-[#AEB5C0]/85 leading-relaxed">
+            <p className="text-sm text-muted-foreground/85 leading-relaxed">
               {selectedPhase.desc}
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">
               <div className="p-3.5 rounded-xl bg-white/1 border border-white/5">
-                <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Remaining Time</span>
+                <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Remaining Time</span>
                 <span className="text-sm font-extrabold text-white mt-1 block">{selectedPhase.timeEstimate}</span>
               </div>
               <div className="p-3.5 rounded-xl bg-white/1 border border-white/5 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Cell Temperature</span>
+                  <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Cell Temperature</span>
                   <span className="text-sm font-extrabold text-white mt-1 block">{selectedPhase.temp}</span>
                 </div>
                 <Thermometer className="w-4 h-4 text-[#3B82F6]" />
@@ -98,7 +98,7 @@ export function ChargingBehaviour() {
           <div className="flex items-center gap-3 p-3.5 rounded-xl border border-white/5 bg-white/1">
             <AlertTriangle className={`w-5 h-5 ${selectedPhase.stress === "High" ? "text-rose-400" : selectedPhase.stress === "Medium" ? "text-amber-400" : "text-emerald-400"}`} />
             <div>
-              <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Thermal Stress Level</span>
+              <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Thermal Stress Level</span>
               <span className="text-xs font-bold text-white mt-0.5 block">{selectedPhase.stress} Stress Phase</span>
             </div>
           </div>
@@ -147,7 +147,7 @@ export function ChargingBehaviour() {
             </svg>
           </div>
 
-          <div className="flex items-center justify-between text-[11px] text-[#AEB5C0]/40">
+          <div className="flex items-center justify-between text-[11px] text-muted-foreground/40">
             <span>0% SOC</span>
             <span>50% (Peak CC)</span>
             <span>80% (CV Threshold)</span>

@@ -35,12 +35,12 @@ export function FutureMobilitySimulator() {
     <section id="simulator" className="space-y-6 border-t border-white/5 pt-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Future Mobility Simulator</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Simulate range, speed limits, and average battery consumption variables on speculative vehicle platforms.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Simulate range, speed limits, and average battery consumption variables on speculative vehicle platforms.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Vector platform flight diagnostics</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Vector platform flight diagnostics</span>
           
           <div className="flex-1 flex items-center justify-center relative py-4">
             <svg viewBox="-80 -40 160 80" className="w-full max-w-[200px] aspect-square overflow-visible">
@@ -73,7 +73,7 @@ export function FutureMobilitySimulator() {
         {/* Inputs */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4 text-xs">
           <div className="space-y-1">
-            <label className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Speculative Platform</label>
+            <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Speculative Platform</label>
             <select
               value={vehicle}
               onChange={(e) => setVehicle(e.target.value)}
@@ -86,7 +86,7 @@ export function FutureMobilitySimulator() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Target Speed</span>
+              <span className="text-muted-foreground/40 uppercase">Target Speed</span>
               <span className="text-white">{speed} km/h</span>
             </div>
             <input
@@ -102,11 +102,11 @@ export function FutureMobilitySimulator() {
 
           <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-3">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Range target</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Range target</span>
               <strong className="text-xs text-cyan-300 block mt-0.5">{stats.range} km</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Avg Consumption</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Avg Consumption</span>
               <strong className="text-xs text-white block mt-0.5">{stats.consumption} Wh/km</strong>
             </div>
           </div>
@@ -125,7 +125,7 @@ export function AIMobilityCenter() {
     <section id="aimobility" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">AI Mobility Optimization</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Explore standard fleet controls algorithms and battery optimization loops.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Explore standard fleet controls algorithms and battery optimization loops.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -134,7 +134,7 @@ export function AIMobilityCenter() {
             <Cpu className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Fleet Routing AI</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Monitors municipal traffic loads and weather constraints, adjusting robotaxis fleets paths dynamically to maximize energy conservation.
           </p>
         </div>
@@ -144,7 +144,7 @@ export function AIMobilityCenter() {
             <BrainCircuit className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Predictive Maintenance Loops</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/85 leading-relaxed">
+          <p className="text-xs text-muted-foreground/85 leading-relaxed">
             Continuously runs cell voltage variance calculations, predicting BMS dendrite hazards before physical component faults happen.
           </p>
         </div>
@@ -183,7 +183,7 @@ export function AIFutureAssistant() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Buttons list */}
         <div className="md:col-span-5 flex flex-col gap-2 p-3 rounded-2xl border border-white/5 bg-black/40">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest px-2 pb-2">Select Query Profile</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">Select Query Profile</span>
           {[
             { id: "solid", label: "Will solid-state batteries replace lithium-ion?" },
             { id: "hydrogen", label: "Will hydrogen replace EVs?" },
@@ -196,7 +196,7 @@ export function AIFutureAssistant() {
               className={`w-full py-2.5 px-3 rounded-xl border text-left text-xs font-bold transition-all cursor-pointer ${
                 selectedQuestion === q.id
                   ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-[#22D3EE]"
-                  : "bg-white/2 border-white/5 text-[#AEB5C0] hover:text-white"
+                  : "bg-white/2 border-white/5 text-muted-foreground hover:text-white"
               }`}
             >
               {q.label}
@@ -208,14 +208,14 @@ export function AIFutureAssistant() {
         <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
           {answer ? (
             <div className="space-y-2">
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">AI Agent Prognostics</span>
-              <p className="text-xs text-[#AEB5C0]/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Agent Prognostics</span>
+              <p className="text-xs text-muted-foreground/85 leading-relaxed bg-white/1 p-3.5 rounded-xl border border-white/5">
                 {answer}
               </p>
             </div>
           ) : (
-            <div className="text-center p-4 text-[#AEB5C0]/45 text-xs flex flex-col items-center justify-center gap-2">
-              <BrainCircuit className="w-8 h-8 text-[#AEB5C0]/20" />
+            <div className="text-center p-4 text-muted-foreground/45 text-xs flex flex-col items-center justify-center gap-2">
+              <BrainCircuit className="w-8 h-8 text-muted-foreground/20" />
               <span>Select an innovation question profile on the left to activate AI advisor simulation.</span>
             </div>
           )}
@@ -282,7 +282,7 @@ export function FutureQuiz() {
     <section id="quiz" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Interactive Certification Quiz</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-1">Answer technical questions to earn Future Tech innovation badges.</p>
+        <p className="text-xs text-muted-foreground/60 mt-1">Answer technical questions to earn Future Tech innovation badges.</p>
       </div>
 
       <div className="max-w-2xl rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md p-5 sm:p-6 space-y-6">
@@ -290,7 +290,7 @@ export function FutureQuiz() {
           <div className="text-center py-6 space-y-4">
             <Award className="w-12 h-12 text-[#22D3EE] mx-auto animate-bounce" />
             <h4 className="text-base font-extrabold text-white">Quiz Module Complete!</h4>
-            <p className="text-xs text-[#AEB5C0]/75">
+            <p className="text-xs text-muted-foreground/75">
               Score achieved: <strong>{score} / {QUESTIONS.length}</strong> correct answers.
             </p>
             <button
@@ -302,7 +302,7 @@ export function FutureQuiz() {
           </div>
         ) : (
           <div className="space-y-4">
-            <div className="flex justify-between items-center text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider">
+            <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">
               <span>Question {activeIdx + 1} of {QUESTIONS.length}</span>
               <span>Score: {score}</span>
             </div>
@@ -336,8 +336,8 @@ export function FutureQuiz() {
 
             {showFeedback && (
               <div className="space-y-3 border-t border-white/5 pt-4">
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Electrochemical Explanation</span>
-                <p className="text-xs text-[#AEB5C0]/80 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Electrochemical Explanation</span>
+                <p className="text-xs text-muted-foreground/80 leading-relaxed bg-white/1 p-3 rounded-xl border border-white/5">
                   {QUESTIONS[activeIdx]!.exp}
                 </p>
                 <button

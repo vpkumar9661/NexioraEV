@@ -26,7 +26,7 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-[#AEB5C0]/80 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/80 text-sm sm:text-base leading-relaxed max-w-lg">
             Learn everything about Electric Vehicles through immersive learning, interactive visualizations, AI guidance and real-world examples.
           </p>
 
@@ -46,7 +46,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="/evtech/ai-assistant"
-              className="px-5 py-3 rounded-xl font-bold bg-transparent border border-white/15 hover:border-[#8B5CF6]/40 text-[#AEB5C0] hover:text-white transition-all duration-300 flex items-center gap-2 text-sm"
+              className="px-5 py-3 rounded-xl font-bold bg-transparent border border-white/15 hover:border-[#8B5CF6]/40 text-muted-foreground hover:text-white transition-all duration-300 flex items-center gap-2 text-sm"
             >
               <Sparkles className="w-4 h-4" />
               Ask AI
@@ -66,7 +66,7 @@ export function HeroSection() {
               <Battery className="w-4 h-4 text-[#A78BFA]" />
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider block">Battery</span>
+              <span className="text-[9px] text-muted-foreground/50 font-bold uppercase tracking-wider block">Battery</span>
               <span className="text-[11px] font-bold text-white block">72 kWh LFP</span>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export function HeroSection() {
               <Zap className="w-4 h-4 text-emerald-400" />
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/50 font-bold uppercase tracking-wider block">Efficiency</span>
+              <span className="text-[9px] text-muted-foreground/50 font-bold uppercase tracking-wider block">Efficiency</span>
               <span className="text-[11px] font-bold text-white block">92% Motor</span>
             </div>
           </motion.div>

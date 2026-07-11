@@ -65,7 +65,7 @@ export function BottomSimulation({
       {/* LEFT: Driving Modes & Timeline Flow */}
       <div className="lg:col-span-6 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md flex flex-col justify-between gap-4">
         <div>
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">Simulation Timeline</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">Simulation Timeline</span>
           <div className="grid grid-cols-3 gap-1 mt-2.5">
             {MODES.map((m) => (
               <button
@@ -74,7 +74,7 @@ export function BottomSimulation({
                 className={`py-1.5 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
                   drivingMode === m.id
                     ? "bg-[#22D3EE]/15 border-[#22D3EE]/30 text-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.08)]"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 {m.label.split(" ")[0]}
@@ -85,7 +85,7 @@ export function BottomSimulation({
 
         {/* Path Flow animation */}
         <div className="p-3.5 rounded-xl bg-black/40 border border-white/5 flex flex-col justify-between gap-3">
-          <div className="flex justify-between items-center text-[9px] text-[#AEB5C0]/45 font-bold uppercase">
+          <div className="flex justify-between items-center text-[9px] text-muted-foreground/45 font-bold uppercase">
             <span>Grid energy flow vector</span>
             <div className="flex gap-2">
               <button
@@ -148,7 +148,7 @@ export function BottomSimulation({
       {/* RIGHT: Real-Time Curves */}
       <div className="lg:col-span-6 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md flex flex-col justify-between gap-4">
         <div className="flex justify-between items-center">
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest">Real-Time Power Curves</span>
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest">Real-Time Power Curves</span>
           <span className="text-[9.5px] font-bold text-red-400 flex items-center gap-1">
             <Flame className="w-3.5 h-3.5 animate-pulse" /> Heat loss: {stats.powerLoss} kW
           </span>

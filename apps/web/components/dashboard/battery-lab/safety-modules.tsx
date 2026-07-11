@@ -29,7 +29,7 @@ export function SafetyModules() {
     <section id="safety" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Battery Safety Protocols</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Explore preventative hardware and firmware safeguards built into high-voltage systems</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Explore preventative hardware and firmware safeguards built into high-voltage systems</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 items-stretch">
@@ -55,7 +55,7 @@ export function SafetyModules() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-white block">{item.title}</span>
-                    <span className="text-[10px] text-[#AEB5C0]/50 block mt-0.5">{item.severity} Protection</span>
+                    <span className="text-[10px] text-muted-foreground/50 block mt-0.5">{item.severity} Protection</span>
                   </div>
                 </div>
                 {isActive && (
@@ -71,22 +71,22 @@ export function SafetyModules() {
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-white/5 pb-3">
               <div>
-                <span className="text-xs font-bold text-[#AEB5C0]/40 uppercase tracking-wider">Severity Classification</span>
+                <span className="text-xs font-bold text-muted-foreground/40 uppercase tracking-wider">Severity Classification</span>
                 <h4 className="text-base font-extrabold text-white mt-1" style={{ color: activeItem.color }}>{activeItem.severity} Trigger Event</h4>
               </div>
             </div>
 
-            <p className="text-sm text-[#AEB5C0]/85 leading-relaxed">{activeItem.desc}</p>
+            <p className="text-sm text-muted-foreground/85 leading-relaxed">{activeItem.desc}</p>
 
             <div className="space-y-3.5 pt-2">
               <div className="p-4 rounded-xl bg-red-500/2 border border-red-500/10">
                 <span className="text-[10px] text-red-400 font-extrabold uppercase tracking-wider block">Sensor Trigger Condition</span>
-                <p className="text-xs text-[#AEB5C0]/80 mt-1 leading-relaxed">{activeItem.trigger}</p>
+                <p className="text-xs text-muted-foreground/80 mt-1 leading-relaxed">{activeItem.trigger}</p>
               </div>
               
               <div className="p-4 rounded-xl bg-emerald-500/2 border border-emerald-500/10">
                 <span className="text-[10px] text-emerald-400 font-extrabold uppercase tracking-wider block">Active Mitigation Response</span>
-                <p className="text-xs text-[#AEB5C0]/80 mt-1 leading-relaxed">{activeItem.action}</p>
+                <p className="text-xs text-muted-foreground/80 mt-1 leading-relaxed">{activeItem.action}</p>
               </div>
             </div>
           </div>

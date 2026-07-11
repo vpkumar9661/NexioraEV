@@ -51,7 +51,7 @@ export function CenterTwin({
       {/* Blueprint Grid background lines */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[15px_15px] pointer-events-none rounded-[24px]" />
       <div className="absolute top-4 left-4 z-10">
-        <span className="text-[10px] text-[#AEB5C0]/40 font-extrabold uppercase tracking-widest block">3D Engineering Configurator</span>
+        <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block">3D Engineering Configurator</span>
         <h3 className="text-xs font-bold text-white uppercase mt-0.5">{platform} Platform Digital Twin</h3>
       </div>
 
@@ -60,14 +60,14 @@ export function CenterTwin({
         <button
           onClick={rotateLeft}
           title="Rotate Left"
-          className="p-1.5 rounded-lg border border-white/5 bg-white/2 text-[#AEB5C0]/60 hover:text-white hover:bg-white/5 cursor-pointer"
+          className="p-1.5 rounded-lg border border-white/5 bg-white/2 text-muted-foreground/60 hover:text-white hover:bg-white/5 cursor-pointer"
         >
           <RotateCw className="w-4 h-4 -scale-x-100" />
         </button>
         <button
           onClick={rotateRight}
           title="Rotate Right"
-          className="p-1.5 rounded-lg border border-white/5 bg-white/2 text-[#AEB5C0]/60 hover:text-white hover:bg-white/5 cursor-pointer"
+          className="p-1.5 rounded-lg border border-white/5 bg-white/2 text-muted-foreground/60 hover:text-white hover:bg-white/5 cursor-pointer"
         >
           <RotateCw className="w-4 h-4" />
         </button>
@@ -76,7 +76,7 @@ export function CenterTwin({
           className={`px-3 py-1 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
             explode
               ? "bg-[#22D3EE]/25 border-[#22D3EE]/40 text-cyan-300"
-              : "border-white/5 bg-white/2 text-[#AEB5C0]/65 hover:text-white"
+              : "border-white/5 bg-white/2 text-muted-foreground/65 hover:text-white"
           }`}
         >
           Explode
@@ -86,7 +86,7 @@ export function CenterTwin({
           className={`px-3 py-1 rounded-lg border text-[10px] font-bold cursor-pointer transition-colors ${
             crossSection
               ? "bg-purple-500/25 border-purple-500/40 text-purple-300"
-              : "border-white/5 bg-white/2 text-[#AEB5C0]/65 hover:text-white"
+              : "border-white/5 bg-white/2 text-muted-foreground/65 hover:text-white"
           }`}
         >
           Cross-Sec
@@ -97,7 +97,7 @@ export function CenterTwin({
           className={`p-1.5 rounded-lg border cursor-pointer transition-colors ${
             showLabels
               ? "bg-white/5 border-white/10 text-white"
-              : "border-white/5 bg-white/2 text-[#AEB5C0]/50"
+              : "border-white/5 bg-white/2 text-muted-foreground/50"
           }`}
         >
           <Tag className="w-4 h-4" />
@@ -193,12 +193,12 @@ export function CenterTwin({
         </div>
         <div className="grid grid-cols-2 gap-4 text-[11px] leading-relaxed">
           <div>
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Structural Materials</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Structural Materials</span>
             <p className="text-white font-bold">{selectedPart.material}</p>
           </div>
           <div>
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Diagnostics Specifications</span>
-            <p className="text-[#AEB5C0]/85">{selectedPart.specs}</p>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Diagnostics Specifications</span>
+            <p className="text-muted-foreground/85">{selectedPart.specs}</p>
           </div>
         </div>
       </div>

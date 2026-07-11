@@ -67,7 +67,7 @@ export default function CompanyIndexPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-linear-to-r from-white via-white to-[#EC4899]/80 bg-clip-text text-transparent">
             Meet the Team Building the Future
           </h1>
-          <p className="text-[#AEB5C0]/80 text-base sm:text-lg leading-relaxed">
+          <p className="text-muted-foreground/80 text-base sm:text-lg leading-relaxed">
             Discover NexioraEV. Learn about our corporate mission to electrify commercial mobility loops, explore job listings, access developer APIs, and get in touch with our partnerships teams.
           </p>
         </section>
@@ -90,13 +90,13 @@ export default function CompanyIndexPage() {
                 
                 <div className="space-y-4 relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#EC4899]/40 transition-colors">
-                    <Icon className="w-6 h-6 text-[#AEB5C0] group-hover:text-[#EC4899] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
+                    <Icon className="w-6 h-6 text-muted-foreground group-hover:text-[#EC4899] group-hover:scale-105 transition-all duration-300" strokeWidth={1.8} />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="text-[18px] font-bold text-white group-hover:text-[#EC4899] transition-colors leading-tight">
                       {category.name}
                     </h3>
-                    <p className="text-[13px] text-[#AEB5C0]/70 line-clamp-3 leading-relaxed">
+                    <p className="text-[13px] text-muted-foreground/70 line-clamp-3 leading-relaxed">
                       {category.description}
                     </p>
                   </div>

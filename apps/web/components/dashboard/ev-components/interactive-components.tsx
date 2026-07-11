@@ -36,7 +36,7 @@ export function ArchitectureExplorer() {
     <section id="architecture" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Interactive EV Architecture</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Select structural chassis nodes to explore detailed engineering functions.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Select structural chassis nodes to explore detailed engineering functions.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -107,12 +107,12 @@ export function ArchitectureExplorer() {
             
             <div className="space-y-3.5">
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Operational Specs</span>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Operational Specs</span>
                 <strong className="text-xs text-white block mt-1">{selectedComp.specs}</strong>
               </div>
               <div>
-                <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Engineering Function</span>
-                <p className="text-xs text-[#AEB5C0]/80 mt-1 leading-relaxed">{selectedComp.functionDesc}</p>
+                <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Engineering Function</span>
+                <p className="text-xs text-muted-foreground/80 mt-1 leading-relaxed">{selectedComp.functionDesc}</p>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ export function ArchitectureExplorer() {
                 className={`py-1.5 rounded-lg border text-[9px] font-extrabold cursor-pointer transition-colors ${
                   selectedComp.id === c.id
                     ? "bg-white/5 border-cyan-500/40 text-[#22D3EE]"
-                    : "bg-white/2 border-white/5 text-[#AEB5C0]/65 hover:text-white"
+                    : "bg-white/2 border-white/5 text-muted-foreground/65 hover:text-white"
                 }`}
               >
                 {c.name.split(" ")[0]}
@@ -149,7 +149,7 @@ export function ExplodedView() {
     <section id="exploded" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">3D Exploded Chassis Inspector</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Explode structural component layers to inspect powertrain layout depths.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Explode structural component layers to inspect powertrain layout depths.</p>
       </div>
 
       <div className="rounded-2xl border border-white/5 bg-black/40 p-6 flex flex-col items-center justify-between min-h-[320px] relative">
@@ -224,7 +224,7 @@ export function PowertrainExplorer() {
     <section id="powertrain" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Powertrain Vector Pipeline</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Trace structural voltage path steps from the storage pack down to wheel axles.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Trace structural voltage path steps from the storage pack down to wheel axles.</p>
       </div>
 
       <div className="p-5 rounded-2xl border border-white/5 bg-white/2 flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -238,7 +238,7 @@ export function PowertrainExplorer() {
           <React.Fragment key={idx}>
             <div className="flex-1 w-full p-4 rounded-xl bg-black/40 border border-white/5 text-center text-xs space-y-1">
               <strong className="text-white block">{step.label}</strong>
-              <span className="text-[10px] text-[#AEB5C0]/50 block">{step.desc}</span>
+              <span className="text-[10px] text-muted-foreground/50 block">{step.desc}</span>
             </div>
             {idx < 4 && (
               <ChevronRight className="w-5 h-5 text-cyan-400 rotate-90 md:rotate-0 my-1 md:my-0" />
@@ -276,14 +276,14 @@ export function MotorLab() {
     <section id="motorlab" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Traction Motor Laboratory</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Compare stator vector magnets layouts and mechanical torque profiles.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Compare stator vector magnets layouts and mechanical torque profiles.</p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-6 items-stretch">
         {/* Graph torque RPM and selectors */}
         <div className="lg:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between gap-5">
           <div className="space-y-1.5">
-            <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest block">Choose Motor Type</span>
+            <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">Choose Motor Type</span>
             <select
               value={selectedMotor.id}
               onChange={(e) => setSelectedMotor(MOTOR_LIST.find((m) => m.id === e.target.value)!)}
@@ -295,7 +295,7 @@ export function MotorLab() {
           </div>
 
           <div className="space-y-2">
-            <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Torque-RPM curves plotting</span>
+            <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Torque-RPM curves plotting</span>
             <svg viewBox="0 0 200 100" className="w-full overflow-visible">
               <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" />
               <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" />
@@ -321,27 +321,27 @@ export function MotorLab() {
 
           <div className="grid grid-cols-2 gap-4 text-xs">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Target Efficiency</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Target Efficiency</span>
               <strong className="text-sm text-cyan-300 block mt-0.5">{selectedMotor.efficiency}</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Max Speed Threshold</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Max Speed Threshold</span>
               <strong className="text-xs text-white block mt-0.5">{selectedMotor.speed}</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Continuous Torque</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Continuous Torque</span>
               <strong className="text-xs text-white block mt-0.5">{selectedMotor.torque}</strong>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-3 border-t border-white/5 pt-4 text-[11px] leading-relaxed">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block mb-1">Key Advantage</span>
-              <p className="text-[#AEB5C0]">{selectedMotor.advantages}</p>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block mb-1">Key Advantage</span>
+              <p className="text-muted-foreground">{selectedMotor.advantages}</p>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block mb-1">Grid Limit</span>
-              <p className="text-[#AEB5C0]">{selectedMotor.limitations}</p>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block mb-1">Grid Limit</span>
+              <p className="text-muted-foreground">{selectedMotor.limitations}</p>
             </div>
           </div>
         </div>
@@ -359,7 +359,7 @@ export function ControllerLab() {
     <section id="controller" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Silicon Carbide Inverters & Controllers</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Understand Pulse Width Modulations (PWM) and transistor gates configurations.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Understand Pulse Width Modulations (PWM) and transistor gates configurations.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -368,7 +368,7 @@ export function ControllerLab() {
             <Cpu className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Silicon Carbide (SiC) Technology</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Silicon Carbide transistors switch currents at far higher frequencies compared to standard silicon switches. This shrinks heat dissipation loads by up to 70%, decreasing cooling requirements and boosting overall system efficiency.
           </p>
         </div>
@@ -378,7 +378,7 @@ export function ControllerLab() {
             <Layers className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Pulse-Width Modulation (PWM)</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Chopping DC voltage into pulses creates simulated AC sine waves. Adjusting the width of these pulses controls the motor&apos;s speed and torque directly.
           </p>
         </div>
@@ -396,7 +396,7 @@ export function ChassisSystems() {
     <section id="chassis" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Chassis Systems (Suspension & Braking)</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Examine regenerative brake recovery and multi-link active suspension mechanics.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Examine regenerative brake recovery and multi-link active suspension mechanics.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -405,7 +405,7 @@ export function ChassisSystems() {
             <Activity className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Regenerative Brake Recovery</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             By reversing rotor electromagnetic fields during deceleration, traction motors act as electrical generators. Redirecting kinetic vehicle energy back into chemical battery packs, recapturing up to 25% range.
           </p>
         </div>
@@ -415,7 +415,7 @@ export function ChassisSystems() {
             <Settings className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Multi-Link Independent Suspension</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Integrates multiple control arms to guide wheel tracking, neutralizing heavy floor battery pack load shifts during fast cornering maneuvers.
           </p>
         </div>
@@ -433,7 +433,7 @@ export function ThermalManagement() {
     <section id="thermal" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Active Thermal Management Loop</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Trace cell jacket plate liquid lines and HVAC heat pump flow directions.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Trace cell jacket plate liquid lines and HVAC heat pump flow directions.</p>
       </div>
 
       <div className="p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col md:flex-row gap-5 items-center justify-between">
@@ -442,7 +442,7 @@ export function ThermalManagement() {
             <Thermometer className="w-4.5 h-4.5 animate-pulse" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Ethylene-Glycol Loop Routing</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed">
+          <p className="text-xs text-muted-foreground/75 leading-relaxed">
             Pumps liquid coolant beneath cell module trays to absorb heat. Reroutes warm water arrays to preheat battery cells in cold climates, maximizing ion motility efficiency.
           </p>
         </div>
@@ -452,7 +452,7 @@ export function ThermalManagement() {
             <Layers className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Active HVAC Heat Pumps</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/75 leading-relaxed">
+          <p className="text-xs text-muted-foreground/75 leading-relaxed">
             Exchanges energy between ambient external air, motor inverter heat exhaust, and battery casings to optimize cabin temperature control, saving battery range.
           </p>
         </div>
@@ -470,7 +470,7 @@ export function HighVoltage() {
     <section id="hv" className="space-y-6 border-t border-white/5 pt-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">High Voltage (HV) Safety Architecture</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Review contactors isolation barriers and pyro-fuse cutoff triggers.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Review contactors isolation barriers and pyro-fuse cutoff triggers.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -479,7 +479,7 @@ export function HighVoltage() {
             <AlertTriangle className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">HV Isolation Contactors</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             Relays inside the battery container isolate high voltage inputs. They instantly snap open in an accident, separating cell voltage grids from auxiliary cabling routes.
           </p>
         </div>
@@ -489,7 +489,7 @@ export function HighVoltage() {
             <ShieldCheck className="w-4.5 h-4.5" />
             <span className="text-xs font-extrabold text-white uppercase tracking-wider">Emergency Pyro-Fuse Cutoff</span>
           </div>
-          <p className="text-xs text-[#AEB5C0]/80 leading-relaxed">
+          <p className="text-xs text-muted-foreground/80 leading-relaxed">
             A fast-acting fuse blown by a micro-explosive charge triggered by the BMS. Cuts pack currents within milliseconds during short-circuits.
           </p>
         </div>

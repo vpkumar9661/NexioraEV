@@ -28,11 +28,11 @@ export function LearningRoadmap({ completedSteps, onToggleStep }: LearningRoadma
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-extrabold text-white">Learning Roadmap</h2>
-          <p className="text-sm text-[#AEB5C0]/60 mt-1">Track your learning journey through EV fundamentals</p>
+          <p className="text-sm text-muted-foreground/60 mt-1">Track your learning journey through EV fundamentals</p>
         </div>
         <div className="text-right">
           <span className="text-2xl font-extrabold text-[#A78BFA]">{progressPercent}%</span>
-          <span className="text-[11px] text-[#AEB5C0]/50 block">Complete</span>
+          <span className="text-[11px] text-muted-foreground/50 block">Complete</span>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ export function LearningRoadmap({ completedSteps, onToggleStep }: LearningRoadma
                       ? "bg-[#8B5CF6] border-[#8B5CF6] text-white shadow-[0_0_12px_rgba(139,92,246,0.3)]"
                       : isCurrent
                       ? "bg-[#8B5CF6]/10 border-[#8B5CF6]/40 text-[#A78BFA] animate-pulse"
-                      : "bg-white/5 border-white/10 text-[#AEB5C0]/40"
+                      : "bg-white/5 border-white/10 text-muted-foreground/40"
                   }`}
                 >
                   {isCompleted ? (
@@ -81,7 +81,7 @@ export function LearningRoadmap({ completedSteps, onToggleStep }: LearningRoadma
               }`}>
                 <div>
                   <h4 className="text-sm font-bold text-white">{step.title}</h4>
-                  <span className="text-[11px] text-[#AEB5C0]/55">{step.time}</span>
+                  <span className="text-[11px] text-muted-foreground/55">{step.time}</span>
                 </div>
                 {isCurrent && (
                   <span className="text-[10px] font-bold text-[#A78BFA] bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 px-2 py-0.5 rounded-full">

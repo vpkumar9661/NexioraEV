@@ -22,7 +22,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight font-sans">
             NexioraEV Engineering Toolkit™
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Professional engineering calculators, simulations, optimization tools, and technical references for Electric Vehicle design and cell chemistry analysis.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -87,14 +87,14 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
             <span className="text-xs font-black text-white block">
               {stat.value}
             </span>
-            <span className="text-[9.5px] text-[#AEB5C0]/50 block mt-1">
+            <span className="text-[9.5px] text-muted-foreground/50 block mt-1">
               {stat.desc}
             </span>
           </div>
@@ -120,7 +120,7 @@ export function ToolCategories() {
     <section id="categories" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Engineering Toolbox Categories</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Quickly scroll down to specific calculation workspaces.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Quickly scroll down to specific calculation workspaces.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -128,7 +128,7 @@ export function ToolCategories() {
           <a
             key={w.id}
             href={`#${w.id}`}
-            className="p-4 rounded-xl border border-white/5 bg-white/2 hover:border-[#00C853]/20 hover:bg-[#00C853]/5 hover:shadow-[0_4px_24px_rgba(0,200,83,0.04)] text-center transition-all duration-300 font-bold text-xs text-[#AEB5C0] hover:text-white"
+            className="p-4 rounded-xl border border-white/5 bg-white/2 hover:border-[#00C853]/20 hover:bg-[#00C853]/5 hover:shadow-[0_4px_24px_rgba(0,200,83,0.04)] text-center transition-all duration-300 font-bold text-xs text-muted-foreground hover:text-white"
           >
             {w.label}
           </a>
@@ -164,7 +164,7 @@ export function BatteryTools() {
     <section id="battery" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Battery Pack Configuration</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Design series-parallel cell matrices. Calculates total nominal voltage, total Ah capacity, and estimated pack weight.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Design series-parallel cell matrices. Calculates total nominal voltage, total Ah capacity, and estimated pack weight.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -173,7 +173,7 @@ export function BatteryTools() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Series Cells (S)</span>
+              <span className="text-muted-foreground/40 uppercase">Series Cells (S)</span>
               <span className="text-white">{series} cells</span>
             </div>
             <input
@@ -188,7 +188,7 @@ export function BatteryTools() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Parallel Cells (P)</span>
+              <span className="text-muted-foreground/40 uppercase">Parallel Cells (P)</span>
               <span className="text-white">{parallel} cells</span>
             </div>
             <input
@@ -208,19 +208,19 @@ export function BatteryTools() {
           
           <div className="grid grid-cols-2 gap-4 text-xs font-semibold">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Nominal Voltage</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Nominal Voltage</span>
               <strong className="text-sm text-white block mt-0.5">{packStats.voltage} V</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Continuous Capacity</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Continuous Capacity</span>
               <strong className="text-sm text-white block mt-0.5">{packStats.totalAh} Ah</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Energy Stored</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Energy Stored</span>
               <strong className="text-sm text-[#00C853] block mt-0.5">{packStats.capacityKwh} kWh</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Weight</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Estimated Weight</span>
               <strong className="text-sm text-white block mt-0.5">~{packStats.weight} kg</strong>
             </div>
           </div>
@@ -253,7 +253,7 @@ export function ChargingTools() {
     <section id="charging" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Charging Time Calculator</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Input charger grid output power against target pack size. WLTP 90% converter efficiency is modeled.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Input charger grid output power against target pack size. WLTP 90% converter efficiency is modeled.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -262,7 +262,7 @@ export function ChargingTools() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Charger Output Power</span>
+              <span className="text-muted-foreground/40 uppercase">Charger Output Power</span>
               <span className="text-white">{power} kW</span>
             </div>
             <input
@@ -278,7 +278,7 @@ export function ChargingTools() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Pack Capacity Size</span>
+              <span className="text-muted-foreground/40 uppercase">Pack Capacity Size</span>
               <span className="text-white">{packSize} kWh</span>
             </div>
             <input
@@ -296,7 +296,7 @@ export function ChargingTools() {
         {/* Readout stats Right */}
         <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[140px]">
           <div className="space-y-1">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated Duration (10% to 100%)</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Estimated Duration (10% to 100%)</span>
             <strong className="text-xl font-black text-white block mt-2">
               {chargeTime.hours} hours {chargeTime.mins} minutes
             </strong>
@@ -330,7 +330,7 @@ export function MotorTools() {
     <section id="motor" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white">Motor Speed & Transmission</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Calculate target output wheel speeds based on continuous motor RPM and transmission gear ratios.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Calculate target output wheel speeds based on continuous motor RPM and transmission gear ratios.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -339,7 +339,7 @@ export function MotorTools() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Motor Rotor RPM</span>
+              <span className="text-muted-foreground/40 uppercase">Motor Rotor RPM</span>
               <span className="text-white">{rpm} rpm</span>
             </div>
             <input
@@ -355,7 +355,7 @@ export function MotorTools() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Gear Reduction Ratio</span>
+              <span className="text-muted-foreground/40 uppercase">Gear Reduction Ratio</span>
               <span className="text-white">{ratio} : 1</span>
             </div>
             <input
@@ -376,11 +376,11 @@ export function MotorTools() {
           
           <div className="grid grid-cols-2 gap-4 text-xs font-semibold">
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Wheel Output Speed</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Wheel Output Speed</span>
               <strong className="text-sm text-white block mt-0.5">{wheelSpeed.wheelRpm} rpm</strong>
             </div>
             <div>
-              <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Calculated Vehicle Speed</span>
+              <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Calculated Vehicle Speed</span>
               <strong className="text-sm text-white block mt-0.5">{wheelSpeed.kmPerHour} km/h</strong>
             </div>
           </div>
@@ -413,7 +413,7 @@ export function PerformanceTools() {
     <section id="performance" className="space-y-6">
       <div>
         <h2 className="text-xl font-black text-white font-sans">Aerodynamics & Range Estimator</h2>
-        <p className="text-xs text-[#AEB5C0]/60 mt-0.5">Calculates estimated WLTP driving range based on aerodynamic drag (Cd) and pack energy sizing.</p>
+        <p className="text-xs text-muted-foreground/60 mt-0.5">Calculates estimated WLTP driving range based on aerodynamic drag (Cd) and pack energy sizing.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
@@ -422,7 +422,7 @@ export function PerformanceTools() {
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 space-y-4 text-xs">
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Drag Coefficient (Cd)</span>
+              <span className="text-muted-foreground/40 uppercase">Drag Coefficient (Cd)</span>
               <span className="text-white">{drag} Cd</span>
             </div>
             <input
@@ -438,7 +438,7 @@ export function PerformanceTools() {
 
           <div className="space-y-1.5">
             <div className="flex justify-between font-bold text-[10px]">
-              <span className="text-[#AEB5C0]/40 uppercase">Pack capacity</span>
+              <span className="text-muted-foreground/40 uppercase">Pack capacity</span>
               <span className="text-white">{pack} kWh</span>
             </div>
             <input
@@ -456,7 +456,7 @@ export function PerformanceTools() {
         {/* Readout stats Right */}
         <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[140px]">
           <div className="space-y-1">
-            <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Estimated WLTP Driving Range</span>
+            <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Estimated WLTP Driving Range</span>
             <strong className="text-2xl font-black text-[#00C853] block mt-2">
               ~{wltpRange} km
             </strong>

@@ -40,14 +40,14 @@ const DATA_MAP: Record<string, {
               <Plug className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Dual AC Charger (22kW)</p>
-                <p className="text-xs text-[#AEB5C0]/75">Perfect for commercial complexes and workplaces.</p>
+                <p className="text-xs text-muted-foreground/75">Perfect for commercial complexes and workplaces.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Load Balancing Engine</p>
-                <p className="text-xs text-[#AEB5C0]/75">Automatically shares available power without upgrading local grid.</p>
+                <p className="text-xs text-muted-foreground/75">Automatically shares available power without upgrading local grid.</p>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const DATA_MAP: Record<string, {
         title: "DC Fast Charging",
         description: "High-speed charging corridors for inter-city travel and commercial operations.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">15-min Charge:</span> Replenish up to 80% range for commercial cars.
             </div>
@@ -89,14 +89,14 @@ const DATA_MAP: Record<string, {
               <Battery className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart Swap Cabinets</p>
-                <p className="text-xs text-[#AEB5C0]/75">IoT-connected cabinets charging batteries safely.</p>
+                <p className="text-xs text-muted-foreground/75">IoT-connected cabinets charging batteries safely.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <RefreshCw className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Hot Swap Feasibility</p>
-                <p className="text-xs text-[#AEB5C0]/75">Swap active battery modules instantly without shutting systems off.</p>
+                <p className="text-xs text-muted-foreground/75">Swap active battery modules instantly without shutting systems off.</p>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const DATA_MAP: Record<string, {
         title: "Next-Gen Recycling",
         description: "We recover lithium, cobalt, and nickel from degraded EV batteries through hydrometallurgy.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Closed Loop:</span> Reintroducing recovered materials into the supply chain.
             </div>
@@ -138,14 +138,14 @@ const DATA_MAP: Record<string, {
               <Truck className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Predictive Routing</p>
-                <p className="text-xs text-[#AEB5C0]/75">Guides fleets along routes with optimal charging coverage.</p>
+                <p className="text-xs text-muted-foreground/75">Guides fleets along routes with optimal charging coverage.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <BarChart3 className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Daily Consumption Audits</p>
-                <p className="text-xs text-[#AEB5C0]/75">Calculates precise kWh usage per mile for commercial dispatch.</p>
+                <p className="text-xs text-muted-foreground/75">Calculates precise kWh usage per mile for commercial dispatch.</p>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const DATA_MAP: Record<string, {
         title: "Driver Performance & Telematics",
         description: "Assess driving patterns to optimize regenerative braking efficiency and minimize brake wear.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Safety Scorecards:</span> Highlighting harsh cornering, acceleration and speed warnings.
             </div>
@@ -187,14 +187,14 @@ const DATA_MAP: Record<string, {
               <Sun className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Microgrid Solar Inverters</p>
-                <p className="text-xs text-[#AEB5C0]/75">Lossless DC-to-DC charging straight from panels to vehicles.</p>
+                <p className="text-xs text-muted-foreground/75">Lossless DC-to-DC charging straight from panels to vehicles.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Sun className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Peak Load Management</p>
-                <p className="text-xs text-[#AEB5C0]/75">Decouples peak EV charging from utility grid demands.</p>
+                <p className="text-xs text-muted-foreground/75">Decouples peak EV charging from utility grid demands.</p>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ const DATA_MAP: Record<string, {
         title: "BESS Peak Shaving",
         description: "Saves commercial sites thousands of dollars monthly in utility grid demand surcharges.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Solar Smoothing:</span> Prevents solar dropouts during overcast days.
             </div>
@@ -236,14 +236,14 @@ const DATA_MAP: Record<string, {
               <Building className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Workplace Benefit Plan</p>
-                <p className="text-xs text-[#AEB5C0]/75">Provide free or subsidized charging for employees.</p>
+                <p className="text-xs text-muted-foreground/75">Provide free or subsidized charging for employees.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Monetization & API Integration</p>
-                <p className="text-xs text-[#AEB5C0]/75">Integrate payments with existing parking gates or retail apps.</p>
+                <p className="text-xs text-muted-foreground/75">Integrate payments with existing parking gates or retail apps.</p>
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ const DATA_MAP: Record<string, {
         title: "Retail Attraction",
         description: "Installing EV chargers increases customer dwell time and average cart size.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Premium Visibility:</span> Feature chargers automatically on public navigation apps.
             </div>
@@ -285,14 +285,14 @@ const DATA_MAP: Record<string, {
               <Activity className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Dynamic Grid Matching</p>
-                <p className="text-xs text-[#AEB5C0]/75">Adapts output grid current dynamically based on load variations.</p>
+                <p className="text-xs text-muted-foreground/75">Adapts output grid current dynamically based on load variations.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Smart Arbitrage Engine</p>
-                <p className="text-xs text-[#AEB5C0]/75">Charges at night during cheap tariffs, discharges during peak hours.</p>
+                <p className="text-xs text-muted-foreground/75">Charges at night during cheap tariffs, discharges during peak hours.</p>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ const DATA_MAP: Record<string, {
         title: "Grid Stabilization Services",
         description: "Contribute to local grid frequency control, securing incentives from electricity distribution companies.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Frequency Response:</span> Mitigates sudden power dropouts in localized areas.
             </div>
@@ -334,14 +334,14 @@ const DATA_MAP: Record<string, {
               <Brain className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Anomalous Spike Warnings</p>
-                <p className="text-xs text-[#AEB5C0]/75">Warns of micro-faults 48 hours before physical manifestation.</p>
+                <p className="text-xs text-muted-foreground/75">Warns of micro-faults 48 hours before physical manifestation.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Cpu className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Edge AI Processor Sync</p>
-                <p className="text-xs text-[#AEB5C0]/75">Real-time local anomaly inference without cloud latency issues.</p>
+                <p className="text-xs text-muted-foreground/75">Real-time local anomaly inference without cloud latency issues.</p>
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@ const DATA_MAP: Record<string, {
         title: "Intelligent Load Forecasting",
         description: "Analyzes ambient weather, seasonal variables, and historic patterns to optimize next-day grid loads.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Weather adaptation:</span> Slows DC charging current under heavy external heat.
             </div>
@@ -383,14 +383,14 @@ const DATA_MAP: Record<string, {
               <Headphones className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">Full Feasibility Audits</p>
-                <p className="text-xs text-[#AEB5C0]/75">Detailed grid load assessments before purchasing chargers.</p>
+                <p className="text-xs text-muted-foreground/75">Detailed grid load assessments before purchasing chargers.</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
               <Settings className="w-5 h-5 text-[#00D26A]" />
               <div>
                 <p className="text-sm font-bold text-white">EV Infrastructure Scoping</p>
-                <p className="text-xs text-[#AEB5C0]/75">Custom grid wiring architecture plan scaled for your commercial layout.</p>
+                <p className="text-xs text-muted-foreground/75">Custom grid wiring architecture plan scaled for your commercial layout.</p>
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ const DATA_MAP: Record<string, {
         title: "Policy & Incentives Advisory",
         description: "We help enterprises maximize green subsidy programs and local government grid incentives.",
         content: (
-          <div className="w-full space-y-3 text-xs text-[#AEB5C0]/80">
+          <div className="w-full space-y-3 text-xs text-muted-foreground/80">
             <div className="p-2.5 rounded-lg bg-[#00D26A]/5 border border-[#00D26A]/10">
               <span className="text-[#00D26A] font-bold">Subsidies Mapping:</span> Integrates PM E-Drive and state tax write-offs.
             </div>

@@ -27,7 +27,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4.5xl font-black tracking-tight text-white leading-tight">
             EV Components Studio
           </h1>
-          <p className="text-[#AEB5C0]/85 text-sm sm:text-base leading-relaxed max-w-lg">
+          <p className="text-muted-foreground/85 text-sm sm:text-base leading-relaxed max-w-lg">
             Discover every component inside an Electric Vehicle through immersive 3D exploded visualizations, powertrain power-flow simulations, and AI-powered diagnostic advisors.
           </p>
           <div className="flex flex-wrap gap-2.5 pt-2">
@@ -111,14 +111,14 @@ export function StatsBar() {
           key={idx}
           className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
-          <span className="text-[9.5px] font-extrabold text-[#AEB5C0]/40 uppercase tracking-widest leading-none block">
+          <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
           </span>
           <div className="mt-3.5">
             <span className="text-[12px] font-black text-white block">
               {stat.value}
             </span>
-            <span className="text-[10px] text-[#AEB5C0]/50 block mt-1">
+            <span className="text-[10px] text-muted-foreground/50 block mt-1">
               {stat.desc}
             </span>
           </div>
@@ -157,7 +157,7 @@ export function ComponentGallery() {
     <section id="gallery" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Engineering Component Gallery</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Discover structural parameters, voltage thresholds, and purposes of EV mechanics.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Discover structural parameters, voltage thresholds, and purposes of EV mechanics.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -169,7 +169,7 @@ export function ComponentGallery() {
           >
             <div>
               <h3 className="text-xs font-bold text-white group-hover:text-[#22D3EE] transition-colors uppercase tracking-wider">{comp.name}</h3>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-2 line-clamp-2 leading-relaxed">{comp.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-2 line-clamp-2 leading-relaxed">{comp.desc}</p>
             </div>
             <span className="text-[9.5px] font-bold text-cyan-400 mt-2 block">
               Learn Specs →
@@ -191,7 +191,7 @@ export function ComponentGallery() {
                 <h4 className="text-xs font-black text-white uppercase tracking-wider">{selectedComp.name}</h4>
                 <button
                   onClick={() => setSelectedComp(null)}
-                  className="text-xs text-[#AEB5C0]/50 hover:text-white cursor-pointer"
+                  className="text-xs text-muted-foreground/50 hover:text-white cursor-pointer"
                 >
                   ✕
                 </button>
@@ -199,11 +199,11 @@ export function ComponentGallery() {
 
               <div className="space-y-3 text-xs leading-relaxed">
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Description Details</span>
-                  <p className="text-[#AEB5C0]/85 mt-1">{selectedComp.desc}</p>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Description Details</span>
+                  <p className="text-muted-foreground/85 mt-1">{selectedComp.desc}</p>
                 </div>
                 <div>
-                  <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block">Engineering Limits</span>
+                  <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Engineering Limits</span>
                   <strong className="text-[#22D3EE] mt-0.5 block">{selectedComp.techSpec}</strong>
                 </div>
               </div>
@@ -230,12 +230,12 @@ export function MaintenanceCenter() {
     <section id="maintenance" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Maintenance Center</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Review standard diagnostic cycles and drive system fluid replacement parameters.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Review standard diagnostic cycles and drive system fluid replacement parameters.</p>
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 space-y-4">
-          <span className="text-[10px] text-[#AEB5C0]/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Periodic inspection checklist</span>
+          <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Periodic inspection checklist</span>
           <div className="space-y-2">
             {SCHEDULE.map((s, idx) => (
               <div key={idx} className="p-3.5 rounded-xl bg-white/2 border border-white/5 flex justify-between items-center text-xs">
@@ -243,7 +243,7 @@ export function MaintenanceCenter() {
                   <CheckSquare className="w-4.5 h-4.5 text-[#22D3EE] shrink-0" />
                   <div>
                     <h5 className="font-bold text-white leading-snug">{s.item}</h5>
-                    <span className="text-[10px] text-[#AEB5C0]/50">{s.interval}</span>
+                    <span className="text-[10px] text-muted-foreground/50">{s.interval}</span>
                   </div>
                 </div>
                 <span className="text-[9px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20 shrink-0">
@@ -256,8 +256,8 @@ export function MaintenanceCenter() {
 
         {/* Maintenance tips */}
         <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4 text-xs">
-          <span className="text-[9px] text-[#AEB5C0]/40 font-bold uppercase block tracking-wider border-b border-white/5 pb-2">Diagnostic Tips</span>
-          <div className="space-y-3 font-semibold text-[#AEB5C0]/85 leading-relaxed">
+          <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block tracking-wider border-b border-white/5 pb-2">Diagnostic Tips</span>
+          <div className="space-y-3 font-semibold text-muted-foreground/85 leading-relaxed">
             <p>
               * <strong>Coolant Flushing:</strong> Inadequate flushing leads to localized hotspot clusters within cells, causing thermal runaway triggers.
             </p>
@@ -287,7 +287,7 @@ export function ResearchLibrary() {
     <section id="library" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Technical Research Library</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Review publications covering silicon-carbide, thermal fluids, and isolations safety.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Review publications covering silicon-carbide, thermal fluids, and isolations safety.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -305,7 +305,7 @@ export function ResearchLibrary() {
             </div>
             <button
               onClick={() => alert(`Initiating mock download: ${paper.doc}`)}
-              className="p-2 rounded-xl border border-white/5 bg-white/3 text-[#AEB5C0] hover:text-white hover:bg-white/5 cursor-pointer"
+              className="p-2 rounded-xl border border-white/5 bg-white/3 text-muted-foreground hover:text-white hover:bg-white/5 cursor-pointer"
             >
               <FileDown className="w-4.5 h-4.5" />
             </button>
@@ -332,7 +332,7 @@ export function VideoLearning() {
     <section id="videos" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Video Learning Courses</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Review lecture video guides covering drive systems configurations.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Review lecture video guides covering drive systems configurations.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -350,9 +350,9 @@ export function VideoLearning() {
               </span>
             </div>
             <div className="p-4 space-y-2">
-              <span className="text-[9px] font-bold text-[#AEB5C0]/40 uppercase tracking-widest block">{vid.level}</span>
+              <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block">{vid.level}</span>
               <h4 className="text-xs font-bold text-white leading-snug group-hover:text-[#22D3EE] transition-colors">{vid.title}</h4>
-              <span className="text-[10px] text-[#AEB5C0]/50 block">Speaker: {vid.author}</span>
+              <span className="text-[10px] text-muted-foreground/50 block">Speaker: {vid.author}</span>
             </div>
           </div>
         ))}
@@ -370,7 +370,7 @@ export function DownloadCenter() {
     <section id="downloads" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Downloads Catalog</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Download CAD technical blueprints, equations worksheets, and standard schematics.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Download CAD technical blueprints, equations worksheets, and standard schematics.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -385,7 +385,7 @@ export function DownloadCenter() {
           >
             <div>
               <h4 className="text-xs font-bold text-white uppercase tracking-wider">{item.title}</h4>
-              <p className="text-[11.5px] text-[#AEB5C0]/55 mt-1 leading-normal">{item.desc}</p>
+              <p className="text-[11.5px] text-muted-foreground/55 mt-1 leading-normal">{item.desc}</p>
             </div>
             <button
               onClick={() => alert(`Downloading file: ${item.file}`)}
@@ -417,7 +417,7 @@ export function FAQSection() {
     <section id="faq" className="space-y-6">
       <div>
         <h2 className="text-2xl font-extrabold text-white">Frequently Asked Questions</h2>
-        <p className="text-sm text-[#AEB5C0]/60 mt-1">Answers to standard queries relating to inverters and transmissions.</p>
+        <p className="text-sm text-muted-foreground/60 mt-1">Answers to standard queries relating to inverters and transmissions.</p>
       </div>
 
       <div className="space-y-2">
@@ -437,10 +437,10 @@ export function FAQSection() {
                 className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
               >
                 <span className="text-xs font-bold text-white">{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-[#AEB5C0]/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
+                <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-                <p className="px-5 pb-4 text-[11.5px] text-[#AEB5C0]/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
+                <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
               </div>
@@ -464,7 +464,7 @@ export function ContinueCTA() {
         <div className="space-y-2">
           <span className="text-[9.5px] font-extrabold text-purple-400 uppercase tracking-widest block">Next Subject Module</span>
           <h3 className="text-lg font-bold text-white">Future Electric Mobility</h3>
-          <p className="text-xs text-[#AEB5C0]/60 max-w-md leading-relaxed">
+          <p className="text-xs text-muted-foreground/60 max-w-md leading-relaxed">
             Transition to the next module. Explore solid-state cells, megawatt dynamic charging pads, and hyper-efficient hub-motors.
           </p>
         </div>
