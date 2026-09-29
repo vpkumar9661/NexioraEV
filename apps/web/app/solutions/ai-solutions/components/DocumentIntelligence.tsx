@@ -85,7 +85,7 @@ export function DocumentIntelligence() {
         </div>
 
         {/* Right Extracted Results */}
-        <div className="lg:col-span-7 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-7 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           
           <div className="space-y-4">
             <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground/40 border-b border-white/5 pb-2">
@@ -117,7 +117,7 @@ export function DocumentIntelligence() {
                 </div>
               </div>
             ) : (
-              <div className="h-[200px] flex items-center justify-center text-xs text-muted-foreground/40 font-mono">
+              <div className="h-50 flex items-center justify-center text-xs text-muted-foreground/40 font-mono">
                 No active document uploaded. Trigger upload test on the left.
               </div>
             )}

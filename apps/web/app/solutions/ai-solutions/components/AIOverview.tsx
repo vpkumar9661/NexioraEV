@@ -106,7 +106,7 @@ function StatCard({
         </div>
 
         {/* Sparkline chart */}
-        <div className="w-[80px] h-[30px] opacity-70 hover:opacity-100 transition-opacity">
+        <div className="w-20 h-7.5 opacity-70 hover:opacity-100 transition-opacity">
           <svg className="w-full h-full overflow-visible">
             <path
               d={`M ${pointsString}`}

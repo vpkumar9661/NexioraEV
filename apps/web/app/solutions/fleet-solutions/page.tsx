@@ -121,8 +121,8 @@ export default function FleetSolutionsPage() {
         />
 
         {/* Ambient Aurora glow balls */}
-        <div className="absolute top-[10%] left-[5%] w-[550px] h-[550px] bg-radial from-[#3B82F6]/2.5 to-transparent blur-3xl" />
-        <div className="absolute bottom-[20%] right-[10%] w-[450px] h-[450px] bg-radial from-[#00D4FF]/2.5 to-transparent blur-3xl" />
+        <div className="absolute top-[10%] left-[5%] w-137.5 h-137.5 bg-radial from-[#3B82F6]/2.5 to-transparent blur-3xl" />
+        <div className="absolute bottom-[20%] right-[10%] w-112.5 h-112.5 bg-radial from-[#00D4FF]/2.5 to-transparent blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex flex-col pb-6">
@@ -182,7 +182,7 @@ export default function FleetSolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
-            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-[120px] scrollbar-thin scroll-smooth"
+            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             
             {/* Section 1: Premium Hero */}
@@ -345,7 +345,7 @@ export default function FleetSolutionsPage() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3.5 px-6 py-4 rounded-[20px] border border-[#ef4444]/30 bg-[#05070d]/90 backdrop-blur-2xl shadow-[0_24px_50px_rgba(239,68,68,0.2)]"
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3.5 px-6 py-4 rounded-[20px] border border-destructive/30 bg-[#05070d]/90 backdrop-blur-2xl shadow-[0_24px_50px_rgba(239,68,68,0.2)]"
           >
             <div className="w-5 h-5 rounded-full border-2 border-white/10 border-t-rose-500 animate-spin" />
             <div className="text-xs">

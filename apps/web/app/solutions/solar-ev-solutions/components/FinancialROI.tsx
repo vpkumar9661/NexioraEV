@@ -79,7 +79,7 @@ export function FinancialROI() {
 
         {/* Right Column Financial Cards Grid */}
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               CAPEX & ITC Deductions
             </span>
@@ -89,7 +89,7 @@ export function FinancialROI() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Net Capital Cost
             </span>
@@ -99,7 +99,7 @@ export function FinancialROI() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Year 1 Net Savings
             </span>
@@ -109,7 +109,7 @@ export function FinancialROI() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Payback Cycle
             </span>
@@ -119,7 +119,7 @@ export function FinancialROI() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               25-Year Cumulative
             </span>
@@ -129,7 +129,7 @@ export function FinancialROI() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Internal Rate of Return
             </span>

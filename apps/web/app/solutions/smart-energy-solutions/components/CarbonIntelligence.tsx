@@ -67,7 +67,7 @@ export function CarbonIntelligence() {
 
         {/* Right Column ESG Metrics Grid */}
         <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               CO₂ Saved
             </span>
@@ -77,7 +77,7 @@ export function CarbonIntelligence() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Trees Equivalent
             </span>
@@ -87,7 +87,7 @@ export function CarbonIntelligence() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               ESG Score rating
             </span>
@@ -97,7 +97,7 @@ export function CarbonIntelligence() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Energy Efficiency
             </span>
@@ -107,7 +107,7 @@ export function CarbonIntelligence() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Green Index
             </span>
@@ -117,7 +117,7 @@ export function CarbonIntelligence() {
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[120px]">
+          <div className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-30">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
               Fossil Fuel Saved
             </span>

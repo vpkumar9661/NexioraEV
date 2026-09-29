@@ -57,14 +57,14 @@ export function AIHero({ onLaunchAI, onStartAnalysis }: AIHeroProps) {
         </div>
 
         {/* Right Interactive SVG column */}
-        <div className="lg:col-span-5 bg-black/40 border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-[300px]">
+        <div className="lg:col-span-5 bg-black/40 border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-75">
           <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground/40 border-b border-white/5 pb-2">
             <span>COGNITIVE NEURAL HOLOGRAM CORE</span>
             <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] animate-pulse" /> ENGINE ACTIVE</span>
           </div>
 
           <div className="flex-1 flex items-center justify-center pt-2">
-            <svg viewBox="0 0 160 120" className="w-full h-full max-h-[180px] overflow-visible">
+            <svg viewBox="0 0 160 120" className="w-full h-full max-h-45 overflow-visible">
               {/* Animated Neural network node rings */}
               <circle cx="80" cy="60" r="28" fill="none" stroke="rgba(139,92,246,0.15)" strokeWidth="1" />
               <circle cx="80" cy="60" r="42" fill="none" stroke="rgba(0,212,255,0.1)" strokeWidth="0.8" strokeDasharray="3 6" className="animate-[spin_20s_linear_infinite]" />

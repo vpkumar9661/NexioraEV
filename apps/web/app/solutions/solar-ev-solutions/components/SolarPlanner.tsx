@@ -137,7 +137,7 @@ export function SolarPlanner() {
         </div>
 
         {/* Right Column Calculated Outputs */}
-        <div className="lg:col-span-6 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-6 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           
           <div className="space-y-4">
             <div>
@@ -182,7 +182,7 @@ export function SolarPlanner() {
               <span className="text-[9px] text-muted-foreground/40 font-bold uppercase block">Est. Installation Net CAPEX</span>
               <span className="text-2xl font-black text-[#00E676]">${installationCost.toLocaleString()}</span>
             </div>
-            <div className="p-3 bg-white/2 border border-white/5 rounded-xl text-[9px] text-muted-foreground/60 max-w-[200px] flex gap-2 items-start">
+            <div className="p-3 bg-white/2 border border-white/5 rounded-xl text-[9px] text-muted-foreground/60 max-w-50 flex gap-2 items-start">
               <ShieldCheck className="w-4 h-4 text-[#00E676] shrink-0 mt-0.5" />
               <p>Includes 30% Federal ITC solar tax credit deduction.</p>
             </div>

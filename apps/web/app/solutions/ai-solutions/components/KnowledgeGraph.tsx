@@ -36,7 +36,7 @@ export function KnowledgeGraph() {
             <span>CLICK POINT NODE TO EXPAND DETAILS</span>
           </div>
 
-          <div className="h-[240px] w-full relative">
+          <div className="h-60 w-full relative">
             <svg viewBox="0 0 200 200" className="w-full h-full overflow-visible">
               {/* Connecting synapsis lines */}
               <line x1="100" y1="50" x2="40" y2="120" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" />
@@ -72,7 +72,7 @@ export function KnowledgeGraph() {
         </div>
 
         {/* Right Details Panel */}
-        <div className="lg:col-span-5 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-5 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}

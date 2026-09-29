@@ -65,7 +65,7 @@ export function EnergyFlowCenter() {
                 }`}
               >
                 <div>
-                  <span className="text-xs font-black block flex items-center gap-1.5">
+                  <span className="text-xs font-black flex items-center gap-1.5">
                     Storm Watch Mode
                     <ShieldAlert className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
                   </span>
@@ -115,7 +115,7 @@ export function EnergyFlowCenter() {
               <span>LIVE CURRENT ROUTING</span>
             </div>
 
-            <div className="h-[220px] w-full relative">
+            <div className="h-55 w-full relative">
               <svg viewBox="0 0 200 200" className="w-full h-full overflow-visible">
                 {/* Node coordinates:
                     Solar: (100, 30)

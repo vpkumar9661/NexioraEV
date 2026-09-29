@@ -752,8 +752,8 @@ export default function HomePage() {
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[700px] h-[700px] opacity-35 bg-radial-gradient from-[#00D26A]/15 to-transparent filter blur-3xl" />
-          <div className="absolute top-0 right-1/4 translate-x-1/2 w-[700px] h-[700px] opacity-35 bg-radial-gradient from-secondary/15 to-transparent filter blur-3xl" />
+          <div className="absolute top-0 left-1/4 -translate-x-1/2 w-175 h-175 opacity-35 bg-radial-gradient from-[#00D26A]/15 to-transparent filter blur-3xl" />
+          <div className="absolute top-0 right-1/4 translate-x-1/2 w-175 h-175 opacity-35 bg-radial-gradient from-secondary/15 to-transparent filter blur-3xl" />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[20%] left-[20%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[60%] left-[75%]" style={{ animationDelay: "3s" }} />
@@ -854,7 +854,7 @@ export default function HomePage() {
           {/* Bottom Grid: 6 Premium Glassmorphic Ecosystem Cards */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16 pt-4 w-full relative z-10">
             {/* Card 1: EV Basics */}
-            <Link href="/evtech/learning-center" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/evtech/learning-center" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00E676] group-hover:text-white transition-colors duration-300">
                   <GraduationCap className="size-4.5" />
@@ -868,7 +868,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 2: Battery Lab */}
-            <Link href="/evtech/battery-lab" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/evtech/battery-lab" className="card-green-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00E676] group-hover:text-white transition-colors duration-300">
                   <Atom className="size-4.5" />
@@ -882,7 +882,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 3: Charging Hub */}
-            <Link href="/charging" className="card-cyan-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/charging" className="card-cyan-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#00D4FF] group-hover:text-white transition-colors duration-300">
                   <BatteryCharging className="size-4.5" />
@@ -896,7 +896,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 4: EV Components */}
-            <Link href="/evtech" className="card-blue-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/evtech" className="card-blue-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#3B82F6] group-hover:text-white transition-colors duration-300">
                   <Cpu className="size-4.5" />
@@ -910,7 +910,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 5: Future Tech */}
-            <Link href="/evtech" className="card-purple-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/evtech" className="card-purple-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#8B5CF6] group-hover:text-white transition-colors duration-300">
                   <Sparkles className="size-4.5" />
@@ -924,7 +924,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 6: AI EV Assistant */}
-            <Link href="/evtech/ai-assistant" className="card-amber-glass p-5 rounded-[18px] group flex flex-col justify-between h-[155px]">
+            <Link href="/evtech/ai-assistant" className="card-amber-glass p-5 rounded-[18px] group flex flex-col justify-between h-38.75">
               <div>
                 <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#FF9800] group-hover:text-white transition-colors duration-300">
                   <Bot className="size-4.5" />
@@ -949,7 +949,7 @@ export default function HomePage() {
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] opacity-50 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-212.5 h-212.5 opacity-50 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10">
@@ -975,7 +975,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] opacity-50 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/3 right-1/4 w-150 h-150 opacity-50 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[20%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-3 h-3 top-[65%] left-[15%]" style={{ animationDelay: "3s" }} />
@@ -989,10 +989,10 @@ export default function HomePage() {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight">
               Why Choose <span className="text-gradient-cyan">NexioraEV</span>?
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed">
               Discover the values that set us apart as India&apos;s trusted platform for next-generation smart mobility.
             </p>
           </div>
@@ -1003,7 +1003,7 @@ export default function HomePage() {
               const cardStyles = ["card-blue-glass", "card-dark-glass", "card-blue-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} p-6 rounded-[18px] flex flex-col justify-start h-[190px]`}>
+                <div key={idx} className={`${currentCardStyle} p-6 rounded-[18px] flex flex-col justify-start h-47.5`}>
                   <div className="size-9 flex items-center justify-center rounded-lg bg-(--accent)/10 text-(--accent) border border-(--accent)/20 shadow-[0_0_10px_rgba(var(--accent-rgb),0.1)]">
                     <CardIcon className="size-4.5" />
                   </div>
@@ -1026,7 +1026,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10 text-center">
@@ -1060,8 +1060,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.25] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] opacity-60 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/3 left-1/4 w-150 h-150 opacity-60 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute bottom-1/4 right-1/4 w-125 h-125 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[20%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[60%] left-[15%]" style={{ animationDelay: "3s" }} />
@@ -1076,10 +1076,10 @@ export default function HomePage() {
           
           <div className="mb-12 flex flex-col sm:flex-row items-start sm:items-end justify-between">
             <div>
-              <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
+              <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight">
                 Latest EV <span className="text-gradient-blue">News & Reviews</span>
               </h2>
-              <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm leading-relaxed">
+              <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm leading-relaxed">
                 Daily reporting on policies, cell technology, and infrastructure rollout.
               </p>
             </div>
@@ -1093,7 +1093,7 @@ export default function HomePage() {
               const cardStyles = ["card-blue-glass", "card-dark-glass", "card-blue-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} rounded-[20px] overflow-hidden flex flex-col h-[380px]`}>
+                <div key={idx} className={`${currentCardStyle} rounded-[20px] overflow-hidden flex flex-col h-95`}>
                   <div className="h-44 w-full relative overflow-hidden bg-slate-900">
                     <Image 
                       src={article.img} 
@@ -1135,7 +1135,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[15%] left-[25%]" style={{ animationDelay: "0s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[70%] left-[85%]" style={{ animationDelay: "2s" }} />
@@ -1149,10 +1149,10 @@ export default function HomePage() {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight">
               EV <span className="text-gradient-purple">Technology Highlights</span>
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed">
               State-of-the-art power electronics, modular skateboard chassis architectures, and automated cell systems.
             </p>
           </div>
@@ -1163,7 +1163,7 @@ export default function HomePage() {
               const cardStyles = ["card-purple-glass", "card-dark-glass", "card-indigo-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-[160px]`}>
+                <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-40`}>
                   <div>
                     <div className="size-8 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-(--accent) shadow-[0_0_10px_rgba(var(--accent-rgb),0.1)]">
                       <Icon className="size-4" />
@@ -1188,7 +1188,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.18] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[30%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-2.5 h-2.5 top-[65%] left-[20%]" style={{ animationDelay: "3s" }} />
@@ -1272,7 +1272,7 @@ export default function HomePage() {
                 const cardStyles = ["card-green-glass", "card-dark-glass", "card-green-glass", "card-dark-glass"];
                 const currentCardStyle = cardStyles[idx % 4];
                 return (
-                  <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-[145px]`}>
+                  <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-36.25`}>
                     <div>
                       <h3 className="font-bold text-[16px] text-white transition-colors">{calc.title}</h3>
                       <p className="text-[12px] text-[#C5CBD7] mt-2 leading-relaxed">{calc.desc}</p>
@@ -1299,7 +1299,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[20%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[60%] left-[15%]" style={{ animationDelay: "3s" }} />
@@ -1313,10 +1313,10 @@ export default function HomePage() {
           </div>
           
           <div className="mb-12">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight">
               Government <span className="text-gradient-blue">Incentives & Subsidies</span>
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed">
               Find listed direct purchase incentives, state waivers, and clean energy subsidies currently active in India.
             </p>
           </div>
@@ -1353,7 +1353,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[15%] left-[30%]" style={{ animationDelay: "0s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[70%] left-[80%]" style={{ animationDelay: "2s" }} />
@@ -1402,9 +1402,9 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="lg:col-span-8 relative rounded-[24px] overflow-hidden p-2 card-dark-glass">
+            <div className="lg:col-span-8 relative rounded-3xl overflow-hidden p-2 card-dark-glass">
               {/* Mock Map UI inside Dark Glass style */}
-              <div className="h-[320px] w-full rounded-[18px] bg-slate-950 relative overflow-hidden flex items-center justify-center border border-white/5">
+              <div className="h-80 w-full rounded-[18px] bg-slate-950 relative overflow-hidden flex items-center justify-center border border-white/5">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#00E5FF_1px,transparent_1px)] bg-size-[16px_16px]" />
                 
                 {/* Map mockup markers */}
@@ -1445,7 +1445,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.18] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[20%] left-[20%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[65%] left-[80%]" style={{ animationDelay: "3s" }} />
@@ -1460,10 +1460,10 @@ export default function HomePage() {
 
           <div className="mb-12 flex flex-col sm:flex-row items-start sm:items-end justify-between">
             <div>
-              <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight">
+              <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight">
                 Battery Lab <span className="text-gradient-green">Research</span>
               </h2>
-              <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm leading-relaxed">
+              <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm leading-relaxed">
                 Explore degradation factors, safety standards, and comparative chemistry graphs.
               </p>
             </div>
@@ -1509,7 +1509,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[30%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-2 h-2 top-[70%] left-[15%]" style={{ animationDelay: "3s" }} />
@@ -1544,8 +1544,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 p-2 rounded-[24px] card-purple-glass shadow-2xl">
-              <div className="h-[300px] flex flex-col justify-between rounded-[18px] bg-slate-950 border border-white/5 p-4 overflow-hidden">
+            <div className="lg:col-span-7 p-2 rounded-3xl card-purple-glass shadow-2xl">
+              <div className="h-75 flex flex-col justify-between rounded-[18px] bg-slate-950 border border-white/5 p-4 overflow-hidden">
                 <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-2">
                   {chatMessages.map((msg, idx) => (
                     <div key={idx} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
@@ -1587,7 +1587,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.22] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[15%] left-[20%]" style={{ animationDelay: "0s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[75%] left-[80%]" style={{ animationDelay: "2s" }} />
@@ -1603,10 +1603,10 @@ export default function HomePage() {
           </div>
 
           <div className="mb-12 text-center">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight mx-auto">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight mx-auto">
               EV Academy <span className="text-gradient-amber">Learning Paths</span>
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed mx-auto">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed mx-auto">
               Free and certified educational modules built directly for engineers, fleet operators, and buyers.
             </p>
           </div>
@@ -1620,7 +1620,7 @@ export default function HomePage() {
               const cardStyles = ["card-amber-glass", "card-dark-glass", "card-amber-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} p-6 rounded-[20px] flex flex-col justify-between h-[300px]`}>
+                <div key={idx} className={`${currentCardStyle} p-6 rounded-[20px] flex flex-col justify-between h-75`}>
                   <div>
                     <div className="flex justify-between items-center">
                       <span className="text-[11px] font-bold text-(--accent) uppercase tracking-wider">{path.level}</span>
@@ -1656,7 +1656,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[20%] left-[80%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-2.5 h-2.5 top-[60%] left-[15%]" style={{ animationDelay: "3s" }} />
@@ -1672,10 +1672,10 @@ export default function HomePage() {
           </div>
 
           <div className="mb-12 text-center">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight mx-auto">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight mx-auto">
               What the <span className="text-gradient-purple">Community Says</span>
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed mx-auto">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed mx-auto">
               Real reviews from fleet operators, developers, and daily drivers using Nexiora.
             </p>
           </div>
@@ -1685,7 +1685,7 @@ export default function HomePage() {
               const cardStyles = ["card-purple-glass", "card-dark-glass", "card-purple-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} p-6 rounded-[20px] flex flex-col justify-between h-[220px]`}>
+                <div key={idx} className={`${currentCardStyle} p-6 rounded-[20px] flex flex-col justify-between h-55`}>
                   <div>
                     <div className="flex gap-1 text-amber-500 mb-4">
                       {[...Array(test.rating)].map((_, i) => <Star key={i} className="size-3.5 fill-amber-500" />)}
@@ -1715,7 +1715,7 @@ export default function HomePage() {
         {/* Layered Background Design */}
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-25 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 opacity-25 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1746,7 +1746,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[20%] left-[20%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[65%] left-[80%]" style={{ animationDelay: "3s" }} />
@@ -1762,10 +1762,10 @@ export default function HomePage() {
           </div>
 
           <div className="mb-12 text-center">
-            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-[700px] leading-tight mx-auto">
+            <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white max-w-175 leading-tight mx-auto">
               The EV <span className="text-gradient-green">Journey Map</span>
             </h2>
-            <p className="mt-4 text-[#B6BCCB] max-w-[700px] text-sm md:text-base leading-relaxed mx-auto">
+            <p className="mt-4 text-[#B6BCCB] max-w-175 text-sm md:text-base leading-relaxed mx-auto">
               Step-by-step roadmap towards zero-emission smart mobility.
             </p>
           </div>
@@ -1775,7 +1775,7 @@ export default function HomePage() {
               const cardStyles = ["card-green-glass", "card-dark-glass", "card-green-glass", "card-dark-glass"];
               const currentCardStyle = cardStyles[idx % 4];
               return (
-                <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-[160px] relative`}>
+                <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-40 relative`}>
                   <span className="absolute -top-3 -left-3 size-7 flex items-center justify-center rounded-full bg-(--accent) text-white text-xs font-black shadow-lg shadow-emerald-500/20">
                     {idx + 1}
                   </span>
@@ -1800,7 +1800,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-noise pointer-events-none" />
         <div className="absolute inset-0 bg-grid opacity-[0.2] pointer-events-none" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
           <div className="particle-container">
             <div className="particle-p1 w-2.5 h-2.5 top-[15%] left-[20%]" style={{ animationDelay: "0s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[75%] left-[80%]" style={{ animationDelay: "2s" }} />
@@ -1847,7 +1847,7 @@ export default function HomePage() {
                 const cardStyles = ["card-green-glass", "card-dark-glass", "card-green-glass", "card-dark-glass"];
                 const currentCardStyle = cardStyles[idx % 4];
                 return (
-                  <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-[130px] cursor-pointer`}>
+                  <div key={idx} className={`${currentCardStyle} p-5 rounded-[18px] flex flex-col justify-between h-32.5 cursor-pointer`}>
                     <div>
                       <span className="text-[9px] font-black text-(--accent) uppercase tracking-wider">{topic.category}</span>
                       <h3 className="font-bold text-[13.5px] text-white mt-1.5 leading-snug line-clamp-2">{topic.title}</h3>
@@ -1877,8 +1877,8 @@ export default function HomePage() {
             Mobile Downloads
           </div>
 
-          <div className="relative rounded-[24px] overflow-hidden border border-white/5 bg-linear-to-b from-[#8B5CF6]/10 to-transparent p-8 sm:p-12 shadow-2xl card-purple-glass">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
+          <div className="relative rounded-3xl overflow-hidden border border-white/5 bg-linear-to-b from-[#8B5CF6]/10 to-transparent p-8 sm:p-12 shadow-2xl card-purple-glass">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 opacity-40 bg-(--ambient-glow)" style={{ background: "var(--ambient-glow)" }} />
             <div className="grid gap-8 lg:grid-cols-12 items-center relative z-10">
               <div className="lg:col-span-7 space-y-6">
                 <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-extrabold tracking-tight text-white leading-tight">
@@ -1938,8 +1938,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[36px_36px] opacity-45 pointer-events-none" />
         
         {/* Animated Mesh Glows */}
-        <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-[#00D26A]/5 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s" }} />
-        <div className="absolute bottom-10 left-1/4 w-[450px] h-[450px] bg-[#3B82F6]/5 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "14s" }} />
+        <div className="absolute -top-40 right-1/4 w-125 h-125 bg-[#00D26A]/5 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "10s" }} />
+        <div className="absolute bottom-10 left-1/4 w-112.5 h-112.5 bg-[#3B82F6]/5 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "14s" }} />
 
         {/* Energy Flow Lines (Background SVG) */}
         <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
@@ -2005,7 +2005,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side Animated SVGs & Data Cards Hero Illustration */}
-            <div className="lg:col-span-6 relative flex justify-center items-center h-[460px] max-w-xl mx-auto lg:max-w-none w-full">
+            <div className="lg:col-span-6 relative flex justify-center items-center h-115 max-w-xl mx-auto lg:max-w-none w-full">
               
               {/* Floating Data Card 1 */}
               <motion.div 
@@ -2038,7 +2038,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Core SVG Composition */}
-              <div className="w-full h-full relative border border-white/5 rounded-[24px] bg-white/1 backdrop-blur-xs overflow-hidden shadow-2xl">
+              <div className="w-full h-full relative border border-white/5 rounded-3xl bg-white/1 backdrop-blur-xs overflow-hidden shadow-2xl">
                 
                 {/* Circuit Grid Pattern Backdrop inside illustration */}
                 <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1.2px,transparent_1.2px)] bg-size-[16px_16px] pointer-events-none" />

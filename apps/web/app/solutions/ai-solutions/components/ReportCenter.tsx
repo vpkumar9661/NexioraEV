@@ -66,7 +66,7 @@ export function ReportCenter() {
             return (
               <div
                 key={report.id}
-                className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300 flex flex-col justify-between h-[200px]"
+                className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300 flex flex-col justify-between h-50"
               >
                 <div className="space-y-1">
                   <div className="flex justify-between items-start">

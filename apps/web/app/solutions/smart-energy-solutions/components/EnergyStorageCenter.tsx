@@ -45,7 +45,7 @@ export function EnergyStorageCenter() {
             <div className="flex items-center gap-5 bg-white/2 border border-white/5 p-5 rounded-2xl">
               <div className="w-16 h-28 border-2 border-white/20 rounded-xl relative p-1.5 flex flex-col justify-end shrink-0">
                 {/* Battery Cap */}
-                <div className="absolute top-[-5px] left-1/2 -translate-x-1/2 w-5 h-1.5 bg-white/30 rounded-t-sm" />
+                <div className="absolute -top-1.25 left-1/2 -translate-x-1/2 w-5 h-1.5 bg-white/30 rounded-t-sm" />
                 <motion.div
                   className="w-full rounded-lg bg-linear-to-t from-[#00E676] to-[#00D4FF]"
                   initial={{ height: 0 }}
@@ -102,7 +102,7 @@ export function EnergyStorageCenter() {
             {hourlyStates.map((block, idx) => (
               <div
                 key={idx}
-                className="p-3.5 rounded-xl border border-white/5 flex flex-col justify-between h-[85px] transition-all"
+                className="p-3.5 rounded-xl border border-white/5 flex flex-col justify-between h-21.25 transition-all"
                 style={{
                   background: block.state === "charge" ? "rgba(0,230,118,0.06)" : block.state === "discharge" ? "rgba(79,70,229,0.06)" : "rgba(255,255,255,0.02)",
                   borderColor: block.state === "charge" ? "rgba(0,230,118,0.15)" : block.state === "discharge" ? "rgba(79,70,229,0.15)" : "rgba(255,255,255,0.05)",

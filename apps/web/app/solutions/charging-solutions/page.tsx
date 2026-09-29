@@ -116,8 +116,8 @@ export default function ChargingSolutionsPage() {
         />
 
         {/* Rising light beams / columns */}
-        <div className="absolute top-[10%] left-[20%] w-[1px] h-[70vh] bg-linear-to-b from-transparent via-[#00E676]/30 to-transparent blur-xs" />
-        <div className="absolute top-[20%] right-[30%] w-[2px] h-[50vh] bg-linear-to-b from-transparent via-[#00D4FF]/30 to-transparent blur-xs animate-pulse duration-[5s]" />
+        <div className="absolute top-[10%] left-[20%] w-px h-[70vh] bg-linear-to-b from-transparent via-[#00E676]/30 to-transparent blur-xs" />
+        <div className="absolute top-[20%] right-[30%] w-0.5 h-[50vh] bg-linear-to-b from-transparent via-[#00D4FF]/30 to-transparent blur-xs animate-pulse duration-[5s]" />
         
         {/* Slow Moving Charging Energy Lines */}
         <svg className="absolute inset-0 w-full h-full opacity-15">
@@ -126,8 +126,8 @@ export default function ChargingSolutionsPage() {
         </svg>
 
         {/* Localized charger hologram glow */}
-        <div className="absolute top-[40%] left-[10%] w-[350px] h-[350px] bg-radial from-[#00E676]/3 to-transparent blur-3xl" />
-        <div className="absolute bottom-[20%] right-[10%] w-[450px] h-[450px] bg-radial from-[#00D4FF]/2.5 to-transparent blur-3xl" />
+        <div className="absolute top-[40%] left-[10%] w-87.5 h-87.5 bg-radial from-[#00E676]/3 to-transparent blur-3xl" />
+        <div className="absolute bottom-[20%] right-[10%] w-112.5 h-112.5 bg-radial from-[#00D4FF]/2.5 to-transparent blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex flex-col pb-6">
@@ -185,7 +185,7 @@ export default function ChargingSolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
-            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-[120px] scrollbar-thin scroll-smooth"
+            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             
             {/* Section 1: Premium Hero */}

@@ -86,7 +86,7 @@ export function BatteryStorageCenter() {
             <div className="flex items-center gap-5 bg-white/2 border border-white/5 p-5 rounded-2xl">
               <div className="w-16 h-28 border-2 border-white/20 rounded-xl relative p-1.5 flex flex-col justify-end shrink-0">
                 {/* Battery Cap */}
-                <div className="absolute top-[-5px] left-1/2 -translate-x-1/2 w-5 h-1.5 bg-white/30 rounded-t-sm" />
+                <div className="absolute -top-1.25 left-1/2 -translate-x-1/2 w-5 h-1.5 bg-white/30 rounded-t-sm" />
                 <motion.div
                   className="w-full rounded-lg bg-linear-to-t from-[#00E676] to-[#00D4FF]"
                   initial={{ height: 0 }}

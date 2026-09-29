@@ -91,7 +91,7 @@ export function KnowledgeCenter() {
         </div>
 
         {/* Right Details overlay */}
-        <div className="lg:col-span-7 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-7 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           
           <AnimatePresence mode="wait">
             <motion.div

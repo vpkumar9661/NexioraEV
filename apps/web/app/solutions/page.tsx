@@ -88,7 +88,7 @@ export default function SolutionsIndexPage() {
               <Link
                 key={solution.name}
                 href={solution.href}
-                className="group relative flex flex-col justify-between p-6 h-[220px] rounded-[18px] border border-white/5 bg-white/1 hover:bg-[#00D26A]/2 hover:border-[#00D26A]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(0,210,106,0.15)] overflow-hidden"
+                className="group relative flex flex-col justify-between p-6 h-55 rounded-[18px] border border-white/5 bg-white/1 hover:bg-[#00D26A]/2 hover:border-[#00D26A]/30 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.01)] hover:shadow-[0_12px_40px_-12px_rgba(0,210,106,0.15)] overflow-hidden"
               >
                 {/* Micro-interaction highlight glow */}
                 <div className="absolute -inset-px bg-linear-to-br from-[#00D26A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[18px] pointer-events-none" />

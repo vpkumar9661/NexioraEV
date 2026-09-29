@@ -57,14 +57,14 @@ export function BusinessHero({ onOptimizeRates, onGenerateReport }: BusinessHero
         </div>
 
         {/* Right Interactive SVG column */}
-        <div className="lg:col-span-5 bg-black/40 border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-[300px]">
+        <div className="lg:col-span-5 bg-black/40 border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-75">
           <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground/40 border-b border-white/5 pb-2">
             <span>OFFICE PARK CHARGING GRID MODEL</span>
             <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#00E676] animate-pulse" /> LIVE DIAGNOSTICS</span>
           </div>
 
           <div className="flex-1 flex items-center justify-center pt-2">
-            <svg viewBox="0 0 160 120" className="w-full h-full max-h-[180px] overflow-visible">
+            <svg viewBox="0 0 160 120" className="w-full h-full max-h-45 overflow-visible">
               {/* Isometric Office building backing outline */}
               <polygon points="80,15 130,40 130,85 80,105 30,85 30,40" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" />
               <polygon points="80,15 80,105" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" />

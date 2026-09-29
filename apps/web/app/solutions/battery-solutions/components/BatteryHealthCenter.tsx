@@ -145,7 +145,7 @@ export function BatteryHealthCenter() {
             {metrics.map((metric, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-[100px]"
+                className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-colors flex flex-col justify-between h-25"
               >
                 <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">
                   {metric.label}
@@ -165,7 +165,7 @@ export function BatteryHealthCenter() {
               <span className="text-white font-mono">{voltage} V</span>
             </div>
             
-            <div className="h-[60px] w-full">
+            <div className="h-15 w-full">
               <svg viewBox="0 0 400 60" className="w-full h-full overflow-visible">
                 {/* Reference baseline */}
                 <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(255,255,255,0.04)" strokeWidth="0.8" strokeDasharray="3 3" />

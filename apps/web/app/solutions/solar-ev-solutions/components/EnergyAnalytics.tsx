@@ -85,7 +85,7 @@ export function EnergyAnalytics() {
           </div>
 
           {activeTab === "daily" ? (
-            <div className="h-[200px] w-full relative pt-2">
+            <div className="h-50 w-full relative pt-2">
               <svg viewBox="0 0 200 150" className="w-full h-full overflow-visible">
                 {/* Horizontal grid lines */}
                 <line x1="0" y1="25" x2="200" y2="25" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" />
@@ -126,7 +126,7 @@ export function EnergyAnalytics() {
               </svg>
             </div>
           ) : (
-            <div className="h-[200px] w-full flex items-end justify-between px-2 pt-4">
+            <div className="h-50 w-full flex items-end justify-between px-2 pt-4">
               {monthlyData.map((item, idx) => {
                 const maxVal = 1200;
                 const genHeight = (item.gen / maxVal) * 100; // %
@@ -134,7 +134,7 @@ export function EnergyAnalytics() {
 
                 return (
                   <div key={idx} className="flex flex-col items-center gap-2 flex-1">
-                    <div className="w-full flex justify-center gap-1.5 h-[130px] items-end">
+                    <div className="w-full flex justify-center gap-1.5 h-32.5 items-end">
                       {/* Solar Bar */}
                       <div className="w-3 rounded-t-sm bg-linear-to-t from-[#F4B400] to-[#FF9800]" style={{ height: `${genHeight}%` }} />
                       {/* Savings Bar */}

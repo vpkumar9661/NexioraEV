@@ -87,7 +87,7 @@ export function RecyclingCenter() {
         </div>
 
         {/* Right Output Analytical Card */}
-        <div className="lg:col-span-7 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-7 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           
           <div className="space-y-4">
             <h3 className="text-sm font-extrabold text-white uppercase tracking-wider border-b border-white/5 pb-2.5">

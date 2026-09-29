@@ -125,8 +125,8 @@ export default function SmartEnergySolutionsPage() {
         />
 
         {/* Ambient Aurora glow balls */}
-        <div className="absolute top-[10%] left-[5%] w-[550px] h-[550px] bg-radial from-[#00E676]/2 to-transparent blur-3xl" />
-        <div className="absolute bottom-[20%] right-[10%] w-[450px] h-[450px] bg-radial from-[#4F46E5]/2 to-transparent blur-3xl" />
+        <div className="absolute top-[10%] left-[5%] w-137.5 h-137.5 bg-radial from-[#00E676]/2 to-transparent blur-3xl" />
+        <div className="absolute bottom-[20%] right-[10%] w-112.5 h-112.5 bg-radial from-[#4F46E5]/2 to-transparent blur-3xl" />
 
         {/* Floating particles simulation */}
         <div className="absolute inset-0 opacity-20">
@@ -193,7 +193,7 @@ export default function SmartEnergySolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
-            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-[120px] scrollbar-thin scroll-smooth"
+            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             
             {/* Section 1: Premium Hero */}

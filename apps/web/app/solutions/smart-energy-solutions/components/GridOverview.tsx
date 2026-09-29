@@ -41,7 +41,7 @@ export function GridOverview() {
             <span>CLICK NODE TO INSPECT LIVE DATA</span>
           </div>
 
-          <div className="h-[280px] w-full relative">
+          <div className="h-70 w-full relative">
             <svg viewBox="0 0 200 200" className="w-full h-full overflow-visible">
               
               {/* Connecting circuit lines */}
@@ -104,7 +104,7 @@ export function GridOverview() {
         </div>
 
         {/* Right Details Panel */}
-        <div className="lg:col-span-4 rounded-[24px] border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
+        <div className="lg:col-span-4 rounded-3xl border border-white/5 bg-[#131722]/55 p-6 flex flex-col justify-between space-y-6 relative overflow-hidden">
           
           <AnimatePresence mode="wait">
             <motion.div

@@ -110,7 +110,7 @@ export function AIBusinessConsultant() {
         </div>
 
         {/* Chat box */}
-        <div className="h-[240px] overflow-y-auto border border-white/5 bg-black/40 rounded-2xl p-4 space-y-4 scroll-smooth">
+        <div className="h-60 overflow-y-auto border border-white/5 bg-black/40 rounded-2xl p-4 space-y-4 scroll-smooth">
           <AnimatePresence initial={false}>
             {messages.map((msg) => (
               <div

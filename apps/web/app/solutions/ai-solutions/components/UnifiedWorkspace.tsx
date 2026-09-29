@@ -110,7 +110,7 @@ export function UnifiedWorkspace() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Left Chats Sidebar */}
-        <div className="lg:col-span-4 bg-black/40 border border-white/5 p-4 rounded-xl flex flex-col justify-between h-[380px]">
+        <div className="lg:col-span-4 bg-black/40 border border-white/5 p-4 rounded-xl flex flex-col justify-between h-95">
           <div className="space-y-4">
             <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground/40 border-b border-white/5 pb-2">
               <span>CONVERSATION HISTORY</span>
@@ -125,7 +125,7 @@ export function UnifiedWorkspace() {
                 >
                   <div className="flex items-center gap-2">
                     {sess.pinned && <Pin className="w-3 h-3 text-[#8B5CF6] shrink-0" />}
-                    <span className="font-extrabold truncate max-w-[120px]">{sess.title}</span>
+                    <span className="font-extrabold truncate max-w-30">{sess.title}</span>
                   </div>
                   <Trash className="w-3 h-3 text-muted-foreground/35 hover:text-rose-400 cursor-pointer shrink-0" />
                 </div>
@@ -139,7 +139,7 @@ export function UnifiedWorkspace() {
         </div>
 
         {/* Right Chat workspace */}
-        <div className="lg:col-span-8 flex flex-col justify-between space-y-4 h-[380px]">
+        <div className="lg:col-span-8 flex flex-col justify-between space-y-4 h-95">
           {/* Chat feed */}
           <div className="flex-1 overflow-y-auto border border-white/5 bg-black/40 rounded-xl p-4 space-y-4 scroll-smooth">
             <AnimatePresence initial={false}>

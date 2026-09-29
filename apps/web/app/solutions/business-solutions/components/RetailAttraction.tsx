@@ -54,7 +54,7 @@ export function RetailAttraction() {
             <span>ACTIVE STATUS</span>
           </div>
 
-          <div className="h-[180px] w-full relative pt-2">
+          <div className="h-45 w-full relative pt-2">
             <svg viewBox="0 0 200 120" className="w-full h-full overflow-visible">
               {/* Parking lot grid perspective sketch */}
               <line x1="10" y1="20" x2="190" y2="20" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" />

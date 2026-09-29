@@ -11,7 +11,7 @@ interface SolarHeroProps {
 
 export function SolarHero({ onDesignSystem, onGenerateProposal }: SolarHeroProps) {
   return (
-    <section className="relative w-full py-12 md:py-20 lg:py-24 overflow-hidden rounded-[32px] border border-white/8 bg-[#05070d]/60 backdrop-blur-2xl shadow-[0_24px_80px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.05)]">
+    <section className="relative w-full py-12 md:py-20 lg:py-24 overflow-hidden rounded-4xl border border-white/8 bg-[#05070d]/60 backdrop-blur-2xl shadow-[0_24px_80px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.05)]">
       {/* Glow Ambient Lights */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#F4B400]/8 blur-[120px] pointer-events-none animate-pulse duration-[8s]" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#00E676]/8 blur-[120px] pointer-events-none animate-pulse duration-[6s]" />
@@ -98,7 +98,7 @@ export function SolarHero({ onDesignSystem, onGenerateProposal }: SolarHeroProps
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="w-full max-w-[380px] h-[400px] relative flex items-center justify-center rounded-[28px] border border-white/5 bg-linear-to-b from-white/4 to-transparent p-6 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.02)] overflow-hidden"
+            className="w-full max-w-95 h-100 relative flex items-center justify-center rounded-[28px] border border-white/5 bg-linear-to-b from-white/4 to-transparent p-6 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.02)] overflow-hidden"
           >
             {/* Hologram scan grid overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(244,180,0,0.015)_1px,transparent_1px)] bg-size-[100%_4px] pointer-events-none" />

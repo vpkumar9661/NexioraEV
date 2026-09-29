@@ -125,7 +125,7 @@ export function AISolarConsultant() {
         </div>
 
         {/* Chat window */}
-        <div className="h-[280px] overflow-y-auto border border-white/5 bg-black/40 rounded-2xl p-4 space-y-4 scroll-smooth">
+        <div className="h-70 overflow-y-auto border border-white/5 bg-black/40 rounded-2xl p-4 space-y-4 scroll-smooth">
           <AnimatePresence initial={false}>
             {messages.map((msg) => (
               <motion.div

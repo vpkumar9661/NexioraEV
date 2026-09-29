@@ -237,7 +237,7 @@ export function CostCalculator() {
             </div>
 
             <div className="p-4 rounded-2xl bg-[#00E676]/5 border border-[#00E676]/10">
-              <span className="text-[9px] text-[#00E676]/65 font-bold uppercase block flex items-center gap-1">
+              <span className="text-[9px] text-[#00E676]/65 font-bold uppercase flex items-center gap-1">
                 <TrendingUp className="w-3 h-3" />
                 Annual Net Profit
               </span>

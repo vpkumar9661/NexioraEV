@@ -151,7 +151,7 @@ export function GlobalAmbientBackground() {
           LAYER 2: Animated Mesh Gradients
           ═══════════════════════════════════════════ */}
       <div
-        className="absolute w-[700px] h-[700px] rounded-full blur-[160px]"
+        className="absolute w-175 h-175 rounded-full blur-[160px]"
         style={{
           top: "5%",
           left: "10%",
@@ -160,7 +160,7 @@ export function GlobalAmbientBackground() {
         }}
       />
       <div
-        className="absolute w-[600px] h-[600px] rounded-full blur-[140px]"
+        className="absolute w-150 h-150 rounded-full blur-[140px]"
         style={{
           top: "35%",
           right: "5%",
@@ -169,7 +169,7 @@ export function GlobalAmbientBackground() {
         }}
       />
       <div
-        className="absolute w-[650px] h-[650px] rounded-full blur-[150px]"
+        className="absolute w-162.5 h-162.5 rounded-full blur-[150px]"
         style={{
           bottom: "10%",
           left: "25%",
@@ -178,7 +178,7 @@ export function GlobalAmbientBackground() {
         }}
       />
       <div
-        className="absolute w-[500px] h-[500px] rounded-full blur-[120px]"
+        className="absolute w-125 h-125 rounded-full blur-[120px]"
         style={{
           bottom: "5%",
           right: "15%",
@@ -284,7 +284,7 @@ export function GlobalAmbientBackground() {
       {!disableAnimations && (
         <>
           <div
-            className="absolute w-[120%] h-[250px] blur-[100px]"
+            className="absolute w-[120%] h-62.5 blur-[100px]"
             style={{
               top: "15%",
               left: "-10%",
@@ -294,7 +294,7 @@ export function GlobalAmbientBackground() {
             }}
           />
           <div
-            className="absolute w-full h-[180px] blur-[80px]"
+            className="absolute w-full h-45 blur-[80px]"
             style={{
               top: "22%",
               left: "-5%",
@@ -310,7 +310,7 @@ export function GlobalAmbientBackground() {
           LAYER 8: Ambient Light Rays
           ═══════════════════════════════════════════ */}
       <div
-        className="absolute w-[900px] h-[900px] rounded-full"
+        className="absolute w-225 h-225 rounded-full"
         style={{
           top: "-20%",
           left: "50%",

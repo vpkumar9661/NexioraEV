@@ -107,7 +107,7 @@ export default function SolarEVSolutionsPage() {
           ═══════════════════════════════════════════ */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Animated sunrise background glow */}
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-radial from-[#F4B400]/4 via-transparent to-transparent rounded-full blur-[100px] animate-[pulse_8s_infinite_alternate]" />
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-175 h-87.5 bg-radial from-[#F4B400]/4 via-transparent to-transparent rounded-full blur-[100px] animate-[pulse_8s_infinite_alternate]" />
         
         {/* 3D grid floor perspective */}
         <div 
@@ -121,8 +121,8 @@ export default function SolarEVSolutionsPage() {
         />
 
         {/* Ambient Aurora glow balls */}
-        <div className="absolute top-[10%] left-[5%] w-[550px] h-[550px] bg-radial from-[#F4B400]/2 to-transparent blur-3xl" />
-        <div className="absolute bottom-[20%] right-[10%] w-[450px] h-[450px] bg-radial from-[#00E676]/2 to-transparent blur-3xl" />
+        <div className="absolute top-[10%] left-[5%] w-137.5 h-137.5 bg-radial from-[#F4B400]/2 to-transparent blur-3xl" />
+        <div className="absolute bottom-[20%] right-[10%] w-112.5 h-112.5 bg-radial from-[#00E676]/2 to-transparent blur-3xl" />
 
         {/* Floating particles simulation */}
         <div className="absolute inset-0 opacity-20">
@@ -189,7 +189,7 @@ export default function SolarEVSolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
-            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-[120px] scrollbar-thin scroll-smooth"
+            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             
             {/* Section 1: Premium Hero */}

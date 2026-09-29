@@ -66,7 +66,7 @@ export function PredictiveAnalytics() {
             </div>
           </div>
 
-          <div className="h-[200px] w-full relative pt-2">
+          <div className="h-50 w-full relative pt-2">
             <svg viewBox="0 0 200 150" className="w-full h-full overflow-visible">
               <line x1="0" y1="25" x2="200" y2="25" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" />
               <line x1="0" y1="80" x2="200" y2="80" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" />

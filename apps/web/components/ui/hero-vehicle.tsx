@@ -17,7 +17,7 @@ export function HeroVehicle() {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] lg:h-[480px] pointer-events-none select-none overflow-hidden">
+    <div className="relative w-full h-100 lg:h-120 pointer-events-none select-none overflow-hidden">
       {/* Floating diagnostic sparkles/particles overlay */}
       <div 
         className="absolute inset-0 z-10 transition-transform duration-700 ease-out"
@@ -47,8 +47,8 @@ export function HeroVehicle() {
         `}</style>
 
         {/* Ambient glow overlays aligned with car and planet */}
-        <div className="absolute top-[25%] right-[35%] w-[200px] h-[200px] bg-secondary/8 rounded-full blur-[50px] glow-pulse-layer" />
-        <div className="absolute bottom-[20%] left-[25%] w-[250px] h-[90px] bg-[#00F5A0]/10 rounded-full blur-2xl glow-pulse-layer" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-[25%] right-[35%] w-50 h-50 bg-secondary/8 rounded-full blur-[50px] glow-pulse-layer" />
+        <div className="absolute bottom-[20%] left-[25%] w-62.5 h-22.5 bg-[#00F5A0]/10 rounded-full blur-2xl glow-pulse-layer" style={{ animationDelay: "2s" }} />
 
         {/* Sparks drifting */}
         <div className="spark-particle bg-[#00F5A0] w-1.5 h-1.5 top-[70%] left-[35%]" style={{ animationDelay: "0s", animationDuration: "5s" }} />
