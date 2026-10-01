@@ -19,6 +19,7 @@ import { AIFleetConsultant } from "./components/AIFleetConsultant";
 import { FleetReportCenter } from "./components/FleetReportCenter";
 import { KnowledgeCenter } from "./components/KnowledgeCenter";
 import { FloatingQuickActions } from "./components/FloatingQuickActions";
+import { smoothScrollToSection } from "@/lib/motion";
 
 const SECTIONS = [
   { id: "hero", label: "Fleet Hero", icon: Compass },
@@ -74,17 +75,7 @@ export default function FleetSolutionsPage() {
   }, [newProjectKey]);
 
   const scrollToSection = (id: string) => {
-    const container = contentContainerRef.current;
-    const el = document.getElementById(id);
-    if (container && el) {
-      const containerTop = container.getBoundingClientRect().top;
-      const elTop = el.getBoundingClientRect().top;
-      const offset = elTop - containerTop + container.scrollTop;
-      container.scrollTo({
-        top: offset - 20,
-        behavior: "smooth"
-      });
-    }
+    smoothScrollToSection(id, contentContainerRef.current, 20);
   };
 
   const handleNewProject = () => {
@@ -182,6 +173,7 @@ export default function FleetSolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
+            id="solution-content-scroll"
             className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             

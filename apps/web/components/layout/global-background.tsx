@@ -148,42 +148,42 @@ export function GlobalAmbientBackground() {
       />
 
       {/* ═══════════════════════════════════════════
-          LAYER 2: Animated Mesh Gradients
+          LAYER 2: Ambient Atmosphere Gradients (GPU Optimized)
           ═══════════════════════════════════════════ */}
       <div
-        className="absolute w-175 h-175 rounded-full blur-[160px]"
+        className="absolute w-175 h-175 rounded-full blur-[120px] will-change-transform"
         style={{
           top: "5%",
           left: "10%",
-          background: "radial-gradient(circle, rgba(0, 230, 118, 0.06) 0%, transparent 70%)",
-          animation: disableAnimations ? "none" : "mesh-drift-1 30s ease-in-out infinite",
+          background: "radial-gradient(circle, rgba(0, 230, 118, 0.055) 0%, transparent 70%)",
+          animation: disableAnimations ? "none" : "light-breathe 18s ease-in-out infinite",
         }}
       />
       <div
-        className="absolute w-150 h-150 rounded-full blur-[140px]"
+        className="absolute w-150 h-150 rounded-full blur-[110px] will-change-transform"
         style={{
           top: "35%",
           right: "5%",
-          background: "radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%)",
-          animation: disableAnimations ? "none" : "mesh-drift-2 35s ease-in-out infinite",
+          background: "radial-gradient(circle, rgba(139, 92, 246, 0.045) 0%, transparent 70%)",
+          animation: disableAnimations ? "none" : "light-breathe 22s ease-in-out 4s infinite",
         }}
       />
       <div
-        className="absolute w-162.5 h-162.5 rounded-full blur-[150px]"
+        className="absolute w-162.5 h-162.5 rounded-full blur-[120px] will-change-transform"
         style={{
           bottom: "10%",
           left: "25%",
-          background: "radial-gradient(circle, rgba(0, 212, 255, 0.04) 0%, transparent 70%)",
-          animation: disableAnimations ? "none" : "mesh-drift-3 40s ease-in-out infinite",
+          background: "radial-gradient(circle, rgba(0, 212, 255, 0.038) 0%, transparent 70%)",
+          animation: disableAnimations ? "none" : "light-breathe 24s ease-in-out 8s infinite",
         }}
       />
       <div
-        className="absolute w-125 h-125 rounded-full blur-[120px]"
+        className="absolute w-125 h-125 rounded-full blur-[90px] will-change-transform"
         style={{
           bottom: "5%",
           right: "15%",
-          background: "radial-gradient(circle, rgba(0, 230, 118, 0.035) 0%, transparent 70%)",
-          animation: disableAnimations ? "none" : "mesh-drift-1 45s ease-in-out infinite reverse",
+          background: "radial-gradient(circle, rgba(0, 230, 118, 0.03) 0%, transparent 70%)",
+          animation: disableAnimations ? "none" : "light-breathe 20s ease-in-out 12s infinite",
         }}
       />
 

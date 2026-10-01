@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   Linkedin, Github, Youtube, Instagram, Facebook, Twitter, 
   Mail, Phone, MapPin, Clock, ShieldCheck, 
@@ -30,9 +31,9 @@ export function SiteFooter() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[40px_40px] opacity-40" />
         
         {/* Layered glowing dots */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#00D26A]/3 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "12s" }} />
-        <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-[#2563EB]/3 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "15s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#8B5CF6]/2 rounded-full blur-[180px]" />
+        <div className="absolute top-0 left-1/4 w-125 h-125 bg-[#00D26A]/3 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: "12s" }} />
+        <div className="absolute bottom-10 right-1/4 w-125 h-125 bg-[#2563EB]/3 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: "15s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-100 bg-[#8B5CF6]/2 rounded-full blur-[180px]" />
         
         {/* Subtle noise texture simulation */}
         <div className="absolute inset-0 bg-noise opacity-[0.015] mix-blend-overlay" />
@@ -45,18 +46,17 @@ export function SiteFooter() {
           
           {/* Brand Presentation & Info Column */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="relative">
-                {/* Soft pulse green blur behind logo */}
-                <div className="absolute inset-0 bg-[#00D26A]/20 rounded-full blur-md scale-150 animate-pulse" />
-                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#00D26A] to-[#22C55E] flex items-center justify-center border border-white/10">
-                  <Zap className="w-5 h-5 text-[#07090e]" strokeWidth={2.5} />
-                </div>
-              </div>
-              <span className="text-2xl font-black tracking-tight text-white">
-                Nexiora<span className="bg-linear-to-r from-[#00D26A] to-[#22C55E] bg-clip-text text-transparent">EV</span>
-              </span>
-            </div>
+            <Link href="/" className="relative inline-flex items-center group/logo py-1" aria-label="NexioraEV Home">
+              {/* Soft pulse green/cyan ambient blur behind logo */}
+              <div className="absolute inset-0 -inset-x-4 bg-radial from-[#00D26A]/20 via-[#00D4FF]/15 to-transparent rounded-full blur-xl opacity-60 group-hover/logo:opacity-100 group-hover/logo:scale-125 transition-all duration-500 pointer-events-none" />
+              <Image
+                src="/brand/nexiora-logo.png"
+                alt="NexioraEV"
+                width={970}
+                height={299}
+                className="h-9 sm:h-10 w-auto object-contain transition-all duration-400 filter drop-shadow-[0_0_8px_rgba(0,210,106,0.3)] group-hover/logo:drop-shadow-[0_0_20px_rgba(0,212,255,0.8)] group-hover/logo:brightness-110 group-hover/logo:scale-[1.03] select-none"
+              />
+            </Link>
             
             <p className="text-sm text-muted-foreground/80 leading-relaxed">
               NexioraEV is India&apos;s next-generation AI-powered Electric Vehicle ecosystem, bringing together technology, intelligent solutions, marketplace services, government resources, and future mobility innovation on one premium platform.
@@ -181,7 +181,7 @@ export function SiteFooter() {
                 <li key={link.name}>
                   <Link href={link.href} className="group relative hover:text-white transition-colors duration-200 block py-0.5">
                     <span>{link.name}</span>
-                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#AEB5C0]/65 group-hover:w-1/2 transition-all duration-300" />
+                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-muted-foreground/65 group-hover:w-1/2 transition-all duration-300" />
                   </Link>
                 </li>
               ))}
@@ -225,7 +225,7 @@ export function SiteFooter() {
           <div className="hidden lg:block lg:col-span-1" />
 
           {/* Newsletter Box (Liquid Glass card with animated border) */}
-          <div className="lg:col-span-2 p-6 rounded-[20px] border border-white/8 bg-white/2 backdrop-blur-xl relative overflow-hidden flex flex-col justify-between min-h-[180px] shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          <div className="lg:col-span-2 p-6 rounded-[20px] border border-white/8 bg-white/2 backdrop-blur-xl relative overflow-hidden flex flex-col justify-between min-h-45 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <div className="absolute -bottom-12 -right-12 w-28 h-28 bg-[#00D26A]/5 rounded-full blur-[30px]" />
             
             <div className="space-y-2">

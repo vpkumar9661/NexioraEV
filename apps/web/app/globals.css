@@ -26,6 +26,21 @@
   --radius-lg: 0.75rem;
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* NexioraEV Motion Tokens */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 280ms;
+  --duration-smooth: 450ms;
+}
+
+:root {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 280ms;
+  --duration-smooth: 450ms;
 }
 
 @layer base {
@@ -40,6 +55,43 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Safe Section Scroll Margins for Fixed Header */
+  section[id], div[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* ============================================
+   PREMIUM HARDWARE-ACCELERATED HOVER UTILITIES
+   ============================================ */
+.premium-card-hover {
+  transition: transform var(--duration-normal) var(--ease-premium), 
+              border-color var(--duration-normal) var(--ease-premium), 
+              box-shadow var(--duration-normal) var(--ease-premium);
+  will-change: transform;
+}
+
+.premium-card-hover:hover {
+  transform: translate3d(0, -4px, 0);
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6), 
+              0 0 24px 0 rgba(0, 245, 160, 0.08);
+}
+
+.premium-btn-hover {
+  transition: transform var(--duration-fast) var(--ease-premium), 
+              filter var(--duration-fast) var(--ease-premium), 
+              box-shadow var(--duration-fast) var(--ease-premium);
+  will-change: transform;
+}
+
+.premium-btn-hover:hover {
+  transform: translate3d(0, -1.5px, 0) scale(1.02);
+}
+
+.premium-btn-hover:active {
+  transform: translate3d(0, 0, 0) scale(0.98);
 }
 
 /* ============================================

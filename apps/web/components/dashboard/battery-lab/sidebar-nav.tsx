@@ -6,6 +6,7 @@ import {
   Table, BarChart3, LineChart, FileText, Play, BrainCircuit,
   Award, Download, Sparkles
 } from "lucide-react";
+import { smoothScrollToSection } from "@/lib/motion";
 
 const SECTIONS = [
   { id: "hero", label: "Overview", icon: BookOpen },
@@ -35,8 +36,8 @@ interface SidebarNavProps {
 
 export function SidebarNav({ activeSection }: SidebarNavProps) {
   return (
-    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-[140px] w-[180px] z-30">
-      <nav className="p-3 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-1 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
+    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-35 w-45 z-30">
+      <nav className="p-3 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-md space-y-1 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
         <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">
           Lab Navigator
         </p>
@@ -47,9 +48,13 @@ export function SidebarNav({ activeSection }: SidebarNavProps) {
             <a
               key={section.id}
               href={`#${section.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollToSection(section.id, null, 24);
+              }}
               className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[12px] font-semibold transition-all duration-200 ${
                 isActive
-                  ? "bg-[#10B981]/10 text-[#6EE7B7] border border-[#10B981]/20"
+                  ? "bg-[#10B981]/10 text-[#6EE7B7] border border-[#10B981]/20 shadow-[0_2px_8px_rgba(16,185,129,0.15)]"
                   : "text-muted-foreground/60 hover:text-white hover:bg-white/5 border border-transparent"
               }`}
             >

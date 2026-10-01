@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Zap, HelpCircle, HardDrive, Plus, Sparkles, Navigation, FileSpreadsheet, Play, Download, X, Eye } from "lucide-react";
+import { smoothScrollToSection } from "@/lib/motion";
 
 interface FloatingQuickActionsProps {
   onNewProject: () => void;
@@ -13,10 +14,7 @@ export function FloatingQuickActions({ onNewProject, onRunSimulation }: Floating
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollIntoAnchor = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    smoothScrollToSection(id, "#solution-content-scroll", 20);
   };
 
   const actionItems = [

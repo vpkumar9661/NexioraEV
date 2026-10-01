@@ -12,6 +12,7 @@ import {
   Users, Handshake, Briefcase, Mic, Code, Mail
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NAV_ITEMS = [
   { name: "EVTech", icon: Zap },
@@ -382,10 +383,17 @@ export function SiteHeader() {
   const router = useRouter();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -495,7 +503,7 @@ export function SiteHeader() {
           box-shadow: 
             0 8px 32px -4px rgba(0,0,0,0.35),
             inset 0 1px 0 0 rgba(255,255,255,0.06);
-          transition: all 400ms var(--ease-apple);
+          transition: background 300ms var(--ease-apple), backdrop-filter 300ms var(--ease-apple), box-shadow 300ms var(--ease-apple);
         }
         .liquid-navbar.scrolled {
           background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.005) 100%), rgba(9,11,16,0.75);
@@ -508,7 +516,7 @@ export function SiteHeader() {
           background: rgba(255,255,255,0.01);
           border: 1px solid rgba(255,255,255,0.05);
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
-          transition: all 400ms var(--ease-apple);
+          transition: background 200ms var(--ease-apple), border-color 200ms var(--ease-apple), transform 200ms var(--ease-apple), box-shadow 200ms var(--ease-apple);
           position: relative;
           overflow: hidden;
         }
@@ -526,7 +534,7 @@ export function SiteHeader() {
           box-shadow: 
             0 4px 15px rgba(0, 210, 106, 0.12),
             inset 0 1px 0 rgba(255,255,255,0.06);
-          transition: all 400ms var(--ease-apple);
+          transition: background 200ms var(--ease-apple), border-color 200ms var(--ease-apple), box-shadow 200ms var(--ease-apple);
         }
         .evtech-nav-btn {
           background: rgba(255, 255, 255, 0.01);
@@ -1202,45 +1210,35 @@ export function SiteHeader() {
         /* Animated Logo branding */
         .logo-glow-bg {
           position: absolute;
-          inset: -12px -20px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(0, 210, 106, 0.22) 0%, transparent 68%);
-          filter: blur(10px);
-          opacity: 0.65;
+          inset: -10px -22px;
+          border-radius: 9999px;
+          background: radial-gradient(ellipse at center, rgba(0, 210, 106, 0.25) 0%, rgba(0, 212, 255, 0.18) 45%, transparent 75%);
+          filter: blur(14px);
+          opacity: 0.6;
           pointer-events: none;
-          transition: all 400ms var(--ease-apple);
+          transition: all 450ms var(--ease-apple);
           animation: logo-glow-pulse 4s ease-in-out infinite;
         }
         .group:hover .logo-glow-bg {
-          background: radial-gradient(circle, rgba(0, 210, 106, 0.42) 0%, transparent 68%);
-          filter: blur(12px);
-          opacity: 0.95;
-          transform: scale(1.15);
+          background: radial-gradient(ellipse at center, rgba(0, 230, 118, 0.6) 0%, rgba(0, 212, 255, 0.5) 45%, rgba(37, 99, 235, 0.3) 70%, transparent 85%);
+          filter: blur(18px);
+          opacity: 1;
+          transform: scale(1.25);
         }
         @keyframes logo-glow-pulse {
-          0%, 100% { opacity: 0.55; transform: scale(1); }
-          50% { opacity: 0.85; transform: scale(1.08); }
+          0%, 100% { opacity: 0.45; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.08); }
         }
-        .logo-text-ev {
-          background: linear-gradient(135deg, #00D26A 0%, #6BFF95 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          filter: drop-shadow(0 0 6px rgba(0, 210, 106, 0.3));
-          transition: all 400ms var(--ease-apple);
-          font-weight: 900;
-        }
-        .group:hover .logo-text-ev {
-          filter: drop-shadow(0 0 10px rgba(0, 210, 106, 0.65)) brightness(1.2);
-        }
-        .logo-icon-zap {
-          color: #00D26A;
-          filter: drop-shadow(0 0 4px rgba(0, 210, 106, 0.4));
+        .logo-brand-img {
+          filter: drop-shadow(0 0 6px rgba(0, 210, 106, 0.35)) drop-shadow(0 0 12px rgba(0, 212, 255, 0.2));
           transition: all 400ms var(--ease-apple);
         }
-        .group:hover .logo-icon-zap {
-          color: #6BFF95;
-          filter: drop-shadow(0 0 8px rgba(0, 210, 106, 0.8)) brightness(1.2);
-          transform: scale(1.12) rotate(8deg);
+        .group:hover .logo-brand-img {
+          filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.95)) 
+                  drop-shadow(0 0 22px rgba(0, 212, 255, 0.85)) 
+                  drop-shadow(0 0 35px rgba(0, 210, 106, 0.5)) 
+                  brightness(1.15);
+          transform: translateY(-0.5px);
         }
       `}} />
       
@@ -1257,25 +1255,34 @@ export function SiteHeader() {
         onMouseLeave={handleMouseLeave}
       >
         <header 
-          className={`liquid-navbar w-full h-[68px] lg:h-[72px] rounded-b-[16px] rounded-t-none flex items-center justify-between px-6 lg:px-10 relative overflow-visible pointer-events-auto ${
+          className={`liquid-navbar w-full h-17 lg:h-18 rounded-b-2xl rounded-t-none flex items-center justify-between px-6 lg:px-10 relative overflow-visible pointer-events-auto ${
             isScrolled ? "scrolled" : ""
           }`}
         >
           {/* Glass Reflection Animation Layer */}
-          <div className="absolute inset-0 pointer-events-none rounded-b-[16px] overflow-hidden mix-blend-overlay">
+          <div className="absolute inset-0 pointer-events-none rounded-b-2xl overflow-hidden mix-blend-overlay">
             <div className="absolute top-0 h-full w-[45%] bg-linear-to-r from-transparent via-[rgba(255,255,255,0.08)] to-transparent animate-liquid-reflection" />
           </div>
 
           {/* Noise Texture Layer */}
-          <div className="absolute inset-0 pointer-events-none rounded-b-[16px] opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZUZpbHRlciI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgibm9pc2VGaWx0ZXIpIi8+PC9zdmc+')] mix-blend-overlay" />
+          <div className="absolute inset-0 pointer-events-none rounded-b-2xl opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZUZpbHRlciI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgibm9pc2VGaWx0ZXIpIi8+PC9zdmc+')] mix-blend-overlay" />
 
           {/* Logo */}
-          <Link href="/" onClick={handleLinkClick} className="relative flex items-center gap-2 group z-10 shrink-0 transition-all duration-300 hover:opacity-95">
+          <Link 
+            href="/" 
+            onClick={handleLinkClick} 
+            className="relative flex items-center group z-10 shrink-0 py-1 transition-transform duration-300 hover:scale-[1.02]"
+            aria-label="NexioraEV Home"
+          >
             <div className="logo-glow-bg" />
-            <Zap className="logo-icon-zap size-[20px] lg:size-[22px] text-[#00D26A]" aria-hidden="true" strokeWidth={2.2} />
-            <span className="text-lg lg:text-[20px] font-bold tracking-wider text-white hidden sm:block font-sans">
-              Nexiora<span className="logo-text-ev">EV</span>
-            </span>
+            <Image
+              src="/brand/nexiora-logo.png"
+              alt="NexioraEV"
+              width={970}
+              height={299}
+              priority
+              className="logo-brand-img h-8.5 sm:h-9.5 lg:h-10 w-auto object-contain select-none"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -1483,14 +1490,14 @@ export function SiteHeader() {
           <div className="hidden md:flex items-center gap-4 lg:gap-5 z-10 shrink-0 self-center">
             {/* Search Bar */}
             <div className="relative group cursor-pointer hidden xl:block">
-              <div className="search-glass flex items-center gap-2 px-3 py-1.5 w-[175px]">
+              <div className="search-glass flex items-center gap-2 px-3 py-1.5 w-43.75">
                 <Search className="w-3.5 h-3.5 text-muted-foreground group-focus-within:text-[#00D26A] transition-colors" strokeWidth={1.5} />
                 <input 
                   type="text"
                   placeholder="Search..."
                   className="bg-transparent border-none outline-none text-[13px] text-white placeholder:text-muted-foreground/60 w-full font-sans py-0 leading-none h-full align-middle"
                 />
-                <kbd className="hidden lg:inline-flex h-[18px] items-center gap-0.5 rounded-[4px] bg-[rgba(255,255,255,0.04)] px-1.5 font-mono text-[9px] font-medium text-muted-foreground border border-[rgba(255,255,255,0.08)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] shrink-0">
+                <kbd className="hidden lg:inline-flex h-4.5 items-center gap-0.5 rounded-[4px] bg-[rgba(255,255,255,0.04)] px-1.5 font-mono text-[9px] font-medium text-muted-foreground border border-[rgba(255,255,255,0.08)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] shrink-0">
                   ⌘K
                 </kbd>
               </div>
@@ -1536,7 +1543,7 @@ export function SiteHeader() {
               {/* Purple/EVTech visual grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+              <div className="max-w-300 mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                 {EVTECH_CATEGORIES.map((category) => {
                   const CatIcon = category.icon;
@@ -1552,9 +1559,9 @@ export function SiteHeader() {
                         '--card-hover-border': `${category.color}66`
                       } as React.CSSProperties}
                     >
-                      <div className="flex items-center gap-[12px] h-full">
+                      <div className="flex items-center gap-3 h-full">
                         <div 
-                          className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-violet-500/30 transition-all duration-300 group-hover/card:scale-105"
+                          className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-violet-500/30 transition-all duration-300 group-hover/card:scale-105"
                           style={{
                             boxShadow: `0 0 12px ${category.color}22`,
                           }}
@@ -1586,7 +1593,7 @@ export function SiteHeader() {
               onMouseEnter={() => handleMouseEnter("solutions")}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="max-w-[1200px] mx-auto p-5">
+              <div className="max-w-300 mx-auto p-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {SOLUTIONS_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
@@ -1598,8 +1605,8 @@ export function SiteHeader() {
                         prefetch={true}
                         className="solutions-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
-                        <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
+                        <div className="flex items-center gap-3 h-full">
+                          <div className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#00D26A]/30 transition-colors">
                             <CatIcon className="solutions-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1630,7 +1637,7 @@ export function SiteHeader() {
               {/* AI/Neural visual grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(255,140,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,140,0,0.02)_1px,transparent_1px)] bg-size-[24px_24px] mask-[radial-gradient(ellipse_at_center,black_70%,transparent_100%)] opacity-30" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+              <div className="max-w-300 mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {INTELLIGENCE_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
@@ -1642,8 +1649,8 @@ export function SiteHeader() {
                         prefetch={true}
                         className="intelligence-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
-                        <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
+                        <div className="flex items-center gap-3 h-full">
+                          <div className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#FF8C00]/30 transition-colors">
                             <CatIcon className="intelligence-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1674,7 +1681,7 @@ export function SiteHeader() {
               {/* Commerce visual grid texture and blueprints */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+              <div className="max-w-300 mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {MARKETPLACE_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
@@ -1686,8 +1693,8 @@ export function SiteHeader() {
                         prefetch={true}
                         className="marketplace-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
-                        <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
+                        <div className="flex items-center gap-3 h-full">
+                          <div className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#2563EB]/30 transition-colors">
                             <CatIcon className="marketplace-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1718,7 +1725,7 @@ export function SiteHeader() {
               {/* Document/Government visual grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-size-[28px_28px] opacity-35" />
               <div className="absolute -top-24 left-1/4 w-96 h-96 bg-[#4F46E5]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+              <div className="max-w-300 mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {SCHEMES_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
@@ -1730,8 +1737,8 @@ export function SiteHeader() {
                         prefetch={true}
                         className="schemes-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
-                        <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
+                        <div className="flex items-center gap-3 h-full">
+                          <div className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#4F46E5]/30 transition-colors">
                             <CatIcon className="schemes-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1762,7 +1769,7 @@ export function SiteHeader() {
               {/* Corporate visual pattern and grid overlay */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(236,72,153,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(236,72,153,0.02)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35" />
               <div className="absolute -top-24 left-1/3 w-96 h-96 bg-[#EC4899]/10 rounded-full blur-[100px] pointer-events-none" />
-              <div className="max-w-[1200px] mx-auto p-5 relative z-10">
+              <div className="max-w-300 mx-auto p-5 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 animate-in fade-in zoom-in-95 duration-200">
                   {COMPANY_CATEGORIES.map((category) => {
                     const CatIcon = category.icon;
@@ -1774,8 +1781,8 @@ export function SiteHeader() {
                         prefetch={true}
                         className="company-mega-menu-card p-4 flex flex-col group/card cursor-pointer relative justify-center"
                       >
-                        <div className="flex items-center gap-[12px] h-full">
-                          <div className="w-[48px] h-[48px] flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
+                        <div className="flex items-center gap-3 h-full">
+                          <div className="w-12 h-12 flex items-center justify-center shrink-0 rounded-[12px] bg-white/5 border border-white/10 group-hover/card:border-[#EC4899]/30 transition-colors">
                             <CatIcon className="company-mega-icon w-5 h-5 text-muted-foreground transition-all duration-300" strokeWidth={1.8} />
                           </div>
                           <div className="flex flex-col justify-center h-full gap-0.5">
@@ -1798,8 +1805,8 @@ export function SiteHeader() {
 
         {/* Mobile Menu Dropdown */}
         <div 
-          className={`lg:hidden absolute top-[70px] left-0 w-full glass-dropdown transition-all duration-500 overflow-hidden origin-top z-40 pointer-events-auto ${
-            isMobileMenuOpen ? "max-h-[850px] opacity-100 py-6 scale-y-100" : "max-h-0 opacity-0 py-0 scale-y-95 pointer-events-none"
+          className={`lg:hidden absolute top-17.5 left-0 w-full glass-dropdown transition-all duration-500 overflow-hidden origin-top z-40 pointer-events-auto ${
+            isMobileMenuOpen ? "max-h-212.5 opacity-100 py-6 scale-y-100" : "max-h-0 opacity-0 py-0 scale-y-95 pointer-events-none"
           }`}
         >
           <div className="flex flex-col gap-4 px-6 max-h-[70vh] overflow-y-auto">
@@ -1825,7 +1832,7 @@ export function SiteHeader() {
                       onClick={() => setIsEvtechMobileOpen(!isEvtechMobileOpen)}
                       className={`${isEvtechMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1838,7 +1845,7 @@ export function SiteHeader() {
                       onClick={() => setIsSolutionsMobileOpen(!isSolutionsMobileOpen)}
                       className={`${isSolutionsMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1851,7 +1858,7 @@ export function SiteHeader() {
                       onClick={() => setIsIntelligenceMobileOpen(!isIntelligenceMobileOpen)}
                       className={`${isIntelligenceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1864,7 +1871,7 @@ export function SiteHeader() {
                       onClick={() => setIsMarketplaceMobileOpen(!isMarketplaceMobileOpen)}
                       className={`${isMarketplaceMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1877,7 +1884,7 @@ export function SiteHeader() {
                       onClick={() => setIsSchemesMobileOpen(!isSchemesMobileOpen)}
                       className={`${isSchemesMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1890,7 +1897,7 @@ export function SiteHeader() {
                       onClick={() => setIsCompanyMobileOpen(!isCompanyMobileOpen)}
                       className={`${isCompanyMobileOpen ? 'glass-btn-active' : 'glass-btn'} flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px] w-full text-center`}
                     >
-                      <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                      <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                       <span className="text-[13px] font-semibold text-white">{item.name}</span>
                     </button>
                   );
@@ -1912,7 +1919,7 @@ export function SiteHeader() {
 
             {/* Mobile EVTech Sub-menu */}
             {isEvtechMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#00D26A] uppercase">EVTech Categories</span>
                 </div>
@@ -1942,7 +1949,7 @@ export function SiteHeader() {
 
             {/* Mobile Solutions Sub-menu */}
             {isSolutionsMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#00D26A] uppercase">Solutions Categories</span>
                 </div>
@@ -1972,7 +1979,7 @@ export function SiteHeader() {
 
             {/* Mobile Intelligence Sub-menu */}
             {isIntelligenceMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#FF8C00] uppercase">Intelligence Categories</span>
                 </div>
@@ -2002,7 +2009,7 @@ export function SiteHeader() {
 
             {/* Mobile Marketplace Sub-menu */}
             {isMarketplaceMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#2563EB] uppercase">Marketplace Categories</span>
                 </div>
@@ -2032,7 +2039,7 @@ export function SiteHeader() {
 
             {/* Mobile Schemes Sub-menu */}
             {isSchemesMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#4F46E5] uppercase">Schemes Categories</span>
                 </div>
@@ -2062,7 +2069,7 @@ export function SiteHeader() {
 
             {/* Mobile Company Sub-menu */}
             {isCompanyMobileOpen && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-[16px] transition-all duration-300 animate-in fade-in slide-in-from-top-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 p-3 bg-white/5 border border-white/5 rounded-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-2">
                 <div className="col-span-full flex items-center justify-between px-1 mb-1">
                   <span className="text-[11px] font-semibold tracking-wider text-[#EC4899] uppercase">Company Categories</span>
                 </div>

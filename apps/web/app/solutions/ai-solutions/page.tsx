@@ -20,6 +20,7 @@ import { InsightsDashboard } from "./components/InsightsDashboard";
 import { ReportCenter } from "./components/ReportCenter";
 import { KnowledgeCenter } from "./components/KnowledgeCenter";
 import { FloatingQuickActions } from "./components/FloatingQuickActions";
+import { smoothScrollToSection } from "@/lib/motion";
 
 const SECTIONS = [
   { id: "hero", label: "AI Hero", icon: Compass },
@@ -76,17 +77,7 @@ export default function AISolutionsPage() {
   }, [optimizerKey]);
 
   const scrollToSection = (id: string) => {
-    const container = contentContainerRef.current;
-    const el = document.getElementById(id);
-    if (container && el) {
-      const containerTop = container.getBoundingClientRect().top;
-      const elTop = el.getBoundingClientRect().top;
-      const offset = elTop - containerTop + container.scrollTop;
-      container.scrollTo({
-        top: offset - 20,
-        behavior: "smooth"
-      });
-    }
+    smoothScrollToSection(id, contentContainerRef.current, 20);
   };
 
   const handleLaunchAI = () => {
@@ -117,8 +108,8 @@ export default function AISolutionsPage() {
         />
 
         {/* Ambient Aurora glow balls */}
-        <div className="absolute top-[10%] left-[5%] w-[550px] h-[550px] bg-radial from-[#8B5CF6]/2 to-transparent blur-3xl" />
-        <div className="absolute bottom-[20%] right-[10%] w-[450px] h-[450px] bg-radial from-[#00D4FF]/2 to-transparent blur-3xl" />
+        <div className="absolute top-[10%] left-[5%] w-137.5 h-137.5 bg-radial from-[#8B5CF6]/2 to-transparent blur-3xl" />
+        <div className="absolute bottom-[20%] right-[10%] w-112.5 h-112.5 bg-radial from-[#00D4FF]/2 to-transparent blur-3xl" />
 
         {/* Floating particles simulation */}
         <div className="absolute inset-0 opacity-20">
@@ -184,7 +175,8 @@ export default function AISolutionsPage() {
               ═══════════════════════════════════════════ */}
           <main 
             ref={contentContainerRef}
-            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-[120px] scrollbar-thin scroll-smooth"
+            id="solution-content-scroll"
+            className="flex-1 h-full overflow-y-auto space-y-16 pr-2 pb-30 scrollbar-thin scroll-smooth"
           >
             
             {/* Section 1: AI Hero */}

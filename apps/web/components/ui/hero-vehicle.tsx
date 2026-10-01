@@ -1,29 +1,63 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 export function HeroVehicle() {
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const targetX = useRef(0);
+  const targetY = useRef(0);
+  const currentX = useRef(0);
+  const currentY = useRef(0);
 
   useEffect(() => {
+    // Respect reduced motion
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches) return;
+
+    let animId: number;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
-      const y = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
-      setCoords({ x, y });
+      const halfW = window.innerWidth / 2;
+      const halfH = window.innerHeight / 2;
+      targetX.current = (e.clientX - halfW) / halfW;
+      targetY.current = (e.clientY - halfH) / halfH;
     };
-    
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+
+    const handleMouseLeave = () => {
+      targetX.current = 0;
+      targetY.current = 0;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    document.body.addEventListener("mouseleave", handleMouseLeave, { passive: true });
+
+    // Smooth RAF lerp loop to prevent React re-renders
+    const tick = () => {
+      currentX.current += (targetX.current - currentX.current) * 0.06;
+      currentY.current += (targetY.current - currentY.current) * 0.06;
+
+      if (containerRef.current) {
+        containerRef.current.style.transform = `translate3d(${currentX.current * 20}px, ${currentY.current * 16}px, 0)`;
+      }
+
+      animId = requestAnimationFrame(tick);
+    };
+
+    animId = requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      document.body.removeEventListener("mouseleave", handleMouseLeave);
+      cancelAnimationFrame(animId);
+    };
   }, []);
 
   return (
     <div className="relative w-full h-100 lg:h-120 pointer-events-none select-none overflow-hidden">
       {/* Floating diagnostic sparkles/particles overlay */}
       <div 
-        className="absolute inset-0 z-10 transition-transform duration-700 ease-out"
-        style={{
-          transform: `translate3d(${coords.x * 25}px, ${coords.y * 20}px, 0)`
-        }}
+        ref={containerRef}
+        className="absolute inset-0 z-10 will-change-transform"
       >
         <style>{`
           @keyframes float-spark {
@@ -46,11 +80,11 @@ export function HeroVehicle() {
           }
         `}</style>
 
-        {/* Ambient glow overlays aligned with car and planet */}
+        {/* Ambient glow overlays aligned with vehicle tech space */}
         <div className="absolute top-[25%] right-[35%] w-50 h-50 bg-secondary/8 rounded-full blur-[50px] glow-pulse-layer" />
         <div className="absolute bottom-[20%] left-[25%] w-62.5 h-22.5 bg-[#00F5A0]/10 rounded-full blur-2xl glow-pulse-layer" style={{ animationDelay: "2s" }} />
 
-        {/* Sparks drifting */}
+        {/* Diagnostic energy sparks drifting */}
         <div className="spark-particle bg-[#00F5A0] w-1.5 h-1.5 top-[70%] left-[35%]" style={{ animationDelay: "0s", animationDuration: "5s" }} />
         <div className="spark-particle bg-secondary w-1 h-1 top-[55%] left-[50%]" style={{ animationDelay: "2s", animationDuration: "7s" }} />
         <div className="spark-particle bg-accent w-1.5 h-1.5 top-[75%] left-[65%]" style={{ animationDelay: "4s", animationDuration: "6s" }} />
