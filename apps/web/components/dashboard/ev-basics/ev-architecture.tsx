@@ -651,10 +651,10 @@ export function EVArchitecture() {
                   </div>
 
                   {/* Arrow between nodes */}
-                  {i < TOP_NODES.length - 1 && (
+                  {i < TOP_NODES.length - 1 && ARROW_LABELS[i] && (
                     <AnimatedArrow
-                      color={ARROW_LABELS[i].color}
-                      label={ARROW_LABELS[i].label}
+                      color={ARROW_LABELS[i]!.color}
+                      label={ARROW_LABELS[i]!.label}
                       direction="right"
                       isActive={activeStep > i}
                       delay={0.4 + i * 0.06 + 0.2}
@@ -705,7 +705,7 @@ export function EVArchitecture() {
               {/* Column 7: Regen Braking card (aligned under Battery Pack) */}
               <div className="min-w-0 flex items-stretch">
                 <NodeCard
-                  node={BOTTOM_NODES[0]}
+                  node={BOTTOM_NODES[0]!}
                   isActive={activeStep > 7}
                   isHovered={hoveredNode === "regen"}
                   onHover={() => { setHoveredNode("regen"); setIsAutoPlaying(false); }}
@@ -729,7 +729,7 @@ export function EVArchitecture() {
               {/* Column 11: Wheels card (aligned under Electric Motor) */}
               <div className="min-w-0 flex items-stretch">
                 <NodeCard
-                  node={BOTTOM_NODES[1]}
+                  node={BOTTOM_NODES[1]!}
                   isActive={activeStep > 6}
                   isHovered={hoveredNode === "wheels"}
                   onHover={() => { setHoveredNode("wheels"); setIsAutoPlaying(false); }}
