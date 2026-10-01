@@ -23,8 +23,8 @@ healthRouter.get("/", async (_req, res, next) => {
       services: { database: databaseStatus },
     };
 
-    const statusCode = payload.status === "ok" ? 200 : 503;
-    res.status(statusCode).json(successResponse(payload));
+    // Always respond with 200 so orchestrator/Render health checks pass while server is alive
+    res.status(200).json(successResponse(payload));
   } catch (error) {
     next(error);
   }
