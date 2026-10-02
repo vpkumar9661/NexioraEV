@@ -684,7 +684,7 @@ export function ArchitectureExplorer() {
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
           {/* ── LEFT COLUMN: Components Navigator Sidebar (14 items) ── */}
-          <div className="lg:col-span-3 flex flex-col rounded-2xl border border-white/10 bg-[#090e18]/85 backdrop-blur-xl p-3 max-h-[580px] lg:max-h-[660px]">
+          <div className="lg:col-span-3 flex flex-col rounded-2xl border border-white/10 bg-[#090e18]/85 backdrop-blur-xl p-3 max-h-145 lg:max-h-165">
             <div className="flex items-center justify-between px-2 pb-2.5 border-b border-white/5">
               <span className="text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground/60">
                 Components
@@ -738,7 +738,7 @@ export function ArchitectureExplorer() {
           </div>
 
           {/* ── CENTER COLUMN: 3D EV Chassis Showcase & Callout Cards ── */}
-          <div className="lg:col-span-6 flex flex-col justify-center relative rounded-2xl border border-white/5 bg-black/40 p-2 sm:p-4 overflow-hidden min-h-[460px] sm:min-h-[540px] lg:min-h-[660px]">
+          <div className="lg:col-span-6 flex flex-col justify-center relative rounded-2xl border border-white/5 bg-black/40 p-2 sm:p-4 overflow-hidden min-h-115 sm:min-h-135 lg:min-h-165">
             {/* Dynamic Tilt Stage */}
             <div
               className="relative w-full h-full flex items-center justify-center transition-transform duration-300 ease-out"
@@ -747,7 +747,7 @@ export function ArchitectureExplorer() {
               }}
             >
               {/* Center 3D Car Image */}
-              <div className="relative w-full max-w-[620px] aspect-16/9 transition-all duration-500">
+              <div className="relative w-full max-w-155 aspect-video transition-all duration-500">
                 <Image
                   src="/chassis/ev-chassis-hero.jpg"
                   alt="Interactive EV Chassis Architecture 3D Render"
@@ -1023,7 +1023,7 @@ export function ArchitectureExplorer() {
                 </div>
 
                 {/* Content according to tab */}
-                <div className="flex-1 min-h-[140px] text-xs space-y-2.5 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-white/10">
+                <div className="flex-1 min-h-35 text-xs space-y-2.5 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-white/10">
                   {inspectorTab === "overview" && (
                     <p className="text-muted-foreground/85 leading-relaxed">
                       {selectedComp.overview}
@@ -1331,7 +1331,7 @@ export function ExplodedView() {
         <p className="text-sm text-muted-foreground/60 mt-1">Explode structural component layers to inspect powertrain layout depths.</p>
       </div>
 
-      <div className="rounded-2xl border border-white/5 bg-black/40 p-6 flex flex-col items-center justify-between min-h-[320px] relative">
+      <div className="rounded-2xl border border-white/5 bg-black/40 p-6 flex flex-col items-center justify-between min-h-80 relative">
         <button
           onClick={() => setExplode(!explode)}
           className="absolute top-4 right-4 px-4 py-1.5 rounded-xl border border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] text-xs font-bold hover:bg-[#22D3EE]/20 transition-all cursor-pointer z-10"
@@ -1340,7 +1340,7 @@ export function ExplodedView() {
         </button>
 
         <div className="flex-1 w-full flex items-center justify-center relative py-6">
-          <svg viewBox="-120 -80 240 160" className="w-full max-w-[280px] aspect-square overflow-visible">
+          <svg viewBox="-120 -80 240 160" className="w-full max-w-70 aspect-square overflow-visible">
             {/* LAYER 3: Outlined Shell (top layer) */}
             <motion.path
               d="M -60,-20 Q 0,-50 60,-20 L 70,10 L -70,10 Z"
