@@ -738,26 +738,80 @@ export default function HomePage() {
           background: radial-gradient(ellipse at 30% 30%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
                       radial-gradient(ellipse at 70% 70%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
         }
+
+        /* ============================================
+           PREMIUM CINEMATIC HERO BACKGROUND
+           ============================================ */
+        .hero-cinematic-section {
+          background-color: #04080F;
+          background-image: 
+            linear-gradient(to right, #04080F 0%, rgba(4, 8, 15, 0.94) 22%, rgba(4, 8, 15, 0.72) 42%, rgba(4, 8, 15, 0.2) 75%, rgba(4, 8, 15, 0.05) 100%),
+            linear-gradient(to top, #04080F 0%, rgba(4, 8, 15, 0.6) 18%, transparent 45%),
+            linear-gradient(to bottom, rgba(4, 8, 15, 0.8) 0%, transparent 18%),
+            url('/hero-cinematic-ev.jpg');
+          background-image: 
+            linear-gradient(to right, #04080F 0%, rgba(4, 8, 15, 0.94) 22%, rgba(4, 8, 15, 0.72) 42%, rgba(4, 8, 15, 0.2) 75%, rgba(4, 8, 15, 0.05) 100%),
+            linear-gradient(to top, #04080F 0%, rgba(4, 8, 15, 0.6) 18%, transparent 45%),
+            linear-gradient(to bottom, rgba(4, 8, 15, 0.8) 0%, transparent 18%),
+            image-set(
+              url('/hero-cinematic-ev.webp') type('image/webp'),
+              url('/hero-cinematic-ev.jpg') type('image/jpeg')
+            );
+          background-size: cover;
+          background-position: right center;
+          background-repeat: no-repeat;
+        }
+
+        @media (max-width: 1023px) {
+          .hero-cinematic-section {
+            background-image: 
+              linear-gradient(to bottom, rgba(4, 8, 15, 0.95) 0%, rgba(4, 8, 15, 0.88) 45%, rgba(4, 8, 15, 0.65) 80%, #04080F 100%),
+              url('/hero-cinematic-ev.jpg');
+            background-image: 
+              linear-gradient(to bottom, rgba(4, 8, 15, 0.95) 0%, rgba(4, 8, 15, 0.88) 45%, rgba(4, 8, 15, 0.65) 80%, #04080F 100%),
+              image-set(
+                url('/hero-cinematic-ev.webp') type('image/webp'),
+                url('/hero-cinematic-ev.jpg') type('image/jpeg')
+              );
+            background-position: 80% 30%;
+          }
+        }
       `}} />
 
       {/* --- Rebuilt Hero Section --- */}
       <section 
-        className="relative overflow-hidden border-b border-white/5 text-white theme-graphite accent-green pt-24 pb-12 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "linear-gradient(to right, rgba(4, 8, 15, 0.85) 0%, rgba(4, 8, 15, 0.45) 45%, rgba(4, 8, 15, 0) 80%), linear-gradient(to top, #04080F 0%, rgba(4, 8, 15, 0) 30%), url('/hero-bg-mockup.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "right center"
-        }}
+        className="relative overflow-hidden border-b border-white/5 text-white theme-graphite accent-green pt-24 pb-12 hero-cinematic-section"
       >
         {/* Layered Background Design */}
-        <div className="absolute inset-0 bg-noise pointer-events-none" />
+        <div className="absolute inset-0 bg-noise pointer-events-none opacity-40" />
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 -translate-x-1/2 w-175 h-175 opacity-35 bg-radial-gradient from-[#00D26A]/15 to-transparent filter blur-3xl" />
-          <div className="absolute top-0 right-1/4 translate-x-1/2 w-175 h-175 opacity-35 bg-radial-gradient from-secondary/15 to-transparent filter blur-3xl" />
+          <div className="absolute top-0 left-1/4 -translate-x-1/2 w-175 h-175 opacity-25 bg-radial-gradient from-[#00E676]/12 to-transparent filter blur-3xl" />
+          <div className="absolute top-0 right-1/4 translate-x-1/2 w-175 h-175 opacity-25 bg-radial-gradient from-[#00D4FF]/12 to-transparent filter blur-3xl" />
           <div className="particle-container">
             <div className="particle-p1 w-2 h-2 top-[20%] left-[20%]" style={{ animationDelay: "1s" }} />
             <div className="particle-p2 w-1.5 h-1.5 top-[60%] left-[75%]" style={{ animationDelay: "3s" }} />
           </div>
+        </div>
+
+        {/* Sophisticated Digital-Grid Floor Perspective */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none overflow-hidden"
+          style={{
+            perspective: "600px",
+            perspectiveOrigin: "50% 0%",
+            maskImage: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 95%)",
+            WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 95%)",
+          }}
+        >
+          <div
+            className="absolute inset-x-[-20%] bottom-0 h-full"
+            style={{
+              transform: "rotateX(60deg)",
+              transformOrigin: "bottom center",
+              backgroundImage: 'linear-gradient(90deg, rgba(0, 245, 160, 0.05) 1px, transparent 1px), linear-gradient(0deg, rgba(0, 217, 255, 0.04) 1px, transparent 1px)',
+              backgroundSize: '48px 48px',
+            }}
+          />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 w-full">

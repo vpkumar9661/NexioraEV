@@ -301,30 +301,21 @@ export default function RegisterPage() {
               >
                 Create an account
               </h1>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#A8B7C5" }}
-              >
+              <p className="text-sm leading-relaxed" style={{ color: "#A8B7C5" }}>
                 Join NexioraEV and start your electric mobility journey.
               </p>
             </div>
 
             {/* Form */}
             <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-5"
-              >
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                 {/* Name Field */}
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel
-                        className="text-sm font-medium"
-                        style={{ color: "#CBD5E1" }}
-                      >
+                      <FormLabel className="text-sm font-medium" style={{ color: "#CBD5E1" }}>
                         Full Name
                       </FormLabel>
                       <FormControl>
@@ -353,10 +344,7 @@ export default function RegisterPage() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel
-                        className="text-sm font-medium"
-                        style={{ color: "#CBD5E1" }}
-                      >
+                      <FormLabel className="text-sm font-medium" style={{ color: "#CBD5E1" }}>
                         Email
                       </FormLabel>
                       <FormControl>
@@ -386,10 +374,7 @@ export default function RegisterPage() {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel
-                        className="text-sm font-medium"
-                        style={{ color: "#CBD5E1" }}
-                      >
+                      <FormLabel className="text-sm font-medium" style={{ color: "#CBD5E1" }}>
                         Password
                       </FormLabel>
                       <FormControl>
