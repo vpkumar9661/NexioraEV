@@ -264,7 +264,7 @@ function AuthCursorGlow() {
   return (
     <div
       ref={glowRef}
-      className="fixed pointer-events-none z-[1] hidden md:block"
+      className="fixed pointer-events-none z-1 hidden md:block"
       style={{
         width: 400,
         height: 400,
@@ -474,7 +474,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         />
 
         {/* ═══ MAIN CONTENT ═══ */}
-        <div className="w-full max-w-[480px] relative z-10 my-auto">
+        <div className="w-full max-w-120 relative z-10 my-auto">
           {/* Logo / Brand */}
           <div className="mb-8 flex justify-center">
             <Link
