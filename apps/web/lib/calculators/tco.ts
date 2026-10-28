@@ -155,3 +155,4 @@ export function calculateTco(inputs: TcoInputs): TcoResults {
     yearlyCumulativeIce,
   };
 }
+

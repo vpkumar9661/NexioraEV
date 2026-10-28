@@ -85,3 +85,4 @@ export function getCalculatorBySlug(slug: string): CalculatorConfig | undefined 
     (c) => c.slug === slug || c.id === slug || c.legacyHrefs.includes(`/calculators/${slug}`)
   );
 }
+

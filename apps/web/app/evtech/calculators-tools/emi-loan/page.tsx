@@ -10,3 +10,4 @@ export const metadata: Metadata = {
 export default function EmiLoanPage() {
   return <EmiLoanCalculator />;
 }
+

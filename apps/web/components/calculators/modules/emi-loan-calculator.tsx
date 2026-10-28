@@ -335,3 +335,4 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
     </CalculatorLayout>
   );
 }
+

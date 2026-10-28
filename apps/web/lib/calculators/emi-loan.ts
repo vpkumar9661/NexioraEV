@@ -127,3 +127,4 @@ export function calculateEmiLoan(inputs: EmiLoanInputs): EmiLoanResults {
     prepaymentMonthsReduced,
   };
 }
+

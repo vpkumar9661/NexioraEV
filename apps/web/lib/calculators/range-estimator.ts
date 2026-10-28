@@ -139,3 +139,4 @@ export function calculateRangeEstimator(inputs: RangeEstimatorInputs): RangeEsti
     tempImpactKm: Math.round(tempImpactKm),
   };
 }
+

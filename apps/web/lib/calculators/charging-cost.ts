@@ -112,3 +112,4 @@ export function calculateChargingCost(inputs: ChargingCostInputs): ChargingCostR
     co2SavedKgPerYear: Math.round(co2SavedKgPerYear),
   };
 }
+

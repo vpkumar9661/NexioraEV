@@ -346,3 +346,4 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
     </CalculatorLayout>
   );
 }
+

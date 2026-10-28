@@ -135,3 +135,4 @@ export function calculateBatteryHealth(inputs: BatteryHealthInputs): BatteryHeal
     recommendations,
   };
 }
+

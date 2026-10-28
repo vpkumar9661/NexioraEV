@@ -21,3 +21,4 @@ export default async function LegacyCalculatorRedirectPage({ params }: Props) {
 
   redirect(calc.canonicalHref);
 }
+
