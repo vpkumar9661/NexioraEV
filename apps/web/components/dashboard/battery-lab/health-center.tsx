@@ -138,7 +138,7 @@ export function HealthCenter() {
 
           <div className="grid grid-cols-2 gap-4 items-center">
             {/* Score Ring */}
-            <div className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/1 border border-white/5 h-[140px] relative">
+            <div className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/1 border border-white/5 h-35 relative">
               <span className="text-3xl font-extrabold text-white">{analytics.healthScore}%</span>
               <span className="text-[10px] text-muted-foreground/50 font-bold uppercase tracking-wider mt-1.5">Calculated SOH</span>
             </div>

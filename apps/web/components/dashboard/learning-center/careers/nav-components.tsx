@@ -13,7 +13,7 @@ import {
 
 export function CareerBreadcrumb() {
   return (
-    <nav className="sticky top-[72px] z-40 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/5 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3">
+    <nav className="sticky top-18 z-40 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/5 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between text-[12px] font-semibold text-muted-foreground/60">
         <div className="flex items-center gap-2">
           <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
@@ -67,8 +67,8 @@ const SECTIONS = [
 
 export function CareerLeftSidebarNav({ activeSection }: CareerLeftSidebarNavProps) {
   return (
-    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-[140px] w-[180px] z-35">
-      <nav className="p-3 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-0.5 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 shadow-2xl">
+    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-35 w-45 z-35">
+      <nav className="p-3 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-md space-y-0.5 max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10 shadow-2xl">
         <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2.5 pb-2">
           Career Map
         </p>

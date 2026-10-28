@@ -32,11 +32,11 @@ export function AIAssistant() {
         <p className="text-sm text-muted-foreground/60 mt-1">Get instant diagnostic or technical answers about high-voltage battery systems</p>
       </div>
 
-      <div className="rounded-[24px] border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/3 via-transparent to-[#8B5CF6]/2 p-6 relative overflow-hidden grid lg:grid-cols-12 gap-6">
+      <div className="rounded-3xl border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/3 via-transparent to-[#8B5CF6]/2 p-6 relative overflow-hidden grid lg:grid-cols-12 gap-6">
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#10B981]/5 rounded-full blur-[80px]" />
         
         {/* Chat History Panel */}
-        <div className="lg:col-span-7 flex flex-col justify-between h-[320px] bg-[#131722]/50 border border-white/3 rounded-xl p-4">
+        <div className="lg:col-span-7 flex flex-col justify-between h-80 bg-[#131722]/50 border border-white/3 rounded-xl p-4">
           <div className="flex-1 overflow-y-auto space-y-3 pr-2 scrollbar-thin scrollbar-thumb-white/5">
             {messages.map((msg, i) => (
               <div

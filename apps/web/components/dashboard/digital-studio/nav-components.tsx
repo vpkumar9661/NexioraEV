@@ -58,7 +58,7 @@ export function TopToolbar({
   onShare
 }: TopToolbarProps) {
   return (
-    <div className="w-full p-4 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md flex items-center justify-between shadow-2xl relative z-25">
+    <div className="w-full p-4 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-md flex items-center justify-between shadow-2xl relative z-25">
       <div className="flex items-center gap-3">
         <div className="w-2.5 h-2.5 rounded-full bg-[#22D3EE] animate-pulse" />
         <h2 className="text-sm font-black text-white flex items-center gap-2">
@@ -111,7 +111,7 @@ interface LeftConfigSidebarProps {
 
 export function LeftConfigSidebar({ config, onChange }: LeftConfigSidebarProps) {
   return (
-    <aside className="w-full lg:w-[260px] shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
+    <aside className="w-full lg:w-65 shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
       <div className="flex items-center gap-2 border-b border-white/5 pb-2.5">
         <Settings className="w-4 h-4 text-[#22D3EE]" />
         <span className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">
@@ -284,7 +284,7 @@ interface RightTelemetrySidebarProps {
 
 export function RightTelemetrySidebar({ telemetry }: RightTelemetrySidebarProps) {
   return (
-    <aside className="w-full lg:w-[260px] shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
+    <aside className="w-full lg:w-65 shrink-0 border border-white/5 bg-white/2 rounded-[20px] p-5 space-y-5 backdrop-blur-md max-h-[85vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white/10">
       <div className="flex items-center gap-2 border-b border-white/5 pb-2.5">
         <Activity className="w-4 h-4 text-[#10B981]" />
         <span className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">

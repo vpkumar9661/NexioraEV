@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative p-6 sm:p-8 rounded-[24px] border border-[#22D3EE]/25 bg-linear-to-b from-[#22D3EE]/5 to-transparent backdrop-blur-md overflow-hidden min-h-[380px] flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
+    <section id="hero" className="relative p-6 sm:p-8 rounded-3xl border border-[#22D3EE]/25 bg-linear-to-b from-[#22D3EE]/5 to-transparent backdrop-blur-md overflow-hidden min-h-95 flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
       {/* Glow mesh */}
       <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-cyan-500/5 blur-[80px] pointer-events-none" />
 
@@ -54,7 +54,7 @@ export function HeroSection() {
 
         {/* Vector SVG Chassis Animation */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <svg viewBox="-90 -90 180 180" className="w-full max-w-[210px] aspect-square overflow-visible">
+          <svg viewBox="-90 -90 180 180" className="w-full max-w-52.5 aspect-square overflow-visible">
             {/* Outlined Car body silhouette */}
             <path
               d="M -70,20 C -70,-30 -30,-50 0,-50 C 30,-50 70,-30 70,20 C 70,35 60,40 50,40 C 40,40 35,30 25,30 C 15,30 10,40 -10,40 C -30,40 -35,30 -45,30 C -55,30 -60,40 -70,20 Z"
@@ -109,7 +109,7 @@ export function StatsBar() {
       {STATS_ITEMS.map((stat, idx) => (
         <div
           key={idx}
-          className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
+          className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
           <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
@@ -165,7 +165,7 @@ export function ComponentGallery() {
           <div
             key={comp.id}
             onClick={() => setSelectedComp(comp)}
-            className="group rounded-[20px] border border-white/5 bg-white/2 hover:bg-white/4 p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] cursor-pointer flex flex-col justify-between min-h-[145px]"
+            className="group rounded-[20px] border border-white/5 bg-white/2 hover:bg-white/4 p-5 transition-all duration-300 hover:border-white/10 hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] cursor-pointer flex flex-col justify-between min-h-36.25"
           >
             <div>
               <h3 className="text-xs font-bold text-white group-hover:text-[#22D3EE] transition-colors uppercase tracking-wider">{comp.name}</h3>
@@ -185,7 +185,7 @@ export function ComponentGallery() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="w-full max-w-md rounded-[24px] border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 shadow-2xl space-y-4"
+              className="w-full max-w-md rounded-3xl border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 shadow-2xl space-y-4"
             >
               <div className="flex justify-between items-center border-b border-white/5 pb-3">
                 <h4 className="text-xs font-black text-white uppercase tracking-wider">{selectedComp.name}</h4>
@@ -426,7 +426,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#22D3EE]/20 bg-[#22D3EE]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -439,7 +439,7 @@ export function FAQSection() {
                 <span className="text-xs font-bold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
@@ -458,7 +458,7 @@ export function FAQSection() {
 
 export function ContinueCTA() {
   return (
-    <section id="cta" className="p-6 sm:p-8 rounded-[24px] border border-white/5 bg-white/2 relative overflow-hidden">
+    <section id="cta" className="p-6 sm:p-8 rounded-3xl border border-white/5 bg-white/2 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-48 h-48 bg-[#22D3EE]/5 blur-2xl pointer-events-none" />
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 relative z-10">
         <div className="space-y-2">

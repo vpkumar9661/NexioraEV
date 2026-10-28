@@ -81,7 +81,7 @@ export function BMSSystem() {
           </div>
 
           {/* Signal flow block diagram */}
-          <div className="relative h-[180px] bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
+          <div className="relative h-45 bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
             <svg className="w-full h-full" viewBox="0 0 400 160">
               {/* Battery Cells array */}
               <g transform="translate(20, 45)">

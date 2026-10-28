@@ -13,7 +13,7 @@ import {
 
 export function AIHero() {
   return (
-    <section id="hero" className="relative p-6 sm:p-8 rounded-[24px] border border-[#7C4DFF]/25 bg-linear-to-b from-[#7C4DFF]/5 to-transparent backdrop-blur-md overflow-hidden min-h-[360px] flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
+    <section id="hero" className="relative p-6 sm:p-8 rounded-3xl border border-[#7C4DFF]/25 bg-linear-to-b from-[#7C4DFF]/5 to-transparent backdrop-blur-md overflow-hidden min-h-90 flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
       <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-[#7C4DFF]/5 blur-[80px] pointer-events-none" />
 
       <div className="grid md:grid-cols-12 gap-8 items-center w-full z-10">
@@ -51,7 +51,7 @@ export function AIHero() {
 
         {/* Vector SVG Animation */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <svg viewBox="-80 -80 160 80" className="w-full max-w-[220px] overflow-visible">
+          <svg viewBox="-80 -80 160 80" className="w-full max-w-55 overflow-visible">
             {/* Hologram rings layers */}
             <ellipse cx="0" cy="15" rx="55" ry="22" fill="none" stroke="rgba(124,77,255,0.15)" strokeWidth="0.8" />
             <ellipse cx="0" cy="15" rx="45" ry="18" fill="none" stroke="rgba(124,77,255,0.1)" strokeWidth="0.8" strokeDasharray="3 3" />
@@ -93,7 +93,7 @@ export function AIQuickActions({ onSelectAction }: AIQuickActionsProps) {
           <div
             key={idx}
             onClick={() => onSelectAction(s.prompt)}
-            className="p-4 rounded-xl border border-white/5 bg-white/2 hover:border-[#7C4DFF]/20 hover:bg-[#7C4DFF]/5 hover:shadow-[0_4px_24px_rgba(124,77,255,0.04)] transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[110px]"
+            className="p-4 rounded-xl border border-white/5 bg-white/2 hover:border-[#7C4DFF]/20 hover:bg-[#7C4DFF]/5 hover:shadow-[0_4px_24px_rgba(124,77,255,0.04)] transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-27.5"
           >
             <span className="text-[10px] text-purple-400 font-extrabold uppercase tracking-wider block">Prompt template</span>
             <h4 className="text-xs font-bold text-white mt-1.5 leading-snug">{s.label}</h4>

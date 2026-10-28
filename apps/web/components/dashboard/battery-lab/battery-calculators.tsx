@@ -78,7 +78,7 @@ export function BatteryCalculators() {
         </div>
 
         {/* Right Side: Active Calculator Input/Output Grid */}
-        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-[300px] flex flex-col justify-between gap-6">
+        <div className="lg:col-span-8 rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-75 flex flex-col justify-between gap-6">
           
           {/* Capacity Calculator */}
           {activeTab === "capacity" && (

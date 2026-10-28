@@ -31,7 +31,7 @@ export function VideoLearning() {
             className="group rounded-[18px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 transition-all duration-300 overflow-hidden cursor-pointer"
           >
             {/* Thumbnail */}
-            <div className="relative h-[130px] bg-linear-to-br from-[#131722] to-[#0a0d14] flex items-center justify-center overflow-hidden">
+            <div className="relative h-32.5 bg-linear-to-br from-[#131722] to-[#0a0d14] flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#10B981_1px,transparent_1px)] bg-size-[12px_12px]" />
               <span className="text-4xl">{video.thumb}</span>
               

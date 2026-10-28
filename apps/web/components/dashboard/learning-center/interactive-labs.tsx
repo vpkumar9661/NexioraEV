@@ -105,7 +105,7 @@ export function CertificationCenter() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Input Form Left */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-55">
           <form onSubmit={handleIssue} className="space-y-4 text-xs">
             <div className="space-y-1">
               <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Candidate Name</label>
@@ -137,7 +137,7 @@ export function CertificationCenter() {
           </form>
         </div>
 
-        <div className="md:col-span-7 p-6 rounded-2xl border border-[#F5B301]/25 bg-linear-to-b from-[#F5B301]/5 to-transparent backdrop-blur-md flex flex-col justify-center min-h-[200px] relative overflow-hidden">
+        <div className="md:col-span-7 p-6 rounded-2xl border border-[#F5B301]/25 bg-linear-to-b from-[#F5B301]/5 to-transparent backdrop-blur-md flex flex-col justify-center min-h-50 relative overflow-hidden">
           <div className="absolute right-0 top-0 w-40 h-40 bg-[#F5B301]/5 rounded-full blur-2xl pointer-events-none" />
           
           {issuedCert ? (
@@ -288,7 +288,7 @@ export function AITutor() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Form panel Left */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[160px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-40">
           <form onSubmit={handleAsk} className="space-y-3 text-xs">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Ask Tutor</span>
             <input
@@ -308,7 +308,7 @@ export function AITutor() {
         </div>
 
         {/* Reply output Panel Right */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[150px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-37.5">
           {reply ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">Tutor Prognostics</span>

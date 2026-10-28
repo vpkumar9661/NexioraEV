@@ -122,7 +122,7 @@ export function ChemistryComparison() {
             <span className="text-[10px] text-muted-foreground/50 mt-1 block">Higher density & higher score is optimal</span>
           </div>
 
-          <div className="relative h-[220px] flex items-center justify-center border border-white/4 bg-[#131722]/40 rounded-xl overflow-hidden">
+          <div className="relative h-55 flex items-center justify-center border border-white/4 bg-[#131722]/40 rounded-xl overflow-hidden">
             <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(#fff_1px,transparent_1px)] bg-size-[10px_10px]" />
             
             <svg className="w-full h-full p-4" viewBox="0 0 200 200" fill="none">

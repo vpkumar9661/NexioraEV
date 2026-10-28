@@ -155,7 +155,7 @@ export function TechExplorer() {
       {/* Pop up Overlay detail panel */}
       {selectedChem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="relative w-full max-w-2xl rounded-[24px] border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6">
+          <div className="relative w-full max-w-2xl rounded-3xl border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6">
             
             {/* Header */}
             <div className="flex items-start justify-between border-b border-white/5 pb-4">

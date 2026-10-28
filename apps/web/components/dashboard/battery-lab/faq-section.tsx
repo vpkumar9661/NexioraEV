@@ -34,7 +34,7 @@ export function FAQSection() {
           <p className="text-sm text-muted-foreground/60 mt-1">Common answers about high-voltage battery technologies</p>
         </div>
 
-        <div className="relative w-full sm:w-[280px]">
+        <div className="relative w-full sm:w-70">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/40" />
           <input
             type="text"
@@ -57,7 +57,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#10B981]/20 bg-[#10B981]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -73,7 +73,7 @@ export function FAQSection() {
                 </span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 text-[#6EE7B7]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-75 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-5 text-[12.5px] text-muted-foreground/70 leading-relaxed pl-12">
                   {faq.a}
                 </p>

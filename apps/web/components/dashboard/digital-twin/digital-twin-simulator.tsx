@@ -595,7 +595,7 @@ export function DigitalTwinSimulator() {
       <div className="grid lg:grid-cols-12 gap-6 items-stretch">
         
         {/* LEFT PANEL: CONFIGURATION */}
-        <div className="lg:col-span-3 rounded-[24px] border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-5 space-y-6 flex flex-col justify-between shadow-2xl relative">
+        <div className="lg:col-span-3 rounded-3xl border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-5 space-y-6 flex flex-col justify-between shadow-2xl relative">
           <div className="absolute top-0 left-0 w-32 h-32 rounded-full bg-purple-500/5 blur-2xl pointer-events-none" />
           
           <div className="space-y-5">
@@ -782,7 +782,7 @@ export function DigitalTwinSimulator() {
         </div>
 
         {/* CENTER PANEL: 3D DIGITAL TWIN DISPLAY */}
-        <div className="lg:col-span-6 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-xl p-5 flex flex-col justify-between shadow-2xl relative min-h-[480px]">
+        <div className="lg:col-span-6 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-xl p-5 flex flex-col justify-between shadow-2xl relative min-h-120">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(192,132,252,0.04),transparent_70%)] pointer-events-none" />
 
           {/* View Modes Top Bar */}
@@ -861,7 +861,7 @@ export function DigitalTwinSimulator() {
 
             <svg
               viewBox="-160 -120 320 240"
-              className="w-full max-w-[340px] aspect-square transition-transform duration-500 cursor-pointer"
+              className="w-full max-w-85 aspect-square transition-transform duration-500 cursor-pointer"
               style={{
                 transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
               }}
@@ -1060,7 +1060,7 @@ export function DigitalTwinSimulator() {
         </div>
 
         {/* RIGHT PANEL: LIVE ENGINEERING ANALYTICS */}
-        <div className="lg:col-span-3 rounded-[24px] border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-5 space-y-6 flex flex-col justify-between shadow-2xl relative">
+        <div className="lg:col-span-3 rounded-3xl border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-5 space-y-6 flex flex-col justify-between shadow-2xl relative">
           <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-purple-500/5 blur-2xl pointer-events-none" />
 
           <div className="space-y-4">
@@ -1161,7 +1161,7 @@ export function DigitalTwinSimulator() {
         <div className="md:col-span-8 space-y-6">
           
           {/* DEGRADATION TIMELINE SLIDER */}
-          <div className="p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
+          <div className="p-5 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/5 pb-3">
               <div>
                 <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">15-Year Life Cycle Simulation</h4>
@@ -1219,7 +1219,7 @@ export function DigitalTwinSimulator() {
           </div>
 
           {/* DYNAMIC SVG CHARTS PANEL */}
-          <div className="p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
+          <div className="p-5 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <h4 className="text-sm font-extrabold text-white uppercase tracking-wider border-b border-white/5 pb-2.5">
               Real-time Simulation curves
             </h4>
@@ -1228,7 +1228,7 @@ export function DigitalTwinSimulator() {
               {/* Chart 1: SOH Degradation Curve */}
               <div className="rounded-xl border border-white/5 bg-black/40 p-4">
                 <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Predicted SOH Degradation</span>
-                <div className="h-[120px] w-full flex items-center justify-center">
+                <div className="h-30 w-full flex items-center justify-center">
                   <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible">
                     <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
                     <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1273,7 +1273,7 @@ export function DigitalTwinSimulator() {
               {/* Chart 2: Fast Charging Throttling Curve */}
               <div className="rounded-xl border border-white/5 bg-black/40 p-4">
                 <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">SOC Charging Power Throttling</span>
-                <div className="h-[120px] w-full flex items-center justify-center">
+                <div className="h-30 w-full flex items-center justify-center">
                   <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible">
                     <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
                     <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1314,7 +1314,7 @@ export function DigitalTwinSimulator() {
         {/* RIGHT COLUMN: AI ADVISOR & COMPARISON PANEL */}
         <div className="md:col-span-4 space-y-6">
           {/* AI ENGINEERING ADVISOR */}
-          <div className="p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
+          <div className="p-5 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
             <div className="flex items-center justify-between border-b border-white/5 pb-2.5">
               <div className="flex items-center gap-2">
                 <BrainCircuit className="w-4 h-4 text-purple-400" />
@@ -1357,7 +1357,7 @@ export function DigitalTwinSimulator() {
           </div>
 
           {/* SIMULATION CONSOLE LOGS */}
-          <div className="p-4 rounded-[24px] border border-white/5 bg-[#07090e]/60 backdrop-blur-md max-h-[190px] overflow-hidden flex flex-col">
+          <div className="p-4 rounded-3xl border border-white/5 bg-[#07090e]/60 backdrop-blur-md max-h-47.5 overflow-hidden flex flex-col">
             <div className="flex items-center gap-2 border-b border-white/5 pb-2 mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
               <span className="text-[9px] font-bold text-white uppercase tracking-wider">Twin Console Log Output</span>
@@ -1378,7 +1378,7 @@ export function DigitalTwinSimulator() {
       <AnimatePresence>
         {comparePanel && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
-            <div className="relative w-full max-w-4xl rounded-[24px] border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6 max-h-[85vh] overflow-y-auto">
+            <div className="relative w-full max-w-4xl rounded-3xl border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6 max-h-[85vh] overflow-y-auto">
               
               <div className="flex items-center justify-between border-b border-white/5 pb-4">
                 <div className="flex items-center gap-3">

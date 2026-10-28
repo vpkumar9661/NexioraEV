@@ -12,7 +12,7 @@ import {
 
 export function AcademyHero() {
   return (
-    <section id="hero" className="relative p-6 sm:p-8 rounded-[24px] border border-[#F5B301]/25 bg-linear-to-b from-[#F5B301]/5 to-transparent backdrop-blur-md overflow-hidden min-h-[360px] flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
+    <section id="hero" className="relative p-6 sm:p-8 rounded-3xl border border-[#F5B301]/25 bg-linear-to-b from-[#F5B301]/5 to-transparent backdrop-blur-md overflow-hidden min-h-90 flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
       <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-[#F5B301]/5 blur-[80px] pointer-events-none" />
 
       <div className="grid md:grid-cols-12 gap-8 items-center w-full z-10">
@@ -50,7 +50,7 @@ export function AcademyHero() {
 
         {/* Vector SVG Animation */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <svg viewBox="-80 -80 160 80" className="w-full max-w-[220px] overflow-visible">
+          <svg viewBox="-80 -80 160 80" className="w-full max-w-55 overflow-visible">
             {/* Hologram rings layers */}
             <ellipse cx="0" cy="15" rx="50" ry="20" fill="none" stroke="rgba(245,179,1,0.15)" strokeWidth="0.8" />
             <ellipse cx="0" cy="15" rx="40" ry="16" fill="none" stroke="rgba(245,179,1,0.1)" strokeWidth="0.8" strokeDasharray="3 3" />
@@ -86,7 +86,7 @@ export function StatsBar() {
       {STATS_ITEMS.map((stat, idx) => (
         <div
           key={idx}
-          className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
+          className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
           <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
@@ -225,7 +225,7 @@ export function CourseLibrary() {
         {COURSES.map((course, idx) => (
           <div
             key={idx}
-            className="p-5 rounded-[20px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 transition-all duration-300 flex flex-col justify-between min-h-[160px]"
+            className="p-5 rounded-[20px] border border-white/5 bg-white/2 hover:bg-white/4 hover:border-white/10 transition-all duration-300 flex flex-col justify-between min-h-40"
           >
             <div className="space-y-2">
               <div className="flex justify-between items-center text-[10px] font-bold text-purple-400 uppercase tracking-wider">
@@ -318,7 +318,7 @@ export function EngineeringProjects() {
         {PROJECTS.map((proj, idx) => (
           <div
             key={idx}
-            className="p-5 rounded-[20px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4 min-h-[130px]"
+            className="p-5 rounded-[20px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4 min-h-32.5"
           >
             <div>
               <span className="text-[9.5px] font-bold text-purple-400 uppercase block tracking-wider">{proj.difficulty} design task</span>

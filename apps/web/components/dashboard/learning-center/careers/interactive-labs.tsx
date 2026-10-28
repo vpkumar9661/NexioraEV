@@ -32,7 +32,7 @@ export function InterviewCenter() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Editor Left */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-55">
           <div className="space-y-2 text-xs">
             <span className="text-[10px] text-purple-400 font-extrabold uppercase block tracking-wider">Problem: Calculate heat capacity thermal loads</span>
             <textarea
@@ -50,7 +50,7 @@ export function InterviewCenter() {
         </div>
 
         {/* Diagnostic Output Right */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-40">
           {feedback ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Evaluator Diagnostics</span>
@@ -99,7 +99,7 @@ export function ResumeBuilder() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Input Form Left */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-55">
           <form onSubmit={handleGenerate} className="space-y-3.5 text-xs">
             <div className="space-y-1">
               <label className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Full Name</label>
@@ -139,7 +139,7 @@ export function ResumeBuilder() {
         </div>
 
         {/* Output PDF Preview Right */}
-        <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[220px] relative overflow-hidden">
+        <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-55 relative overflow-hidden">
           {resumeData ? (
             <div className="space-y-4 border border-white/5 p-5 rounded-xl bg-black/40 relative z-10">
               <div className="flex justify-between items-start border-b border-white/5 pb-2">
@@ -268,7 +268,7 @@ export function AICareerCoach() {
         </div>
 
         {/* Readout coach Right */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[150px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-37.5">
           {response ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">Career Coach Prognostics</span>
@@ -404,7 +404,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#F4B400]/20 bg-[#F4B400]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -417,7 +417,7 @@ export function FAQSection() {
                 <span className="text-xs font-bold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#F4B400]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
@@ -433,7 +433,7 @@ export function FAQSection() {
 // Final CTA
 export function CareerCTA() {
   return (
-    <section id="cta" className="p-6 sm:p-8 rounded-[24px] border border-[#F4B400]/25 bg-linear-to-b from-[#F4B400]/5 to-transparent relative overflow-hidden">
+    <section id="cta" className="p-6 sm:p-8 rounded-3xl border border-[#F4B400]/25 bg-linear-to-b from-[#F4B400]/5 to-transparent relative overflow-hidden">
       <div className="absolute top-0 right-0 w-48 h-48 bg-[#F4B400]/5 blur-2xl pointer-events-none" />
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 relative z-10">
         <div className="space-y-2">

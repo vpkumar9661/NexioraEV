@@ -12,7 +12,7 @@ import {
 
 export function CareerHero() {
   return (
-    <section id="hero" className="relative p-6 sm:p-8 rounded-[24px] border border-[#F4B400]/25 bg-linear-to-b from-[#F4B400]/5 to-transparent backdrop-blur-md overflow-hidden min-h-[360px] flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
+    <section id="hero" className="relative p-6 sm:p-8 rounded-3xl border border-[#F4B400]/25 bg-linear-to-b from-[#F4B400]/5 to-transparent backdrop-blur-md overflow-hidden min-h-90 flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
       <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-[#F4B400]/5 blur-[80px] pointer-events-none" />
 
       <div className="grid md:grid-cols-12 gap-8 items-center w-full z-10">
@@ -50,7 +50,7 @@ export function CareerHero() {
 
         {/* Vector SVG Animation */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <svg viewBox="-80 -80 160 80" className="w-full max-w-[220px] overflow-visible">
+          <svg viewBox="-80 -80 160 80" className="w-full max-w-55 overflow-visible">
             {/* Hologram rings layers */}
             <ellipse cx="0" cy="15" rx="55" ry="22" fill="none" stroke="rgba(244,180,0,0.15)" strokeWidth="0.8" />
             <ellipse cx="0" cy="15" rx="45" ry="18" fill="none" stroke="rgba(244,180,0,0.1)" strokeWidth="0.8" strokeDasharray="3 3" />
@@ -86,7 +86,7 @@ export function StatsBar() {
       {STATS_ITEMS.map((stat, idx) => (
         <div
           key={idx}
-          className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
+          className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
           <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}

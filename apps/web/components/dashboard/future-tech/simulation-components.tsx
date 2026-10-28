@@ -39,11 +39,11 @@ export function FutureMobilitySimulator() {
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Vector platform flight diagnostics</span>
           
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -40 160 80" className="w-full max-w-[200px] aspect-square overflow-visible">
+            <svg viewBox="-80 -40 160 80" className="w-full max-w-50 aspect-square overflow-visible">
               {/* Proving guidelines */}
               <circle cx="0" cy="0" r="30" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" />
               
@@ -205,7 +205,7 @@ export function AIFutureAssistant() {
         </div>
 
         {/* Readout answer panel */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-40">
           {answer ? (
             <div className="space-y-2">
               <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Agent Prognostics</span>

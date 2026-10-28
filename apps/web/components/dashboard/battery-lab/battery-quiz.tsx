@@ -178,7 +178,7 @@ export function BatteryQuiz() {
         </div>
       </div>
 
-      <div className="rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-[300px] flex flex-col justify-between gap-6">
+      <div className="rounded-[20px] border border-white/5 bg-white/2 p-6 min-h-75 flex flex-col justify-between gap-6">
         
         {/* Scoreboard screen */}
         {showResult ? (

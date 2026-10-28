@@ -47,9 +47,9 @@ export function CenterTwin({
   const rotateRight = () => setRotation((r) => r + 15);
 
   return (
-    <div className="flex-1 rounded-[24px] border border-white/5 bg-black/40 p-6 flex flex-col justify-between min-h-[420px] relative">
+    <div className="flex-1 rounded-3xl border border-white/5 bg-black/40 p-6 flex flex-col justify-between min-h-105 relative">
       {/* Blueprint Grid background lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[15px_15px] pointer-events-none rounded-[24px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[15px_15px] pointer-events-none rounded-3xl" />
       <div className="absolute top-4 left-4 z-10">
         <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block">3D Engineering Configurator</span>
         <h3 className="text-xs font-bold text-white uppercase mt-0.5">{platform} Platform Digital Twin</h3>
@@ -111,7 +111,7 @@ export function CenterTwin({
           className="origin-center"
           transition={{ type: "spring", stiffness: 60 }}
         >
-          <svg viewBox="-120 -80 240 160" className="w-full max-w-[340px] aspect-square overflow-visible">
+          <svg viewBox="-120 -80 240 160" className="w-full max-w-85 aspect-square overflow-visible">
             {/* Ambient chassis boundary (outer casing shell) */}
             <motion.path
               d="M -75,-25 Q 0,-60 75,-25 L 85,15 L -85,15 Z"

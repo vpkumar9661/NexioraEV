@@ -31,7 +31,7 @@ export function PreStartHeader({ setup, onLaunch, onConfigChange }: PreStartHead
   const weight = setup.platform === "bus" || setup.platform === "truck" ? 9500 : 1850;
 
   return (
-    <div className="w-full p-6 rounded-[24px] border border-white/5 bg-white/2 backdrop-blur-md space-y-6 shadow-2xl relative z-20">
+    <div className="w-full p-6 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-md space-y-6 shadow-2xl relative z-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/5 pb-4">
         <div>
           <span className="text-[10px] text-[#22D3EE] font-extrabold uppercase tracking-widest block">

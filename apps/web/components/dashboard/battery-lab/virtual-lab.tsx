@@ -428,7 +428,7 @@ export function VirtualBatteryLab() {
       {/* DASHBOARD WORKSPACE GRID */}
       <div className="grid lg:grid-cols-12 gap-6 items-stretch relative">
         {/* LEFT COMPACT LAB SELECTOR (TABS) */}
-        <div className="lg:col-span-3 flex flex-col gap-2 p-3 rounded-[24px] border border-white/5 bg-[#131722]/40 backdrop-blur-xl h-fit">
+        <div className="lg:col-span-3 flex flex-col gap-2 p-3 rounded-3xl border border-white/5 bg-[#131722]/40 backdrop-blur-xl h-fit">
           <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2.5 py-1.5">
             Laboratory Modules
           </p>
@@ -487,7 +487,7 @@ export function VirtualBatteryLab() {
         </div>
 
         {/* MIDDLE DETAILED SIMULATOR FRAME */}
-        <div className="lg:col-span-6 flex flex-col rounded-[24px] border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-6 min-h-[480px] shadow-2xl relative overflow-hidden">
+        <div className="lg:col-span-6 flex flex-col rounded-3xl border border-white/5 bg-[#131722]/60 backdrop-blur-xl p-6 min-h-120 shadow-2xl relative overflow-hidden">
           <div className="flex-1 flex flex-col z-10">
             {activeTab === 1 && <Lab3DExplorer addLog={addLog} />}
             {activeTab === 2 && (
@@ -531,7 +531,7 @@ export function VirtualBatteryLab() {
 
         {/* RIGHT PANEL - ALWAYS VISIBLE TELEMETRY AND DIAGNOSTIC LOGS */}
         <div className="lg:col-span-3 flex flex-col gap-6">
-          <div className="p-5 rounded-[24px] border border-white/5 bg-[#131722]/70 backdrop-blur-md shadow-2xl relative overflow-hidden">
+          <div className="p-5 rounded-3xl border border-white/5 bg-[#131722]/70 backdrop-blur-md shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-purple-500/5 blur-2xl pointer-events-none" />
             
             <div className="flex items-center gap-2 border-b border-white/5 pb-3.5 mb-4">
@@ -615,7 +615,7 @@ export function VirtualBatteryLab() {
           </div>
 
           {/* Diagnostic Console Logs */}
-          <div className="flex-1 flex flex-col p-4 rounded-[24px] border border-white/5 bg-[#07090e]/60 backdrop-blur-md max-h-[220px]">
+          <div className="flex-1 flex flex-col p-4 rounded-3xl border border-white/5 bg-[#07090e]/60 backdrop-blur-md max-h-55">
             <div className="flex items-center gap-2 border-b border-white/5 pb-2 mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
               <span className="text-[10px] font-bold text-white uppercase tracking-wider">Lab Console Logs</span>
@@ -665,7 +665,7 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch">
         {/* Interactive Viewport */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between p-4 relative min-h-[300px] overflow-hidden">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between p-4 relative min-h-75 overflow-hidden">
           {/* Glow backdrop */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(192,132,252,0.06),transparent_70%)] pointer-events-none" />
 
@@ -705,7 +705,7 @@ function Lab3DExplorer({ addLog }: { addLog: (m: string) => void }) {
           <div className="flex-1 flex items-center justify-center py-4">
             <svg
               viewBox="-100 -120 200 240"
-              className="w-full max-w-[220px] aspect-square transition-transform duration-500"
+              className="w-full max-w-55 aspect-square transition-transform duration-500"
               style={{
                 transform: `rotate(${rotateAngle}deg) scale(${zoomScale})`,
                 cursor: "pointer"
@@ -1012,7 +1012,7 @@ function LabChargingSimulation({
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Graph / Visualization */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-55">
           <div className="flex items-center justify-between">
             <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Charging Curves Profile</span>
             <span className="text-[10px] font-extrabold text-purple-300 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">
@@ -1022,7 +1022,7 @@ function LabChargingSimulation({
 
           {/* CC/CV SVG Plot chart */}
           <div className="flex-1 flex items-center justify-center py-3 relative">
-            <svg viewBox="0 0 200 100" className="w-full h-full max-h-[140px] overflow-visible">
+            <svg viewBox="0 0 200 100" className="w-full h-full max-h-35 overflow-visible">
               {/* Grid Lines */}
               <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
               <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1099,7 +1099,7 @@ function LabChargingSimulation({
                   }}
                   className="flex-1 accent-[#8B5CF6] h-1 bg-white/10 rounded-lg appearance-none cursor-pointer"
                 />
-                <span className="text-sm font-extrabold text-white min-w-[32px] text-right">{soc}%</span>
+                <span className="text-sm font-extrabold text-white min-w-8 text-right">{soc}%</span>
               </div>
             </div>
 
@@ -1208,7 +1208,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Heat Map Visualization chamber */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between p-4 relative min-h-[220px] overflow-hidden">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between p-4 relative min-h-55 overflow-hidden">
           {/* Dynamic background thermal chamber gradient */}
           <div
             className="absolute inset-0 opacity-40 transition-all duration-700 pointer-events-none"
@@ -1241,7 +1241,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
 
           {/* Centered graphical battery core */}
           <div className="flex-1 flex flex-col items-center justify-center z-10 py-3">
-            <div className="w-[150px] h-[55px] border border-white/10 rounded-xl relative p-1 flex items-center overflow-hidden bg-white/2">
+            <div className="w-37.5 h-13.75 border border-white/10 rounded-xl relative p-1 flex items-center overflow-hidden bg-white/2">
               {/* Inner glowing battery blocks based on thermal condition */}
               <div
                 className="h-full rounded-lg transition-all duration-700 w-full"
@@ -1297,7 +1297,7 @@ function LabThermalResponse({ temperature, setTemperature, addLog, efficiency, s
                   }}
                   className="flex-1 accent-purple-400 h-1 bg-white/10 rounded-lg appearance-none cursor-pointer"
                 />
-                <span className="text-sm font-extrabold text-white min-w-[32px] text-right">{temperature}°C</span>
+                <span className="text-sm font-extrabold text-white min-w-8 text-right">{temperature}°C</span>
               </div>
             </div>
 
@@ -1391,11 +1391,11 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Radar Graph */}
-        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Interactive Material Radar mapping</span>
           
           <div className="flex-1 flex items-center justify-center relative">
-            <svg viewBox="0 0 200 200" className="w-full max-w-[170px] aspect-square overflow-visible">
+            <svg viewBox="0 0 200 200" className="w-full max-w-42.5 aspect-square overflow-visible">
               {/* Radar grid pentagons */}
               {[20, 40, 60, 80].map((r) => {
                 const points = [0, 72, 144, 216, 288].map((angle) => {
@@ -1597,7 +1597,7 @@ function LabDegradationKinetics({
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Degradation Retention Graph */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-55">
           <div className="flex items-center justify-between">
             <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Capacity retention curve</span>
             <span className="text-[10px] font-extrabold text-[#10B981] bg-[#10B981]/10 px-2 py-0.5 rounded border border-[#10B981]/20">
@@ -1606,7 +1606,7 @@ function LabDegradationKinetics({
           </div>
 
           <div className="flex-1 flex items-center justify-center py-2 relative">
-            <svg viewBox="0 0 200 100" className="w-full h-full max-h-[140px] overflow-visible">
+            <svg viewBox="0 0 200 100" className="w-full h-full max-h-35 overflow-visible">
               {/* Grid Lines */}
               <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
               <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
@@ -1781,7 +1781,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Form panel */}
-        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between gap-3 min-h-[220px]">
+        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between gap-3 min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Operational Requirement Profile</span>
           
           <div className="space-y-3">
@@ -1838,7 +1838,7 @@ function LabAIAdvisor({ chemistry, addLog }: { chemistry: ChemistryType; addLog:
 
         {/* AI response readout */}
         <div className="md:col-span-6 flex flex-col justify-between gap-3">
-          <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md h-full flex flex-col justify-between min-h-[220px]">
+          <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md h-full flex flex-col justify-between min-h-55">
             {isLoading ? (
               <div className="flex-1 flex flex-col items-center justify-center gap-2">
                 <div className="w-8 h-8 rounded-full border-2 border-purple-400 border-t-transparent animate-spin" />

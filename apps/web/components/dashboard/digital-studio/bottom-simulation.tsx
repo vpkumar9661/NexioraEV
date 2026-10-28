@@ -105,7 +105,7 @@ export function BottomSimulation({
 
           {/* Energy Path SVG animation flow */}
           <div className="flex items-center justify-center relative py-1.5">
-            <svg viewBox="0 0 200 40" className="w-full max-w-[260px] overflow-visible">
+            <svg viewBox="0 0 200 40" className="w-full max-w-65 overflow-visible">
               {/* Battery cell node */}
               <rect x="5" y="10" width="30" height="20" rx="3" fill="#1F1235" stroke="#8B5CF6" />
               <text x="20" y="22" fill="#C084FC" fontSize="4.5" textAnchor="middle" fontWeight="bold">PACK</text>
@@ -155,7 +155,7 @@ export function BottomSimulation({
         </div>
 
         <div className="flex-1 flex items-center justify-center relative py-2">
-          <svg viewBox="0 0 200 80" className="w-full h-full max-h-[100px] overflow-visible">
+          <svg viewBox="0 0 200 80" className="w-full h-full max-h-25 overflow-visible">
             <line x1="15" y1="5" x2="15" y2="70" stroke="rgba(255,255,255,0.05)" strokeWidth="0.8" />
             <line x1="15" y1="70" x2="190" y2="70" stroke="rgba(255,255,255,0.05)" strokeWidth="0.8" />
 

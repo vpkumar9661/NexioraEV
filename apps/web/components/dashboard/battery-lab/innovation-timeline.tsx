@@ -37,7 +37,7 @@ export function InnovationTimeline() {
         {/* Timeline slider steps */}
         <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 pt-2">
           {/* Horizontal connecting line (desktop only) */}
-          <div className="absolute left-6 right-6 top-[28px] h-0.5 bg-white/5 hidden md:block z-0" />
+          <div className="absolute left-6 right-6 top-7 h-0.5 bg-white/5 hidden md:block z-0" />
 
           {EVENTS.map((event, idx) => {
             const isActive = idx === activeIndex;

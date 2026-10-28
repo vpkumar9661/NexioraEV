@@ -118,7 +118,7 @@ export function AIReports({ config, telemetry, onExport }: AIReportsProps) {
         <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block border-b border-white/5 pb-2">Active Designs Matrix</span>
         
         <div className="overflow-x-auto">
-          <table className="w-full text-xs text-left border-collapse min-w-[500px]">
+          <table className="w-full text-xs text-left border-collapse min-w-125">
             <thead>
               <tr className="border-b border-white/5 text-muted-foreground/40 text-[9px] uppercase font-bold tracking-wider">
                 <th className="pb-3">Design Version</th>

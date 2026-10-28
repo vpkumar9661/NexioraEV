@@ -108,7 +108,7 @@ export function ChargingBehaviour() {
         <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6 relative">
           <span className="text-xs font-bold text-white uppercase tracking-wider block">DC Fast Charging Curve Simulation</span>
 
-          <div className="relative h-[200px] border border-white/3 bg-[#131722]/50 rounded-xl overflow-hidden p-4">
+          <div className="relative h-50 border border-white/3 bg-[#131722]/50 rounded-xl overflow-hidden p-4">
             <svg className="w-full h-full" viewBox="0 0 300 120" fill="none">
               {/* Grid Background lines */}
               <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />

@@ -1910,7 +1910,7 @@ export function SiteHeader() {
                     className="glass-btn flex flex-col items-center justify-center border border-[rgba(255,255,255,0.06)] gap-2.5 px-3 py-4 hover:text-[#00D26A] rounded-[14px]"
                     onClick={handleLinkClick}
                   >
-                    <Icon className="w-[18px] h-[18px] text-muted-foreground" strokeWidth={1.5} />
+                    <Icon className="w-4.5 h-4.5 text-muted-foreground" strokeWidth={1.5} />
                     <span className="text-[13px] font-semibold text-white">{item.name}</span>
                   </Link>
                 )

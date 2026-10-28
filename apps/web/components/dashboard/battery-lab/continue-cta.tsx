@@ -5,7 +5,7 @@ import { ArrowRight, Zap } from "lucide-react";
 
 export function ContinueCTA() {
   return (
-    <section className="relative overflow-hidden rounded-[24px] border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/6 via-transparent to-[#3B82F6]/4 p-8 sm:p-12">
+    <section className="relative overflow-hidden rounded-3xl border border-[#10B981]/15 bg-linear-to-br from-[#10B981]/6 via-transparent to-[#3B82F6]/4 p-8 sm:p-12">
       <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#10B981]/8 rounded-full blur-[100px]" />
       <div className="absolute -bottom-24 -left-24 w-60 h-60 bg-[#3B82F6]/5 rounded-full blur-[80px]" />
 

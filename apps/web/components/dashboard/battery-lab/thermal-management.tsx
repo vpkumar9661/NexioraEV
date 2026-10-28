@@ -98,7 +98,7 @@ export function ThermalManagement() {
         <div className="lg:col-span-6 rounded-[20px] border border-white/5 bg-white/2 p-6 flex flex-col justify-between gap-6">
           <span className="text-xs font-bold text-white uppercase tracking-wider block">Cell Module Heat Map Simulation</span>
 
-          <div className="relative h-[180px] bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
+          <div className="relative h-45 bg-[#131722]/50 border border-white/3 rounded-xl flex items-center justify-center p-4">
             <svg className="w-full h-full" viewBox="0 0 300 120">
               {/* Cooling channel flow indicator */}
               {selectedSystem.id === "liquid" && (

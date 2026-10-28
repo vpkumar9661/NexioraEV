@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Zap, Battery } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative overflow-hidden rounded-[24px] border border-white/5 bg-white/2 backdrop-blur-md p-8 sm:p-12 shadow-[0_16px_64px_rgba(0,0,0,0.3)]">
+    <section id="hero" className="relative overflow-hidden rounded-3xl border border-white/5 bg-white/2 backdrop-blur-md p-8 sm:p-12 shadow-[0_16px_64px_rgba(0,0,0,0.3)]">
       {/* Ambient purple glow */}
       <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#8B5CF6]/8 rounded-full blur-[100px]" />
       <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#3B82F6]/6 rounded-full blur-[80px]" />
@@ -55,7 +55,7 @@ export function HeroSection() {
         </div>
 
         {/* Right Animated SVG Illustration */}
-        <div className="lg:col-span-6 relative flex justify-center items-center h-[360px]">
+        <div className="lg:col-span-6 relative flex justify-center items-center h-90">
           {/* Floating data cards */}
           <motion.div
             animate={{ y: [0, -8, 0] }}

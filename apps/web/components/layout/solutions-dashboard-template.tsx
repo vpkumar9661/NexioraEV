@@ -74,7 +74,7 @@ export function SolutionsDashboardTemplate({
           {stats.map((stat, idx) => (
             <div 
               key={idx}
-              className="p-5 rounded-[16px] border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between h-[105px]"
+              className="p-5 rounded-2xl border border-white/5 bg-white/2 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between h-26.25"
             >
               <span className="text-[12px] font-bold text-muted-foreground/60 uppercase tracking-wider">{stat.label}</span>
               <div className="flex items-baseline justify-between mt-2">
@@ -113,7 +113,7 @@ export function SolutionsDashboardTemplate({
                   <div className="w-2.5 h-2.5 rounded-full bg-[#00D26A] animate-pulse" />
                 </div>
               </div>
-              <div className="p-5 flex-1 flex flex-col justify-between min-h-[220px]">
+              <div className="p-5 flex-1 flex flex-col justify-between min-h-55">
                 <p className="text-[12.5px] text-muted-foreground/70 mb-4">{widget.description}</p>
                 <div className="flex-1 flex items-center justify-center bg-white/1 border border-white/5 rounded-[12px] p-4">
                   {widget.content}

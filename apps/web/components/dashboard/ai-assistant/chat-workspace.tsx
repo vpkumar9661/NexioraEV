@@ -46,7 +46,7 @@ export function ChatWorkspace({
         </button>
       </div>
 
-      <div className="rounded-[24px] border border-white/5 bg-black/50 overflow-hidden flex flex-col h-[400px]">
+      <div className="rounded-3xl border border-white/5 bg-black/50 overflow-hidden flex flex-col h-100">
         {/* Messages list */}
         <div className="flex-1 p-6 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-white/10">
           {messages.length === 0 ? (

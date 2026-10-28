@@ -133,7 +133,7 @@ export function AdvisorsSection() {
         </div>
 
         {/* Text Output Right */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[140px] text-xs">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-35 text-xs">
           <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block border-b border-white/5 pb-2">Advisor Recommendation</span>
           <p className="text-muted-foreground/85 leading-relaxed bg-white/1 p-3 rounded-lg border border-white/5 mt-2 font-semibold">
             {chem === "nmc" && "NMC battery configurations feature high energy density, but require active liquid cooling radiators to stabilize cell balancing temperatures."}
@@ -169,7 +169,7 @@ export function VoiceModeSection() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Voice push to talk Left */}
-        <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-[160px]">
+        <div className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-40">
           <div>
             <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">AI Voice Mode</span>
             <p className="text-xs text-muted-foreground/65 mt-2 leading-relaxed">
@@ -195,7 +195,7 @@ export function VoiceModeSection() {
         </div>
 
         {/* Document summarizer Right */}
-        <div id="document" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-[160px]">
+        <div id="document" className="md:col-span-6 p-5 rounded-2xl border border-white/5 bg-white/2 space-y-4 flex flex-col justify-between min-h-40">
           <div>
             <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">Technical Document Summarizer</span>
             <p className="text-xs text-muted-foreground/65 mt-2 leading-relaxed">
@@ -241,7 +241,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#7C4DFF]/20 bg-[#7C4DFF]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -254,7 +254,7 @@ export function FAQSection() {
                 <span className="text-xs font-bold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#7C4DFF]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>

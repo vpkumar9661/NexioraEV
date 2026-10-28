@@ -44,14 +44,14 @@ export function PhysicsViewport({
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* SVG Rolling Road Viewport Left */}
-        <div className="md:col-span-7 rounded-[24px] border border-white/5 bg-black/50 p-6 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
+        <div className="md:col-span-7 rounded-3xl border border-white/5 bg-black/50 p-6 flex flex-col justify-between min-h-70 relative overflow-hidden">
           {/* Engineering blueprint coordinates overlay */}
           <div className="absolute top-4 left-4 z-10 text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider">
             Vector proving coordinates HUD
           </div>
 
           <div className="flex-1 flex items-center justify-center relative py-6">
-            <svg viewBox="-100 -50 200 100" className="w-full h-full max-h-[140px] overflow-visible">
+            <svg viewBox="-100 -50 200 100" className="w-full h-full max-h-35 overflow-visible">
               
               {/* Dynamic scrolling horizon stars/grids */}
               <line x1="-100" y1="20" x2="100" y2="20" stroke="rgba(255,255,255,0.08)" strokeWidth="0.8" />
@@ -134,7 +134,7 @@ export function PhysicsViewport({
         <div className="md:col-span-5 flex flex-col justify-between gap-4">
           
           {/* Notification feed top */}
-          <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex-1 flex flex-col justify-center min-h-[100px]">
+          <div className="p-4 rounded-xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex-1 flex flex-col justify-center min-h-25">
             <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2 border-b border-white/5 pb-1">
               Engineering alerts feed
             </span>

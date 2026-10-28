@@ -34,7 +34,7 @@ export function PowerFlow() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Animation window */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">
             <span>Dynamic energy transmission paths</span>
             <div className="flex gap-2">
@@ -54,7 +54,7 @@ export function PowerFlow() {
           </div>
 
           <div className="flex-1 flex items-center justify-center relative py-6">
-            <svg viewBox="0 0 200 60" className="w-full max-w-[280px] overflow-visible">
+            <svg viewBox="0 0 200 60" className="w-full max-w-70 overflow-visible">
               {/* Flow points grid */}
               <circle cx="15" cy="30" r="10" fill="#1E293B" stroke="rgba(255,255,255,0.1)" />
               <text x="15" y="32" fill="#AEB5C0" fontSize="5" textAnchor="middle">GRID</text>
@@ -137,7 +137,7 @@ export function ComponentComparison() {
       </div>
 
       <div className="rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md overflow-x-auto">
-        <table className="w-full text-xs text-left border-collapse min-w-[500px]">
+        <table className="w-full text-xs text-left border-collapse min-w-125">
           <thead>
             <tr className="border-b border-white/5 text-muted-foreground/50 text-[10px] uppercase font-bold tracking-wider bg-white/1">
               <th className="p-4">Component Profile</th>
@@ -228,7 +228,7 @@ export function AIComponentAssistant() {
         </div>
 
         {/* Readout answer panel */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-40">
           {answer ? (
             <div className="space-y-2">
               <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Agent Diagnostics</span>

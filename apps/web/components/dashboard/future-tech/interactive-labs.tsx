@@ -23,7 +23,7 @@ export function SolidStateBatteryCenter() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Toggle & Graph Visual */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between gap-5 min-h-[200px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between gap-5 min-h-50">
           <div className="space-y-1">
             <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest block">Choose Battery Type</span>
             <div className="grid grid-cols-2 gap-1.5">
@@ -51,7 +51,7 @@ export function SolidStateBatteryCenter() {
           </div>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -40 160 80" className="w-full max-w-[150px] aspect-square overflow-visible">
+            <svg viewBox="-80 -40 160 80" className="w-full max-w-37.5 aspect-square overflow-visible">
               {/* Outer shell cell */}
               <rect x="-50" y="-20" width="100" height="40" rx="3" fill="#131722" stroke="rgba(255,255,255,0.06)" />
               <rect x="-46" y="-16" width="92" height="32" rx="2" fill="#0F172A" />
@@ -166,11 +166,11 @@ export function WirelessChargingLab() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* SVG coil visualization */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Induction magnetic flux alignment HUD</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -50 160 100" className="w-full max-w-[180px] aspect-square overflow-visible">
+            <svg viewBox="-80 -50 160 100" className="w-full max-w-45 aspect-square overflow-visible">
               
               {/* Primary coil pad (ground) */}
               <rect x="-40" y="25" width="80" height="10" rx="2" fill="#131722" stroke="rgba(255,255,255,0.06)" />
@@ -252,11 +252,11 @@ export function AutonomousDrivingLab() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* SVG scan window left */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Sensor fusion coordinate tracking HUD</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -50 160 100" className="w-full max-w-[200px] aspect-square overflow-visible">
+            <svg viewBox="-80 -50 160 100" className="w-full max-w-50 aspect-square overflow-visible">
               {/* Proving road path */}
               <line x1="-50" y1="35" x2="0" y2="-35" stroke="rgba(255,255,255,0.06)" strokeWidth="8" />
               
@@ -337,11 +337,11 @@ export function SmartCityExplorer() {
       </div>
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Smart city microgrid distribution map</span>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -50 160 100" className="w-full h-full max-h-[150px] overflow-visible">
+            <svg viewBox="-80 -50 160 100" className="w-full h-full max-h-37.5 overflow-visible">
               {/* Solar panels grid */}
               <polygon points="-50,-20 -20,-30 0,-15 -30,-5" fill={solarRoads ? "rgba(34,211,238,0.15)" : "transparent"} stroke="#22D3EE" strokeWidth="0.8" />
               

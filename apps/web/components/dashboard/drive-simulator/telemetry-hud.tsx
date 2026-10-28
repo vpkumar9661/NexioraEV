@@ -35,7 +35,7 @@ export function TelemetryHud({ telemetry, coolingActive }: TelemetryHudProps) {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         
         {/* Speed Dial */}
-        <div className="p-4 rounded-[16px] border border-white/5 bg-white/2 space-y-2">
+        <div className="p-4 rounded-2xl border border-white/5 bg-white/2 space-y-2">
           <span className="text-[9.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Vehicle Speed</span>
           <div className="flex items-baseline justify-between">
             <strong className="text-2xl font-black text-white">{telemetry.speed}</strong>
@@ -47,7 +47,7 @@ export function TelemetryHud({ telemetry, coolingActive }: TelemetryHudProps) {
         </div>
 
         {/* Battery SOC */}
-        <div className="p-4 rounded-[16px] border border-white/5 bg-white/2 space-y-2">
+        <div className="p-4 rounded-2xl border border-white/5 bg-white/2 space-y-2">
           <span className="text-[9.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">State of Charge</span>
           <div className="flex items-baseline justify-between">
             <strong className="text-2xl font-black text-cyan-300">{telemetry.soc}%</strong>
@@ -59,7 +59,7 @@ export function TelemetryHud({ telemetry, coolingActive }: TelemetryHudProps) {
         </div>
 
         {/* Continuous Power */}
-        <div className="p-4 rounded-[16px] border border-white/5 bg-white/2 space-y-2">
+        <div className="p-4 rounded-2xl border border-white/5 bg-white/2 space-y-2">
           <span className="text-[9.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Inverter Output</span>
           <div className="flex items-baseline justify-between">
             <strong className="text-2xl font-black text-white">{telemetry.power}</strong>
@@ -71,7 +71,7 @@ export function TelemetryHud({ telemetry, coolingActive }: TelemetryHudProps) {
         </div>
 
         {/* Regen recovered */}
-        <div className="p-4 rounded-[16px] border border-white/5 bg-white/2 space-y-2">
+        <div className="p-4 rounded-2xl border border-white/5 bg-white/2 space-y-2">
           <span className="text-[9.5px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Regenerative Recovery</span>
           <div className="flex items-baseline justify-between">
             <strong className="text-2xl font-black text-emerald-400">+{telemetry.regenRecovered.toFixed(2)}</strong>
