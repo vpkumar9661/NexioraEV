@@ -375,7 +375,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
       <style dangerouslySetInnerHTML={{ __html: AUTH_LAYOUT_STYLES }} />
 
       <div
-        className="relative flex min-h-[calc(100vh-64px)] items-center justify-center overflow-hidden px-4 py-8 sm:px-8 sm:py-12"
+        className="relative flex min-h-screen flex-col items-center overflow-x-hidden px-4 pt-28 pb-12 sm:pt-32 sm:pb-16"
         style={{ background: "#050A12" }}
       >
         {/* ═══ LAYER 1: Deep midnight base ═══ */}
@@ -478,28 +478,28 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         />
 
         {/* ═══ MAIN CONTENT ═══ */}
-        <div className="w-full max-w-[480px] relative z-10">
+        <div className="w-full max-w-[480px] relative z-10 my-auto">
           {/* Logo / Brand */}
-          <div className="mb-7 flex justify-center">
+          <div className="mb-8 flex justify-center">
             <Link
               href="/"
-              className="group relative inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+              className="group relative inline-flex items-center justify-center px-6 py-3 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
               style={{
-                background: "rgba(13, 24, 35, 0.65)",
-                border: "1px solid rgba(255, 255, 255, 0.12)",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
+                background: "rgba(13, 24, 35, 0.75)",
+                border: "1px solid rgba(255, 255, 255, 0.14)",
+                backdropFilter: "blur(24px)",
+                WebkitBackdropFilter: "blur(24px)",
                 boxShadow:
-                  "0 8px 32px -4px rgba(0, 0, 0, 0.4), 0 0 24px -4px rgba(0, 245, 160, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                  "0 8px 32px -4px rgba(0, 0, 0, 0.45), 0 0 24px -4px rgba(0, 245, 160, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12)",
               }}
               aria-label="NexioraEV Home"
             >
               {/* Restrained emerald & cyan halo */}
               <div
-                className="absolute -inset-1 rounded-2xl pointer-events-none opacity-40 group-hover:opacity-75 transition-opacity duration-500 blur-md"
+                className="absolute -inset-1 rounded-2xl pointer-events-none opacity-40 group-hover:opacity-80 transition-opacity duration-500 blur-md"
                 style={{
                   background:
-                    "radial-gradient(circle, rgba(0, 245, 160, 0.25) 0%, rgba(0, 217, 255, 0.15) 50%, transparent 80%)",
+                    "radial-gradient(circle, rgba(0, 245, 160, 0.3) 0%, rgba(0, 217, 255, 0.18) 50%, transparent 80%)",
                 }}
               />
               <Image
@@ -508,7 +508,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
                 width={970}
                 height={299}
                 priority
-                className="h-8 sm:h-9 w-auto object-contain select-none transition-transform duration-300 group-hover:scale-[1.01]"
+                className="h-9 sm:h-10.5 w-auto object-contain select-none transition-transform duration-300 group-hover:scale-[1.01]"
               />
             </Link>
           </div>
