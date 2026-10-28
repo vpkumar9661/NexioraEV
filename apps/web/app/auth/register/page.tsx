@@ -6,10 +6,9 @@ import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { ArrowRight, Loader2, Mail, Lock, User, Eye, EyeOff, AlertCircle } from "lucide-react";
+import { ArrowRight, Loader2, Mail, Lock, User, Eye, EyeOff } from "lucide-react";
 
 import { registerSchema, type RegisterInput } from "@nexiora/shared";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,

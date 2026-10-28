@@ -24,8 +24,6 @@ interface Particle {
   delay: number;
   duration: number;
   opacity: number;
-  driftX: number;
-  driftY: number;
 }
 
 // ─── Auth Particles (sparse, green/cyan/blue) ───
@@ -51,8 +49,6 @@ function AuthParticles({ reducedMotion }: { reducedMotion: boolean }) {
         delay: rng() * 12,
         duration: rng() * 18 + 14,
         opacity,
-        driftX: (rng() - 0.5) * 60,
-        driftY: (rng() - 0.5) * 60,
       };
     });
   }, []);

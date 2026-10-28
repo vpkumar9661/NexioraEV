@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Loader2, Mail, Lock, Eye, EyeOff, AlertCircle } from "lucide-react";
 
 import { loginSchema, type LoginInput } from "@nexiora/shared";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
