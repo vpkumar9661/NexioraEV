@@ -67,7 +67,7 @@ Net Savings = (ICE Cost / km - EV Cost / km) × Distance`,
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Controls Panel */}
-        <div className="lg:col-span-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
+        <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center text-[#00E676]">
@@ -317,7 +317,7 @@ Net Savings = (ICE Cost / km - EV Cost / km) × Distance`,
           />
 
           {/* Projected Savings Card */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00E676]/10 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/20 p-6 sm:p-7 space-y-6">
+          <div className="rounded-3xl bg-linear-to-br from-[#00E676]/10 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/20 p-6 sm:p-7 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#00E676]">
@@ -343,21 +343,21 @@ Net Savings = (ICE Cost / km - EV Cost / km) × Distance`,
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-white/10">
-              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/2 border border-white/5">
                 <div className="text-[11px] text-[#94A3B8]">Daily EV Cost</div>
                 <div className="text-base font-bold text-white mt-1">₹{results.dailyEvTripCost}</div>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/2 border border-white/5">
                 <div className="text-[11px] text-[#94A3B8]">Daily Petrol Cost</div>
                 <div className="text-base font-bold text-rose-400 mt-1">₹{results.dailyIceTripCost}</div>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/2 border border-white/5">
                 <div className="text-[11px] text-[#94A3B8]">Monthly Savings</div>
                 <div className="text-base font-bold text-[#00E676] mt-1">
                   ₹{results.monthlySavings.toLocaleString("en-IN")}
                 </div>
               </div>
-              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-3 rounded-xl bg-white/2 border border-white/5">
                 <div className="text-[11px] text-[#94A3B8]">Annual Savings</div>
                 <div className="text-base font-bold text-[#00D4FF] mt-1">
                   ₹{results.annualSavings.toLocaleString("en-IN")}
@@ -367,7 +367,7 @@ Net Savings = (ICE Cost / km - EV Cost / km) × Distance`,
           </div>
 
           {/* Quick Explanatory Banner */}
-          <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-4 flex items-start gap-3 text-xs text-[#94A3B8]">
+          <div className="rounded-2xl bg-white/2 border border-white/5 p-4 flex items-start gap-3 text-xs text-[#94A3B8]">
             <BatteryCharging className="size-4 text-[#00E676] shrink-0 mt-0.5" />
             <p>
               <strong className="text-white">Pro Tip:</strong> Setting home charging schedules during off-peak Time-of-Day (ToD) tariff windows (11 PM - 6 AM) can reduce your charging cost by an additional 15% to 25% in states with time-varying power pricing.

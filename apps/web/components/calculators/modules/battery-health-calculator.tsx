@@ -67,7 +67,7 @@ Where:
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Controls Panel */}
-        <div className="lg:col-span-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
+        <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center text-[#00E676]">
@@ -261,7 +261,7 @@ Where:
           </div>
 
           {/* 10-Year Health Projection Timeline */}
-          <div className="rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-5">
+          <div className="rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-5">
             <div>
               <h4 className="text-sm font-bold text-white flex items-center gap-2">
                 <Clock className="size-4 text-[#00D4FF]" />
@@ -321,7 +321,7 @@ Where:
           </div>
 
           {/* Actionable Longevity Recommendations */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00E676]/5 via-white/[0.02] to-transparent border border-[#00E676]/20 p-6 space-y-4">
+          <div className="rounded-3xl bg-linear-to-br from-[#00E676]/5 via-white/2 to-transparent border border-[#00E676]/20 p-6 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#00E676] flex items-center gap-2">
               <Lightbulb className="size-4" />
               <span>Tailored Battery Longevity Recommendations</span>

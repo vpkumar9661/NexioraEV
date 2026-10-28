@@ -26,7 +26,7 @@ export function CalculatorComparisonBar({
   const maxValue = Math.max(...items.map((i) => i.value), 1);
 
   return (
-    <div className="rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-5 space-y-4">
+    <div className="rounded-2xl bg-white/3 backdrop-blur-xl border border-white/10 p-5 space-y-4">
       {(title || subtitle) && (
         <div>
           {title && <h4 className="text-sm font-semibold text-white">{title}</h4>}

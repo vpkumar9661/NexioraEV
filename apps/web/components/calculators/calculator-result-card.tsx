@@ -60,7 +60,7 @@ export function CalculatorResultCard({
 
   return (
     <div
-      className={`relative rounded-2xl bg-white/[0.03] backdrop-blur-xl border ${currentTheme.border} p-5 transition-all shadow-lg ${currentTheme.glow} ${className}`}
+      className={`relative rounded-2xl bg-white/3 backdrop-blur-xl border ${currentTheme.border} p-5 transition-all shadow-lg ${currentTheme.glow} ${className}`}
     >
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className="text-xs font-medium text-[#94A3B8]">{label}</span>

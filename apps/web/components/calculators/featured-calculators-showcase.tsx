@@ -35,7 +35,7 @@ export function FeaturedCalculatorsShowcase() {
         {CALCULATORS_CONFIG.map((calc) => (
           <div
             key={calc.id}
-            className="group relative rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#00E676]/40 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,230,118,0.1)] hover:-translate-y-0.5"
+            className="group relative rounded-2xl bg-white/3 backdrop-blur-xl border border-white/10 hover:border-[#00E676]/40 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,230,118,0.1)] hover:-translate-y-0.5"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">

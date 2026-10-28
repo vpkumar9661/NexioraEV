@@ -72,7 +72,7 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Controls Panel */}
-        <div className="lg:col-span-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
+        <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center text-[#00E676]">
@@ -195,7 +195,7 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
         <div className="lg:col-span-7 space-y-6">
           
           {/* Hero EMI Card */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00E676]/15 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+          <div className="rounded-3xl bg-linear-to-br from-[#00E676]/15 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#00E676] flex items-center gap-1.5">
@@ -226,21 +226,21 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
 
             {/* Key figures strip */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-6 border-t border-white/10">
-              <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-3.5 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8]">Principal Amount</div>
                 <div className="text-lg font-bold text-white mt-1">
                   ₹{results.loanPrincipal.toLocaleString("en-IN")}
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-3.5 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8]">Total Interest</div>
                 <div className="text-lg font-bold text-rose-400 mt-1">
                   ₹{results.totalInterestPayable.toLocaleString("en-IN")}
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 col-span-2 sm:col-span-1">
+              <div className="p-3.5 rounded-2xl bg-white/3 border border-white/5 col-span-2 sm:col-span-1">
                 <div className="text-xs font-medium text-[#94A3B8]">Total Repayment</div>
                 <div className="text-lg font-bold text-[#00E676] mt-1">
                   ₹{results.totalLoanRepayment.toLocaleString("en-IN")}
@@ -272,7 +272,7 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
           />
 
           {/* Section 80EEB Tax Benefit Box */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00D4FF]/10 via-white/[0.02] to-transparent border border-[#00D4FF]/25 p-6 space-y-3">
+          <div className="rounded-3xl bg-linear-to-br from-[#00D4FF]/10 via-white/2 to-transparent border border-[#00D4FF]/25 p-6 space-y-3">
             <div className="flex items-center gap-2">
               <BadgePercent className="size-5 text-[#00D4FF]" />
               <h4 className="text-sm font-bold text-white">Income Tax Section 80EEB Benefit</h4>
@@ -283,7 +283,7 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
           </div>
 
           {/* Optional Amortization Schedule Accordion */}
-          <div className="rounded-3xl bg-white/[0.03] border border-white/10 p-5 space-y-4">
+          <div className="rounded-3xl bg-white/3 border border-white/10 p-5 space-y-4">
             <div className="flex items-center justify-between">
               <div>
                 <h4 className="text-sm font-bold text-white flex items-center gap-2">
@@ -315,7 +315,7 @@ Total Upfront Outlay = Down Payment + Processing Fee`,
                   </thead>
                   <tbody className="divide-y divide-white/5 font-mono">
                     {results.schedule.map((row) => (
-                      <tr key={row.year} className="hover:bg-white/[0.02]">
+                      <tr key={row.year} className="hover:bg-white/2">
                         <td className="py-2.5 font-bold text-white">Year {row.year}</td>
                         <td className="py-2.5 text-[#CBD5E1]">₹{row.openingBalance.toLocaleString("en-IN")}</td>
                         <td className="py-2.5 text-[#00E676] font-semibold">₹{row.principalPaid.toLocaleString("en-IN")}</td>

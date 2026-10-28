@@ -69,7 +69,7 @@ Where:
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Controls Panel */}
-        <div className="lg:col-span-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
+        <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center text-[#00E676]">
@@ -243,7 +243,7 @@ Where:
         <div className="lg:col-span-7 space-y-6">
           
           {/* Main Savings Hero Card */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00E676]/15 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+          <div className="rounded-3xl bg-linear-to-br from-[#00E676]/15 via-black/40 to-[#00D4FF]/10 border border-[#00E676]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#00E676] flex items-center gap-1.5">
@@ -275,7 +275,7 @@ Where:
 
             {/* Quick Summary comparison */}
             <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-4 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8] flex items-center gap-1.5">
                   <Zap className="size-3.5 text-[#00E676]" />
                   <span>Total Net EV Cost</span>
@@ -286,7 +286,7 @@ Where:
                 <p className="text-[11px] text-[#64748B] mt-0.5">₹{Math.round(results.monthlyEvOperatingCost)}/mo running cost</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-4 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8] flex items-center gap-1.5">
                   <Fuel className="size-3.5 text-rose-400" />
                   <span>Total Net ICE Cost</span>
@@ -322,7 +322,7 @@ Where:
           />
 
           {/* Detailed Category Breakdown Table */}
-          <div className="rounded-3xl bg-white/[0.03] border border-white/10 p-5 space-y-4">
+          <div className="rounded-3xl bg-white/3 border border-white/10 p-5 space-y-4">
             <div>
               <h4 className="text-sm font-bold text-white flex items-center gap-2">
                 <Layers className="size-4 text-[#00D4FF]" />
@@ -345,7 +345,7 @@ Where:
                   {results.breakdown.map((row, idx) => {
                     const diff = row.iceAmount - row.evAmount;
                     return (
-                      <tr key={idx} className="hover:bg-white/[0.02]">
+                      <tr key={idx} className="hover:bg-white/2">
                         <td className="py-2.5 font-sans font-medium text-white">{row.category}</td>
                         <td className="py-2.5 text-[#00E676] font-semibold">
                           {row.evAmount < 0 ? "-" : ""}₹{Math.abs(row.evAmount).toLocaleString("en-IN")}

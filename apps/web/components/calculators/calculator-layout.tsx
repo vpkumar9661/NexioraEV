@@ -40,15 +40,15 @@ export function CalculatorLayout({
       {/* Ambient background glows */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div 
-          className="absolute -top-[10%] left-1/4 w-[650px] h-[650px] rounded-full blur-[160px] opacity-25"
+          className="absolute -top-1/10 left-1/4 w-162.5 h-162.5 rounded-full blur-[160px] opacity-25"
           style={{ background: `radial-gradient(circle, ${config.accentColor} 0%, transparent 70%)` }}
         />
         <div 
-          className="absolute top-[40%] right-10 w-[550px] h-[550px] rounded-full blur-[140px] opacity-15"
+          className="absolute top-[40%] right-10 w-137.5 h-137.5 rounded-full blur-[140px] opacity-15"
           style={{ background: "radial-gradient(circle, #00D4FF 0%, transparent 70%)" }}
         />
         <div 
-          className="absolute -bottom-[10%] left-1/3 w-[600px] h-[600px] rounded-full blur-[160px] opacity-20"
+          className="absolute -bottom-1/10 left-1/3 w-150 h-150 rounded-full blur-[160px] opacity-20"
           style={{ background: "radial-gradient(circle, #00E676 0%, transparent 70%)" }}
         />
       </div>
@@ -66,7 +66,7 @@ export function CalculatorLayout({
             Calculators & Tools
           </Link>
           <ChevronRight className="size-3 text-white/30" />
-          <span className="text-white font-semibold truncate max-w-[200px] sm:max-w-none">
+          <span className="text-white font-semibold truncate max-w-50 sm:max-w-none">
             {config.shortTitle}
           </span>
         </nav>
@@ -137,7 +137,7 @@ export function CalculatorLayout({
         </div>
 
         {/* Formula, Methodology, Assumptions & Limitations Accordion Card */}
-        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md space-y-6">
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white/2 border border-white/10 backdrop-blur-md space-y-6">
           <div className="flex items-center gap-2.5 pb-4 border-b border-white/10">
             <div className="p-2 rounded-lg bg-[#00E676]/10 text-[#00E676]">
               <HelpCircle className="size-5" />

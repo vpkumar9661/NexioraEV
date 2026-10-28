@@ -67,7 +67,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Controls Panel */}
-        <div className="lg:col-span-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
+        <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-xl bg-[#00D4FF]/10 border border-[#00D4FF]/30 flex items-center justify-center text-[#00D4FF]">
@@ -223,7 +223,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
         <div className="lg:col-span-7 space-y-6">
           
           {/* Main Range Display Hero */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#00D4FF]/15 via-black/40 to-[#00E676]/10 border border-[#00D4FF]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+          <div className="rounded-3xl bg-linear-to-br from-[#00D4FF]/15 via-black/40 to-[#00E676]/10 border border-[#00D4FF]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#00D4FF]/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -256,7 +256,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
 
             {/* City vs Highway quick breakdown */}
             <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-4 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8] flex items-center gap-1.5">
                   <Car className="size-3.5 text-[#00E676]" />
                   <span>City Range (Stop & Go)</span>
@@ -267,7 +267,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                 <p className="text-[11px] text-[#64748B] mt-0.5">Assisted by regenerative braking</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+              <div className="p-4 rounded-2xl bg-white/3 border border-white/5">
                 <div className="text-xs font-medium text-[#94A3B8] flex items-center gap-1.5">
                   <Wind className="size-3.5 text-cyan-400" />
                   <span>Expressway Range</span>
@@ -319,7 +319,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
 
           {/* Driving Tip Advice */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-4 space-y-1.5 text-xs">
+            <div className="rounded-2xl bg-white/2 border border-white/5 p-4 space-y-1.5 text-xs">
               <span className="font-bold text-[#00E676] flex items-center gap-1">
                 <Gauge className="size-3.5" />
                 <span>Sweet Spot Cruising</span>
@@ -329,7 +329,7 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white/[0.02] border border-white/5 p-4 space-y-1.5 text-xs">
+            <div className="rounded-2xl bg-white/2 border border-white/5 p-4 space-y-1.5 text-xs">
               <span className="font-bold text-[#00D4FF] flex items-center gap-1">
                 <Thermometer className="size-3.5" />
                 <span>Pre-conditioning</span>
