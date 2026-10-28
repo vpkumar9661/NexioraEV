@@ -95,11 +95,11 @@ const TECH_HIGHLIGHTS = [
 ];
 
 const CALCULATORS = [
-  { title: "Charging Cost", desc: "Calculate direct tariff savings vs fossil fuel alternatives.", href: "/calculators/charging-cost" },
-  { title: "Range Estimator", desc: "Determine battery range based on speed, AC usage, and terrain.", href: "/calculators/range" },
-  { title: "Battery Health", desc: "Predict degradation curves and calculate remaining cycle count.", href: "/calculators/battery" },
-  { title: "EMI & Loan", desc: "Calculate interest subsidies and tax write-offs for green car loans.", href: "/calculators/emi" },
-  { title: "Total Cost of Ownership", desc: "Compare lifecycle cost projections (procurement, service, parts).", href: "/calculators/tco" }
+  { title: "Charging Cost", desc: "Calculate direct tariff savings vs fossil fuel alternatives.", href: "/evtech/calculators-tools/charging-cost" },
+  { title: "Range Estimator", desc: "Determine battery range based on speed, AC usage, and terrain.", href: "/evtech/calculators-tools/range-estimator" },
+  { title: "Battery Health", desc: "Predict degradation curves and calculate remaining cycle count.", href: "/evtech/calculators-tools/battery-health" },
+  { title: "EMI & Loan", desc: "Calculate interest subsidies and tax write-offs for green car loans.", href: "/evtech/calculators-tools/emi-loan" },
+  { title: "Total Cost of Ownership", desc: "Compare lifecycle cost projections (procurement, service, parts).", href: "/evtech/calculators-tools/total-cost-of-ownership" }
 ];
 
 const SCHEMES = [
@@ -1317,6 +1317,15 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-[#94A3B8] font-medium">Estimated Real-World Range:</span>
                   <span className="text-2xl font-black text-(--accent) tracking-tight drop-shadow-[0_0_8px_rgba(var(--accent-rgb),0.3)]">{estimatedRange} KM</span>
+                </div>
+                <div className="pt-2 border-t border-white/5 flex justify-end">
+                  <Link 
+                    href="/evtech/calculators-tools/range-estimator"
+                    className="inline-flex items-center gap-1.5 text-[11.5px] font-bold text-(--accent) hover:underline"
+                  >
+                    <span>Open Full 8-Factor Estimator</span>
+                    <ArrowRight className="size-3" />
+                  </Link>
                 </div>
               </div>
             </div>

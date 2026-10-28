@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FeaturedCalculatorsShowcase } from "@/components/calculators";
 import { 
   ToolkitBreadcrumb,
   ToolkitLeftSidebarNav,
@@ -93,6 +94,9 @@ export default function CalculatorsToolsPage() {
 
         {/* Section 2: Stats bar */}
         <StatsBar />
+
+        {/* Dedicated Interactive Calculators Platform */}
+        <FeaturedCalculatorsShowcase />
 
         {/* Section 3: Categories shortcuts */}
         <ToolCategories />
