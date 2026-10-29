@@ -68,13 +68,13 @@ export default function CareerHubPage() {
     <div className="min-h-screen bg-[#07090e] text-white font-sans overflow-hidden">
       {/* Royal Gold themed ambient glowing backgrounds */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[15%] left-1/4 w-[600px] h-[600px] bg-[#F4B400]/1 rounded-full blur-[150px]" />
-        <div className="absolute top-[45%] right-1/4 w-[500px] h-[500px] bg-[#3B82F6]/1 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[15%] left-1/3 w-[600px] h-[600px] bg-[#10B981]/1 rounded-full blur-[150px]" />
+        <div className="absolute top-[15%] left-1/4 w-150 h-150 bg-[#F4B400]/1 rounded-full blur-[150px]" />
+        <div className="absolute top-[45%] right-1/4 w-125 h-125 bg-[#3B82F6]/1 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[15%] left-1/3 w-150 h-150 bg-[#10B981]/1 rounded-full blur-[150px]" />
       </div>
 
       {/* Sticky breadcrumbs */}
-      <div className="pt-[72px] px-4 sm:px-6 lg:px-8 relative z-40">
+      <div className="pt-18 px-4 sm:px-6 lg:px-8 relative z-40">
         <CareerBreadcrumb />
       </div>
 
