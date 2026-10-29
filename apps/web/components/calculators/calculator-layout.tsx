@@ -40,15 +40,15 @@ export function CalculatorLayout({
       {/* Ambient background glows */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div 
-          className="absolute -top-1/10 left-1/4 w-162.5 h-162.5 rounded-full blur-[160px] opacity-25"
+          className="absolute top-[-10%] left-1/4 w-162.5 h-162.5 rounded-full blur-[160px] opacity-25"
           style={{ background: `radial-gradient(circle, ${config.accentColor} 0%, transparent 70%)` }}
         />
         <div 
-          className="absolute top-[40%] right-10 w-137.5 h-137.5 rounded-full blur-[140px] opacity-15"
+          className="absolute top-2/5 right-10 w-137.5 h-137.5 rounded-full blur-[140px] opacity-15"
           style={{ background: "radial-gradient(circle, #00D4FF 0%, transparent 70%)" }}
         />
         <div 
-          className="absolute -bottom-1/10 left-1/3 w-150 h-150 rounded-full blur-[160px] opacity-20"
+          className="absolute bottom-[-10%] left-1/3 w-150 h-150 rounded-full blur-[160px] opacity-20"
           style={{ background: "radial-gradient(circle, #00E676 0%, transparent 70%)" }}
         />
       </div>

@@ -2043,7 +2043,7 @@ export default function EVTechHub() {
                 </div>
 
                 {/* Chat window panel */}
-                <div className="glass-panel rounded-3xl overflow-hidden h-[500px] flex flex-col justify-between">
+                <div className="glass-panel rounded-3xl overflow-hidden h-125 flex flex-col justify-between">
                   {/* Message thread */}
                   <div className="flex-1 p-6 overflow-y-auto space-y-4 custom-scroll">
                     {chatMessages.map((msg, idx) => (
