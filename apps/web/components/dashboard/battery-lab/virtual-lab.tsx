@@ -994,6 +994,7 @@ function LabChargingSimulation({
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isChargingSim, soc, chargingDetails, temperature]);
 
   const toggleCharging = () => {
@@ -1378,7 +1379,7 @@ function LabChemistryMatrix({ activeChem, setChemistry, addLog }: ChemistryMatri
       pointsStr: points.map((p) => `${p.x},${p.y}`).join(" "),
       stats: { densityVal, cycleVal, safetyVal, costVal, weatherVal }
     };
-  }, [activeChem, selectedDetails]);
+  }, [selectedDetails]);
 
   return (
     <div className="space-y-4 h-full flex flex-col justify-between">

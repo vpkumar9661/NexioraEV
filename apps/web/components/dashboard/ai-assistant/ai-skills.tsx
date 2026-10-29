@@ -27,7 +27,7 @@ export function TripPlanner() {
     const socPercent = Math.max(0, Math.round((remainingKwh / capacity) * 100));
 
     return { dist, totalEnergy, cost, socPercent };
-  }, [origin, destination, capacity]);
+  }, [capacity]);
 
   return (
     <section id="planner" className="space-y-6">

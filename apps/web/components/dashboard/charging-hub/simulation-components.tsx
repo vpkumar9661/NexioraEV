@@ -196,7 +196,7 @@ export function CostCalculator() {
       yearlySavings,
       co2Reduction
     };
-  }, [packKwh, electricityPrice, milesPerYear]);
+  }, [electricityPrice, milesPerYear]);
 
   return (
     <div className="space-y-4 h-full flex flex-col justify-between">

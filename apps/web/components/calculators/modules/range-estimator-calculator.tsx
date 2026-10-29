@@ -1,31 +1,31 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { 
-  Gauge, 
-  Battery, 
-  Wind, 
-  Thermometer, 
-  Mountain, 
-  Car, 
-  RotateCcw, 
+import {
+  Gauge,
+  Battery,
+  Wind,
+  Thermometer,
+  Mountain,
+  Car,
+  RotateCcw,
   SlidersHorizontal,
   Flame,
   Snowflake,
-  Activity
+  Activity,
 } from "lucide-react";
-import { 
-  CalculatorLayout, 
-  CalculatorInputField, 
-  CalculatorSlider, 
-  CalculatorSelect, 
-  CalculatorResultCard, 
-  CalculatorComparisonBar 
+import {
+  CalculatorLayout,
+  CalculatorInputField,
+  CalculatorSlider,
+  CalculatorSelect,
+  CalculatorResultCard,
+  CalculatorComparisonBar,
 } from "@/components/calculators";
-import { 
-  DEFAULT_RANGE_INPUTS, 
-  calculateRangeEstimator, 
-  validateRangeEstimatorInputs 
+import {
+  DEFAULT_RANGE_INPUTS,
+  calculateRangeEstimator,
+  validateRangeEstimatorInputs,
 } from "@/lib/calculators/range-estimator";
 import { RangeEstimatorInputs } from "@/lib/calculators/types";
 import { CALCULATORS_CONFIG } from "@/config/calculators";
@@ -35,7 +35,10 @@ const config = CALCULATORS_CONFIG.find((c) => c.id === "range-estimator")!;
 export function RangeEstimatorCalculator() {
   const [inputs, setInputs] = useState<RangeEstimatorInputs>(DEFAULT_RANGE_INPUTS);
 
-  const handleInputChange = <K extends keyof RangeEstimatorInputs>(key: K, value: RangeEstimatorInputs[K]) => {
+  const handleInputChange = <K extends keyof RangeEstimatorInputs>(
+    key: K,
+    value: RangeEstimatorInputs[K],
+  ) => {
     setInputs((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -50,7 +53,8 @@ export function RangeEstimatorCalculator() {
     formula: `Available Energy (kWh) = Usable Battery Capacity × (Current SOC / 100)
 Effective Consumption (kWh/100 km) = Baseline Consumption × F_speed × F_hvac × F_terrain × F_temp × F_profile
 Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
-    description: "Estimates realistic drivable range by factoring in quadratic aerodynamic drag at varying cruise speeds, thermal pre-conditioning and cabin climate demands, gravitational elevation resistance, and regenerative energy recovery profiles.",
+    description:
+      "Estimates realistic drivable range by factoring in quadratic aerodynamic drag at varying cruise speeds, thermal pre-conditioning and cabin climate demands, gravitational elevation resistance, and regenerative energy recovery profiles.",
     assumptions: [
       "Baseline efficiency assumes flat asphalt road in still wind conditions at 60 km/h.",
       "Aerodynamic drag scales quadratically with speed beyond 70 km/h.",
@@ -65,7 +69,6 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
   return (
     <CalculatorLayout config={config} onReset={handleReset} methodology={methodology}>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
         {/* LEFT COLUMN: Input Controls Panel */}
         <div className="lg:col-span-5 rounded-3xl bg-white/3 backdrop-blur-2xl border border-white/10 p-6 sm:p-7 space-y-6 shadow-2xl">
           <div className="flex items-center justify-between pb-4 border-b border-white/10">
@@ -221,7 +224,6 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
 
         {/* RIGHT COLUMN: Results & Range Visualizations */}
         <div className="lg:col-span-7 space-y-6">
-          
           {/* Main Range Display Hero */}
           <div className="rounded-3xl bg-linear-to-br from-[#00D4FF]/15 via-black/40 to-[#00E676]/10 border border-[#00D4FF]/30 p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#00D4FF]/10 rounded-full blur-3xl pointer-events-none" />
@@ -239,7 +241,8 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                   <span className="text-xl sm:text-2xl font-bold text-[#00E676]">KM</span>
                 </div>
                 <p className="text-xs text-[#94A3B8] mt-1">
-                  At {inputs.currentSocPercent}% SOC with {results.availableEnergyKwh} kWh available energy
+                  At {inputs.currentSocPercent}% SOC with {results.availableEnergyKwh} kWh available
+                  energy
                 </p>
               </div>
 
@@ -262,9 +265,12 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                   <span>City Range (Stop & Go)</span>
                 </div>
                 <div className="text-2xl font-black text-white mt-1.5">
-                  {results.estimatedCityRangeKm} <span className="text-xs font-semibold text-[#00E676]">KM</span>
+                  {results.estimatedCityRangeKm}{" "}
+                  <span className="text-xs font-semibold text-[#00E676]">KM</span>
                 </div>
-                <p className="text-[11px] text-[#64748B] mt-0.5">Assisted by regenerative braking</p>
+                <p className="text-[11px] text-[#64748B] mt-0.5">
+                  Assisted by regenerative braking
+                </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white/3 border border-white/5">
@@ -273,7 +279,8 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                   <span>Expressway Range</span>
                 </div>
                 <div className="text-2xl font-black text-white mt-1.5">
-                  {results.estimatedHighwayRangeKm} <span className="text-xs font-semibold text-cyan-400">KM</span>
+                  {results.estimatedHighwayRangeKm}{" "}
+                  <span className="text-xs font-semibold text-cyan-400">KM</span>
                 </div>
                 <p className="text-[11px] text-[#64748B] mt-0.5">Reduced by aerodynamic drag</p>
               </div>
@@ -325,7 +332,8 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                 <span>Sweet Spot Cruising</span>
               </span>
               <p className="text-[#94A3B8]">
-                Maintaining cruising speeds between 60 to 75 km/h rather than 100+ km/h can extend highway range by up to 25% due to reduced wind resistance.
+                Maintaining cruising speeds between 60 to 75 km/h rather than 100+ km/h can extend
+                highway range by up to 25% due to reduced wind resistance.
               </p>
             </div>
 
@@ -335,15 +343,13 @@ Estimated Range (km) = (Available Energy / Effective Consumption) × 100`,
                 <span>Pre-conditioning</span>
               </span>
               <p className="text-[#94A3B8]">
-                Pre-cooling or pre-heating the cabin while the vehicle is plugged into the wall charger saves valuable battery charge for driving range.
+                Pre-cooling or pre-heating the cabin while the vehicle is plugged into the wall
+                charger saves valuable battery charge for driving range.
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
     </CalculatorLayout>
   );
 }
-

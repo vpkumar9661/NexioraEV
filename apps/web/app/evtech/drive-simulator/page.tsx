@@ -140,7 +140,7 @@ export default function DriveSimulatorPage() {
     }, 100);
 
     return () => clearInterval(interval);
-  }, [stage, speed, isAccelerating, isBraking, setup, selectedEnv, weather]);
+  }, [stage, speed, isAccelerating, isBraking, setup, selectedEnv, weather, maxSpeed, soc]);
 
   // Telemetry updates calculation mapping
   const telemetry = useMemo<TelemetryData>(() => {
