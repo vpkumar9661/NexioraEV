@@ -343,7 +343,7 @@ function MythFactCard({ item }: { item: MythFact }) {
   return (
     <div 
       onClick={() => setFlipped(!flipped)}
-      className={`flip-card h-[200px] w-full ${flipped ? "flipped" : ""}`}
+      className={`flip-card h-50 w-full ${flipped ? "flipped" : ""}`}
     >
       <div className="flip-card-inner">
         {/* Front - Myth */}
@@ -749,7 +749,7 @@ export default function EVTechHub() {
       </section>
 
       {/* --- DASHBOARD TAB NAVIGATION --- */}
-      <section className="sticky top-[72px] z-30 bg-[#080b11]/80 backdrop-blur-xl border-b border-white/5 py-3">
+      <section className="sticky top-18 z-30 bg-[#080b11]/80 backdrop-blur-xl border-b border-white/5 py-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex gap-2 overflow-x-auto pb-1.5 custom-scroll md:justify-center">
             {TABS.map((tab) => {
@@ -837,7 +837,7 @@ export default function EVTechHub() {
                   <div className="grid lg:grid-cols-12 gap-8 items-center">
                     {/* SVG Diagram Column */}
                     <div className="lg:col-span-7 flex justify-center">
-                      <div className="w-full max-w-[650px] aspect-video relative bg-neutral-950/40 rounded-2xl border border-white/5 p-4 flex items-center justify-center">
+                      <div className="w-full max-w-162.5 aspect-video relative bg-neutral-950/40 rounded-2xl border border-white/5 p-4 flex items-center justify-center">
                         <svg viewBox="0 0 800 450" className="w-full h-full text-slate-600">
                           {/* Skateboard Chassis Guide Lines */}
                           <line x1="100" y1="280" x2="700" y2="280" stroke="rgba(255,255,255,0.05)" strokeWidth="6" strokeDasharray="10 5" />
@@ -1040,7 +1040,7 @@ export default function EVTechHub() {
                     {/* Horizontal scrollbar helper */}
                     <div className="flex gap-6 overflow-x-auto pb-4 pt-2 custom-scroll">
                       {TIMELINE_DATA.map((event, idx) => (
-                        <div key={idx} className="min-w-[260px] md:min-w-[290px] flex-1">
+                        <div key={idx} className="min-w-65 md:min-w-72.5 flex-1">
                           <div className="glass-panel p-5 rounded-2xl space-y-3 relative h-full flex flex-col justify-between hover:border-white/20 transition-colors duration-300">
                             <div>
                               <span className="text-xl font-black text-[#FF9F1A]">{event.year}</span>
@@ -1329,7 +1329,7 @@ export default function EVTechHub() {
                   
                   {/* Graph mockup */}
                   <div className="bg-neutral-950/60 rounded-xl border border-white/5 p-4 space-y-4">
-                    <div className="h-[180px] w-full flex items-end gap-1.5 relative pt-4">
+                    <div className="h-45 w-full flex items-end gap-1.5 relative pt-4">
                       {/* Grid Lines */}
                       <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
                         <div className="w-full border-t border-white/3" />
@@ -2152,7 +2152,7 @@ export default function EVTechHub() {
 
               {/* Glossary Grid */}
               <div className="lg:col-span-8">
-                <div className="grid sm:grid-cols-2 gap-4 max-h-[350px] overflow-y-auto custom-scroll pr-2">
+                <div className="grid sm:grid-cols-2 gap-4 max-h-87.5 overflow-y-auto custom-scroll pr-2">
                   {filteredGlossary.length > 0 ? (
                     filteredGlossary.map((item, idx) => (
                       <div key={idx} className="glass-panel p-4 rounded-xl space-y-1.5 hover:border-white/15 transition-colors">
@@ -2248,7 +2248,7 @@ export default function EVTechHub() {
               <div className="lg:col-span-8 space-y-4">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">Active Discussions</span>
                 
-                <div className="space-y-3 max-h-[380px] overflow-y-auto custom-scroll pr-2">
+                <div className="space-y-3 max-h-95 overflow-y-auto custom-scroll pr-2">
                   {forumQuestions.map((fq) => (
                     <div key={fq.id} className="glass-panel p-4 rounded-xl flex justify-between items-start gap-4">
                       <div className="flex gap-3">
@@ -2266,11 +2266,11 @@ export default function EVTechHub() {
                       </div>
 
                       <div className="flex gap-3 text-right shrink-0">
-                        <div className="text-center bg-white/2 border border-white/5 px-2 py-1 rounded-lg min-w-[36px]">
+                        <div className="text-center bg-white/2 border border-white/5 px-2 py-1 rounded-lg min-w-9">
                           <span className="block text-[11px] font-bold text-white">{fq.votes}</span>
                           <span className="block text-[8px] text-slate-500 uppercase font-medium">Votes</span>
                         </div>
-                        <div className="text-center bg-white/2 border border-white/5 px-2 py-1 rounded-lg min-w-[36px]">
+                        <div className="text-center bg-white/2 border border-white/5 px-2 py-1 rounded-lg min-w-9">
                           <span className="block text-[11px] font-bold text-white">{fq.answers}</span>
                           <span className="block text-[8px] text-slate-500 uppercase font-medium">Replies</span>
                         </div>
