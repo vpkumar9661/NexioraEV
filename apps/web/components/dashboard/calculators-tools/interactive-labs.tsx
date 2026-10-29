@@ -158,7 +158,7 @@ export function ConvertersSection() {
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         
         {/* Form Left */}
-        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-[160px]">
+        <div className="md:col-span-5 p-5 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-between min-h-40">
           <div className="space-y-3.5 text-xs">
             <div className="grid grid-cols-2 gap-2">
               <input
@@ -180,7 +180,7 @@ export function ConvertersSection() {
         </div>
 
         {/* Readout Right */}
-        <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[130px]">
+        <div className="md:col-span-7 p-6 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-32.5">
           <div className="space-y-1">
             <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block">Conversion Output</span>
             <strong className="text-xl font-black text-[#00C853] block mt-2">
@@ -282,7 +282,7 @@ export function AIPlanner() {
         </div>
 
         {/* Advisor text Right */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[150px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-37.5">
           {advice ? (
             <div className="space-y-2 text-xs">
               <span className="text-[9px] text-purple-400 font-bold uppercase tracking-wider block">AI Advisor diagnostics</span>
@@ -332,7 +332,7 @@ export function DownloadsCenter() {
         </div>
 
         {/* CTA Redirect Right */}
-        <div className="md:col-span-6 p-5 rounded-2xl border border-[#00C853]/25 bg-linear-to-b from-[#00C853]/5 to-transparent backdrop-blur-md flex flex-col justify-between min-h-[140px]">
+        <div className="md:col-span-6 p-5 rounded-2xl border border-[#00C853]/25 bg-linear-to-b from-[#00C853]/5 to-transparent backdrop-blur-md flex flex-col justify-between min-h-35">
           <div>
             <span className="text-[9px] text-[#00C853] font-extrabold uppercase tracking-wider block">Conclude Toolkit Analysis</span>
             <h4 className="text-xs font-black text-white mt-1.5 uppercase tracking-wide">Continue to AI EV Assistant</h4>
@@ -377,7 +377,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#00C853]/20 bg-[#00C853]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -390,7 +390,7 @@ export function FAQSection() {
                 <span className="text-xs font-bold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#00C853]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>

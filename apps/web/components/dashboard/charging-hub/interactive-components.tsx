@@ -164,10 +164,10 @@ export function InteractiveStation() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* SVG Station Illustration */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex items-center justify-center relative min-h-[300px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex items-center justify-center relative min-h-75">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.03),transparent_70%)] pointer-events-none" />
 
-          <svg viewBox="-80 -100 160 200" className="w-full max-w-[210px] aspect-square overflow-visible">
+          <svg viewBox="-80 -100 160 200" className="w-full max-w-52.5 aspect-square overflow-visible">
             {/* Charger Pedestal Base */}
             <polygon points="-40,-80 40,-80 50,85 -50,85" fill="#131722" stroke="rgba(255,255,255,0.06)" />
             <polygon points="-35,-75 35,-75 45,80 -45,80" fill="#0F172A" />
@@ -301,11 +301,11 @@ export function ConnectorExplorer() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* SVG connector layout pins */}
-        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-6 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider block mb-2">Cross-section pin connector HUD</span>
           
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -80 160 160" className="w-full max-w-[150px] aspect-square overflow-visible">
+            <svg viewBox="-80 -80 160 160" className="w-full max-w-37.5 aspect-square overflow-visible">
               {/* Main Outer Plug boundary */}
               <circle cx="0" cy="0" r="60" fill="#131722" stroke="rgba(255,255,255,0.06)" />
               <circle cx="0" cy="0" r="55" fill="#0F172A" />

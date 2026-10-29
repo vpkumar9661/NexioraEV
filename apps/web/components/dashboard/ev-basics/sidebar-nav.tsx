@@ -24,8 +24,8 @@ interface SidebarNavProps {
 
 export function SidebarNav({ activeSection }: SidebarNavProps) {
   return (
-    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-[140px] w-[180px] z-30">
-      <nav className="p-3 rounded-[16px] border border-white/5 bg-white/2 backdrop-blur-md space-y-1">
+    <aside className="hidden xl:block fixed left-[max(1rem,calc((100vw-1280px)/2-200px))] top-35 w-45 z-30">
+      <nav className="p-3 rounded-2xl border border-white/5 bg-white/2 backdrop-blur-md space-y-1">
         <p className="text-[10px] font-extrabold text-muted-foreground/40 uppercase tracking-widest px-2 pb-2">
           Navigation
         </p>

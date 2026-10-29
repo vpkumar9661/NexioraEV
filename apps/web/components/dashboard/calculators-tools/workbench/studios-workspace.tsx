@@ -61,7 +61,7 @@ export function StudiosWorkspace({
       </div>
 
       {/* active tab panels layout */}
-      <div className="p-5 rounded-[24px] border border-white/5 bg-white/2 backdrop-blur-md min-h-[300px]">
+      <div className="p-5 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-md min-h-75">
         
         {/* Battery Design */}
         {activeTab === "battery" && (
@@ -91,9 +91,9 @@ export function StudiosWorkspace({
             </div>
 
             {/* Matrix Visual */}
-            <div className="border border-white/5 rounded-xl bg-black/40 p-4 flex flex-col justify-center min-h-[120px]">
+            <div className="border border-white/5 rounded-xl bg-black/40 p-4 flex flex-col justify-center min-h-30">
               <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest block mb-3">Series-Parallel configuration board</span>
-              <svg viewBox="-80 -30 160 60" className="w-full max-w-[180px] mx-auto overflow-visible">
+              <svg viewBox="-80 -30 160 60" className="w-full max-w-45 mx-auto overflow-visible">
                 {/* Visual rendering cells blocks */}
                 <rect x="-45" y="-12" width="22" height="24" rx="2" fill="rgba(0,200,83,0.15)" stroke="#00C853" strokeWidth="0.8" />
                 <rect x="-15" y="-12" width="22" height="24" rx="2" fill="rgba(0,200,83,0.15)" stroke="#00C853" strokeWidth="0.8" />

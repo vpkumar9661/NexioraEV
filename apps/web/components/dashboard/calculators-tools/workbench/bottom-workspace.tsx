@@ -18,7 +18,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
     <div className="grid md:grid-cols-12 gap-6 items-stretch relative z-25">
       
       {/* AI Engineering Copilot Left */}
-      <div className="md:col-span-7 p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
+      <div className="md:col-span-7 p-5 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-md space-y-4">
         <div className="flex gap-2 items-center text-[#00C853]">
           <BrainCircuit className="w-5 h-5 animate-pulse" />
           <h3 className="text-sm font-black text-white uppercase tracking-wider font-sans">AI Engineering Copilot</h3>
@@ -48,7 +48,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
       </div>
 
       {/* Formula Library Right */}
-      <div className="md:col-span-5 p-5 rounded-[24px] border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4">
+      <div className="md:col-span-5 p-5 rounded-3xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-between gap-4">
         <div>
           <span className="text-[10px] text-muted-foreground/40 font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
             Formula Reference sheets
@@ -78,7 +78,7 @@ export function BottomWorkspace({ setup }: BottomWorkspaceProps) {
           </div>
         </div>
 
-        <div className="border border-white/5 p-3.5 rounded-xl bg-black/40 text-xs font-mono text-muted-foreground min-h-[70px] flex items-center justify-center text-center leading-normal">
+        <div className="border border-white/5 p-3.5 rounded-xl bg-black/40 text-xs font-mono text-muted-foreground min-h-17.5 flex items-center justify-center text-center leading-normal">
           {selectedFormula === "balancing" ? balancingFormula : specificEnergy}
         </div>
       </div>

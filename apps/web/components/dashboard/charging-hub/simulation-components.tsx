@@ -53,7 +53,7 @@ export function ChargingSimulator() {
 
       <div className="grid md:grid-cols-12 gap-5 flex-1 items-stretch py-2">
         {/* Interactive panel left */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-4 flex flex-col justify-between min-h-55">
           <div className="flex items-center justify-between">
             <span className="text-[10px] text-muted-foreground/40 font-bold uppercase tracking-wider">Charging loop timeline graph</span>
             <span className="text-[10px] font-extrabold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
@@ -62,7 +62,7 @@ export function ChargingSimulator() {
           </div>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="0 0 200 100" className="w-full h-full max-h-[120px] overflow-visible">
+            <svg viewBox="0 0 200 100" className="w-full h-full max-h-30 overflow-visible">
               <line x1="15" y1="10" x2="15" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
               <line x1="15" y1="85" x2="190" y2="85" stroke="rgba(255,255,255,0.05)" strokeWidth="0.7" />
 
@@ -376,14 +376,14 @@ export function NetworkDashboard() {
 
       <div className="grid md:grid-cols-12 gap-6 items-stretch">
         {/* Graphical Map representation */}
-        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-[220px]">
+        <div className="md:col-span-7 rounded-2xl border border-white/5 bg-black/40 p-5 flex flex-col justify-between min-h-55">
           <div className="flex justify-between items-center text-[10px] text-muted-foreground/40 font-bold uppercase">
             <span>Dynamic Grid Load Mapping</span>
             <span className="text-[#10B981] animate-pulse">Live Connected</span>
           </div>
 
           <div className="flex-1 flex items-center justify-center relative py-4">
-            <svg viewBox="-80 -50 160 100" className="w-full h-full max-h-[150px] overflow-visible">
+            <svg viewBox="-80 -50 160 100" className="w-full h-full max-h-37.5 overflow-visible">
               {/* Map grid circles representation */}
               <circle cx="-50" cy="-20" r="4" fill="#10B981" />
               <line x1="-50" y1="-20" x2="-20" y2="10" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
@@ -489,7 +489,7 @@ export function AIAssistant() {
         </div>
 
         {/* Readout answer panel */}
-        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-[160px]">
+        <div className="md:col-span-7 p-5 rounded-2xl border border-white/5 bg-[#131722]/50 backdrop-blur-md flex flex-col justify-center min-h-40">
           {answer ? (
             <div className="space-y-2">
               <span className="text-[9px] text-muted-foreground/40 font-bold uppercase tracking-wider block">AI Agent Diagnosis</span>

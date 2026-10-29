@@ -44,7 +44,7 @@ export function TopToolbar({
           type="text"
           value={projectName}
           onChange={(e) => onRename(e.target.value)}
-          className="bg-transparent border-none focus:outline-none text-sm font-black text-white max-w-[200px]"
+          className="bg-transparent border-none focus:outline-none text-sm font-black text-white max-w-50"
         />
       </div>
 
@@ -83,7 +83,7 @@ interface LeftConfigSidebarProps {
 
 export function LeftConfigSidebar({ setup, onChange }: LeftConfigSidebarProps) {
   return (
-    <aside className="w-full lg:w-[260px] shrink-0 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-6">
+    <aside className="w-full lg:w-65 shrink-0 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-6">
       <span className="text-[10px] text-[#00C853] font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
         Engineering Inputs
       </span>
@@ -202,7 +202,7 @@ interface RightDiagnosticsSidebarProps {
 
 export function RightDiagnosticsSidebar({ stats }: RightDiagnosticsSidebarProps) {
   return (
-    <aside className="w-full lg:w-[260px] shrink-0 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-6">
+    <aside className="w-full lg:w-65 shrink-0 p-5 rounded-[20px] border border-white/5 bg-white/2 backdrop-blur-md space-y-6">
       <span className="text-[10px] text-[#00C853] font-extrabold uppercase tracking-widest block border-b border-white/5 pb-2">
         Live Engineering HUD
       </span>

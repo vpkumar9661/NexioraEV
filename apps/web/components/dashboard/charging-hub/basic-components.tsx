@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative p-6 sm:p-8 rounded-[24px] border border-[#22D3EE]/25 bg-linear-to-b from-[#22D3EE]/5 to-transparent backdrop-blur-md overflow-hidden min-h-[380px] flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
+    <section id="hero" className="relative p-6 sm:p-8 rounded-3xl border border-[#22D3EE]/25 bg-linear-to-b from-[#22D3EE]/5 to-transparent backdrop-blur-md overflow-hidden min-h-95 flex items-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)]">
       
       {/* Energy Glow mesh */}
       <div className="absolute right-0 top-0 w-80 h-80 rounded-full bg-cyan-500/5 blur-[80px] pointer-events-none" />
@@ -55,7 +55,7 @@ export function HeroSection() {
 
         {/* Dynamic SVG EV Charger Animation */}
         <div className="md:col-span-5 flex items-center justify-center">
-          <svg viewBox="0 0 200 180" className="w-full max-w-[220px] aspect-square overflow-visible">
+          <svg viewBox="0 0 200 180" className="w-full max-w-55 aspect-square overflow-visible">
             {/* Charger Pedestal */}
             <rect x="70" y="40" width="60" height="110" rx="10" fill="#131722" stroke="rgba(255,255,255,0.06)" />
             <rect x="75" y="45" width="50" height="100" rx="8" fill="#0F172A" />
@@ -107,7 +107,7 @@ export function StatsBar() {
       {STATS_ITEMS.map((stat, idx) => (
         <div
           key={idx}
-          className="p-4 rounded-[16px] border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
+          className="p-4 rounded-2xl border border-white/5 bg-white/2 hover:border-white/10 hover:bg-white/4 transition-all duration-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] flex flex-col justify-between"
         >
           <span className="text-[9.5px] font-extrabold text-muted-foreground/40 uppercase tracking-widest leading-none block">
             {stat.label}
@@ -252,7 +252,7 @@ export function TechExplorer() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative w-full max-w-2xl rounded-[24px] border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6"
+              className="relative w-full max-w-2xl rounded-3xl border border-white/10 bg-[#131722]/95 backdrop-blur-xl p-6 sm:p-8 shadow-2xl space-y-6"
             >
               <div className="flex items-start justify-between border-b border-white/5 pb-4">
                 <div className="flex items-center gap-3">
@@ -464,7 +464,7 @@ export function FAQSection() {
           return (
             <div
               key={idx}
-              className={`rounded-[16px] border transition-all duration-300 overflow-hidden ${
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? "border-[#22D3EE]/20 bg-[#22D3EE]/3"
                   : "border-white/5 bg-white/2 hover:border-white/10"
@@ -477,7 +477,7 @@ export function FAQSection() {
                 <span className="text-xs font-bold text-white">{faq.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#22D3EE]" : ""}`} />
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-4 text-[11.5px] text-muted-foreground/75 leading-relaxed pl-5 border-t border-white/5 pt-2">
                   {faq.a}
                 </p>
@@ -496,7 +496,7 @@ export function FAQSection() {
 
 export function ContinueCTA() {
   return (
-    <section id="cta" className="p-6 sm:p-8 rounded-[24px] border border-white/5 bg-white/2 relative overflow-hidden">
+    <section id="cta" className="p-6 sm:p-8 rounded-3xl border border-white/5 bg-white/2 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-48 h-48 bg-[#22D3EE]/5 blur-2xl pointer-events-none" />
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 relative z-10">
         <div className="space-y-2">
