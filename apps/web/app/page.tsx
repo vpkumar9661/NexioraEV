@@ -79,7 +79,7 @@ const NEWS_ARTICLES = [
     date: "June 25, 2026",
     title: "National Highway 44 Gets 350kW Fast Chargers",
     summary: "High-speed charging hubs established every 50km on Delhi-Srinagar corridor featuring liquid-cooled connector cables.",
-    img: "https://images.unsplash.com/photo-1558441719-ff34b0524a24?w=600&auto=format&fit=crop&q=60"
+    img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&auto=format&fit=crop&q=60"
   }
 ];
 
