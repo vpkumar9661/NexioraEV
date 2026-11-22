@@ -10,7 +10,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div
       className="relative min-h-screen w-full flex items-center justify-center p-4 sm:p-6 overflow-hidden"
-      style={{ backgroundColor: "#F4F5F7" }}
+      style={{ backgroundColor: "#0B0F17" }}
     >
       {/* Soft Ambient & Geometric Circular Background Decorations */}
       <AuthDecorations />

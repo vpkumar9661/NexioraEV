@@ -142,7 +142,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
             setIsLoading(false);
             return;
           }
-          // If offline/connection refused, show friendly fallback
           setErrorMessage("Unable to connect to authentication server. Please check your connection or try again shortly.");
           setIsLoading(false);
           return;
@@ -190,7 +189,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           return;
         }
       } else if (mode === "forgot-password") {
-        // Password reset flow
         setSuccessMessage("If an account exists with this email, a password reset link has been sent.");
         setIsLoading(false);
       }
@@ -208,10 +206,11 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
     <motion.div
       layout
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="w-full max-w-[430px] mx-auto bg-white rounded-3xl p-7 sm:p-9 relative z-10 border border-slate-100"
+      className="w-full max-w-[430px] mx-auto rounded-3xl p-7 sm:p-9 relative z-10 border border-white/[0.08]"
       style={{
+        backgroundColor: "#121824",
         boxShadow:
-          "0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 24px 48px -12px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)",
+          "0 24px 60px -12px rgba(0, 0, 0, 0.7), 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.02)",
       }}
     >
       {/* ── Logo & Brand ── */}
@@ -237,10 +236,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
         <motion.div
           initial={{ opacity: 0, y: -6 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-rose-50/90 border border-rose-200/80 text-rose-700 text-xs font-medium leading-relaxed"
+          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs font-medium leading-relaxed"
           role="alert"
         >
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-500 mt-0.5" />
+          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
           <span>{errorMessage}</span>
         </motion.div>
       )}
@@ -249,10 +248,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
         <motion.div
           initial={{ opacity: 0, y: -6 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-emerald-50/90 border border-emerald-200/80 text-emerald-800 text-xs font-medium leading-relaxed"
+          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-medium leading-relaxed"
           role="status"
         >
-          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 mt-0.5" />
+          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
           <span>{successMessage}</span>
         </motion.div>
       )}
@@ -269,10 +268,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           >
             {/* Header */}
             <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-800">
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                 Welcome Back
               </h1>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Sign in to your NexioraEV account.
               </p>
             </div>
@@ -305,12 +304,12 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
 
               {/* Remember Me & Forgot Password Row */}
               <div className="flex items-center justify-between pt-1 text-xs">
-                <label className="flex items-center gap-2 text-slate-600 cursor-pointer select-none">
+                <label className="flex items-center gap-2 text-slate-300 cursor-pointer select-none">
                   <input
                     type="checkbox"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-4 h-4 rounded-md border-slate-300 text-emerald-600 focus:ring-emerald-500/20 transition cursor-pointer"
+                    className="w-4 h-4 rounded-md border-slate-700 bg-[#0C1019] text-emerald-500 focus:ring-emerald-500/20 transition cursor-pointer"
                   />
                   <span>Remember Me</span>
                 </label>
@@ -318,7 +317,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 <button
                   type="button"
                   onClick={() => switchMode("forgot-password")}
-                  className="font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+                  className="font-medium text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
                 >
                   Forgot Password?
                 </button>
@@ -329,11 +328,11 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full h-12 bg-slate-900 hover:bg-slate-800 active:scale-[0.985] text-white font-medium text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-md shadow-slate-900/10 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
                       <span>Signing In...</span>
                     </>
                   ) : (
@@ -346,12 +345,12 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
               </div>
 
               {/* Secondary Switching Link */}
-              <div className="text-center pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500">
+              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
                 Don&apos;t have an account?{" "}
                 <button
                   type="button"
                   onClick={() => switchMode("register")}
-                  className="font-semibold text-emerald-600 hover:text-emerald-700 transition-colors cursor-pointer"
+                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
                 >
                   Create Account
                 </button>
@@ -370,10 +369,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           >
             {/* Header */}
             <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-800">
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                 Create Your Account
               </h1>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Join the NexioraEV ecosystem.
               </p>
             </div>
@@ -433,11 +432,11 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full h-12 bg-slate-900 hover:bg-slate-800 active:scale-[0.985] text-white font-medium text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-md shadow-slate-900/10 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
                       <span>Creating Account...</span>
                     </>
                   ) : (
@@ -450,12 +449,12 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
               </div>
 
               {/* Secondary Switching Link */}
-              <div className="text-center pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500">
+              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
                 Already have an account?{" "}
                 <button
                   type="button"
                   onClick={() => switchMode("login")}
-                  className="font-semibold text-emerald-600 hover:text-emerald-700 transition-colors cursor-pointer"
+                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
                 >
                   Sign In
                 </button>
@@ -474,10 +473,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           >
             {/* Header */}
             <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-800">
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                 Reset Your Password
               </h1>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Enter your email address to receive a password reset link.
               </p>
             </div>
@@ -501,11 +500,11 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full h-12 bg-slate-900 hover:bg-slate-800 active:scale-[0.985] text-white font-medium text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-md shadow-slate-900/10 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
                       <span>Sending Link...</span>
                     </>
                   ) : (
@@ -518,11 +517,11 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
               </div>
 
               {/* Back to Sign In Link */}
-              <div className="text-center pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500">
+              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
                 <button
                   type="button"
                   onClick={() => switchMode("login")}
-                  className="font-semibold text-emerald-600 hover:text-emerald-700 transition-colors cursor-pointer"
+                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
                 >
                   ← Back to Sign In
                 </button>
