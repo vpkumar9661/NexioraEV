@@ -319,9 +319,9 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
       </div>
 
       {/* ── Main Composition: 3D Lamp (Left) & Auth Card / Turn-on Screen (Right) ── */}
-      <div className="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center relative min-h-[560px]">
+      <div className="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center relative min-h-140">
         {/* LEFT COLUMN: 3D Interactive Desk Lamp */}
-        <div className="lg:col-span-6 flex items-center justify-center relative order-1 h-80 sm:h-96 lg:h-[600px] w-full">
+        <div className="lg:col-span-6 flex items-center justify-center relative order-1 h-80 sm:h-96 lg:h-150 w-full">
           <LampScene
             isOn={isLampOn}
             lampColor={activeTheme.hex}
@@ -331,7 +331,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           />
 
           {/* Interactive hint on the lamp */}
-          <div className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/80 border border-white/[0.08] text-[11px] text-slate-400 select-none flex items-center gap-2 backdrop-blur-xs">
+          <div className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/80 border border-white/8 text-xs text-slate-400 select-none flex items-center gap-2 backdrop-blur-xs">
             <span
               className="w-2 h-2 rounded-full transition-colors duration-300"
               style={{ backgroundColor: isLampOn ? activeTheme.accent : "#64748B" }}
@@ -351,7 +351,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
         </div>
 
         {/* RIGHT COLUMN: Auth Card (When ON) OR "Turn on the lamp" (When OFF) */}
-        <div className="lg:col-span-6 flex items-center justify-center relative order-2 w-full z-10 min-h-[460px]">
+        <div className="lg:col-span-6 flex items-center justify-center relative order-2 w-full z-10 min-h-115">
           <AnimatePresence mode="wait">
             {!isLampOn ? (
               <motion.div
@@ -409,7 +409,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 <motion.div
                   layout
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full rounded-3xl p-7 sm:p-9 relative z-10 border border-white/[0.08] backdrop-blur-xl"
+                  className="w-full rounded-3xl p-7 sm:p-9 relative z-10 border border-white/8 backdrop-blur-xl"
                   style={{
                     backgroundColor: "rgba(17, 21, 31, 0.92)",
                     boxShadow: `0 24px 60px -12px rgba(0, 0, 0, 0.75), 0 0 60px -10px rgba(${activeTheme.rgb}, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08)`,
@@ -417,7 +417,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                 >
                   {/* ── Mode Pill Switcher (Sign In | Sign Up) ── */}
                   {mode !== "forgot-password" && (
-                    <div className="grid grid-cols-2 p-1 mb-6 rounded-xl bg-black/40 border border-white/[0.05]">
+                    <div className="grid grid-cols-2 p-1 mb-6 rounded-xl bg-black/40 border border-white/5">
                       <button
                         type="button"
                         onClick={() => switchMode("login")}
@@ -777,7 +777,7 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
                             </button>
                           </div>
 
-                          <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
+                          <div className="text-center pt-4 border-t border-white/6 text-xs sm:text-sm text-slate-400">
                             <button
                               type="button"
                               onClick={() => switchMode("login")}

@@ -23,7 +23,7 @@ export function LampColorSelector({
   onResetLamp,
 }: LampColorSelectorProps) {
   return (
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#11141D]/90 border border-white/[0.1] shadow-2xl backdrop-blur-md">
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#11141D]/90 border border-white/10 shadow-2xl backdrop-blur-md">
       {/* Color Swatch Dots */}
       <div className="flex items-center gap-1.5">
         {COLOR_OPTIONS.map((id) => {

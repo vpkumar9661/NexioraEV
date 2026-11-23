@@ -65,7 +65,7 @@ export const NeumorphicInput = forwardRef<HTMLInputElement, NeumorphicInputProps
               ${
                 error
                   ? "border border-rose-500/80 ring-2 ring-rose-500/20"
-                  : "border border-white/[0.08]"
+                  : "border border-white/8"
               }
               ${className}
             `}

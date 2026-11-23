@@ -22,7 +22,7 @@ export function DeskLamp({ theme, isOn, onToggle }: DeskLampProps) {
   };
 
   return (
-    <div className="relative w-full max-w-[420px] h-[480px] sm:h-[540px] flex items-center justify-center select-none pointer-events-auto">
+    <div className="relative w-full max-w-105 h-120 sm:h-135 flex items-center justify-center select-none pointer-events-auto">
       {/* ── Volumetric Light Beam (Projected from Lampshade toward Card) ── */}
       <div
         className="absolute pointer-events-none transition-all duration-700 ease-out z-0"
@@ -255,7 +255,7 @@ export function DeskLamp({ theme, isOn, onToggle }: DeskLampProps) {
         initial={{ opacity: 0, y: 4 }}
         animate={{ opacity: 0.85, y: 0 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#121620]/90 border border-white/[0.08] text-[11px] font-medium text-slate-400 pointer-events-none whitespace-nowrap shadow-md backdrop-blur-xs"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#121620]/90 border border-white/8 text-xs font-medium text-slate-400 pointer-events-none whitespace-nowrap shadow-md backdrop-blur-xs"
       >
         Click string to turn {isOn ? "off" : "on"}
       </motion.div>

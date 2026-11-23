@@ -60,7 +60,7 @@ export function AuthDecorations() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         {/* Inner subtle circle */}
         <div
-          className="rounded-full border border-white/[0.05] will-change-transform"
+          className="rounded-full border border-white/5 will-change-transform"
           style={{
             width: "680px",
             height: "680px",
@@ -72,7 +72,7 @@ export function AuthDecorations() {
 
         {/* Outer dashed delicate circle */}
         <div
-          className="absolute rounded-full border border-dashed border-white/[0.03] will-change-transform"
+          className="absolute rounded-full border border-dashed border-white/3 will-change-transform"
           style={{
             width: "920px",
             height: "920px",
