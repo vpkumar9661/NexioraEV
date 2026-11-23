@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -20,13 +19,8 @@ import { APP_NAME } from "@nexiora/shared";
 import { apiRequest, ApiClientError } from "@/lib/api-client";
 import { NeumorphicInput } from "./neumorphic-input";
 import { LampColorSelector } from "./lamp-color-selector";
+import { StudioDeskLamp } from "./studio-desk-lamp";
 import { LampColorId, LAMP_THEMES } from "./lamp-theme";
-
-// Dynamically import the 3D scene (SSR disabled – Three.js needs the browser)
-const LampScene = dynamic(
-  () => import("./lamp-scene").then((m) => m.LampScene),
-  { ssr: false }
-);
 
 type AuthMode = "login" | "register" | "forgot-password";
 
@@ -42,7 +36,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   // Lamp Lighting State
   const [activeThemeId, setActiveThemeId] = useState<LampColorId>("amber");
   const [isLampOn, setIsLampOn] = useState<boolean>(false);
-  const [resetCount, setResetCount] = useState(0);
 
   // Form Fields State
   const [name, setName] = useState("");
@@ -58,16 +51,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const activeTheme = LAMP_THEMES[activeThemeId];
-
-  // Convert hex to rgb tuple for Three.js
-  const lampRgb: [number, number, number] = useMemo(() => {
-    const parts = activeTheme.rgb.split(",").map((s) => parseFloat(s.trim()));
-    return [
-      (parts[0] ?? 0) / 255,
-      (parts[1] ?? 0) / 255,
-      (parts[2] ?? 0) / 255,
-    ];
-  }, [activeTheme.rgb]);
 
   // Initialize theme and rememberMe from localStorage
   useEffect(() => {
@@ -308,36 +291,24 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           />
         </Link>
 
-        {/* Dynamic Lamp Color Selector & Reset Control */}
+        {/* Dynamic Lamp Color Selector */}
         <LampColorSelector
           activeThemeId={activeThemeId}
           onSelectTheme={handleSelectTheme}
           isOn={isLampOn}
           onTogglePower={handleTogglePower}
-          onResetLamp={() => setResetCount((c) => c + 1)}
         />
       </div>
 
-      {/* ── Main Composition: 3D Lamp (Left) & Auth Card / Turn-on Screen (Right) ── */}
-      <div className="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center relative min-h-140">
-        {/* LEFT COLUMN: 3D Interactive Desk Lamp */}
-        <div className="lg:col-span-6 flex items-center justify-center relative order-1 h-80 sm:h-96 lg:h-150 w-full">
-          <LampScene
+      {/* ── Main Composition: Studio Desk Lamp (Left) & Auth Card / Turn-on Screen (Right) ── */}
+      <div className="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center justify-center relative min-h-140">
+        {/* LEFT COLUMN: Photorealistic Studio Desk Lamp */}
+        <div className="lg:col-span-6 flex items-center justify-center relative order-1 w-full">
+          <StudioDeskLamp
+            theme={activeTheme}
             isOn={isLampOn}
-            lampColor={activeTheme.hex}
-            lampRgb={lampRgb}
             onToggle={handleTogglePower}
-            resetTrigger={resetCount}
           />
-
-          {/* Interactive hint on the lamp */}
-          <div className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/80 border border-white/8 text-xs text-slate-400 select-none flex items-center gap-2 backdrop-blur-xs">
-            <span
-              className="w-2 h-2 rounded-full transition-colors duration-300"
-              style={{ backgroundColor: isLampOn ? activeTheme.accent : "#64748B" }}
-            />
-            <span>Drag head to tilt • Click lamp to power {isLampOn ? "off" : "on"}</span>
-          </div>
         </div>
 
         {/* RIGHT COLUMN: Auth Card (When ON) OR "Turn on the lamp" (When OFF) */}
