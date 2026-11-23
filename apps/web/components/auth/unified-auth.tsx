@@ -40,8 +40,9 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   const [mode, setMode] = useState<AuthMode>(initialMode);
 
   // Lamp Lighting State
-  const [activeThemeId, setActiveThemeId] = useState<LampColorId>("green");
+  const [activeThemeId, setActiveThemeId] = useState<LampColorId>("amber");
   const [isLampOn, setIsLampOn] = useState<boolean>(false);
+  const [resetCount, setResetCount] = useState(0);
 
   // Form Fields State
   const [name, setName] = useState("");
@@ -307,12 +308,13 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           />
         </Link>
 
-        {/* Dynamic Lamp Color Selector */}
+        {/* Dynamic Lamp Color Selector & Reset Control */}
         <LampColorSelector
           activeThemeId={activeThemeId}
           onSelectTheme={handleSelectTheme}
           isOn={isLampOn}
           onTogglePower={handleTogglePower}
+          onResetLamp={() => setResetCount((c) => c + 1)}
         />
       </div>
 
@@ -325,20 +327,24 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
             lampColor={activeTheme.hex}
             lampRgb={lampRgb}
             onToggle={handleTogglePower}
+            resetTrigger={resetCount}
           />
 
           {/* Interactive hint on the lamp */}
-          <div className="absolute bottom-2 left-6 text-[11px] text-slate-500/80 pointer-events-none select-none flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: activeTheme.accent }} />
-            Click lamp or power button to toggle light
+          <div className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/80 border border-white/[0.08] text-[11px] text-slate-400 select-none flex items-center gap-2 backdrop-blur-xs">
+            <span
+              className="w-2 h-2 rounded-full transition-colors duration-300"
+              style={{ backgroundColor: isLampOn ? activeTheme.accent : "#64748B" }}
+            />
+            <span>Drag head to tilt • Click lamp to power {isLampOn ? "off" : "on"}</span>
           </div>
 
           {/* ── Coloured glow pool on the desk (HTML ambient, behind card) ── */}
           <div
             className="absolute bottom-0 right-0 w-[120%] h-3/4 pointer-events-none transition-opacity duration-700 z-0"
             style={{
-              opacity: isLampOn ? 0.75 : 0,
-              background: `radial-gradient(ellipse 70% 50% at 70% 85%, rgba(${activeTheme.rgb}, 0.22) 0%, rgba(${activeTheme.rgb}, 0.06) 45%, transparent 70%)`,
+              opacity: isLampOn ? 0.6 : 0,
+              background: `radial-gradient(ellipse 70% 50% at 70% 85%, rgba(${activeTheme.rgb}, 0.18) 0%, rgba(${activeTheme.rgb}, 0.04) 45%, transparent 70%)`,
               filter: "blur(40px)",
             }}
           />

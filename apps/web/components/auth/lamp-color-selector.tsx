@@ -2,26 +2,28 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Power } from "lucide-react";
-import { LampColorId, LampColorTheme, LAMP_THEMES } from "./lamp-theme";
+import { Power, RotateCcw } from "lucide-react";
+import { LampColorId, LAMP_THEMES } from "./lamp-theme";
 
 interface LampColorSelectorProps {
   activeThemeId: LampColorId;
   onSelectTheme: (id: LampColorId) => void;
   isOn: boolean;
   onTogglePower: () => void;
+  onResetLamp?: () => void;
 }
 
-const COLOR_OPTIONS: LampColorId[] = ["amber", "cyan", "pink", "green", "white"];
+const COLOR_OPTIONS: LampColorId[] = ["amber", "green", "cyan", "pink", "white"];
 
 export function LampColorSelector({
   activeThemeId,
   onSelectTheme,
   isOn,
   onTogglePower,
+  onResetLamp,
 }: LampColorSelectorProps) {
   return (
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#121622]/90 border border-white/[0.1] shadow-xl backdrop-blur-md">
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#11141D]/90 border border-white/[0.1] shadow-2xl backdrop-blur-md">
       {/* Color Swatch Dots */}
       <div className="flex items-center gap-1.5">
         {COLOR_OPTIONS.map((id) => {
@@ -63,6 +65,19 @@ export function LampColorSelector({
       </div>
 
       <div className="w-px h-4 bg-white/10 mx-0.5" />
+
+      {/* Reset Lamp Position Button */}
+      {onResetLamp && (
+        <button
+          type="button"
+          onClick={onResetLamp}
+          className="p-1.5 rounded-full text-slate-500 hover:text-slate-300 hover:bg-white/5 transition-all duration-200 cursor-pointer"
+          title="Reset lamp position"
+          aria-label="Reset lamp position"
+        >
+          <RotateCcw className="w-3.5 h-3.5" />
+        </button>
+      )}
 
       {/* Power Toggle Button */}
       <button

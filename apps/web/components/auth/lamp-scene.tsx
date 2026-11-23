@@ -15,6 +15,7 @@ interface LampSceneProps {
   lampColor: string;
   lampRgb: [number, number, number];
   onToggle?: () => void;
+  resetTrigger?: number;
 }
 
 export function LampScene({
@@ -22,66 +23,72 @@ export function LampScene({
   lampColor,
   lampRgb,
   onToggle,
+  resetTrigger = 0,
 }: LampSceneProps) {
   return (
-    <div className="w-full h-full select-none">
+    <div className="w-full h-full select-none relative">
       <Canvas
         shadows
         dpr={[1, 2]}
         camera={{
-          position: [3.2, 2.2, 6.8],
-          fov: 38,
+          position: [2.9, 1.7, 6.6],
+          fov: 35, // 50mm equivalent portrait lens – zero wide-angle distortion
           near: 0.1,
           far: 100,
         }}
         gl={{
           antialias: true,
-          toneMapping: 3, // ACESFilmic
-          toneMappingExposure: 0.95,
+          toneMapping: 3, // ACESFilmic tone mapping
+          toneMappingExposure: 1.05,
         }}
         style={{ background: "transparent" }}
       >
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
 
-        {/* Minimal ambient light – keeps scene dark, rich, and moody */}
-        <ambientLight intensity={0.06} color="#161824" />
-
-        {/* Subtle high key light */}
+        {/* ── Studio Key Light (Neutral warm overhead fill) ── */}
         <directionalLight
-          position={[6, 9, 4]}
-          intensity={0.14}
-          color="#222838"
+          position={[5, 8, 4]}
+          intensity={0.4}
+          color="#FFF2E0"
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+          shadow-bias={-0.0005}
         />
 
-        {/* Soft fill light from behind lamp */}
+        {/* ── Studio Rim Light (Cool subtle edge highlight on dark graphite) ── */}
         <directionalLight
-          position={[-6, 4, -3]}
-          intensity={0.08}
-          color="#182030"
+          position={[-6, 4, -4]}
+          intensity={0.3}
+          color="#94A3B8"
         />
 
-        {/* Environment map for realistic metallic reflections */}
-        <Environment preset="night" environmentIntensity={0.09} />
+        {/* ── Ambient Studio Environment Light ── */}
+        <ambientLight intensity={0.16} color="#1E2330" />
 
-        {/* Contact shadow pool under the lamp base */}
+        {/* ── Environment Reflections (Controlled studio sheen) ── */}
+        <Environment preset="studio" environmentIntensity={0.15} />
+
+        {/* ── Soft Ground Contact Shadow ── */}
         <ContactShadows
-          position={[-0.4, -2.74, 0]}
-          opacity={0.7}
-          scale={14}
-          blur={2.4}
-          far={6}
+          position={[-0.45, -2.64, 0]}
+          opacity={0.75}
+          scale={15}
+          blur={2.6}
+          far={5}
           resolution={512}
           color="#000000"
         />
 
-        {/* 3D Articulated Desk Lamp */}
+        {/* ── Realistic 3D Desk Lamp with Physical Springs & Materials ── */}
         <Suspense fallback={null}>
           <Lamp3DModel
             isOn={isOn}
             lampColor={lampColor}
             lampRgb={lampRgb}
             onToggle={onToggle}
+            resetTrigger={resetTrigger}
           />
         </Suspense>
       </Canvas>
