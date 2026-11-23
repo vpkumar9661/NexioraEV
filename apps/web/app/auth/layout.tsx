@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import { ReactNode } from "react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Authentication | NexioraEV",
-  description: "Sign in or create your NexioraEV account with an interactive lamp-illuminated experience.",
+  description:
+    "Sign in or create your NexioraEV account with an interactive lamp-illuminated experience.",
 };
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
