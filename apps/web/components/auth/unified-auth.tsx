@@ -338,16 +338,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
             />
             <span>Drag head to tilt • Click lamp to power {isLampOn ? "off" : "on"}</span>
           </div>
-
-          {/* ── Coloured glow pool on the desk (HTML ambient, behind card) ── */}
-          <div
-            className="absolute bottom-0 right-0 w-[120%] h-3/4 pointer-events-none transition-opacity duration-700 z-0"
-            style={{
-              opacity: isLampOn ? 0.6 : 0,
-              background: `radial-gradient(ellipse 70% 50% at 70% 85%, rgba(${activeTheme.rgb}, 0.18) 0%, rgba(${activeTheme.rgb}, 0.04) 45%, transparent 70%)`,
-              filter: "blur(40px)",
-            }}
-          />
         </div>
 
         {/* RIGHT COLUMN: Auth Card (When ON) OR "Turn on the lamp" (When OFF) */}

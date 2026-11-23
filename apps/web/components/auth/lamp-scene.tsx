@@ -31,14 +31,14 @@ export function LampScene({
         shadows
         dpr={[1, 2]}
         camera={{
-          position: [2.9, 1.7, 6.6],
-          fov: 35, // 50mm equivalent portrait lens – zero wide-angle distortion
+          position: [2.1, 0.35, 5.2],
+          fov: 38,
           near: 0.1,
-          far: 100,
+          far: 50,
         }}
         gl={{
           antialias: true,
-          toneMapping: 3, // ACESFilmic tone mapping
+          toneMapping: 3, // ACESFilmic
           toneMappingExposure: 1.05,
         }}
         style={{ background: "transparent" }}
@@ -48,40 +48,40 @@ export function LampScene({
 
         {/* ── Studio Key Light (Neutral warm overhead fill) ── */}
         <directionalLight
-          position={[5, 8, 4]}
-          intensity={0.4}
-          color="#FFF2E0"
+          position={[4.5, 6.5, 3.8]}
+          intensity={0.42}
+          color="#FFF4E6"
           castShadow
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
-          shadow-bias={-0.0005}
+          shadow-bias={-0.0004}
         />
 
-        {/* ── Studio Rim Light (Cool subtle edge highlight on dark graphite) ── */}
+        {/* ── Studio Rim Light (Subtle metallic edge separation) ── */}
         <directionalLight
-          position={[-6, 4, -4]}
-          intensity={0.3}
+          position={[-5, 3.5, -3.5]}
+          intensity={0.28}
           color="#94A3B8"
         />
 
-        {/* ── Ambient Studio Environment Light ── */}
-        <ambientLight intensity={0.16} color="#1E2330" />
+        {/* ── Ambient Studio Light ── */}
+        <ambientLight intensity={0.18} color="#1E2330" />
 
-        {/* ── Environment Reflections (Controlled studio sheen) ── */}
-        <Environment preset="studio" environmentIntensity={0.15} />
+        {/* ── Studio Environment Reflections ── */}
+        <Environment preset="studio" environmentIntensity={0.14} />
 
-        {/* ── Soft Ground Contact Shadow ── */}
+        {/* ── Soft Ground Contact Shadow (Directly anchored under lamp base) ── */}
         <ContactShadows
-          position={[-0.45, -2.64, 0]}
-          opacity={0.75}
-          scale={15}
-          blur={2.6}
-          far={5}
+          position={[-0.55, -1.49, 0]}
+          opacity={0.65}
+          scale={8}
+          blur={2.2}
+          far={3.5}
           resolution={512}
           color="#000000"
         />
 
-        {/* ── Realistic 3D Desk Lamp with Physical Springs & Materials ── */}
+        {/* ── 3D Architect Desk Lamp ── */}
         <Suspense fallback={null}>
           <Lamp3DModel
             isOn={isOn}
