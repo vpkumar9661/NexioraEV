@@ -1,22 +1,24 @@
 import { ReactNode } from "react";
-import { AuthDecorations } from "@/components/auth/auth-decorations";
 
 export const metadata = {
   title: "Authentication | NexioraEV",
-  description: "Sign in or create your NexioraEV account to access electric mobility tools and ecosystem.",
+  description: "Sign in or create your NexioraEV account with an interactive lamp-illuminated experience.",
 };
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div
-      className="relative min-h-screen w-full flex items-center justify-center p-4 sm:p-6 overflow-hidden"
-      style={{ backgroundColor: "#0B0F17" }}
+      className="relative min-h-screen w-full flex items-center justify-center overflow-x-hidden"
+      style={{
+        backgroundColor: "#080B11",
+        backgroundImage: `
+          radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
+          radial-gradient(ellipse 60% 40% at 50% 105%, rgba(0, 0, 0, 0.8) 0%, transparent 70%)
+        `,
+      }}
     >
-      {/* Soft Ambient & Geometric Circular Background Decorations */}
-      <AuthDecorations />
-
       {/* Main Authentication Container */}
-      <main className="w-full relative z-10 flex items-center justify-center py-8">
+      <main className="w-full relative z-10 flex items-center justify-center py-6 sm:py-10">
         {children}
       </main>
     </div>

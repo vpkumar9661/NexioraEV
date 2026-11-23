@@ -8,11 +8,26 @@ interface NeumorphicInputProps extends React.InputHTMLAttributes<HTMLInputElemen
   icon?: React.ReactNode;
   error?: string;
   isPassword?: boolean;
+  accentColor?: string;
 }
 
 export const NeumorphicInput = forwardRef<HTMLInputElement, NeumorphicInputProps>(
-  ({ label, icon, error, isPassword, type = "text", id, className = "", ...props }, ref) => {
+  (
+    {
+      label,
+      icon,
+      error,
+      isPassword,
+      accentColor = "#00E676",
+      type = "text",
+      id,
+      className = "",
+      ...props
+    },
+    ref
+  ) => {
     const [showPassword, setShowPassword] = useState(false);
+    const [isFocused, setIsFocused] = useState(false);
     const inputId = id || `input-${label.toLowerCase().replace(/\s+/g, "-")}`;
     const actualType = isPassword ? (showPassword ? "text" : "password") : type;
 
@@ -28,7 +43,12 @@ export const NeumorphicInput = forwardRef<HTMLInputElement, NeumorphicInputProps
         <div className="relative group">
           {/* Left Icon */}
           {icon && (
-            <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-emerald-400 transition-colors duration-200 pointer-events-none z-10">
+            <div
+              className="absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors duration-200 pointer-events-none z-10"
+              style={{
+                color: isFocused ? accentColor : "#64748B",
+              }}
+            >
               {icon}
             </div>
           )}
@@ -45,23 +65,19 @@ export const NeumorphicInput = forwardRef<HTMLInputElement, NeumorphicInputProps
               ${
                 error
                   ? "border border-rose-500/80 ring-2 ring-rose-500/20"
-                  : "border border-white/[0.08] focus:border-emerald-500/70"
+                  : "border border-white/[0.08]"
               }
               ${className}
             `}
             style={{
               backgroundColor: "#0C1019",
-              boxShadow:
-                "inset 2px 2px 5px rgba(0, 0, 0, 0.55), inset -1px -1px 3px rgba(255, 255, 255, 0.04)",
+              borderColor: !error && isFocused ? accentColor : undefined,
+              boxShadow: isFocused
+                ? `inset 1px 1px 4px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.03), 0 0 0 3px ${accentColor}25`
+                : "inset 2px 2px 5px rgba(0, 0, 0, 0.55), inset -1px -1px 3px rgba(255, 255, 255, 0.04)",
             }}
-            onFocus={(e) => {
-              e.currentTarget.style.boxShadow =
-                "inset 1px 1px 4px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.03), 0 0 0 3px rgba(0, 210, 106, 0.18)";
-            }}
-            onBlur={(e) => {
-              e.currentTarget.style.boxShadow =
-                "inset 2px 2px 5px rgba(0, 0, 0, 0.55), inset -1px -1px 3px rgba(255, 255, 255, 0.04)";
-            }}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
             {...props}
           />
 
@@ -70,7 +86,10 @@ export const NeumorphicInput = forwardRef<HTMLInputElement, NeumorphicInputProps
             <button
               type="button"
               onClick={() => setShowPassword((prev) => !prev)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-lg text-slate-400 hover:text-slate-200 focus:outline-hidden focus:text-emerald-400 transition-colors cursor-pointer"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-lg text-slate-400 hover:text-slate-200 focus:outline-hidden transition-colors cursor-pointer"
+              style={{
+                color: isFocused ? accentColor : undefined,
+              }}
               aria-label={showPassword ? "Hide password" : "Show password"}
               tabIndex={0}
             >

@@ -9,6 +9,9 @@ import { Mail, Lock, User, ArrowRight, Loader2, AlertCircle, CheckCircle2 } from
 import { APP_NAME } from "@nexiora/shared";
 import { apiRequest, ApiClientError } from "@/lib/api-client";
 import { NeumorphicInput } from "./neumorphic-input";
+import { DeskLamp } from "./desk-lamp";
+import { LampColorSelector } from "./lamp-color-selector";
+import { LampColorId, LAMP_THEMES } from "./lamp-theme";
 
 type AuthMode = "login" | "register" | "forgot-password";
 
@@ -20,6 +23,10 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [mode, setMode] = useState<AuthMode>(initialMode);
+
+  // Lamp Lighting State
+  const [activeThemeId, setActiveThemeId] = useState<LampColorId>("green");
+  const [isLampOn, setIsLampOn] = useState<boolean>(true);
 
   // Form Fields State
   const [name, setName] = useState("");
@@ -34,9 +41,15 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Initialize rememberMe from localStorage
+  const activeTheme = LAMP_THEMES[activeThemeId];
+
+  // Initialize theme and rememberMe from localStorage
   useEffect(() => {
     try {
+      const savedTheme = localStorage.getItem("nexiora_lamp_theme") as LampColorId;
+      if (savedTheme && LAMP_THEMES[savedTheme]) {
+        setActiveThemeId(savedTheme);
+      }
       const savedEmail = localStorage.getItem("nexiora_remember_email");
       if (savedEmail) {
         setEmail(savedEmail);
@@ -46,6 +59,20 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
       // Ignore localStorage errors
     }
   }, []);
+
+  const handleSelectTheme = (id: LampColorId) => {
+    setActiveThemeId(id);
+    if (!isLampOn) setIsLampOn(true);
+    try {
+      localStorage.setItem("nexiora_lamp_theme", id);
+    } catch {
+      // Ignore
+    }
+  };
+
+  const handleTogglePower = () => {
+    setIsLampOn((prev) => !prev);
+  };
 
   // Sync mode with query/route changes
   const switchMode = (newMode: AuthMode) => {
@@ -203,21 +230,22 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   };
 
   return (
-    <motion.div
-      layout
-      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="w-full max-w-[430px] mx-auto rounded-3xl p-7 sm:p-9 relative z-10 border border-white/[0.08]"
-      style={{
-        backgroundColor: "#121824",
-        boxShadow:
-          "0 24px 60px -12px rgba(0, 0, 0, 0.7), 0 8px 24px -4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.02)",
-      }}
+    <div
+      className="w-full max-w-6xl mx-auto min-h-[600px] flex flex-col items-center justify-center relative z-10 px-4 py-8"
+      style={
+        {
+          "--lamp-color": activeTheme.hex,
+          "--lamp-glow": activeTheme.glow,
+          "--lamp-accent": activeTheme.accent,
+          "--lamp-intensity": isLampOn ? "1" : "0.1",
+        } as React.CSSProperties
+      }
     >
-      {/* ── Logo & Brand ── */}
-      <div className="flex flex-col items-center justify-center mb-6">
+      {/* ── Top Bar: Brand Logo & Lamp Color Selector ── */}
+      <div className="w-full max-w-5xl flex items-center justify-between mb-8 sm:mb-12 z-20">
         <Link
           href="/"
-          className="inline-flex items-center justify-center transition-transform hover:scale-105 duration-200"
+          className="inline-flex items-center gap-2 group transition-transform duration-200 hover:scale-105"
           aria-label="NexioraEV Home"
         >
           <Image
@@ -226,310 +254,384 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
             width={970}
             height={299}
             priority
-            className="h-8.5 sm:h-9.5 w-auto object-contain select-none"
+            className="h-8 sm:h-9 w-auto object-contain select-none"
           />
         </Link>
+
+        {/* Dynamic Lamp Color Selector (Amber, Cyan, Pink, Green, White) */}
+        <LampColorSelector
+          activeThemeId={activeThemeId}
+          onSelectTheme={handleSelectTheme}
+          isOn={isLampOn}
+          onTogglePower={handleTogglePower}
+        />
       </div>
 
-      {/* ── Global Alerts ── */}
-      {errorMessage && (
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs font-medium leading-relaxed"
-          role="alert"
-        >
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
-          <span>{errorMessage}</span>
-        </motion.div>
-      )}
+      {/* ── Main Composition: Desk Lamp (Left) & Auth Card (Right) ── */}
+      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center justify-center">
+        {/* LEFT COLUMN: Realistic Desk Lamp (45-50% width) */}
+        <div className="lg:col-span-6 flex items-center justify-center relative order-1 lg:order-1">
+          <DeskLamp
+            theme={activeTheme}
+            isOn={isLampOn}
+            onToggle={handleTogglePower}
+          />
+        </div>
 
-      {successMessage && (
-        <motion.div
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-medium leading-relaxed"
-          role="status"
-        >
-          <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
-          <span>{successMessage}</span>
-        </motion.div>
-      )}
-
-      {/* ── Dynamic Form Switching (Login / Register / Forgot Password) ── */}
-      <AnimatePresence mode="wait">
-        {mode === "login" && (
+        {/* RIGHT COLUMN: Premium Authentication Card (45-50% width) */}
+        <div className="lg:col-span-6 flex items-center justify-center relative order-2 lg:order-2 w-full">
           <motion.div
-            key="login"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+            layout
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full max-w-[420px] rounded-3xl p-7 sm:p-9 relative z-10 border border-white/[0.08]"
+            style={{
+              backgroundColor: "#11151F",
+              boxShadow: isLampOn
+                ? `0 24px 60px -12px rgba(0, 0, 0, 0.75), 0 0 40px -10px rgba(${activeTheme.rgb}, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08)`
+                : "0 24px 60px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              transition: "box-shadow 0.6s ease",
+            }}
           >
-            {/* Header */}
-            <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Welcome Back
-              </h1>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Sign in to your NexioraEV account.
-              </p>
-            </div>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <NeumorphicInput
-                label="Email Address"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                icon={<Mail className="w-4 h-4" />}
-                error={errors.email}
-                disabled={isLoading}
-                autoComplete="email"
-              />
-
-              <NeumorphicInput
-                label="Password"
-                placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                icon={<Lock className="w-4 h-4" />}
-                isPassword
-                error={errors.password}
-                disabled={isLoading}
-                autoComplete="current-password"
-              />
-
-              {/* Remember Me & Forgot Password Row */}
-              <div className="flex items-center justify-between pt-1 text-xs">
-                <label className="flex items-center gap-2 text-slate-300 cursor-pointer select-none">
-                  <input
-                    type="checkbox"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-4 h-4 rounded-md border-slate-700 bg-[#0C1019] text-emerald-500 focus:ring-emerald-500/20 transition cursor-pointer"
-                  />
-                  <span>Remember Me</span>
-                </label>
-
-                <button
-                  type="button"
-                  onClick={() => switchMode("forgot-password")}
-                  className="font-medium text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
-                >
-                  Forgot Password?
-                </button>
-              </div>
-
-              {/* Primary Sign In Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
-                      <span>Signing In...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Sign In</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {/* Secondary Switching Link */}
-              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
-                Don&apos;t have an account?{" "}
-                <button
-                  type="button"
-                  onClick={() => switchMode("register")}
-                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
-                >
-                  Create Account
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        )}
-
-        {mode === "register" && (
-          <motion.div
-            key="register"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {/* Header */}
-            <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Create Your Account
-              </h1>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Join the NexioraEV ecosystem.
-              </p>
-            </div>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-3.5">
-              <NeumorphicInput
-                label="Full Name"
-                type="text"
-                placeholder="Alex Morgan"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                icon={<User className="w-4 h-4" />}
-                error={errors.name}
-                disabled={isLoading}
-                autoComplete="name"
-              />
-
-              <NeumorphicInput
-                label="Email Address"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                icon={<Mail className="w-4 h-4" />}
-                error={errors.email}
-                disabled={isLoading}
-                autoComplete="email"
-              />
-
-              <NeumorphicInput
-                label="Password"
-                placeholder="Min 8 characters"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                icon={<Lock className="w-4 h-4" />}
-                isPassword
-                error={errors.password}
-                disabled={isLoading}
-                autoComplete="new-password"
-              />
-
-              <NeumorphicInput
-                label="Confirm Password"
-                placeholder="Re-enter password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                icon={<Lock className="w-4 h-4" />}
-                isPassword
-                error={errors.confirmPassword}
-                disabled={isLoading}
-                autoComplete="new-password"
-              />
-
-              {/* Primary Register Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
-                      <span>Creating Account...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Create Account</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {/* Secondary Switching Link */}
-              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
-                Already have an account?{" "}
+            {/* ── Mode Pill Switcher (Sign In | Sign Up) ── */}
+            {mode !== "forgot-password" && (
+              <div className="grid grid-cols-2 p-1 mb-6 rounded-xl bg-[#090D14] border border-white/[0.05]">
                 <button
                   type="button"
                   onClick={() => switchMode("login")}
-                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
+                  className={`py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+                    mode === "login"
+                      ? "text-slate-950 shadow-md"
+                      : "text-slate-400 hover:text-white"
+                  }`}
+                  style={{
+                    backgroundColor: mode === "login" ? activeTheme.accent : "transparent",
+                    color: mode === "login" ? activeTheme.buttonText : undefined,
+                  }}
                 >
                   Sign In
                 </button>
-              </div>
-            </form>
-          </motion.div>
-        )}
 
-        {mode === "forgot-password" && (
-          <motion.div
-            key="forgot-password"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {/* Header */}
-            <div className="text-center mb-6">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Reset Your Password
-              </h1>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Enter your email address to receive a password reset link.
-              </p>
-            </div>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <NeumorphicInput
-                label="Email Address"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                icon={<Mail className="w-4 h-4" />}
-                error={errors.email}
-                disabled={isLoading}
-                autoComplete="email"
-              />
-
-              {/* Primary Reset Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full h-12 bg-linear-to-r from-[#00D26A] to-[#00D9FF] hover:opacity-95 active:scale-[0.985] text-[#050A12] font-semibold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-slate-900" />
-                      <span>Sending Link...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Send Reset Link</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {/* Back to Sign In Link */}
-              <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
                 <button
                   type="button"
-                  onClick={() => switchMode("login")}
-                  className="font-semibold text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
+                  onClick={() => switchMode("register")}
+                  className={`py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+                    mode === "register"
+                      ? "text-slate-950 shadow-md"
+                      : "text-slate-400 hover:text-white"
+                  }`}
+                  style={{
+                    backgroundColor: mode === "register" ? activeTheme.accent : "transparent",
+                    color: mode === "register" ? activeTheme.buttonText : undefined,
+                  }}
                 >
-                  ← Back to Sign In
+                  Sign Up
                 </button>
               </div>
-            </form>
+            )}
+
+            {/* ── Global Alerts ── */}
+            {errorMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs font-medium leading-relaxed"
+                role="alert"
+              >
+                <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
+                <span>{errorMessage}</span>
+              </motion.div>
+            )}
+
+            {successMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mb-5 flex items-start gap-2.5 p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-xs font-medium leading-relaxed"
+                role="status"
+              >
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
+                <span>{successMessage}</span>
+              </motion.div>
+            )}
+
+            {/* ── Dynamic Form Switching (Login / Register / Forgot Password) ── */}
+            <AnimatePresence mode="wait">
+              {mode === "login" && (
+                <motion.div
+                  key="login"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                      Welcome
+                    </h1>
+                    <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                      Sign in to continue to your account.
+                    </p>
+                  </div>
+
+                  {/* Form */}
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <NeumorphicInput
+                      label="Username or Email"
+                      type="email"
+                      placeholder="you@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      icon={<Mail className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      error={errors.email}
+                      disabled={isLoading}
+                      autoComplete="email"
+                    />
+
+                    <NeumorphicInput
+                      label="Password"
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      icon={<Lock className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      isPassword
+                      error={errors.password}
+                      disabled={isLoading}
+                      autoComplete="current-password"
+                    />
+
+                    {/* Remember Me & Forgot Password Row */}
+                    <div className="flex items-center justify-between pt-1 text-xs">
+                      <label className="flex items-center gap-2 text-slate-300 cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={rememberMe}
+                          onChange={(e) => setRememberMe(e.target.checked)}
+                          className="w-4 h-4 rounded-md border-slate-700 bg-[#0C1019] focus:ring-2 transition cursor-pointer"
+                          style={{ accentColor: activeTheme.accent }}
+                        />
+                        <span>Remember me</span>
+                      </label>
+
+                      <button
+                        type="button"
+                        onClick={() => switchMode("forgot-password")}
+                        className="font-medium hover:underline transition-colors cursor-pointer"
+                        style={{ color: activeTheme.accent }}
+                      >
+                        Forgot?
+                      </button>
+                    </div>
+
+                    {/* Primary Sign In Button (Synchronized with Lamp Color) */}
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        disabled={isLoading}
+                        className="w-full h-12 hover:opacity-95 active:scale-[0.985] font-semibold text-sm rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                        style={{
+                          background: activeTheme.buttonGradient,
+                          color: activeTheme.buttonText,
+                          boxShadow: `0 4px 20px -2px ${activeTheme.glow}`,
+                        }}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Signing in...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Sign in</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </form>
+                </motion.div>
+              )}
+
+              {mode === "register" && (
+                <motion.div
+                  key="register"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                      Create Account
+                    </h1>
+                    <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                      Join the NexioraEV ecosystem.
+                    </p>
+                  </div>
+
+                  {/* Form */}
+                  <form onSubmit={handleSubmit} className="space-y-3.5">
+                    <NeumorphicInput
+                      label="Full Name"
+                      type="text"
+                      placeholder="Alex Morgan"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      icon={<User className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      error={errors.name}
+                      disabled={isLoading}
+                      autoComplete="name"
+                    />
+
+                    <NeumorphicInput
+                      label="Email Address"
+                      type="email"
+                      placeholder="you@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      icon={<Mail className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      error={errors.email}
+                      disabled={isLoading}
+                      autoComplete="email"
+                    />
+
+                    <NeumorphicInput
+                      label="Password"
+                      placeholder="Min 8 characters"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      icon={<Lock className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      isPassword
+                      error={errors.password}
+                      disabled={isLoading}
+                      autoComplete="new-password"
+                    />
+
+                    <NeumorphicInput
+                      label="Confirm Password"
+                      placeholder="Re-enter password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      icon={<Lock className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      isPassword
+                      error={errors.confirmPassword}
+                      disabled={isLoading}
+                      autoComplete="new-password"
+                    />
+
+                    {/* Primary Register Button */}
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        disabled={isLoading}
+                        className="w-full h-12 hover:opacity-95 active:scale-[0.985] font-semibold text-sm rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                        style={{
+                          background: activeTheme.buttonGradient,
+                          color: activeTheme.buttonText,
+                          boxShadow: `0 4px 20px -2px ${activeTheme.glow}`,
+                        }}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Creating account...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Create account</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </form>
+                </motion.div>
+              )}
+
+              {mode === "forgot-password" && (
+                <motion.div
+                  key="forgot-password"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+                      Reset Password
+                    </h1>
+                    <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                      Enter your email to receive a password reset link.
+                    </p>
+                  </div>
+
+                  {/* Form */}
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <NeumorphicInput
+                      label="Email Address"
+                      type="email"
+                      placeholder="you@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      icon={<Mail className="w-4 h-4" />}
+                      accentColor={activeTheme.accent}
+                      error={errors.email}
+                      disabled={isLoading}
+                      autoComplete="email"
+                    />
+
+                    {/* Primary Reset Button */}
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        disabled={isLoading}
+                        className="w-full h-12 hover:opacity-95 active:scale-[0.985] font-semibold text-sm rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                        style={{
+                          background: activeTheme.buttonGradient,
+                          color: activeTheme.buttonText,
+                          boxShadow: `0 4px 20px -2px ${activeTheme.glow}`,
+                        }}
+                      >
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Sending link...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Send reset link</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    {/* Back to Sign In Link */}
+                    <div className="text-center pt-4 border-t border-white/[0.06] text-xs sm:text-sm text-slate-400">
+                      <button
+                        type="button"
+                        onClick={() => switchMode("login")}
+                        className="font-semibold hover:underline transition-colors cursor-pointer"
+                        style={{ color: activeTheme.accent }}
+                      >
+                        ← Back to Sign In
+                      </button>
+                    </div>
+                  </form>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }
