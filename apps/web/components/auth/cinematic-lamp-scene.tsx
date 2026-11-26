@@ -1,11 +1,10 @@
 "use client";
 
 import React, { Suspense, useMemo, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   Environment,
   ContactShadows,
-  AdaptiveDpr,
   AdaptiveEvents,
 } from "@react-three/drei";
 import * as THREE from "three";
@@ -67,16 +66,33 @@ function StudioDeskSurface() {
       rotation={[-Math.PI / 2, 0, 0]}
       receiveShadow
     >
-      <circleGeometry args={[6.2, 64]} />
+      <circleGeometry args={[6.2, 96]} />
       <meshStandardMaterial
         color="#0B0E15"
-        roughness={0.42}
-        metalness={0.35}
+        roughness={0.44}
+        metalness={0.32}
         transparent
         alphaMap={alphaMap}
       />
     </mesh>
   );
+}
+
+/**
+ * Smoothly interpolates renderer exposure between OFF and ON states
+ * without recreating the WebGLRenderer config object.
+ */
+function ExposureController({ isOn }: { isOn: boolean }) {
+  const { gl } = useThree();
+  useFrame((_, delta) => {
+    const target = isOn ? 1.12 : 0.94;
+    gl.toneMappingExposure = THREE.MathUtils.lerp(
+      gl.toneMappingExposure,
+      target,
+      Math.min(delta, 0.05) * 4.5
+    );
+  });
+  return null;
 }
 
 export function CinematicLampScene({
@@ -100,7 +116,7 @@ export function CinematicLampScene({
   return (
     <div className="w-full h-full select-none relative">
       <Canvas
-        shadows
+        shadows="soft"
         dpr={isMobile ? [1, 1.5] : [1, 2]}
         camera={{
           position: isMobile ? [1.6, 0.55, 6.4] : [2.2, 0.4, 5.9],
@@ -110,13 +126,15 @@ export function CinematicLampScene({
         }}
         gl={{
           antialias: true,
+          alpha: true,
+          powerPreference: "high-performance",
           toneMapping: THREE.ACESFilmicToneMapping,
-          toneMappingExposure: isOn ? 1.12 : 0.92,
+          toneMappingExposure: 0.94,
         }}
         style={{ background: "transparent" }}
       >
-        <AdaptiveDpr pixelated />
         <AdaptiveEvents />
+        <ExposureController isOn={isOn} />
 
         {/* ── Studio Key Light (Subtle overhead fill to preserve silhouette when OFF) ── */}
         <directionalLight
@@ -126,7 +144,9 @@ export function CinematicLampScene({
           castShadow
           shadow-mapSize-width={isMobile ? 512 : 1024}
           shadow-mapSize-height={isMobile ? 512 : 1024}
-          shadow-bias={-0.0004}
+          shadow-bias={-0.0003}
+          shadow-normalBias={0.02}
+          shadow-radius={4}
         />
 
         {/* ── Studio Rim Light (Metallic edge separation on brushed arms & brass) ── */}

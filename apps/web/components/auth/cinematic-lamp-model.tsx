@@ -140,24 +140,31 @@ export function CinematicLampModel({
   // ══════════════════════════════════════════════════════════════
   const materials = useMemo(() => {
     // Matte brushed dark graphite / anodized metal (Lamp base & shade exterior)
-    const brushedDarkMetal = new THREE.MeshStandardMaterial({
+    const brushedDarkMetal = new THREE.MeshPhysicalMaterial({
       color: "#1B1E26",
-      metalness: 0.62,
-      roughness: 0.44,
+      metalness: 0.65,
+      roughness: 0.4,
+      clearcoat: 0.22,
+      clearcoatRoughness: 0.36,
+      reflectivity: 0.72,
     });
 
     // Dark architectural structural steel (Parallel arm struts)
-    const structuralMetal = new THREE.MeshStandardMaterial({
+    const structuralMetal = new THREE.MeshPhysicalMaterial({
       color: "#262C38",
-      metalness: 0.78,
-      roughness: 0.32,
+      metalness: 0.76,
+      roughness: 0.34,
+      clearcoat: 0.16,
+      clearcoatRoughness: 0.38,
     });
 
     // Machined brass mechanical hardware (Joint pins, thumbscrews, collars)
-    const machinedBrass = new THREE.MeshStandardMaterial({
+    const machinedBrass = new THREE.MeshPhysicalMaterial({
       color: "#C89B4B",
       metalness: 0.88,
-      roughness: 0.28,
+      roughness: 0.26,
+      clearcoat: 0.18,
+      clearcoatRoughness: 0.24,
       emissive: "#1F1404",
       emissiveIntensity: 0.08,
     });
@@ -165,15 +172,17 @@ export function CinematicLampModel({
     // High-tensile coiled spring steel
     const springSteel = new THREE.MeshStandardMaterial({
       color: "#9AA5B6",
-      metalness: 0.88,
-      roughness: 0.22,
+      metalness: 0.86,
+      roughness: 0.24,
     });
 
     // Parabolic shade interior reflector (Satin warm off-white)
-    const reflectorInterior = new THREE.MeshStandardMaterial({
+    const reflectorInterior = new THREE.MeshPhysicalMaterial({
       color: "#F5EFE6",
-      metalness: 0.24,
-      roughness: 0.26,
+      metalness: 0.18,
+      roughness: 0.28,
+      sheen: 0.3,
+      sheenRoughness: 0.4,
       side: THREE.BackSide,
     });
 
@@ -231,48 +240,64 @@ export function CinematicLampModel({
   }, []);
 
   // ══════════════════════════════════════════════════════════════
-  // GEOMETRIES — Parametric High-Fidelity Geometry
+  // GEOMETRIES — High-Resolution Smooth Parametric Geometry
   // ══════════════════════════════════════════════════════════════
   const geometries = useMemo(() => {
-    // 1. Helical Spring Geometry
+    // 1. High-resolution Helical Spring Geometry
     const springCurve = new HelicalSpringCurve(0.036, 0.84, 16);
-    const springGeo = new THREE.TubeGeometry(springCurve, 72, 0.0095, 8, false);
+    const springGeo = new THREE.TubeGeometry(springCurve, 128, 0.0095, 14, false);
+    springGeo.computeVertexNormals();
 
-    // 2. Parabolic Bell Dome Shade (Profile generated via Lathe)
+    // 2. Ultra-Smooth Parabolic Bell Dome Shade (Lathe with smooth bevels & rolled lip)
     const shadePoints: THREE.Vector2[] = [];
-    shadePoints.push(new THREE.Vector2(0.16, 0.62));
-    shadePoints.push(new THREE.Vector2(0.22, 0.6));
-    shadePoints.push(new THREE.Vector2(0.22, 0.36));
-    for (let i = 0; i <= 24; i++) {
-      const t = i / 24;
-      const y = 0.36 - t * 0.92; // from +0.36 down to -0.56
-      const r = 0.22 + Math.pow(t, 0.76) * 0.68; // from 0.22 out to 0.90
+    // Smooth top dome cap transition
+    shadePoints.push(new THREE.Vector2(0.15, 0.62));
+    shadePoints.push(new THREE.Vector2(0.195, 0.615));
+    shadePoints.push(new THREE.Vector2(0.215, 0.595));
+    shadePoints.push(new THREE.Vector2(0.22, 0.56));
+    shadePoints.push(new THREE.Vector2(0.22, 0.38));
+    // Smooth shoulder transition into parabolic bell
+    shadePoints.push(new THREE.Vector2(0.228, 0.35));
+    for (let i = 1; i <= 48; i++) {
+      const t = i / 48;
+      const y = 0.35 - t * 0.91; // from +0.35 down to -0.56
+      const r = 0.228 + Math.pow(t, 0.76) * 0.672; // from 0.228 out to 0.90
       shadePoints.push(new THREE.Vector2(r, y));
     }
-    // Rolled protective rim lip
-    shadePoints.push(new THREE.Vector2(0.92, -0.57));
-    shadePoints.push(new THREE.Vector2(0.89, -0.59));
-    const shadeGeo = new THREE.LatheGeometry(shadePoints, 48);
+    // Smooth 5-point rounded rolled protective rim lip
+    shadePoints.push(new THREE.Vector2(0.912, -0.566));
+    shadePoints.push(new THREE.Vector2(0.922, -0.575));
+    shadePoints.push(new THREE.Vector2(0.916, -0.586));
+    shadePoints.push(new THREE.Vector2(0.902, -0.592));
+    shadePoints.push(new THREE.Vector2(0.888, -0.586));
+    const shadeGeo = new THREE.LatheGeometry(shadePoints, 96);
+    shadeGeo.computeVertexNormals();
 
-    // 3. Weighted Circular Base with beveled rim & brass groove
+    // 3. Ultra-Smooth Weighted Circular Base with chamfered bevels
     const basePoints: THREE.Vector2[] = [
       new THREE.Vector2(0, 0),
-      new THREE.Vector2(1.08, 0),
-      new THREE.Vector2(1.08, 0.055),
-      new THREE.Vector2(1.02, 0.13),
-      new THREE.Vector2(1.02, 0.16),
-      new THREE.Vector2(0.94, 0.21),
-      new THREE.Vector2(0.34, 0.22),
+      new THREE.Vector2(1.07, 0),
+      new THREE.Vector2(1.08, 0.012),
+      new THREE.Vector2(1.08, 0.05),
+      new THREE.Vector2(1.065, 0.078),
+      new THREE.Vector2(1.035, 0.112),
+      new THREE.Vector2(1.02, 0.135),
+      new THREE.Vector2(1.02, 0.155),
+      new THREE.Vector2(1.0, 0.18),
+      new THREE.Vector2(0.965, 0.202),
+      new THREE.Vector2(0.935, 0.212),
+      new THREE.Vector2(0.36, 0.222),
+      new THREE.Vector2(0.31, 0.236),
       new THREE.Vector2(0.28, 0.25),
       new THREE.Vector2(0, 0.25),
     ];
-    const baseGeo = new THREE.LatheGeometry(basePoints, 48);
+    const baseGeo = new THREE.LatheGeometry(basePoints, 96);
+    baseGeo.computeVertexNormals();
 
     // 4. Open-ended Frustum Cone for Volumetric Shader Beam
-    // Top radius sits inside shade opening, bottom flares naturally toward desk
-    const coneGeo = new THREE.CylinderGeometry(0.46, 2.55, 4.4, 48, 1, true);
+    const coneGeo = new THREE.CylinderGeometry(0.46, 2.55, 4.4, 64, 1, true);
 
-    // 5. Arched Rubber Cable Curves
+    // 5. High-resolution Arched Rubber Cable Curves
     const elbowCableCurve = createCableCurve(
       new THREE.Vector3(-0.05, 1.45, -0.05),
       new THREE.Vector3(-0.36, 1.95, 0),
@@ -280,11 +305,12 @@ export function CinematicLampModel({
     );
     const elbowCableGeo = new THREE.TubeGeometry(
       elbowCableCurve,
-      24,
+      48,
       0.017,
-      8,
+      14,
       false
     );
+    elbowCableGeo.computeVertexNormals();
 
     const headCableCurve = createCableCurve(
       new THREE.Vector3(0, 1.45, 0),
@@ -293,11 +319,12 @@ export function CinematicLampModel({
     );
     const headCableGeo = new THREE.TubeGeometry(
       headCableCurve,
-      24,
+      48,
       0.017,
-      8,
+      14,
       false
     );
+    headCableGeo.computeVertexNormals();
 
     return {
       springGeo,
@@ -502,30 +529,30 @@ export function CinematicLampModel({
 
         {/* Brass waist groove accent ring */}
         <mesh position={[0, 0.135, 0]} material={materials.machinedBrass}>
-          <torusGeometry args={[1.03, 0.016, 12, 48]} />
+          <torusGeometry args={[1.03, 0.016, 20, 96]} />
         </mesh>
 
         {/* Central brass mounting collar */}
         <mesh position={[0, 0.34, 0]} material={materials.machinedBrass}>
-          <cylinderGeometry args={[0.14, 0.16, 0.21, 24]} />
+          <cylinderGeometry args={[0.14, 0.16, 0.21, 48]} />
         </mesh>
 
         {/* Swivel stem pin */}
         <mesh position={[0, 0.47, 0]} material={materials.structuralMetal}>
-          <cylinderGeometry args={[0.095, 0.095, 0.11, 20]} />
+          <cylinderGeometry args={[0.095, 0.095, 0.11, 48]} />
         </mesh>
 
         {/* Tactile Power Switch directly integrated into the base */}
         <group position={[0.54, 0.215, 0.48]}>
           <mesh material={materials.machinedBrass}>
-            <cylinderGeometry args={[0.068, 0.078, 0.04, 16]} />
+            <cylinderGeometry args={[0.068, 0.078, 0.04, 36]} />
           </mesh>
           <mesh
             ref={baseSwitchLedRef}
             position={[0, 0.028, 0]}
             material={materials.switchLedMat}
           >
-            <cylinderGeometry args={[0.038, 0.038, 0.02, 16]} />
+            <cylinderGeometry args={[0.038, 0.038, 0.02, 36]} />
           </mesh>
         </group>
       </group>
@@ -536,7 +563,7 @@ export function CinematicLampModel({
       <group position={[0, 0.55, 0]}>
         {/* Brass central axle */}
         <mesh material={materials.machinedBrass} rotation={[0, 0, Math.PI / 2]}>
-          <cylinderGeometry args={[0.105, 0.105, 0.38, 20]} />
+          <cylinderGeometry args={[0.105, 0.105, 0.38, 48]} />
         </mesh>
         {/* Flanged black clamping discs */}
         <mesh
@@ -544,14 +571,14 @@ export function CinematicLampModel({
           material={materials.brushedDarkMetal}
           rotation={[0, 0, Math.PI / 2]}
         >
-          <cylinderGeometry args={[0.19, 0.19, 0.042, 24]} />
+          <cylinderGeometry args={[0.19, 0.19, 0.042, 64]} />
         </mesh>
         <mesh
           position={[-0.19, 0, 0]}
           material={materials.brushedDarkMetal}
           rotation={[0, 0, Math.PI / 2]}
         >
-          <cylinderGeometry args={[0.19, 0.19, 0.042, 24]} />
+          <cylinderGeometry args={[0.19, 0.19, 0.042, 64]} />
         </mesh>
         {/* Brass knurled thumbscrew knob */}
         <mesh
@@ -559,7 +586,7 @@ export function CinematicLampModel({
           material={materials.machinedBrass}
           rotation={[0, 0, Math.PI / 2]}
         >
-          <cylinderGeometry args={[0.085, 0.085, 0.068, 16]} />
+          <cylinderGeometry args={[0.085, 0.085, 0.068, 36]} />
         </mesh>
 
         {/* Lower Arm (Pivots backward-left at +0.34 rad) */}
@@ -625,28 +652,28 @@ export function CinematicLampModel({
               ══════════════════════════════════════════════════════════ */}
           <group position={[0, 2.1, 0]}>
             <mesh material={materials.machinedBrass} rotation={[0, 0, Math.PI / 2]}>
-              <cylinderGeometry args={[0.125, 0.125, 0.36, 20]} />
+              <cylinderGeometry args={[0.125, 0.125, 0.36, 48]} />
             </mesh>
             <mesh
               position={[0.18, 0, 0]}
               material={materials.brushedDarkMetal}
               rotation={[0, 0, Math.PI / 2]}
             >
-              <cylinderGeometry args={[0.2, 0.2, 0.042, 24]} />
+              <cylinderGeometry args={[0.2, 0.2, 0.042, 64]} />
             </mesh>
             <mesh
               position={[-0.18, 0, 0]}
               material={materials.brushedDarkMetal}
               rotation={[0, 0, Math.PI / 2]}
             >
-              <cylinderGeometry args={[0.2, 0.2, 0.042, 24]} />
+              <cylinderGeometry args={[0.2, 0.2, 0.042, 64]} />
             </mesh>
             <mesh
               position={[0.24, 0, 0]}
               material={materials.machinedBrass}
               rotation={[0, 0, Math.PI / 2]}
             >
-              <cylinderGeometry args={[0.095, 0.095, 0.085, 16]} />
+              <cylinderGeometry args={[0.095, 0.095, 0.085, 36]} />
             </mesh>
             <mesh position={[0.29, 0, 0]} material={materials.machinedBrass}>
               <boxGeometry args={[0.042, 0.24, 0.042]} />
@@ -711,14 +738,14 @@ export function CinematicLampModel({
                   ══════════════════════════════════════════════════════ */}
               <group position={[0, 1.9, 0]}>
                 <mesh material={materials.machinedBrass}>
-                  <sphereGeometry args={[0.13, 20, 20]} />
+                  <sphereGeometry args={[0.13, 40, 40]} />
                 </mesh>
                 <mesh
                   position={[0.12, 0, 0]}
                   material={materials.machinedBrass}
                   rotation={[0, 0, Math.PI / 2]}
                 >
-                  <cylinderGeometry args={[0.052, 0.052, 0.065, 12]} />
+                  <cylinderGeometry args={[0.052, 0.052, 0.065, 32]} />
                 </mesh>
 
                 {/* ════════════════════════════════════════════════════
@@ -727,7 +754,7 @@ export function CinematicLampModel({
                 <group ref={headGroupRef} rotation={[-0.18, 0.22, 0.35]}>
                   {/* Brass top cable gland nut */}
                   <mesh position={[0, 0.71, 0]} material={materials.machinedBrass}>
-                    <cylinderGeometry args={[0.085, 0.095, 0.1, 16]} />
+                    <cylinderGeometry args={[0.085, 0.095, 0.1, 36]} />
                   </mesh>
 
                   {/* Arched rubber wire entering top gland */}
@@ -741,12 +768,12 @@ export function CinematicLampModel({
                     position={[0, 0.46, 0]}
                     material={materials.brushedDarkMetal}
                   >
-                    <cylinderGeometry args={[0.19, 0.21, 0.38, 32]} />
+                    <cylinderGeometry args={[0.19, 0.21, 0.38, 64]} />
                   </mesh>
 
                   {/* Brass accent collar ring between socket & dome */}
                   <mesh position={[0, 0.27, 0]} material={materials.machinedBrass}>
-                    <torusGeometry args={[0.205, 0.017, 12, 32]} />
+                    <torusGeometry args={[0.205, 0.017, 20, 64]} />
                   </mesh>
 
                   {/* Parabolic Bell Shade (Lathe Geometry) */}
@@ -788,7 +815,9 @@ export function CinematicLampModel({
                     castShadow
                     shadow-mapSize-width={shadowMapSize}
                     shadow-mapSize-height={shadowMapSize}
-                    shadow-bias={-0.0004}
+                    shadow-bias={-0.0003}
+                    shadow-normalBias={0.02}
+                    shadow-radius={4}
                   />
 
                   {/* Target object anchored inside headGroupRef so beam follows head */}
@@ -832,11 +861,11 @@ export function CinematicLampModel({
 
       {/* Trailing Rubber Base Power Cord */}
       <mesh position={[-0.78, 0.025, 0.32]} rotation={[0, 0.35, Math.PI / 2]}>
-        <cylinderGeometry args={[0.02, 0.02, 0.85, 8]} />
+        <cylinderGeometry args={[0.02, 0.02, 0.85, 20]} />
         <meshStandardMaterial color="#0E1015" roughness={0.85} />
       </mesh>
       <mesh position={[-1.25, 0.022, 0.56]} rotation={[0, 0.65, Math.PI / 2]}>
-        <cylinderGeometry args={[0.02, 0.02, 0.7, 8]} />
+        <cylinderGeometry args={[0.02, 0.02, 0.7, 20]} />
         <meshStandardMaterial color="#0E1015" roughness={0.85} />
       </mesh>
     </group>
