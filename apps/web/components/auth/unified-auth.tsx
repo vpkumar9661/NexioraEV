@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   Mail,
   Lock,
@@ -42,6 +42,8 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   // Lamp Lighting State
   const [activeThemeId, setActiveThemeId] = useState<LampColorId>("amber");
   const [isLampOn, setIsLampOn] = useState<boolean>(false);
+  const [resetTrigger, setResetTrigger] = useState<number>(0);
+  const prefersReducedMotion = useReducedMotion() ?? false;
 
   // Form Fields State
   const [name, setName] = useState("");
@@ -57,16 +59,6 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const activeTheme = LAMP_THEMES[activeThemeId];
-
-  // Convert hex to rgb tuple for Three.js
-  const lampRgb: [number, number, number] = useMemo(() => {
-    const parts = activeTheme.rgb.split(",").map((s) => parseFloat(s.trim()));
-    return [
-      (parts[0] ?? 0) / 255,
-      (parts[1] ?? 0) / 255,
-      (parts[2] ?? 0) / 255,
-    ];
-  }, [activeTheme.rgb]);
 
   // Initialize theme and rememberMe from localStorage
   useEffect(() => {
@@ -313,37 +305,56 @@ export function UnifiedAuth({ initialMode = "login" }: UnifiedAuthProps) {
           onSelectTheme={handleSelectTheme}
           isOn={isLampOn}
           onTogglePower={handleTogglePower}
+          onResetLamp={() => setResetTrigger((prev) => prev + 1)}
         />
       </div>
 
       {/* ── Cinematic Full-Screen Illumination Spread when Lamp is ON ── */}
+      {/* Primary directional spread originating from the lamp head */}
       <div
         className="fixed inset-0 pointer-events-none transition-opacity duration-1000 z-0"
         style={{
-          opacity: isLampOn ? 0.35 : 0,
-          background: `radial-gradient(ellipse 80% 70% at 30% 45%, rgba(${activeTheme.rgb}, 0.22) 0%, rgba(${activeTheme.rgb}, 0.05) 50%, transparent 80%)`,
+          opacity: isLampOn ? 1 : 0,
+          background: `
+            radial-gradient(ellipse 68% 65% at 28% 42%, rgba(${activeTheme.rgb}, 0.22) 0%, rgba(${activeTheme.rgb}, 0.08) 42%, transparent 78%),
+            radial-gradient(ellipse 95% 85% at 55% 52%, rgba(${activeTheme.rgb}, 0.09) 0%, rgba(${activeTheme.rgb}, 0.025) 55%, transparent 88%)
+          `,
         }}
       />
 
       {/* ── Main Composition: 3D Lamp (Left) & Auth Card / Turn-on Screen (Right) ── */}
       <div className="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center justify-center relative min-h-140 z-10">
         {/* LEFT COLUMN: Cinematic Interactive 3D Lamp */}
-        <div className="lg:col-span-6 flex items-center justify-center relative order-1 h-80 sm:h-96 lg:h-150 w-full">
+        <div
+          className="lg:col-span-6 flex items-center justify-center relative order-1 h-80 sm:h-96 lg:h-150 w-full"
+          aria-label="Interactive 3D desk lamp scene"
+        >
           <CinematicLampScene
             isOn={isLampOn}
             lampColor={activeTheme.hex}
-            lampRgb={lampRgb}
             onToggle={handleTogglePower}
+            resetTrigger={resetTrigger}
+            reducedMotion={prefersReducedMotion}
           />
 
-          {/* Interactive hint on the lamp */}
-          <div className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/80 border border-white/8 text-xs text-slate-400 select-none flex items-center gap-2 backdrop-blur-xs">
+          {/* Interactive & Keyboard-Accessible Lamp Control Pill */}
+          <button
+            type="button"
+            onClick={handleTogglePower}
+            aria-pressed={isLampOn}
+            aria-label={
+              isLampOn
+                ? "Desk lamp is on. Press to switch lamp off."
+                : "Desk lamp is off. Press to switch lamp on and reveal authentication."
+            }
+            className="absolute bottom-2 left-6 px-3 py-1 rounded-full bg-[#11141D]/85 border border-white/10 hover:border-white/25 text-xs text-slate-300 select-none flex items-center gap-2 backdrop-blur-xs cursor-pointer transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400"
+          >
             <span
               className="w-2 h-2 rounded-full transition-colors duration-300"
               style={{ backgroundColor: isLampOn ? activeTheme.accent : "#64748B" }}
             />
             <span>Drag head to aim • Click lamp to power {isLampOn ? "off" : "on"}</span>
-          </div>
+          </button>
         </div>
 
         {/* RIGHT COLUMN: Auth Card (When ON) OR "Turn on the lamp" (When OFF) */}
